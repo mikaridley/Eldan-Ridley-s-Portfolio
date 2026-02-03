@@ -1,0 +1,28 @@
+.app-footer {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  padding-block-start: 2rem;
+  padding-inline: 1rem;
+
+  background-color: var(--clr-bg-dark);
+
+  > * {
+    grid-column: span 2;
+  }
+
+  > img {
+    width: 200px;
+  }
+
+  > p {
+    font-size: 1.2rem;
+    color: var(--clr-bg-light);
+    text-align: center;
+  }
+
+  .copyright {
+    justify-self: start;
+    font-size: 0.8rem;
+  }
+}

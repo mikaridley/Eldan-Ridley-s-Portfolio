@@ -1,0 +1,23 @@
+/* headers */
+@font-face {
+  font-family: homenaje;
+  src: url('../../fonts/homenaje/Homenaje-Regular.ttf');
+}
+
+@font-face {
+  font-family: homenaje;
+  src: url('../../fonts/homenaje/Homenaje-Regular.ttf');
+  font-weight: 700;
+}
+
+/* text */
+@font-face {
+  font-family: manrope;
+  src: url('../../fonts/manrope/manrope-regular.ttf');
+}
+
+@font-face {
+  font-family: manrope;
+  src: url('../../fonts/manrope/manrope-bold.ttf');
+  font-weight: 700;
+}

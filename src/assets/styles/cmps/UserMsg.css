@@ -1,0 +1,22 @@
+.user-msg {
+  position: fixed;
+  top: 60px;
+  right: 0.2em;
+  z-index: 10;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0.3em;
+
+  background-color: var(--clr-bg-dark);
+  color: var(--clr-bg-light);
+  font-size: 0.9em;
+
+  translate: 150%;
+  transition: 600ms ease-in-out;
+}
+
+.user-msg.visible {
+  translate: 0;
+}

@@ -1,0 +1,18 @@
+import ReactDOM from 'react-dom/client'
+
+import { BrowserRouter as Router } from 'react-router-dom'
+
+import * as serviceWorkerRegistration from './services/serviceWorkerRegistration'
+
+import { RootCmp } from './RootCmp'
+
+import './assets/styles/main.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <Router>
+    <RootCmp />
+  </Router>
+)
+
+serviceWorkerRegistration.register()

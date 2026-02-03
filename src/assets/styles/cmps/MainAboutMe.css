@@ -1,0 +1,70 @@
+.main-about-me {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  justify-items: center;
+  row-gap: 2rem;
+  column-gap: 12rem;
+
+  width: 100%;
+  padding-block-start: 6rem;
+  padding-block-end: 2rem;
+
+  background: linear-gradient(
+    to top left,
+    var(--clr-bg-secondary),
+    var(--clr-bg-main) 40%
+  );
+  clip-path: ellipse(110% 100% at 50% 0%);
+
+  .about-me {
+    justify-self: end;
+    display: grid;
+    padding-inline-start: 8rem;
+
+    > h1 {
+      position: relative;
+      right: 4px;
+
+      grid-column: 1 / span 2;
+      height: 100px;
+      font-size: 6.5rem;
+    }
+
+    > h2 {
+      position: relative;
+      right: 1px;
+
+      grid-column: 1 / span 2;
+      margin-bottom: 1rem;
+      font-size: 3rem;
+    }
+
+    > p {
+      margin: 0;
+      font-size: 1.2rem;
+      grid-column: 1 / span 2;
+    }
+
+    .resume-btn {
+      margin-block: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        content: url('../../imgs/cv.svg');
+        transform: scale(0.7);
+      }
+
+      &:hover {
+        background-color: var(--clr-bg-secondary);
+      }
+    }
+  }
+
+  > .avatar {
+    justify-self: start;
+    width: 500px;
+  }
+}

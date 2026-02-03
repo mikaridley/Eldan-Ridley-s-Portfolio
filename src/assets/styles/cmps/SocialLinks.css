@@ -1,0 +1,39 @@
+.social-links {
+  grid-column: span 2;
+  display: flex;
+  gap: 2rem;
+
+  > .icon {
+    display: grid;
+    place-items: center;
+
+    width: 35px;
+    border-radius: 1px;
+    cursor: pointer;
+
+    > img {
+      width: 90%;
+    }
+
+    &:hover {
+      border-radius: 3px;
+    }
+
+    .github&:hover {
+      background-color: var(--clr-github);
+      box-shadow: 0 0 0 0.3rem var(--clr-github);
+    }
+    .linkedin&:hover {
+      background-color: var(--clr-linkedin);
+      box-shadow: 0 0 0 0.3rem var(--clr-linkedin);
+    }
+    .mail&:hover {
+      background-color: var(--clr-mail);
+      box-shadow: 0 0 0 0.3rem var(--clr-mail);
+    }
+    .whatsup&:hover {
+      background-color: var(--clr-whatsup);
+      box-shadow: 0 0 0 0.3rem var(--clr-whatsup);
+    }
+  }
+}
