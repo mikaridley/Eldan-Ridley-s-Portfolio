@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logo from '../assets/imgs/logo.png'
 
 export function AppHeader() {
@@ -7,10 +8,10 @@ export function AppHeader() {
         <img src={logo} />
       </div>
       <nav className="navigation">
-        <a>Home</a>
-        <a>About Me</a>
-        <a>Resume</a>
-        <a>LinkedIn</a>
+        <Link to="/home">Home</Link>
+        <Link to="/about-me">About Me</Link>
+        <Link to="/resume">Resume</Link>
+        <Link to="/linkedin">LinkedIn</Link>
       </nav>
     </header>
   )

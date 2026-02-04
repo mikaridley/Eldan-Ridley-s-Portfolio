@@ -11,8 +11,8 @@ export function RootCmp() {
       <AppHeader />
       <main>
         <Routes>
-          <Route path="" element={<HomePage />} />
-          <Route path="" element={<AboutMePage />} />
+          <Route path="home" element={<HomePage />} />
+          <Route path="about-me" element={<AboutMePage />} />
         </Routes> 
       </main>
       <AppFooter />
