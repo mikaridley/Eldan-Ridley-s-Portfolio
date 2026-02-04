@@ -9,15 +9,11 @@
 
 /* pages */
 @import 'pages/HomePage.css';
+@import 'pages/AboutMePage.css';
 
 /* cmps */
 @import 'cmps/AppHeader.css';
-@import 'cmps/MainAboutMe.css';
-@import 'cmps/Introduction.css';
-@import 'cmps/ProjectList.css';
-@import 'cmps/ProjectPreview.css';
 @import 'cmps/ContactMe.css';
-@import 'cmps/SocialLinks.css';
 @import 'cmps/AppFooter.css';
 @import 'cmps/UserMsg.css';
 

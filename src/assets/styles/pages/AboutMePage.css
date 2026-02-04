@@ -1,0 +1,33 @@
+.about-me-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    row-gap: 15rem;
+
+    max-width: 1500px;
+    margin-inline: auto;
+    margin-block-start: 7rem;
+
+    .eldan-img-1{
+        width: 660px;
+        height: 800px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .eldan-img-2{
+        width: 720px;
+        height: 720px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about-me,.what-i-do{
+        align-self: center;
+
+        h4{
+            padding-block:1rem;
+            color:var(--dark-grey);
+        }
+    }
+}

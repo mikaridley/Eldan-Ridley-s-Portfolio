@@ -1,16 +1,4 @@
-/* headers */
-@font-face {
-  font-family: homenaje;
-  src: url('../../fonts/homenaje/Homenaje-Regular.ttf');
-}
 
-@font-face {
-  font-family: homenaje;
-  src: url('../../fonts/homenaje/Homenaje-Regular.ttf');
-  font-weight: 700;
-}
-
-/* text */
 @font-face {
   font-family: manrope;
   src: url('../../fonts/manrope/manrope-regular.ttf');
@@ -18,6 +6,31 @@
 
 @font-face {
   font-family: manrope;
+  src: url('../../fonts/manrope/Manrope-Medium.ttf');
+  font-weight: 500;
+}
+
+
+@font-face {
+  font-family: manrope;
+  src: url('../../fonts/manrope/Manrope-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: manrope;
   src: url('../../fonts/manrope/manrope-bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: monserrat;
+  src: url('../../fonts/montserrat/Montserrat-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: monserrat;
+  src: url('../../fonts/montserrat/Montserrat-Bold.ttf');
   font-weight: 700;
 }
