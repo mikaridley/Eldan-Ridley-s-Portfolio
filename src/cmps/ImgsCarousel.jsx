@@ -1,37 +1,81 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useMemo } from 'react'
 import '../assets/styles/cmps/ImgsCarousel.css'
 
 const GAP = 12
-const VISIBLE_COUNT = 4
+const SLIDE_HEIGHT = 550
 
 export function ImgsCarousel({ images = [] }) {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [slideWidth, setSlideWidth] = useState(0)
+  const [slideWidths, setSlideWidths] = useState([])
+  const [isTransitioning, setIsTransitioning] = useState(true)
   const viewportRef = useRef(null)
+  const n = images.length
+  const displayImages = n > 0 ? [...images, ...images] : []
+
+  const getSlideWidth = (idx) => slideWidths[idx] ?? SLIDE_HEIGHT
+
+  const offsetByIndex = useMemo(() => {
+    const offsets = [0]
+    for (let i = 0; i < displayImages.length; i++) {
+      const w = slideWidths[i] ?? SLIDE_HEIGHT
+      offsets.push(offsets[i] + w + GAP)
+    }
+    return offsets
+  }, [displayImages.length, slideWidths])
+
+  const translateX = -offsetByIndex[currentIndex] ?? 0
+
+  const handleImageLoad = (idx, e) => {
+    const { naturalWidth, naturalHeight } = e.target
+    if (!naturalWidth || !naturalHeight) return
+    const w = SLIDE_HEIGHT * (naturalWidth / naturalHeight)
+    setSlideWidths((prev) => {
+      const next = [...prev]
+      next[idx] = w
+      return next
+    })
+  }
 
   useEffect(() => {
-    const el = viewportRef.current
-    if (!el) return
-    const updateSlideWidth = () => {
-      const totalGap = (VISIBLE_COUNT - 1) * GAP
-      const w = (el.offsetWidth - totalGap) / VISIBLE_COUNT
-      setSlideWidth(w)
+    setSlideWidths([])
+  }, [images])
+
+  const handleTransitionEnd = () => {
+    if (n === 0) return
+    if (currentIndex >= n) {
+      setIsTransitioning(false)
+      setCurrentIndex(currentIndex % n)
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setIsTransitioning(true))
+      })
     }
-    updateSlideWidth()
-    const ro = new ResizeObserver(updateSlideWidth)
-    ro.observe(el)
-    return () => ro.disconnect()
-  }, [])
+  }
 
   const goPrev = () => {
-    setCurrentIndex((i) => (i === 0 ? images.length - 1 : i - 1))
+    if (n === 0) return
+    if (currentIndex === 0) {
+      setIsTransitioning(false)
+      setCurrentIndex(displayImages.length - 1)
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setIsTransitioning(true))
+      })
+    } else {
+      setCurrentIndex((i) => i - 1)
+    }
   }
 
   const goNext = () => {
-    setCurrentIndex((i) => (i === images.length - 1 ? 0 : i + 1))
+    if (n === 0) return
+    if (currentIndex === displayImages.length - 1) {
+      setIsTransitioning(false)
+      setCurrentIndex(0)
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setIsTransitioning(true))
+      })
+    } else {
+      setCurrentIndex((i) => i + 1)
+    }
   }
-
-  const translateX = slideWidth > 0 ? -currentIndex * (slideWidth + GAP) : 0
 
   if (!images.length) return null
 
@@ -43,15 +87,21 @@ export function ImgsCarousel({ images = [] }) {
           style={{
             transform: `translateX(${translateX}px)`,
             gap: `${GAP}px`,
+            transition: isTransitioning ? 'transform 0.3s ease' : 'none',
           }}
+          onTransitionEnd={handleTransitionEnd}
         >
-          {images.map((src, idx) => (
+          {displayImages.map((src, idx) => (
             <div
               key={idx}
               className="imgs-carousel-slide"
-              style={{ width: slideWidth > 0 ? `${slideWidth}px` : undefined }}
+              style={{ width: `${getSlideWidth(idx)}px` }}
             >
-              <img src={src} alt={`Slide ${idx + 1}`} />
+              <img
+                src={src}
+                alt={`Slide ${(idx % n) + 1}`}
+                onLoad={(e) => handleImageLoad(idx, e)}
+              />
             </div>
           ))}
         </div>
