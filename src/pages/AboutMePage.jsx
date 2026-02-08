@@ -1,5 +1,21 @@
 import eldanImg1 from '../assets/imgs/eldan1.jpg'
 import eldanImg2 from '../assets/imgs/eldan2.jpg'
+import eldanImg3 from '../assets/imgs/eldan3.png'
+import eldanImg4 from '../assets/imgs/eldan4.png'
+import eldanImg5 from '../assets/imgs/eldan5.png'
+import eldanImg6 from '../assets/imgs/eldan6.png'
+import eldanImg7 from '../assets/imgs/eldan7.png'
+import eldanImg8 from '../assets/imgs/eldan8.png'
+import { ImgsCarousel } from '../cmps/ImgsCarousel'
+
+const CAROUSEL_IMAGES = [
+  eldanImg3,
+  eldanImg4,
+  eldanImg5,
+  eldanImg6,
+  eldanImg7,
+  eldanImg8,
+]
 
 export function AboutMePage() {
   return (
@@ -18,6 +34,10 @@ export function AboutMePage() {
         <p>When I’m not geeking out, I enjoy cooking, casual sports like billiards or fishing, reading, and playing games. I even create my own video games here and there for mobile or PC, and occasionally design my own board and card games too.</p>
       </div>
       <img src={eldanImg2} alt="Eldan" className="eldan-img-2"/>
+
+      <div className="about-me-page-carousel">
+        <ImgsCarousel images={CAROUSEL_IMAGES} />
+      </div>
     </section>
   )
 }

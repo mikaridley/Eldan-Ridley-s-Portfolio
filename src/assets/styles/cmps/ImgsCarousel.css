@@ -1,0 +1,92 @@
+.imgs-carousel {
+  position: relative;
+  width: 720px;
+  height: 720px;
+
+  .imgs-carousel-viewport {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  /* Centered wrapper so arrows stay inside visible content area (no cropping) */
+  .imgs-carousel-arrows {
+    position: absolute;
+    inset: 0;
+    max-width: 1500px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    pointer-events: none;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 100px;
+    box-sizing: border-box;
+  }
+
+  .imgs-carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.3s ease;
+    width: max-content;
+  }
+
+  .imgs-carousel-slide {
+    flex-shrink: 0;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+  }
+
+  .imgs-carousel-arrow {
+    pointer-events: auto;
+    position: static;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--dark-grey, #363636);
+    background: #fff;
+    color: var(--dark-grey, #363636);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      background: var(--dark-grey, #363636);
+      color: #fff;
+    }
+
+    &:active {
+      transform: scale(0.96);
+    }
+
+    .imgs-carousel-arrow-icon {
+      font-size: 2rem;
+      line-height: 1;
+      font-weight: 300;
+      user-select: none;
+    }
+
+    &--left .imgs-carousel-arrow-icon {
+      margin-right: 2px;
+    }
+
+    &--right .imgs-carousel-arrow-icon {
+      margin-left: 2px;
+    }
+  }
+}
