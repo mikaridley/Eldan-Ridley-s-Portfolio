@@ -6,7 +6,7 @@
   padding-block: 2rem;
   margin-inline: 6rem;
   margin-block: 10rem;
-  border-top: 1px solid var(--dark-grey);
+  border-top: 1px solid var(--main-txt);
 
 
   > img {
