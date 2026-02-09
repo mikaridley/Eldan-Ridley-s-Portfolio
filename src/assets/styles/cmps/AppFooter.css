@@ -1,28 +1,41 @@
 .app-footer {
+  position: relative;
   display: grid;
-  justify-items: center;
-  gap: 1rem;
-  padding-block-start: 2rem;
-  padding-inline: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding-block: 2rem;
+  margin-inline: 6rem;
+  margin-block: 10rem;
+  border-top: 1px solid var(--dark-grey);
 
-  background-color: var(--clr-bg-dark);
-
-  > * {
-    grid-column: span 2;
-  }
 
   > img {
-    width: 200px;
+justify-self: end;
+    width:70px;
+    grid-row: span 2;
   }
 
   > p {
+    margin:0;
     font-size: 1.2rem;
-    color: var(--clr-bg-light);
-    text-align: center;
+    color: var(--dark-grey);
+
+    &.msg {
+      font-size: 2rem;
+    }
+
+    &.email {
+      grid-row: 2;
+      font-size: 0.9rem;
+    }
   }
 
   .copyright {
-    justify-self: start;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     font-size: 0.8rem;
   }
+
+  
 }
