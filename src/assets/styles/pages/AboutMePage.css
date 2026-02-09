@@ -35,7 +35,7 @@
         grid-column: 1 / -1;
         width: 100vw;
         margin-left: calc(50% - 50vw);
-        overflow: visible;
+        overflow-x: clip;
 
         .imgs-carousel {
             width: 100%;
