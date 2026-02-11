@@ -6,6 +6,7 @@ import eldanImg5 from '../assets/imgs/eldan5.png'
 import eldanImg6 from '../assets/imgs/eldan6.png'
 import eldanImg7 from '../assets/imgs/eldan7.png'
 import eldanImg8 from '../assets/imgs/eldan8.png'
+import eldanImg9 from '../assets/imgs/eldan9.png'
 import { ImgsCarousel } from '../cmps/ImgsCarousel'
 
 const CAROUSEL_IMAGES = [
@@ -15,6 +16,7 @@ const CAROUSEL_IMAGES = [
   eldanImg6,
   eldanImg7,
   eldanImg8,
+  eldanImg9,
 ]
 
 export function AboutMePage() {
