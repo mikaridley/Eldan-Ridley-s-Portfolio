@@ -35,9 +35,9 @@
         transition: width 0.2s ease;
       }
 
-      &:hover {
-        color:var(--dark-txt);
-        font-weight: 700;
+      &:hover,
+      &.active {
+        color: var(--dark-txt);
         &::after {
           width: 90%;
         }
