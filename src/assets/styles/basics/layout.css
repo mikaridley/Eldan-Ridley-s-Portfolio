@@ -1,5 +1,10 @@
 .main-layout {
+  position: relative;
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
+}
+
+.main-layout main {
+  padding-block-start: 5rem;
 }

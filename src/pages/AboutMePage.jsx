@@ -7,6 +7,7 @@ import eldanImg6 from '../assets/imgs/eldan6.png'
 import eldanImg7 from '../assets/imgs/eldan7.png'
 import eldanImg8 from '../assets/imgs/eldan8.png'
 import eldanImg9 from '../assets/imgs/eldan9.png'
+import { AppHeader } from '../cmps/AppHeader'
 import { ImgsCarousel } from '../cmps/ImgsCarousel'
 
 const CAROUSEL_IMAGES = [

@@ -1,2 +1,10 @@
 .home-page {
+    .home-opening {
+        margin-block-start: -5rem;
+        padding-block-start: 5rem;
+        background-image: url('../../imgs/quantex/home-bg.png');
+        background-size: cover;
+        background-position: top center;
+    }
 }
+ 
