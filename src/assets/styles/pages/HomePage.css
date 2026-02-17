@@ -87,6 +87,8 @@
         padding-inline: 10rem;
         padding-block: 5rem;
         background-color: #fff;
+        max-width: 1100px;
+        margin-inline: auto;
 
         .project-details-heading {
             font-size: 1.25rem;
