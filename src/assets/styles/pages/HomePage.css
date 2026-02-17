@@ -56,5 +56,28 @@
             margin-block-start: 2rem;
         }
     }
+
+    .problem-solution {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem 6rem;
+        padding-inline: 10rem;
+        padding-block: 5rem;
+        background-color: var(--light-bg);
+
+        .problem-solution-heading {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--dark-grey);
+            margin-block-end: 1rem;
+        }
+
+        .problem-solution-col p {
+            color: var(--main-txt);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+    }
 }
  
