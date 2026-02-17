@@ -114,6 +114,7 @@
         width: 100vw;
         margin-left: calc(50% - 50vw);
         overflow-x: clip;
+        margin-block-end: 10rem;
 
         .imgs-carousel {
             width: 100%;

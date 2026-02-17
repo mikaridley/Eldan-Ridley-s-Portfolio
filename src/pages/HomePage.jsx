@@ -1,6 +1,7 @@
 import appScreen from '../assets/imgs/quantex/first-page.png'
 import appGif from '../assets/imgs/quantex/app-gif.gif'
 import { ImgsCarousel } from '../cmps/ImgsCarousel'
+import { Stepper } from '../cmps/Stepper'
 
 const quantexCarouselModules = import.meta.glob('../assets/imgs/quantex/carousel/*', { eager: true })
 const QUANTEX_CAROUSEL_IMAGES = Object.keys(quantexCarouselModules)
@@ -73,6 +74,8 @@ export function HomePage() {
           <ImgsCarousel images={QUANTEX_CAROUSEL_IMAGES} />
         </section>
       )}
+
+      <Stepper activeStep={1} />
       
     </section>
   )
