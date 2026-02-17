@@ -31,6 +31,36 @@ export function HomePage() {
           <p>I designed Quantex to replace the physical errand with a digital-first approach. The platform allows users to convert currencies instantly with a single tap, enabling them to pay at cashiers or online without delay. By prioritising a simple, high-contrast interface, I ensured the product is easy to navigate for everyone, from tech-savvy travellers to those who typically struggle with complex digital tools.</p>
         </div>
       </section>
+
+      <section className="project-details">
+        <div className="project-details-col">
+          <h4 className="project-details-heading">My role</h4>
+          <ul className="project-details-list">
+            <li>UX designer</li>
+            <li>Visual designer</li>
+            <li>UX researcher</li>
+          </ul>
+        </div>
+        <div className="project-details-col">
+          <h4 className="project-details-heading">Team</h4>
+          <ul className="project-details-list">
+            <li>Solo project</li>
+          </ul>
+        </div>
+        <div className="project-details-col">
+          <h4 className="project-details-heading">Duration</h4>
+          <ul className="project-details-list">
+            <li>3 weeks</li>
+          </ul>
+        </div>
+        <div className="project-details-col">
+          <h4 className="project-details-heading">Tools</h4>
+          <ul className="project-details-list">
+            <li>Figma</li>
+            <li>Good old fashion pen & paper</li>
+          </ul>
+        </div>
+      </section>
       
     </section>
   )
