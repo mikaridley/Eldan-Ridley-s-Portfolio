@@ -1,7 +1,16 @@
 import appScreen from '../assets/imgs/quantex/first-page.png'
 import appGif from '../assets/imgs/quantex/app-gif.gif'
 import { ImgsCarousel } from '../cmps/ImgsCarousel'
+
+const stepperImgModules = import.meta.glob('../assets/imgs/quantex/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
+const STEPPER_PERSONA_IMAGES = Object.keys(stepperImgModules)
+  .sort()
+  .slice(0, 2)
+  .map((key) => stepperImgModules[key].default)
+  .filter(Boolean)
+
 import { Stepper } from '../cmps/Stepper'
+import { StepperHeader } from '../cmps/StepperHeader'
 
 const quantexCarouselModules = import.meta.glob('../assets/imgs/quantex/carousel/*', { eager: true })
 const QUANTEX_CAROUSEL_IMAGES = Object.keys(quantexCarouselModules)
@@ -76,7 +85,21 @@ export function HomePage() {
       )}
 
       <Stepper activeStep={1} />
-      
+      <StepperHeader number={1} word="Research" />
+
+      <section className="research-personas" aria-labelledby="research-personas-heading">
+        <h3 id="research-personas-heading" className="research-personas-heading">1.1. Defining the target audience</h3>
+        <h4 className="research-personas-subtitle">Personas</h4>
+        <p className="research-personas-intro">
+          These personas represent the core user groups identified during the research phase. They served as a guide for every design decision, helping me build a solution that simplifies the currency exchange process for everyone, from busy parents to users with specific accessibility requirements.
+        </p>
+        <div className="research-personas-imgs">
+          {STEPPER_PERSONA_IMAGES.map((src, index) => (
+            <img key={index} src={src} alt="" className="research-personas-img" />
+          ))}
+        </div>
+      </section>
+
     </section>
   )
 }

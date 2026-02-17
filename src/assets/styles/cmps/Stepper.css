@@ -2,10 +2,10 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+
   padding-block: 1.5rem;
   padding-inline: 2rem;
+  margin-block-end: 10rem;
 
   .stepper {
     display: flex;

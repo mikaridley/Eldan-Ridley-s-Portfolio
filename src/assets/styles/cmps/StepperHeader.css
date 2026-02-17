@@ -1,0 +1,14 @@
+.stepper-header {
+  background-color: var(--baby-blue-bg);
+  padding-block: 2.5rem;
+  padding-inline: 2rem;
+  text-align: center;
+
+  .stepper-header-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    color: var(--dark-txt);
+    letter-spacing: 0.02em;
+  }
+}
