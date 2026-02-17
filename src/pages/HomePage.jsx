@@ -1,6 +1,12 @@
 import appScreen from '../assets/imgs/quantex/first-page.png'
 import appGif from '../assets/imgs/quantex/app-gif.gif'
-import { AppHeader } from '../cmps/AppHeader'
+import { ImgsCarousel } from '../cmps/ImgsCarousel'
+
+const quantexCarouselModules = import.meta.glob('../assets/imgs/quantex/carousel/*', { eager: true })
+const QUANTEX_CAROUSEL_IMAGES = Object.keys(quantexCarouselModules)
+  .sort()
+  .map((key) => quantexCarouselModules[key].default)
+  .filter(Boolean)
 
 
 
@@ -61,6 +67,12 @@ export function HomePage() {
           </ul>
         </div>
       </section>
+
+      {QUANTEX_CAROUSEL_IMAGES.length > 0 && (
+        <section className="home-page-carousel">
+          <ImgsCarousel images={QUANTEX_CAROUSEL_IMAGES} />
+        </section>
+      )}
       
     </section>
   )
