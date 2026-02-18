@@ -177,6 +177,8 @@ export function HomePage() {
         )}
       </section>
 
+      <StepperHeader number={3} word="Design" />
+
     </section>
   )
 }
