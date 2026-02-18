@@ -13,6 +13,11 @@ const getStepperImg = (name) => {
   return key ? stepperImgModules[key].default : null
 }
 const EMPATHY_MAP_IMG = getStepperImg('empathy')
+const STEPPER_STICKY_NOTE_IMAGES = Object.keys(stepperImgModules)
+  .filter((k) => k.toLowerCase().includes('sticky'))
+  .sort()
+  .map((key) => stepperImgModules[key].default)
+  .filter(Boolean)
 
 import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
@@ -124,6 +129,38 @@ export function HomePage() {
             <img src={EMPATHY_MAP_IMG} alt="Empathy map for Robert - says, thinks, does, feels" className="research-empathy-img" />
           </div>
         )}
+      </section>
+
+      <StepperHeader number={2} word="Ideation" />
+
+      <section className="ideation-user-stories" aria-labelledby="ideation-user-stories-heading">
+        <h3 id="ideation-user-stories-heading" className="ideation-user-stories-heading">2.1. User stories & requirements</h3>
+
+        <div className="ideation-block">
+          <h4 className="ideation-block-title">User stories</h4>
+          <p className="ideation-block-p">
+            I drafted user stories to define the core needs of my personas. These statements ensured that every feature addressed a specific goal, such as Drake&apos;s need for efficiency as a single parent or Natasha&apos;s requirement for spontaneity and simplicity.
+          </p>
+          {STEPPER_STICKY_NOTE_IMAGES.length > 0 && (
+            <div className="ideation-sticky-notes">
+              {STEPPER_STICKY_NOTE_IMAGES.map((src, index) => (
+                <img key={index} src={src} alt="" className="ideation-sticky-note-img" />
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="ideation-block">
+          <h4 className="ideation-block-title">How might we</h4>
+          <p className="ideation-block-p">
+            I translated my research findings and user stories into &apos;How Might We&apos; statements. This process allowed me to reframe user pain points as design opportunities, ensuring the solution focused on accessibility, speed, and the removal of physical errands.
+          </p>
+          <ul className="ideation-hmw-list">
+            <li>How might we eliminate the need for travellers to visit physical exchange shops before or during their trip?</li>
+            <li>How might we design a currency exchange process that is intuitive for users with low technical knowledge or memory hurdles?</li>
+            <li>How might we help a busy parent complete a secure transaction in seconds?</li>
+          </ul>
+        </div>
       </section>
 
     </section>
