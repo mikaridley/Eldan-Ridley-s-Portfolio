@@ -19,6 +19,7 @@ const STEPPER_STICKY_NOTE_IMAGES = Object.keys(stepperImgModules)
   .map((key) => stepperImgModules[key].default)
   .filter(Boolean)
 const PROJECT_IMAGE = getStepperImg('project image')
+const PAPER_WIREFRAME_IMG = getStepperImg('paper wireframe')
 
 import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
@@ -27,6 +28,12 @@ const quantexCarouselModules = import.meta.glob('../assets/imgs/quantex/carousel
 const QUANTEX_CAROUSEL_IMAGES = Object.keys(quantexCarouselModules)
   .sort()
   .map((key) => quantexCarouselModules[key].default)
+  .filter(Boolean)
+
+const lowWireframesCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/low-wireframes-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
+const LOW_WIREFRAMES_CAROUSEL_IMAGES = Object.keys(lowWireframesCarouselModules)
+  .sort()
+  .map((key) => lowWireframesCarouselModules[key].default)
   .filter(Boolean)
 
 
@@ -112,9 +119,9 @@ export function HomePage() {
       </section>
 
       <section className="research-empathy" aria-labelledby="research-empathy-heading">
+        <h3 id="research-empathy-heading" className="research-empathy-heading">1.2. User research & synthesis</h3>
+        <h4 className="research-empathy-subtitle">Empathy map</h4>
         <div className="research-empathy-text">
-          <h3 id="research-empathy-heading" className="research-empathy-heading">1.2. User research & synthesis</h3>
-          <h4 className="research-empathy-subtitle">Empathy map</h4>
           <p className="research-empathy-p">
             The key insight from this map was that users didn&apos;t just want better rates - they wanted their time back.
           </p>
@@ -178,6 +185,39 @@ export function HomePage() {
       </section>
 
       <StepperHeader number={3} word="Design" />
+
+      <section className="design-wireframes" aria-labelledby="design-wireframes-heading">
+        <h3 id="design-wireframes-heading" className="design-wireframes-heading">3.1. Sketches to low-fidelity</h3>
+        <h4 className="design-wireframes-subtitle">Paper wireframes</h4>
+        <div className="design-wireframes-text">
+          <p className="design-wireframes-p">
+            I used paper wireframes to explore a layout that removes complexity for those less familiar with digital finance. By simplifying the steps between currency selection and the final exchange, I ensured the process feels intuitive and efficient, regardless of the user&apos;s technical experience.
+          </p>
+          <ul className="design-wireframes-notes">
+            <li><strong>a.</strong> Large, clear input fields allow users to quickly choose their currencies without searching through dense menus.</li>
+            <li><strong>b.</strong> Positioning the primary action at the bottom of the screen ensures it sits within the &apos;thumb zone&apos;. This ergonomic choice improves accessibility and allows for a more comfortable one-handed experience for all users.</li>
+          </ul>
+        </div>
+        {PAPER_WIREFRAME_IMG && (
+          <div className="design-wireframes-fig">
+            <img src={PAPER_WIREFRAME_IMG} alt="Paper wireframe - select amount screen for currency exchange" className="design-wireframes-img" />
+          </div>
+        )}
+
+        <h4 className="design-wireframes-subtitle design-wireframes-subtitle--block">Low-fidelity wireframes</h4>
+        <p className="design-wireframes-lofi-p">
+          I transitioned my paper sketches into digital low-fidelity wireframes to focus on visual hierarchy and flow. During this stage, I refined the layout to ensure the core exchange process remained the central focus, allowing me to test the usability of the interface before introducing brand elements.
+        </p>
+        <div className="design-wireframes-carousel">
+          {LOW_WIREFRAMES_CAROUSEL_IMAGES.length > 0 ? (
+            <ImgsCarousel images={LOW_WIREFRAMES_CAROUSEL_IMAGES} />
+          ) : (
+            <p className="design-wireframes-carousel-placeholder">
+              Add wireframe images to <code>src/assets/imgs/quantex/stepper/low-wireframes-carousel/</code> to see the carousel.
+            </p>
+          )}
+        </div>
+      </section>
 
     </section>
   )
