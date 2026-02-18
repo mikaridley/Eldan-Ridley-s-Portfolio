@@ -8,6 +8,11 @@ const STEPPER_PERSONA_IMAGES = Object.keys(stepperImgModules)
   .slice(0, 2)
   .map((key) => stepperImgModules[key].default)
   .filter(Boolean)
+const getStepperImg = (name) => {
+  const key = Object.keys(stepperImgModules).find((k) => k.toLowerCase().includes(name.toLowerCase()))
+  return key ? stepperImgModules[key].default : null
+}
+const EMPATHY_MAP_IMG = getStepperImg('empathy')
 
 import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
@@ -98,6 +103,27 @@ export function HomePage() {
             <img key={index} src={src} alt="" className="research-personas-img" />
           ))}
         </div>
+      </section>
+
+      <section className="research-empathy" aria-labelledby="research-empathy-heading">
+        <div className="research-empathy-text">
+          <h3 id="research-empathy-heading" className="research-empathy-heading">1.2. User research & synthesis</h3>
+          <h4 className="research-empathy-subtitle">Empathy map</h4>
+          <p className="research-empathy-p">
+            The key insight from this map was that users didn&apos;t just want better rates - they wanted their time back.
+          </p>
+          <p className="research-empathy-p">
+            I created this empathy map to align the product&apos;s core features with the real-world needs of my users.
+          </p>
+          <p className="research-empathy-p">
+            By mapping out what travellers say, think, do, and feel, I identified a clear demand for a digital-first solution that removes the &apos;chore&apos; of visiting a physical exchange centre. This allowed me to focus on creating a &apos;one-click&apos; exchange experience that feels accessible to everyone, regardless of their tech experience.
+          </p>
+        </div>
+        {EMPATHY_MAP_IMG && (
+          <div className="research-empathy-fig">
+            <img src={EMPATHY_MAP_IMG} alt="Empathy map for Robert - says, thinks, does, feels" className="research-empathy-img" />
+          </div>
+        )}
       </section>
 
     </section>
