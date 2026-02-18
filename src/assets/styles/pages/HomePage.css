@@ -307,5 +307,39 @@
     .ideation-hmw-list li:last-child {
         margin-block-end: 0;
     }
+
+    .ideation-mapping {
+        padding-inline: 2rem;
+        padding-block: 3rem 5rem;
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+
+    .ideation-mapping-heading {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 700;
+        color: var(--dark-grey);
+        margin: 0 0 0.5rem 0;
+    }
+
+    .ideation-mapping-subtitle {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--dark-grey);
+        margin: 0 0 1rem 0;
+    }
+
+    .ideation-mapping-p {
+        color: var(--main-txt);
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .ideation-mapping-img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
 }
  

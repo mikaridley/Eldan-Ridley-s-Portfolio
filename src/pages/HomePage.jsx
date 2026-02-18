@@ -18,6 +18,7 @@ const STEPPER_STICKY_NOTE_IMAGES = Object.keys(stepperImgModules)
   .sort()
   .map((key) => stepperImgModules[key].default)
   .filter(Boolean)
+const PROJECT_IMAGE = getStepperImg('project image')
 
 import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
@@ -161,6 +162,19 @@ export function HomePage() {
             <li>How might we help a busy parent complete a secure transaction in seconds?</li>
           </ul>
         </div>
+      </section>
+
+      <section className="ideation-mapping" aria-labelledby="ideation-mapping-heading">
+        <h3 id="ideation-mapping-heading" className="ideation-mapping-heading">2.2. Mapping the journey</h3>
+        <h4 className="ideation-mapping-subtitle">Sitemap</h4>
+        <p className="ideation-mapping-p">
+          I designed a sitemap to establish a clear and shallow information architecture. By keeping the navigation simple, I ensured that users could reach the exchange flow in a single tap.
+        </p>
+        {PROJECT_IMAGE && (
+          <div className="ideation-mapping-fig">
+            <img src={PROJECT_IMAGE} alt="Quantex sitemap - Homepage, Profile, Exchange, Wallet, Rate History" className="ideation-mapping-img" />
+          </div>
+        )}
       </section>
 
     </section>
