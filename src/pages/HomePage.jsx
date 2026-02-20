@@ -30,6 +30,7 @@ const BEFORE_HOMEPAGE_3_IMG = getStepperImg('App Homepage - Before 3')
 const AFTER_HOMEPAGE_3_IMG = getStepperImg('App Homepage - After 3')
 const LINE_IMG = getStepperImg('Line')
 const FINAL_DESIGN_IMG = getStepperImg('final-design')
+const METRICS_IMG = getStepperImg('metrics')
 
 import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
@@ -412,6 +413,8 @@ export function HomePage() {
 
       <StepperHeader number={4} word="Takeaways" />
 
+
+
       <section className="takeaways-reflections-next" aria-labelledby="takeaways-reflections-heading">
         <div className="takeaways-reflections">
           <h3 id="takeaways-reflections-heading" className="takeaways-rn-heading">Reflections</h3>
@@ -442,6 +445,30 @@ export function HomePage() {
             </li>
           </ul>
         </div>
+      </section>
+
+
+      <section className="takeaways-metrics" aria-labelledby="takeaways-metrics-heading">
+        <h3 id="takeaways-metrics-heading" className="takeaways-metrics-heading">Metrics</h3>
+        <p className="takeaways-metrics-intro">
+          As this is a conceptual project, I haven&apos;t tracked live user data. However, if Quantex were to launch, I would focus on the following metrics to evaluate the design&apos;s impact:
+        </p>
+        <ul className="takeaways-metrics-list">
+          <li>
+            <strong>Task Success Rate:</strong> I would track how easily users can complete an exchange from start to finish. A high success rate would confirm that the &apos;simple and friendly&apos; approach is working.
+          </li>
+          <li>
+            <strong>Drop-off Rate:</strong> By monitoring where users leave the flow I could identify if any part of the interface remains confusing or intimidating.
+          </li>
+          <li>
+            <strong>Accessibility Compliance:</strong> Regular audits would ensure the app continues to meet WCAG 2.1 Level AA standards as new currencies or features are added.
+          </li>
+        </ul>
+        {METRICS_IMG && (
+          <div className="takeaways-metrics-fig">
+            <img src={METRICS_IMG} alt="Metrics graph - Task success rate, Drop-off reduction, WCAG compliance" className="takeaways-metrics-img" />
+          </div>
+        )}
       </section>
 
     </section>
