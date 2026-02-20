@@ -712,6 +712,44 @@
                 object-fit: contain;
             }
         }
+
+        .design-hifi-desktop {
+            padding-inline: 2rem;
+            padding-block: 3rem 4rem;
+            max-width: 720px;
+            margin-inline: auto;
+
+            .design-hifi-desktop-heading {
+                font-size: clamp(1.5rem, 3vw, 2rem);
+                font-weight: 700;
+                color: var(--dark-grey);
+                margin: 0 0 1rem 0;
+            }
+
+            .design-hifi-desktop-p {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: var(--main-txt);
+                margin: 0 0 1rem 0;
+
+                &:last-child {
+                    margin-block-end: 0;
+                }
+            }
+        }
+
+        .design-hifi-computer-carousel {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            overflow-x: clip;
+            margin-block: 2rem 4rem;
+
+            .imgs-carousel {
+                width: 100%;
+                height: 500px;
+                --imgs-carousel-slide-height: 500px;
+            }
+        }
     }
 }
  

@@ -46,6 +46,12 @@ const LOW_WIREFRAMES_CAROUSEL_IMAGES = Object.keys(lowWireframesCarouselModules)
   .map((key) => lowWireframesCarouselModules[key].default)
   .filter(Boolean)
 
+const computerCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/computer-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
+const COMPUTER_CAROUSEL_IMAGES = Object.keys(computerCarouselModules)
+  .sort()
+  .map((key) => computerCarouselModules[key].default)
+  .filter(Boolean)
+
 
 
 export function HomePage() {
@@ -364,6 +370,22 @@ export function HomePage() {
             <img src={FINAL_DESIGN_IMG} alt="Quantex final design - Payment received screens across mobile and web" className="design-hifi-final-img" />
           )}
         </div>
+
+        <div className="design-hifi-desktop">
+          <h3 className="design-hifi-desktop-heading">Desktop website</h3>
+          <p className="design-hifi-desktop-p">
+            For the desktop version, I maintained the exact same layout and functionality as the mobile experience to ensure total consistency. By keeping the interface centred with generous margins, the app remains easy to focus on and doesn&apos;t feel stretched or overwhelming on a larger monitor.
+          </p>
+          <p className="design-hifi-desktop-p">
+            Using wide margins on the desktop version keeps the content in a narrow, readable column. This prevents long lines of text which can be difficult for many users to track and makes the overall interface feel more balanced.
+          </p>
+        </div>
+
+        {COMPUTER_CAROUSEL_IMAGES.length > 0 && (
+          <div className="design-hifi-computer-carousel">
+            <ImgsCarousel images={COMPUTER_CAROUSEL_IMAGES} />
+          </div>
+        )}
       </section>
 
     </section>
