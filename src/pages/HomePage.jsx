@@ -24,6 +24,10 @@ const MOODBOARD_IMG = getStepperImg('mood-board')
 const STICKER_SHEET_IMG = getStepperImg('sticker sheet') || getStepperImg('sticker')
 const BEFORE_HOMEPAGE_IMG = getStepperImg('App Homepage - Before 1')
 const AFTER_HOMEPAGE_IMG = getStepperImg('App Homepage - After 1')
+const BEFORE_HOMEPAGE_2_IMG = getStepperImg('App Homepage - Before 2')
+const AFTER_HOMEPAGE_2_IMG = getStepperImg('App Homepage - After 2')
+const BEFORE_HOMEPAGE_3_IMG = getStepperImg('App Homepage - Before 3')
+const AFTER_HOMEPAGE_3_IMG = getStepperImg('App Homepage - After 3')
 const LINE_IMG = getStepperImg('Line')
 
 import { Stepper } from '../cmps/Stepper'
@@ -285,6 +289,67 @@ export function HomePage() {
             </p>
             {AFTER_HOMEPAGE_IMG && (
               <img src={AFTER_HOMEPAGE_IMG} alt="Quantex app homepage - after redesign" className="design-hifi-ba-img" />
+            )}
+          </div>
+        </div>
+
+        <div className="design-hifi-iteration">
+          <h4 className="design-hifi-iteration-title">Iteration #2</h4>
+        </div>
+
+        <div className="design-hifi-before-after">
+          <div className="design-hifi-before">
+            <h4 className="design-hifi-ba-title">Before</h4>
+            <p className="design-hifi-ba-p">
+              In the initial design, the exchange arrows were a flat icon without any button characteristics. This made it unclear if the element was interactive or simply a visual divider between the currency fields.
+            </p>
+            {BEFORE_HOMEPAGE_2_IMG && (
+              <img src={BEFORE_HOMEPAGE_2_IMG} alt="Quantex exchange screen - before" className="design-hifi-ba-img" />
+            )}
+          </div>
+          {LINE_IMG && (
+            <img src={LINE_IMG} alt="" className="design-hifi-arrow" aria-hidden="true" />
+          )}
+          <div className="design-hifi-after">
+            <h4 className="design-hifi-ba-title">After</h4>
+            <p className="design-hifi-ba-p">
+              I redesigned the arrows as a clear, shadowed button to signal interactivity. This change follows the app&apos;s established button styles, making it intuitive for users to tap and switch the exchange direction instantly.
+            </p>
+            {AFTER_HOMEPAGE_2_IMG && (
+              <img src={AFTER_HOMEPAGE_2_IMG} alt="Quantex exchange screen - after" className="design-hifi-ba-img" />
+            )}
+          </div>
+        </div>
+
+        <div className="design-hifi-iteration design-hifi-iteration--with-intro">
+          <h4 className="design-hifi-iteration-title">Iteration #3</h4>
+        </div>
+
+        <h5 className="design-hifi-iteration-subtitle">Accessibility refinements</h5>
+          <p className="design-hifi-iteration-p">
+            I conducted an accessibility audit using WebAIM&apos;s contrast checker to ensure the interface meets industry standards for readability. These refinements focus on adjusting colour contrast and button visibility, making the app easier to navigate for users with visual impairments or those viewing the screen in challenging lighting conditions.
+          </p>
+
+        <div className="design-hifi-before-after">
+          <div className="design-hifi-before">
+            <h4 className="design-hifi-ba-title">Before</h4>
+            <p className="design-hifi-ba-p">
+              The initial green brand colour failed to meet the WCAG AA contrast standards for accessibility. The light text on the green background made primary actions difficult to read for users with low vision.
+            </p>
+            {BEFORE_HOMEPAGE_3_IMG && (
+              <img src={BEFORE_HOMEPAGE_3_IMG} alt="Quantex transaction summary - before accessibility update" className="design-hifi-ba-img" />
+            )}
+          </div>
+          {LINE_IMG && (
+            <img src={LINE_IMG} alt="" className="design-hifi-arrow" aria-hidden="true" />
+          )}
+          <div className="design-hifi-after">
+            <h4 className="design-hifi-ba-title">After</h4>
+            <p className="design-hifi-ba-p">
+              I updated the brand palette to a deeper blue, which passed the WebAIM contrast test with a higher ratio. This change ensures that all text and icons are sharp and legible, providing a more inclusive experience without sacrificing the professional look of the app.
+            </p>
+            {AFTER_HOMEPAGE_3_IMG && (
+              <img src={AFTER_HOMEPAGE_3_IMG} alt="Quantex transaction summary - after accessibility update" className="design-hifi-ba-img" />
             )}
           </div>
         </div>
