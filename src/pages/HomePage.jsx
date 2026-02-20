@@ -250,6 +250,19 @@ export function HomePage() {
         </div>
       </section>
 
+      <section className="design-hifi" aria-labelledby="design-hifi-heading">
+        <div className="design-hifi-intro">
+          <h3 id="design-hifi-heading" className="design-hifi-heading">3.3. High-fidelity mockups</h3>
+          <h4 className="design-hifi-subtitle">Iterations</h4>
+          <p className="design-hifi-p">
+            After testing the initial designs, I identified several areas where the user flow could be further simplified. These iterations focus on refining the layout based on direct user feedback, ensuring that the most important tasks — like checking rates and finalising an exchange — are as seamless as possible.
+          </p>
+        </div>
+        <div className="design-hifi-iteration">
+          <h4 className="design-hifi-iteration-title">Iteration #1</h4>
+        </div>
+      </section>
+
     </section>
   )
 }

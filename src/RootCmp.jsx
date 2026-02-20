@@ -7,16 +7,17 @@ import { AppFooter } from './cmps/AppFooter'
 
 export function RootCmp() {
   const { pathname } = useLocation()
-  const isHome = pathname === '/home' || pathname === 'home'
+  const isHome = pathname === '/' || pathname === '/home' || pathname === 'home'
 
   return (
     <div className={`main-layout${isHome ? ' on-home' : ''}`}>
-     <AppHeader />
+      <AppHeader />
       <main>
         <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="home" element={<HomePage />} />
           <Route path="about-me" element={<AboutMePage />} />
-        </Routes> 
+        </Routes>
       </main>
       <AppFooter />
     </div>

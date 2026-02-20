@@ -551,5 +551,58 @@
             }
         }
     }
+
+    .design-hifi {
+    max-width: 1200px;
+    margin-inline: auto;
+    
+        .design-hifi-intro {
+            background-color: var(--hero-bg);
+            color: var(--light-txt);
+            padding-inline: 2rem;
+            padding-block: 3rem 3rem;
+
+            .design-hifi-heading {
+                font-size: clamp(1.5rem, 3vw, 2rem);
+                font-weight: 700;
+                color: var(--dark-txt);
+                margin: 0 0 0.5rem 0;
+            }
+
+            .design-hifi-subtitle {
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: var(--dark-txt);
+                opacity: 0.9;
+                margin: 0 0 1rem 0;
+            }
+
+            .design-hifi-p {
+                color: var(--dark-grey);
+                opacity: 0.85;
+                font-size: 1rem;
+                line-height: 1.6;
+                margin: 0;
+                max-width: 720px;
+            }
+        }
+
+        .design-hifi-iteration {
+            background-color: var(--light-bg);
+            padding-inline: 2rem;
+            padding-block: 2rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 6rem;
+
+            .design-hifi-iteration-title {
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: var(--dark-grey);
+                margin: 0;
+            }
+        }
+    }
 }
  
