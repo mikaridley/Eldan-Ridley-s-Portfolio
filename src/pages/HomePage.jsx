@@ -410,6 +410,8 @@ export function HomePage() {
 
       </section>
 
+      <StepperHeader number={4} word="Takeaways" />
+
     </section>
   )
 }
