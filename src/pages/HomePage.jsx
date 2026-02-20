@@ -52,6 +52,12 @@ const COMPUTER_CAROUSEL_IMAGES = Object.keys(computerCarouselModules)
   .map((key) => computerCarouselModules[key].default)
   .filter(Boolean)
 
+const finalCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/final-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
+const FINAL_CAROUSEL_IMAGES = Object.keys(finalCarouselModules)
+  .sort()
+  .map((key) => finalCarouselModules[key].default)
+  .filter(Boolean)
+
 
 
 export function HomePage() {
@@ -395,6 +401,12 @@ export function HomePage() {
             I kept the native app and mobile web designs almost identical. This ensures that users like Drake or Natasha get the same simple interface and accessible features, regardless of how they choose to log in while on the go.
           </p>
         </div>
+
+        {FINAL_CAROUSEL_IMAGES.length > 0 && (
+          <div className="design-hifi-final-carousel">
+            <ImgsCarousel images={FINAL_CAROUSEL_IMAGES} />
+          </div>
+        )}
 
       </section>
 
