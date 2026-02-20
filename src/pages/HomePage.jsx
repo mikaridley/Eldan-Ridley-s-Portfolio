@@ -29,6 +29,7 @@ const AFTER_HOMEPAGE_2_IMG = getStepperImg('App Homepage - After 2')
 const BEFORE_HOMEPAGE_3_IMG = getStepperImg('App Homepage - Before 3')
 const AFTER_HOMEPAGE_3_IMG = getStepperImg('App Homepage - After 3')
 const LINE_IMG = getStepperImg('Line')
+const FINAL_DESIGN_IMG = getStepperImg('final-design')
 
 import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
@@ -352,6 +353,16 @@ export function HomePage() {
               <img src={AFTER_HOMEPAGE_3_IMG} alt="Quantex transaction summary - after accessibility update" className="design-hifi-ba-img" />
             )}
           </div>
+        </div>
+
+        <div className="design-hifi-final">
+          <h3 className="design-hifi-final-heading">Final design</h3>
+          <p className="design-hifi-final-p">
+            The final phase of the project involved expanding Quantex across multiple platforms. By designing the mobile app alongside the desktop and mobile web versions, I made sure the app feels the same no matter where you use it. Whether a user is at home on a PC, using a mobile browser, or opening the app while travelling, the layout remains familiar and easy to navigate.
+          </p>
+          {FINAL_DESIGN_IMG && (
+            <img src={FINAL_DESIGN_IMG} alt="Quantex final design - Payment received screens across mobile and web" className="design-hifi-final-img" />
+          )}
         </div>
       </section>
 
