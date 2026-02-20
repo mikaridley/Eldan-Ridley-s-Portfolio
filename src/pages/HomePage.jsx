@@ -22,6 +22,9 @@ const PROJECT_IMAGE = getStepperImg('project image')
 const PAPER_WIREFRAME_IMG = getStepperImg('paper wireframe')
 const MOODBOARD_IMG = getStepperImg('mood-board')
 const STICKER_SHEET_IMG = getStepperImg('sticker sheet') || getStepperImg('sticker')
+const BEFORE_HOMEPAGE_IMG = getStepperImg('App Homepage - Before 1')
+const AFTER_HOMEPAGE_IMG = getStepperImg('App Homepage - After 1')
+const LINE_IMG = getStepperImg('Line')
 
 import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
@@ -260,6 +263,30 @@ export function HomePage() {
         </div>
         <div className="design-hifi-iteration">
           <h4 className="design-hifi-iteration-title">Iteration #1</h4>
+        </div>
+
+        <div className="design-hifi-before-after">
+          <div className="design-hifi-before">
+            <h4 className="design-hifi-ba-title">Before</h4>
+            <p className="design-hifi-ba-p">
+              The original layout relied on a vertical list of buttons, requiring users to navigate away from the home screen to view essential data like rate trends or transaction history.
+            </p>
+            {BEFORE_HOMEPAGE_IMG && (
+              <img src={BEFORE_HOMEPAGE_IMG} alt="Quantex app homepage - before redesign" className="design-hifi-ba-img" />
+            )}
+          </div>
+          {LINE_IMG && (
+            <img src={LINE_IMG} alt="" className="design-hifi-arrow" aria-hidden="true" />
+          )}
+          <div className="design-hifi-after">
+            <h4 className="design-hifi-ba-title">After</h4>
+            <p className="design-hifi-ba-p">
+              I redesigned the home screen to feature interactive widgets that display live data. By bringing the wallet balance and rate graph to the forefront, users can get an instant overview of their finances without additional navigation.
+            </p>
+            {AFTER_HOMEPAGE_IMG && (
+              <img src={AFTER_HOMEPAGE_IMG} alt="Quantex app homepage - after redesign" className="design-hifi-ba-img" />
+            )}
+          </div>
         </div>
       </section>
 
