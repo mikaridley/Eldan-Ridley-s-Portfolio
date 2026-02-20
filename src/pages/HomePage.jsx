@@ -20,6 +20,8 @@ const STEPPER_STICKY_NOTE_IMAGES = Object.keys(stepperImgModules)
   .filter(Boolean)
 const PROJECT_IMAGE = getStepperImg('project image')
 const PAPER_WIREFRAME_IMG = getStepperImg('paper wireframe')
+const MOODBOARD_IMG = getStepperImg('mood-board')
+const STICKER_SHEET_IMG = getStepperImg('sticker sheet') || getStepperImg('sticker')
 
 import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
@@ -215,6 +217,35 @@ export function HomePage() {
             <p className="design-wireframes-carousel-placeholder">
               Add wireframe images to <code>src/assets/imgs/quantex/stepper/low-wireframes-carousel/</code> to see the carousel.
             </p>
+          )}
+        </div>
+      </section>
+
+      <section className="design-visual-identity" aria-labelledby="design-visual-identity-heading">
+        <h3 id="design-visual-identity-heading" className="design-visual-identity-heading">3.2. Visual identity & moodboard</h3>
+
+        <div className="design-visual-identity-block">
+          <h4 className="design-visual-identity-subtitle">Moodboard</h4>
+          <p className="design-visual-identity-p">
+            I looked for visuals that balanced a sense of security with the excitement of travel. I chose a blue accent to build professional trust, paired with cleaner, lighter tones to ensure the app feels like a helpful travel companion rather than a complex financial tool.
+          </p>
+          {MOODBOARD_IMG && (
+            <div className="design-visual-identity-fig">
+              <img src={MOODBOARD_IMG} alt="Moodboard - banking and travel app UI inspiration" className="design-visual-identity-img" />
+            </div>
+          )}
+        </div>
+
+        <div className="design-visual-identity-block">
+          <h4 className="design-visual-identity-subtitle">Style guide</h4>
+          <p className="design-visual-identity-p">
+            I designed these components to keep the experience intuitive and approachable. By using familiar iconography and a clean visual hierarchy, I ensured the interface feels friendly and simple to navigate, removing the &apos;intimidation factor&apos; usually found in banking apps.
+            Accessibility in mind: I used universally recognised icons and high-contrast colours to support users who may find text-heavy interfaces overwhelming. This approach ensures that even at a glance, the app&apos;s functions remain clear and accessible to everyone.
+          </p>
+          {STICKER_SHEET_IMG && (
+            <div className="design-visual-identity-fig">
+              <img src={STICKER_SHEET_IMG} alt="Style guide - Quantex typography, colours, buttons, inputs, icons" className="design-visual-identity-img" />
+            </div>
           )}
         </div>
       </section>
