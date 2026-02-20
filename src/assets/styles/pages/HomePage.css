@@ -738,6 +738,27 @@
             }
         }
 
+        .design-hifi-mobile {
+            padding-inline: 2rem;
+            padding-block: 3rem 4rem;
+            max-width: 720px;
+            margin-inline: auto;
+
+            .design-hifi-mobile-heading {
+                font-size: clamp(1.5rem, 3vw, 2rem);
+                font-weight: 700;
+                color: var(--dark-grey);
+                margin: 0 0 1rem 0;
+            }
+
+            .design-hifi-mobile-p {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: var(--main-txt);
+                margin: 0;
+            }
+        }
+
         .design-hifi-computer-carousel {
             width: 100vw;
             margin-left: calc(50% - 50vw);

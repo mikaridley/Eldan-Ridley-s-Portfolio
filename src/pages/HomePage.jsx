@@ -381,11 +381,21 @@ export function HomePage() {
           </p>
         </div>
 
+
+
         {COMPUTER_CAROUSEL_IMAGES.length > 0 && (
           <div className="design-hifi-computer-carousel">
             <ImgsCarousel images={COMPUTER_CAROUSEL_IMAGES} />
           </div>
         )}
+
+    <div className="design-hifi-mobile">
+          <h3 className="design-hifi-mobile-heading">Mobile website</h3>
+          <p className="design-hifi-mobile-p">
+            I kept the native app and mobile web designs almost identical. This ensures that users like Drake or Natasha get the same simple interface and accessible features, regardless of how they choose to log in while on the go.
+          </p>
+        </div>
+
       </section>
 
     </section>
