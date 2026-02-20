@@ -412,6 +412,38 @@ export function HomePage() {
 
       <StepperHeader number={4} word="Takeaways" />
 
+      <section className="takeaways-reflections-next" aria-labelledby="takeaways-reflections-heading">
+        <div className="takeaways-reflections">
+          <h3 id="takeaways-reflections-heading" className="takeaways-rn-heading">Reflections</h3>
+          <ul className="takeaways-rn-list">
+            <li>
+              <strong>Simplicity is key:</strong> I learnt that in fintech, less is almost always more. Removing the &apos;intimidation factor&apos; by using familiar iconography and plenty of white space made the app feel far more trustworthy.
+            </li>
+            <li>
+              <strong>Accessibility from the start:</strong> Designing for users like Natasha taught me that accessibility isn&apos;t a &apos;final coat of paint&apos; but a foundation. Checking the WebAIM contrast early on allowed me to confidently settle on a brand palette that was both visually appealing and inclusive from the very beginning.
+            </li>
+            <li>
+              <strong>Platform consistency:</strong> Moving from mobile to PC was a challenge at first, as the desktop version initially felt too sparse compared to traditional websites. However, I realised that maintaining this simplicity ensured the interface felt familiar and comfortable for users moving between devices, which was more valuable than adding unnecessary elements.
+            </li>
+          </ul>
+        </div>
+        <div className="takeaways-next">
+          <h3 id="takeaways-next-heading" className="takeaways-rn-heading">Next steps</h3>
+          <p className="takeaways-next-intro">If I were to continue developing Quantex, I would focus on the following:</p>
+          <ul className="takeaways-rn-list">
+            <li>
+              <strong>Onboarding guide:</strong> I would implement a short, interactive &apos;Quick Start&apos; guide for new users to explain the exchange process and build immediate confidence.
+            </li>
+            <li>
+              <strong>Multi-language support:</strong> To truly support international travel, I would expand the app to include multiple languages, ensuring the interface remains accessible to non-English speakers.
+            </li>
+            <li>
+              <strong>Smart alerts:</strong> I would add a feature for &apos;Rate Alerts&apos;, allowing users to set a target exchange rate and receive a notification when the market hits that number.
+            </li>
+          </ul>
+        </div>
+      </section>
+
     </section>
   )
 }
