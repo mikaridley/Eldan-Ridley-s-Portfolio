@@ -1,36 +1,35 @@
-
 @font-face {
   font-family: manrope;
-  src: url('../../fonts/manrope/manrope-regular.ttf');
+  src: url('../../fonts/manrope/manrope-regular.ttf') format('truetype');
+  font-weight: 400;
 }
 
 @font-face {
   font-family: manrope;
-  src: url('../../fonts/manrope/Manrope-Medium.ttf');
+  src: url('../../fonts/manrope/Manrope-Medium.ttf') format('truetype');
   font-weight: 500;
 }
 
-
 @font-face {
   font-family: manrope;
-  src: url('../../fonts/manrope/Manrope-SemiBold.ttf');
+  src: url('../../fonts/manrope/Manrope-SemiBold.ttf') format('truetype');
   font-weight: 600;
 }
 
 @font-face {
   font-family: manrope;
-  src: url('../../fonts/manrope/manrope-bold.ttf');
+  src: url('../../fonts/manrope/manrope-bold.ttf') format('truetype');
   font-weight: 700;
 }
 
 @font-face {
   font-family: monserrat;
-  src: url('../../fonts/montserrat/Montserrat-SemiBold.ttf');
+  src: url('../../fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
   font-weight: 600;
 }
 
 @font-face {
   font-family: monserrat;
-  src: url('../../fonts/montserrat/Montserrat-Bold.ttf');
+  src: url('../../fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
   font-weight: 700;
 }

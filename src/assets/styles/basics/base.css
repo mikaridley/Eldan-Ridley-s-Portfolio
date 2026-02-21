@@ -6,7 +6,7 @@
 
 html {
   /* color-scheme: light dark; */
-  font-family: 'manrope', sans-serif;
+  font-family: manrope, sans-serif;
   font-size: 14px;
 }
 
@@ -35,25 +35,25 @@ h6 {
 
 h1{
   font-size: 64px;
-  font-family: monserrat;
+  font-family: monserrat, sans-serif;
   font-weight: 600;
 }
 
 h2{
   font-size: 48px;
-  font-family: monserrat;
+  font-family: monserrat, sans-serif;
   font-weight: 700;
 }
 
 h3{
   font-size: 36px;
-  font-family: monserrat;
+  font-family: monserrat, sans-serif;
   font-weight: 700;
 }
 
 h4{
   font-size: 32px;
-  font-family: manrope;
+  font-family: manrope, sans-serif;
   font-weight: 600;
 }
 
@@ -61,7 +61,7 @@ h4{
 p {
   margin: 0 0 1em;
   text-wrap: pretty;
-  font-family: manrope;
+  font-family: manrope, sans-serif;
   font-weight: 500;
 }
 
