@@ -60,14 +60,14 @@
     .problem-solution {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 4rem 6rem;
-        padding-inline: 10rem;
+        gap: 4rem 15rem;
+        padding-inline: var(--home-padding-inline);
         padding-block: 5rem;
         background-color: var(--light-bg);
 
         .problem-solution-heading {
-            font-size: 1.75rem;
-            font-weight: 700;
+            font-size: 2.2rem;
+            font-weight: 600;
             color: var(--dark-grey);
             margin-block-end: 1rem;
         }
@@ -75,7 +75,7 @@
         .problem-solution-col {
             p {
                 color: var(--main-txt);
-                font-size: 1rem;
+                font-size: 1.14rem;
                 line-height: 1.6;
                 margin: 0;
             }
