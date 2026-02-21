@@ -5,7 +5,9 @@
 
   padding-block: 1.5rem;
   padding-inline: 2rem;
-  margin-block-end: 10rem;
+  margin-block-end: 15rem;
+
+  background-color: var(--white-bg);
 
   .stepper {
     display: flex;
@@ -17,9 +19,9 @@
       flex: 1;
       min-width: 20px;
       height: 0;
-      border-top: 1px solid #d0d0d0;
-      margin-inline: 0.25rem;
-      margin-top: 20px;
+      border-top: 1px solid var(--dark-grey);
+      margin-inline: 1.5rem;
+      margin-top: 35px;
       align-self: flex-start;
     }
 
@@ -33,14 +35,14 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 40px;
-          height: 40px;
+          width: 70px;
+          height: 70px;
           border-radius: 50%;
           font-weight: 700;
-          font-size: 1rem;
+          font-size: 2rem;
           background-color: #fff;
-          border: 1px solid #d0d0d0;
-          color: var(--dark-grey, #363636);
+          border: 1px solid var(--dark-grey);
+          color: var(--dark-grey);
           flex-shrink: 0;
 
           &.active {
@@ -52,8 +54,8 @@
 
       .stepper-label {
         margin-block-start: 0.75rem;
-        font-size: 0.95rem;
-        color: var(--dark-grey, #363636);
+        font-size: 1.14rem;
+        color: var(--dark-grey);
         text-align: center;
       }
     }

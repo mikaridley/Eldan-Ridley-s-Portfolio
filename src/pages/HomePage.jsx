@@ -121,7 +121,7 @@ export function HomePage() {
 
       {QUANTEX_CAROUSEL_IMAGES.length > 0 && (
         <section className="home-page-carousel">
-          <ImgsCarousel images={QUANTEX_CAROUSEL_IMAGES} />
+          <ImgsCarousel images={QUANTEX_CAROUSEL_IMAGES} gap={0} />
         </section>
       )}
 

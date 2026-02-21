@@ -1,10 +1,9 @@
 import { useState, useRef, useEffect, useMemo } from 'react'
 import '../assets/styles/cmps/ImgsCarousel.css'
 
-const GAP = 12
 const SLIDE_HEIGHT = 550
 
-export function ImgsCarousel({ images = [] }) {
+export function ImgsCarousel({ images = [], gap = 15 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [slideWidths, setSlideWidths] = useState([])
   const [isTransitioning, setIsTransitioning] = useState(true)
@@ -18,10 +17,10 @@ export function ImgsCarousel({ images = [] }) {
     const offsets = [0]
     for (let i = 0; i < displayImages.length; i++) {
       const w = slideWidths[i] ?? SLIDE_HEIGHT
-      offsets.push(offsets[i] + w + GAP)
+      offsets.push(offsets[i] + w + gap)
     }
     return offsets
-  }, [displayImages.length, slideWidths])
+  }, [displayImages.length, slideWidths, gap])
 
   const translateX = -offsetByIndex[currentIndex] ?? 0
 
@@ -86,7 +85,7 @@ export function ImgsCarousel({ images = [] }) {
           className="imgs-carousel-track"
           style={{
             transform: `translateX(${translateX}px)`,
-            gap: `${GAP}px`,
+            gap: `${gap}px`,
             transition: isTransitioning ? 'transform 0.3s ease' : 'none',
           }}
           onTransitionEnd={handleTransitionEnd}
