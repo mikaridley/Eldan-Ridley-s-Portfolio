@@ -15,17 +15,16 @@
   .imgs-carousel-arrows {
     position: absolute;
     inset: 0;
-    max-width: 1500px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    pointer-events: none;
-    z-index: 1;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-inline: 30px;
-    box-sizing: border-box;
+
+    width: 100%;
+    padding-inline: 2rem;
+    pointer-events: none;
   }
 
   .imgs-carousel-track {
@@ -38,8 +37,6 @@
   .imgs-carousel-slide {
     flex-shrink: 0;
     height: var(--imgs-carousel-slide-height, 550px);
-    border-radius: 8px;
-    overflow: hidden;
 
     img {
       width: 100%;
@@ -47,7 +44,6 @@
       object-fit: contain;
       object-position: center;
       display: block;
-      vertical-align: middle;
     }
   }
 
@@ -58,9 +54,8 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border: 2px solid var(--dark-grey, #363636);
-    background: #fff;
-    color: var(--dark-grey, #363636);
+    border: 2px solid var(--main-txt);
+    color: var(--main-txt);
     cursor: pointer;
     display: flex;
     align-items: center;
