@@ -1,9 +1,10 @@
-.home-page {
+.home-page {  
 
     .home-opening {
         display: grid;
+        grid-template-columns: 1.5fr 1fr;
         row-gap: 1rem;
-        padding-inline: 10rem;
+        padding-inline: var(--home-padding-inline);
         margin-block-start: -5rem;
         padding-block-start: 15rem;
         padding-block-end: 5rem;

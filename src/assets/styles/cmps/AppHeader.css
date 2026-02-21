@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
 
-  padding-inline: 4rem;
+  padding-inline: var(--home-padding-inline);
   padding-block-start: 1rem;
 
   .logo {
