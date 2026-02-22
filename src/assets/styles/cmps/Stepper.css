@@ -1,3 +1,9 @@
+.stepper-sentinel {
+  height: 1px;
+  width: 100%;
+  pointer-events: none;
+}
+
 .stepper-wrapper {
   position: sticky;
   top: 0;
@@ -8,6 +14,10 @@
   margin-block-end: 15rem;
 
   background-color: var(--white-bg);
+
+  &.is-sticky {
+    border-bottom: 2px solid var(--dark-grey);
+  }
 
   .stepper {
     display: flex;
