@@ -3,15 +3,14 @@ import appGif from '../assets/imgs/quantex/app-gif.gif'
 import { ImgsCarousel } from '../cmps/ImgsCarousel'
 
 const stepperImgModules = import.meta.glob('../assets/imgs/quantex/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
-const STEPPER_PERSONA_IMAGES = Object.keys(stepperImgModules)
-  .sort()
-  .slice(0, 2)
-  .map((key) => stepperImgModules[key].default)
-  .filter(Boolean)
 const getStepperImg = (name) => {
   const key = Object.keys(stepperImgModules).find((k) => k.toLowerCase().includes(name.toLowerCase()))
   return key ? stepperImgModules[key].default : null
 }
+const STEPPER_PERSONA_IMAGES = [
+  getStepperImg('Persona - Drake'),
+  getStepperImg('Persona - Natasha'),
+].filter(Boolean)
 const EMPATHY_MAP_IMG = getStepperImg('empathy')
 const STEPPER_STICKY_NOTE_IMAGES = Object.keys(stepperImgModules)
   .filter((k) => k.toLowerCase().includes('sticky'))
