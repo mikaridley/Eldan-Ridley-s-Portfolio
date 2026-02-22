@@ -237,15 +237,13 @@ export function HomePage() {
       <section className="design-wireframes" aria-labelledby="design-wireframes-heading">
         <h3 id="design-wireframes-heading" className="design-wireframes-heading">3.1. Sketches to low-fidelity</h3>
         <h4 className="design-wireframes-subtitle">Paper wireframes</h4>
-        <div className="design-wireframes-text">
           <p className="design-wireframes-p">
             I used paper wireframes to explore a layout that removes complexity for those less familiar with digital finance. By simplifying the steps between currency selection and the final exchange, I ensured the process feels intuitive and efficient, regardless of the user&apos;s technical experience.
           </p>
           <ul className="design-wireframes-notes">
-            <li><strong>a.</strong> Large, clear input fields allow users to quickly choose their currencies without searching through dense menus.</li>
-            <li><strong>b.</strong> Positioning the primary action at the bottom of the screen ensures it sits within the &apos;thumb zone&apos;. This ergonomic choice improves accessibility and allows for a more comfortable one-handed experience for all users.</li>
+            <li><span>a.</span> Large, clear input fields allow users to quickly choose their currencies without searching through dense menus.</li>
+            <li><span>b.</span> Positioning the primary action at the bottom of the screen ensures it sits within the &apos;thumb zone&apos;. This ergonomic choice improves accessibility and allows for a more comfortable one-handed experience for all users.</li>
           </ul>
-        </div>
         {PAPER_WIREFRAME_IMG && (
           <div className="design-wireframes-fig">
             <img src={PAPER_WIREFRAME_IMG} alt="Paper wireframe - select amount screen for currency exchange" className="design-wireframes-img" />
@@ -258,7 +256,7 @@ export function HomePage() {
         </p>
         <div className="design-wireframes-carousel">
           {LOW_WIREFRAMES_CAROUSEL_IMAGES.length > 0 ? (
-            <ImgsCarousel images={LOW_WIREFRAMES_CAROUSEL_IMAGES} />
+            <ImgsCarousel images={LOW_WIREFRAMES_CAROUSEL_IMAGES} gap={15} />
           ) : (
             <p className="design-wireframes-carousel-placeholder">
               Add wireframe images to <code>src/assets/imgs/quantex/stepper/low-wireframes-carousel/</code> to see the carousel.
