@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from 'react'
 import appScreen from '../assets/imgs/quantex/first-page.png'
 import appGif from '../assets/imgs/quantex/app-gif.gif'
 import { ImgsCarousel } from '../cmps/ImgsCarousel'
@@ -60,7 +61,32 @@ const FINAL_CAROUSEL_IMAGES = Object.keys(finalCarouselModules)
 
 
 
+const STEP_HEADER_OFFSET = 120
+
 export function HomePage() {
+  const step1Ref = useRef(null)
+  const step2Ref = useRef(null)
+  const step3Ref = useRef(null)
+  const step4Ref = useRef(null)
+  const stepRefs = [step1Ref, step2Ref, step3Ref, step4Ref]
+  const [activeStep, setActiveStep] = useState(1)
+
+  useEffect(() => {
+    const onScroll = () => {
+      let current = 1
+      stepRefs.forEach((ref, i) => {
+        if (ref.current) {
+          const top = ref.current.getBoundingClientRect().top
+          if (top <= STEP_HEADER_OFFSET) current = i + 1
+        }
+      })
+      setActiveStep(current)
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
     <section className="home-page">
       
@@ -124,8 +150,8 @@ export function HomePage() {
         </section>
       )}
 
-      <Stepper activeStep={1} />
-      <StepperHeader number={1} word="Research" />
+      <Stepper activeStep={activeStep} />
+      <div ref={step1Ref}><StepperHeader number={1} word="Research" /></div>
 
       <section className="research-personas" aria-labelledby="research-personas-heading">
         <h3 id="research-personas-heading" className="research-personas-heading">1.1. Defining the target audience</h3>
@@ -161,7 +187,7 @@ export function HomePage() {
         )}
       </section>
 
-      <StepperHeader number={2} word="Ideation" />
+      <div ref={step2Ref}><StepperHeader number={2} word="Ideation" /></div>
 
       <section className="ideation-user-stories" aria-labelledby="ideation-user-stories-heading">
         <h3 id="ideation-user-stories-heading" className="ideation-user-stories-heading">2.1. User stories & requirements</h3>
@@ -206,7 +232,7 @@ export function HomePage() {
         )}
       </section>
 
-      <StepperHeader number={3} word="Design" />
+      <div ref={step3Ref}><StepperHeader number={3} word="Design" /></div>
 
       <section className="design-wireframes" aria-labelledby="design-wireframes-heading">
         <h3 id="design-wireframes-heading" className="design-wireframes-heading">3.1. Sketches to low-fidelity</h3>
@@ -410,7 +436,7 @@ export function HomePage() {
 
       </section>
 
-      <StepperHeader number={4} word="Takeaways" />
+      <div ref={step4Ref}><StepperHeader number={4} word="Takeaways" /></div>
 
 
 
