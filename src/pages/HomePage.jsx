@@ -144,7 +144,7 @@ export function HomePage() {
         <h3 id="research-empathy-heading" className="research-empathy-heading">1.2. User research & synthesis</h3>
         <h4 className="research-empathy-subtitle">Empathy map</h4>
         <div className="research-empathy-text">
-          <p className="research-empathy-p">
+          <p className="research-empathy-p darker">
             The key insight from this map was that users didn&apos;t just want better rates - they wanted their time back.
           </p>
           <p className="research-empathy-p">
