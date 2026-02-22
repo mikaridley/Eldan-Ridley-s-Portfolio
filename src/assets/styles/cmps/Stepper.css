@@ -16,7 +16,7 @@
   background-color: var(--white-bg);
 
   &.is-sticky {
-    border-bottom: 2px solid var(--dark-grey);
+    border-bottom: 2px solid var(--main-txt);
   }
 
   .stepper {
@@ -68,6 +68,10 @@
         color: var(--dark-grey);
         text-align: center;
       }
+    }
+
+    .is-sticky & {
+      max-width: 90%;
     }
   }
 }
