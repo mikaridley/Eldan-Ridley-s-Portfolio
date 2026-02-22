@@ -7,8 +7,8 @@
   .stepper-header-title {
     margin: 0;
     font-weight: 700;
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
-    color: var(--dark-txt);
+    font-size: 3.4rem;
+    color: var(--dark-grey);
     letter-spacing: 0.02em;
   }
 }
