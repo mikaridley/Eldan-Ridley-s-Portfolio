@@ -1,4 +1,4 @@
-import logo from '../assets/imgs/logo.png'
+import logo from '../assets/imgs/logo-black.png'
 
 export function AppFooter() {
   return (
