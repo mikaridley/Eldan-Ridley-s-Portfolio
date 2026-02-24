@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useMemo } from 'react'
 import '../assets/styles/cmps/ImgsCarousel.css'
+import carouselArrowSvg from '../assets/imgs/quantex/Carousel Arrow.svg'
 
 const SLIDE_HEIGHT = 550
 
@@ -130,7 +131,7 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
           onClick={goPrev}
           aria-label="Previous"
         >
-          <span className="imgs-carousel-arrow-icon">‹</span>
+          <img src={carouselArrowSvg} alt="" className="imgs-carousel-arrow-icon" />
         </button>
         <button
           type="button"
@@ -138,7 +139,7 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
           onClick={goNext}
           aria-label="Next"
         >
-          <span className="imgs-carousel-arrow-icon">›</span>
+          <img src={carouselArrowSvg} alt="" className="imgs-carousel-arrow-icon" />
         </button>
       </div>
     </div>
