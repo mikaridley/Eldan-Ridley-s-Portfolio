@@ -5,6 +5,7 @@ import { AboutMePage } from './pages/AboutMePage'
 import { AppHeader } from './cmps/AppHeader'
 import { AppFooter } from './cmps/AppFooter'
 import { ScrollToTop } from './cmps/ScrollToTop'
+import { GlobalLightbox } from './cmps/GlobalLightbox'
 
 export function RootCmp() {
   const { pathname } = useLocation()
@@ -22,6 +23,7 @@ export function RootCmp() {
       </main>
       <AppFooter />
       <ScrollToTop />
+      <GlobalLightbox />
     </div>
   )
 }
