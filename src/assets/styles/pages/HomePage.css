@@ -89,10 +89,10 @@
     .project-details {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        padding-inline: 35rem;
+        column-gap: 5rem;
+        margin-inline: 21rem;
         padding-block: 15rem;
         background-color: var(--light-txt);
-        margin-inline: auto;
 
         .project-details-col {
             .project-details-heading {
@@ -104,7 +104,7 @@
 
             .project-details-list {
                 li {
-                    font-size: 1.4rem;
+                    font-size: 1.14rem;
                     line-height: 3;
                 }
             }

@@ -4,6 +4,7 @@ import { HomePage } from './pages/HomePage'
 import { AboutMePage } from './pages/AboutMePage'
 import { AppHeader } from './cmps/AppHeader'
 import { AppFooter } from './cmps/AppFooter'
+import { ScrollToTop } from './cmps/ScrollToTop'
 
 export function RootCmp() {
   const { pathname } = useLocation()
@@ -20,6 +21,7 @@ export function RootCmp() {
         </Routes>
       </main>
       <AppFooter />
+      <ScrollToTop />
     </div>
   )
 }
