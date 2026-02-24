@@ -1,5 +1,6 @@
 :root {
 --home-padding-inline:14rem;
+--home-padding-inline:13vw;
 
 /* txt */
 --light-txt:#ffffff;

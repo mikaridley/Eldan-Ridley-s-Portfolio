@@ -3,28 +3,34 @@ import '../assets/styles/cmps/ImgsCarousel.css'
 
 const SLIDE_HEIGHT = 550
 
-export function ImgsCarousel({ images = [], gap = 15 }) {
+export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [slideWidths, setSlideWidths] = useState([])
+  const [viewportWidth, setViewportWidth] = useState(720)
   const [isTransitioning, setIsTransitioning] = useState(true)
   const viewportRef = useRef(null)
   const n = images.length
   const displayImages = n > 0 ? [...images, ...images] : []
 
-  const getSlideWidth = (idx) => slideWidths[idx] ?? SLIDE_HEIGHT
+  const slideWidthWhenFixed = viewportWidth > 0 && visibleCount > 0
+    ? (viewportWidth - (visibleCount - 1) * gap) / visibleCount
+    : SLIDE_HEIGHT
+  const getSlideWidth = (idx) =>
+    visibleCount != null && visibleCount > 0 ? slideWidthWhenFixed : (slideWidths[idx] ?? SLIDE_HEIGHT)
 
   const offsetByIndex = useMemo(() => {
     const offsets = [0]
     for (let i = 0; i < displayImages.length; i++) {
-      const w = slideWidths[i] ?? SLIDE_HEIGHT
+      const w = getSlideWidth(i)
       offsets.push(offsets[i] + w + gap)
     }
     return offsets
-  }, [displayImages.length, slideWidths, gap])
+  }, [displayImages.length, slideWidths, gap, slideWidthWhenFixed, visibleCount])
 
   const translateX = -offsetByIndex[currentIndex] ?? 0
 
   const handleImageLoad = (idx, e) => {
+    if (visibleCount != null && visibleCount > 0) return
     const { naturalWidth, naturalHeight } = e.target
     if (!naturalWidth || !naturalHeight) return
     const w = SLIDE_HEIGHT * (naturalWidth / naturalHeight)
@@ -36,8 +42,19 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
   }
 
   useEffect(() => {
-    setSlideWidths([])
-  }, [images])
+    const el = viewportRef.current
+    if (!el) return
+    const ro = new ResizeObserver(([entry]) => {
+      const w = entry?.contentRect?.width
+      if (typeof w === 'number') setViewportWidth(w)
+    })
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+
+  useEffect(() => {
+    if (visibleCount == null || visibleCount <= 0) setSlideWidths([])
+  }, [images, visibleCount])
 
   const handleTransitionEnd = () => {
     if (n === 0) return

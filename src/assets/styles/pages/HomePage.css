@@ -1,4 +1,5 @@
 .home-page {  
+    
     .home-opening {
         display: grid;
         grid-template-columns: 1.5fr 1fr;
@@ -35,12 +36,14 @@
         padding-inline: var(--home-padding-inline);
         padding-block: 15rem;
 
+
         h4 {
             color:var(--dark-grey);
             align-self: end;
         }
 
         p {
+            max-width: 55rem;
             font-size: 1.14rem;
             .p-gap {
                 display: block;
@@ -114,6 +117,7 @@
         overflow-x: clip;
         margin-block-end: 10rem;
         background-color: var(--light-bg);
+        padding-block:5rem;
 
         .imgs-carousel {
             width: 100%;
@@ -418,11 +422,12 @@
             margin-left: calc(50% - 50vw);
             margin-block-end: 22rem;
             background-color: var(--light-bg);
+            padding-block:5rem;
 
             .imgs-carousel {
                 width: 100%;
-                height: 400px;
-                --imgs-carousel-slide-height: 400px;
+                height: 700px;
+                --imgs-carousel-slide-height: 700px;
             }
 
             .design-wireframes-carousel-placeholder {
@@ -463,16 +468,11 @@
     }
 
     .design-visual-identity {
-        padding-inline: 2rem;
-        padding-block: 3rem 5rem;
-        max-width: 1200px;
-        margin-inline: auto;
+        margin-inline: var(--home-padding-inline);
 
         .design-visual-identity-heading {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 700;
             color: var(--dark-grey);
-            margin: 0 0 2rem 0;
+            margin: 0 0 5rem 0;
         }
 
         .design-visual-identity-block {
@@ -481,31 +481,33 @@
             gap: 0 4rem;
             row-gap: 1rem;
             align-items: center;
-            margin-block-end: 3rem;
+            margin-block-end: 15rem;
 
             &:last-child {
                 margin-block-end: 0;
             }
 
             .design-visual-identity-subtitle {
-                grid-column: 1;
-                font-size: 1.25rem;
-                font-weight: 700;
+                align-self: end;
                 color: var(--dark-grey);
-                margin: 0 0 1rem 0;
+                margin: 0 0 1.7rem 0;
             }
 
             .design-visual-identity-p {
-                grid-column: 1;
-                color: var(--main-txt);
-                font-size: 1rem;
+                align-self: start;
+                font-size: 1.14rem;
                 line-height: 1.6;
-                margin: 0;
+
+                & span {
+                    display: block;
+                    color: var(--dark-grey);
+                    margin-block-start:1.7rem;
+                }
             }
 
             .design-visual-identity-fig {
                 grid-column: 2;
-                grid-row: 1 / -1;
+                grid-row: 1 / 3;
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
@@ -514,7 +516,34 @@
                     display: block;
                     max-width: 100%;
                     height: auto;
+
+                    &.secondary {
+                        margin-block-start:25rem;
+                    }
                 }
+            }
+        }
+
+        .design-hifi-intro {
+            color: var(--light-txt);
+            padding-block: 3rem 3rem;
+
+            .design-hifi-heading {
+                color: var(--dark-txt);
+                margin: 0 0 5.7rem 0;
+            }
+
+            .design-hifi-subtitle {
+                color: var(--dark-txt);
+                margin: 0 0 1.7rem 0;
+            }
+
+            .design-hifi-p {
+                color: var(--main-txt);
+                font-size: 1.14rem;
+                line-height: 1.6;
+                margin-block-end: 8rem;
+                max-width: 75rem;
             }
         }
 
@@ -533,72 +562,17 @@
     }
 
     .design-hifi {
-    max-width: 1200px;
-    margin-inline: auto;
-    
-        .design-hifi-intro {
-            background-color: var(--hero-bg);
-            color: var(--light-txt);
-            padding-inline: 2rem;
-            padding-block: 3rem 3rem;
-
-            .design-hifi-heading {
-                font-size: clamp(1.5rem, 3vw, 2rem);
-                font-weight: 700;
-                color: var(--dark-txt);
-                margin: 0 0 0.5rem 0;
-            }
-
-            .design-hifi-subtitle {
-                font-size: 1.25rem;
-                font-weight: 700;
-                color: var(--dark-txt);
-                opacity: 0.9;
-                margin: 0 0 1rem 0;
-            }
-
-            .design-hifi-p {
-                color: var(--dark-grey);
-                opacity: 0.85;
-                font-size: 1rem;
-                line-height: 1.6;
-                margin: 0;
-                max-width: 720px;
-            }
-        }
 
         .design-hifi-iteration {
             background-color: var(--light-bg);
-            padding-inline: 2rem;
-            padding-block: 2rem 3rem;
-            display: flex;
-            flex-direction: column;
+            padding-block: 2.6rem;
             align-items: center;
-            justify-content: center;
-            gap: 0.25rem;
-            min-height: 6rem;
+            justify-content: start;
+            padding-inline: var(--home-padding-inline);
 
             .design-hifi-iteration-title {
-                font-size: 1.25rem;
-                font-weight: 700;
                 color: var(--dark-grey);
                 margin: 0;
-            }
-
-            .design-hifi-iteration-subtitle {
-                font-size: 1.1rem;
-                font-weight: 700;
-                color: var(--dark-grey);
-                margin: 0;
-            }
-
-            .design-hifi-iteration-p {
-                font-size: 1rem;
-                line-height: 1.6;
-                color: var(--main-txt);
-                margin: 0;
-                max-width: 720px;
-                text-align: center;
             }
 
             &.design-hifi-iteration--with-intro {
@@ -613,104 +587,117 @@
             }
         }
 
+        
+        .design-hifi-iteration-subtitle {
+            margin-inline: var(--home-padding-inline);
+            margin-block-end: 1.7rem;
+            margin-block-start: 4.7rem;
+            color: var(--dark-grey);
+        }
+
+        .design-hifi-iteration-p {
+            font-size: 1.14rem;
+            line-height: 1.6;
+            color: var(--main-txt);
+            margin-inline: var(--home-padding-inline);
+            max-width: 75rem;
+            margin-block-end: 4.7rem;
+        }
+
         .design-hifi-before-after {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            padding-inline: 2rem;
-            padding-block: 3rem 4rem;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20rem;
+            margin-inline: var(--home-padding-inline);
+            max-width: 90rem;
+            padding-block: 4.6rem 15rem;
+            position: relative;
 
-            .design-hifi-before,
-            .design-hifi-after {
-                flex: 1;
-                min-width: 260px;
-                max-width: 320px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 1rem;
-
-                .design-hifi-ba-title {
-                    font-size: 1.5rem;
-                    font-weight: 700;
+            .design-hifi-ba-title {
                     color: var(--dark-txt);
-                    margin: 0;
-                }
+                    margin-block-end: 1.7rem;
 
-                .design-hifi-ba-p {
-                    font-size: 0.95rem;
-                    line-height: 1.5;
+                    &.after {
+                        grid-column:2;
+                        grid-row:1;
+                    }
+            }
+
+            .design-hifi-ba-p {
+                    font-size: 1.14rem;
+                    line-height: 1.6;
                     color: var(--main-txt);
-                    opacity: 0.9;
-                    margin: 0;
-                }
+                    margin-block-end: 5.7rem;
 
-                .design-hifi-ba-img {
+                    &.after {
+                        grid-column:2;
+                        grid-row:2;
+                    }
+            }
+
+            .design-hifi-ba-img {
                     display: block;
-                    max-width: 100%;
-                    height: auto;
-                    width: 100%;
+                    max-width: 23rem;
                     object-fit: contain;
-                }
+
+                    &.after {
+                        grid-column:2;
+                        grid-row:3;
+                    }
             }
 
             .design-hifi-arrow {
-                width: 3rem;
-                height: auto;
+                position: absolute;
+                top:450px;
+                right:540px;
+                width: 25rem;
                 object-fit: contain;
-                flex-shrink: 0;
             }
         }
 
         .design-hifi-final {
-            padding-inline: 2rem;
-            padding-block: 3rem 4rem;
+            padding-inline: var(--home-padding-inline);
+            padding-block-end: 28rem;
 
             .design-hifi-final-heading {
-                font-size: clamp(1.5rem, 3vw, 2rem);
-                font-weight: 700;
+                font-weight: 600;
+                font-size: 2.2rem;
                 color: var(--dark-grey);
-                margin: 0 0 1rem 0;
+                margin: 0 0 1.7rem 0;
             }
 
             .design-hifi-final-p {
-                font-size: 1rem;
+                font-size: 1.14rem;
                 line-height: 1.6;
                 color: var(--main-txt);
-                margin: 0 0 2rem 0;
-                max-width: 720px;
+                margin: 0 0 7.6rem 0;
+                max-width: 75rem;
             }
 
             .design-hifi-final-img {
                 display: block;
-                max-width: 100%;
-                height: auto;
-                width: 100%;
+                max-width: 54rem;
                 object-fit: contain;
             }
         }
 
         .design-hifi-desktop {
-            padding-inline: 2rem;
-            padding-block: 3rem 4rem;
-            max-width: 720px;
-            margin-inline: auto;
+            padding-inline: var(--home-padding-inline);
+            padding-block-end: 5.7rem;
 
             .design-hifi-desktop-heading {
-                font-size: clamp(1.5rem, 3vw, 2rem);
-                font-weight: 700;
+                font-size: 2.2rem;
+                font-weight: 600;
                 color: var(--dark-grey);
-                margin: 0 0 1rem 0;
+                margin: 0 0 1.7rem 0;
             }
 
             .design-hifi-desktop-p {
-                font-size: 1rem;
+                font-size: 1.14rem;
                 line-height: 1.6;
                 color: var(--main-txt);
                 margin: 0 0 1rem 0;
+                max-width: 53rem;
 
                 &:last-child {
                     margin-block-end: 0;
@@ -719,10 +706,8 @@
         }
 
         .design-hifi-mobile {
-            padding-inline: 2rem;
-            padding-block: 3rem 4rem;
-            max-width: 720px;
-            margin-inline: auto;
+            padding-inline: var(--home-padding-inline);
+            padding-block-end: 5.7rem;
 
             .design-hifi-mobile-heading {
                 font-size: clamp(1.5rem, 3vw, 2rem);
@@ -732,10 +717,11 @@
             }
 
             .design-hifi-mobile-p {
-                font-size: 1rem;
+                font-size: 1.14rem;
                 line-height: 1.6;
                 color: var(--main-txt);
                 margin: 0;
+                max-width: 53rem;
             }
         }
 
@@ -745,6 +731,7 @@
             overflow-x: clip;
             margin-block: 2rem 4rem;
             background-color: var(--light-bg);
+            margin-block-end: 28rem;
 
             .imgs-carousel {
                 width: 100%;
@@ -757,8 +744,9 @@
             width: 100vw;
             margin-left: calc(50% - 50vw);
             overflow-x: clip;
-            margin-block: 2rem 4rem;
+            margin-block-end: 35rem;
             background-color: var(--light-bg);
+            padding-block:5rem;
 
             .imgs-carousel {
                 width: 100%;
@@ -768,28 +756,78 @@
         }
     }
 
+    .takeaways-reflections-next {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 12rem;
+        align-items: start;
+        padding-inline: var(--home-padding-inline);
+        padding-block-start:10rem;
+
+        .takeaways-reflections,
+        .takeaways-next {
+            .takeaways-rn-heading {
+                font-size: 2.2rem;
+                font-weight: 600;
+                color: var(--dark-grey);
+                margin: 0 0 1.7rem 0;
+            }
+
+            .takeaways-rn-list {
+                margin: 0;
+                padding-left: 1.5rem;
+                list-style-type: disc;
+                color: var(--main-txt);
+                font-size: 1.14rem;
+                line-height: 1.6;
+
+                li::marker {
+                    color: var(--dark-grey);
+                }
+
+                li {
+                    margin-block-end: 0.75rem;
+
+                    & span {
+                        color: var(--dark-grey);
+                    }
+                }
+            }
+        }
+
+        .takeaways-next-intro {
+            color: var(--dark-grey);
+            font-size: 1.14rem;
+            line-height: 1.6;
+            margin: 0 0 1.7rem 0;
+        }
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
     .takeaways-metrics {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 2rem 4rem;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: repeat(3, auto);
         align-items: start;
-        padding-inline: 2rem;
         padding-block: 3rem 5rem;
-        max-width: 1200px;
-        margin-inline: auto;
+        margin-inline: var(--home-padding-inline);
 
         .takeaways-metrics-heading {
+            align-self: end;
             grid-column: 1;
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 700;
+            font-size: 2.2rem;
+            font-weight: 600;
             color: var(--dark-grey);
-            margin: 0 0 1rem 0;
+            margin: 0 0 1.7rem 0;
         }
 
         .takeaways-metrics-intro {
             grid-column: 1;
-            color: var(--main-txt);
-            font-size: 1rem;
+            color: var(--dark-grey);
+            font-size: 1.14rem;
             line-height: 1.6;
             margin: 0 0 1rem 0;
         }
@@ -797,23 +835,22 @@
         .takeaways-metrics-list {
             grid-column: 1;
             margin: 0;
-            padding-left: 1.5rem;
             color: var(--main-txt);
-            font-size: 1rem;
+            font-size: 1.14rem;
             line-height: 1.6;
 
             li {
                 margin-block-end: 0.75rem;
 
-                &:last-child {
-                    margin-block-end: 0;
+                & span {
+                    color: var(--dark-grey);
                 }
             }
         }
 
         .takeaways-metrics-fig {
             grid-column: 2;
-            grid-row: 1 / -1;
+            grid-row: 1 / 4;
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -836,52 +873,6 @@
         }
     }
 
-    .takeaways-reflections-next {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem 4rem;
-        align-items: start;
-        padding-inline: 2rem;
-        padding-block: 3rem 5rem;
-        max-width: 1200px;
-        margin-inline: auto;
 
-        .takeaways-reflections,
-        .takeaways-next {
-            .takeaways-rn-heading {
-                font-size: clamp(1.5rem, 3vw, 2rem);
-                font-weight: 700;
-                color: var(--dark-grey);
-                margin: 0 0 1rem 0;
-            }
-
-            .takeaways-rn-list {
-                margin: 0;
-                padding-left: 1.5rem;
-                color: var(--main-txt);
-                font-size: 1rem;
-                line-height: 1.6;
-
-                li {
-                    margin-block-end: 0.75rem;
-
-                    &:last-child {
-                        margin-block-end: 0;
-                    }
-                }
-            }
-        }
-
-        .takeaways-next-intro {
-            color: var(--main-txt);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin: 0 0 1rem 0;
-        }
-
-        @media (max-width: 900px) {
-            grid-template-columns: 1fr;
-        }
-    }
 }
  

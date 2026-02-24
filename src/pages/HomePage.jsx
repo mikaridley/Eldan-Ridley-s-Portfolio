@@ -284,17 +284,15 @@ export function HomePage() {
           <h4 className="design-visual-identity-subtitle">Style guide</h4>
           <p className="design-visual-identity-p">
             I designed these components to keep the experience intuitive and approachable. By using familiar iconography and a clean visual hierarchy, I ensured the interface feels friendly and simple to navigate, removing the &apos;intimidation factor&apos; usually found in banking apps.
-            Accessibility in mind: I used universally recognised icons and high-contrast colours to support users who may find text-heavy interfaces overwhelming. This approach ensures that even at a glance, the app&apos;s functions remain clear and accessible to everyone.
+            <span>Accessibility in mind</span> I used universally recognised icons and high-contrast colours to support users who may find text-heavy interfaces overwhelming. This approach ensures that even at a glance, the app&apos;s functions remain clear and accessible to everyone.
           </p>
           {STICKER_SHEET_IMG && (
             <div className="design-visual-identity-fig">
-              <img src={STICKER_SHEET_IMG} alt="Style guide - Quantex typography, colours, buttons, inputs, icons" className="design-visual-identity-img" />
+              <img src={STICKER_SHEET_IMG} alt="Style guide - Quantex typography, colours, buttons, inputs, icons" className="design-visual-identity-img secondary" />
             </div>
           )}
         </div>
-      </section>
 
-      <section className="design-hifi" aria-labelledby="design-hifi-heading">
         <div className="design-hifi-intro">
           <h3 id="design-hifi-heading" className="design-hifi-heading">3.3. High-fidelity mockups</h3>
           <h4 className="design-hifi-subtitle">Iterations</h4>
@@ -302,32 +300,34 @@ export function HomePage() {
             After testing the initial designs, I identified several areas where the user flow could be further simplified. These iterations focus on refining the layout based on direct user feedback, ensuring that the most important tasks — like checking rates and finalising an exchange — are as seamless as possible.
           </p>
         </div>
+      </section>
+
+      <section className="design-hifi" aria-labelledby="design-hifi-heading">
         <div className="design-hifi-iteration">
           <h4 className="design-hifi-iteration-title">Iteration #1</h4>
         </div>
 
         <div className="design-hifi-before-after">
-          <div className="design-hifi-before">
-            <h4 className="design-hifi-ba-title">Before</h4>
-            <p className="design-hifi-ba-p">
+            <h4 className="design-hifi-ba-title before">Before</h4>
+            <p className="design-hifi-ba-p before">
               The original layout relied on a vertical list of buttons, requiring users to navigate away from the home screen to view essential data like rate trends or transaction history.
             </p>
             {BEFORE_HOMEPAGE_IMG && (
-              <img src={BEFORE_HOMEPAGE_IMG} alt="Quantex app homepage - before redesign" className="design-hifi-ba-img" />
+              <img src={BEFORE_HOMEPAGE_IMG} alt="Quantex app homepage - before redesign" className="design-hifi-ba-img before" />
             )}
-          </div>
+
           {LINE_IMG && (
             <img src={LINE_IMG} alt="" className="design-hifi-arrow" aria-hidden="true" />
           )}
-          <div className="design-hifi-after">
-            <h4 className="design-hifi-ba-title">After</h4>
-            <p className="design-hifi-ba-p">
+
+            <h4 className="design-hifi-ba-title after">After</h4>
+            <p className="design-hifi-ba-p after">
               I redesigned the home screen to feature interactive widgets that display live data. By bringing the wallet balance and rate graph to the forefront, users can get an instant overview of their finances without additional navigation.
             </p>
             {AFTER_HOMEPAGE_IMG && (
-              <img src={AFTER_HOMEPAGE_IMG} alt="Quantex app homepage - after redesign" className="design-hifi-ba-img" />
+              <img src={AFTER_HOMEPAGE_IMG} alt="Quantex app homepage - after redesign" className="design-hifi-ba-img after" />
             )}
-          </div>
+
         </div>
 
         <div className="design-hifi-iteration">
@@ -362,7 +362,7 @@ export function HomePage() {
           <h4 className="design-hifi-iteration-title">Iteration #3</h4>
         </div>
 
-        <h5 className="design-hifi-iteration-subtitle">Accessibility refinements</h5>
+        <h4 className="design-hifi-iteration-subtitle">Accessibility refinements</h4>
           <p className="design-hifi-iteration-p">
             I conducted an accessibility audit using WebAIM&apos;s contrast checker to ensure the interface meets industry standards for readability. These refinements focus on adjusting colour contrast and button visibility, making the app easier to navigate for users with visual impairments or those viewing the screen in challenging lighting conditions.
           </p>
@@ -415,7 +415,7 @@ export function HomePage() {
 
         {COMPUTER_CAROUSEL_IMAGES.length > 0 && (
           <div className="design-hifi-computer-carousel">
-            <ImgsCarousel images={COMPUTER_CAROUSEL_IMAGES} />
+            <ImgsCarousel images={COMPUTER_CAROUSEL_IMAGES} visibleCount={3} />
           </div>
         )}
 
@@ -443,13 +443,13 @@ export function HomePage() {
           <h3 id="takeaways-reflections-heading" className="takeaways-rn-heading">Reflections</h3>
           <ul className="takeaways-rn-list">
             <li>
-              <strong>Simplicity is key:</strong> I learnt that in fintech, less is almost always more. Removing the &apos;intimidation factor&apos; by using familiar iconography and plenty of white space made the app feel far more trustworthy.
+              <span>Simplicity is key:</span> I learnt that in fintech, less is almost always more. Removing the &apos;intimidation factor&apos; by using familiar iconography and plenty of white space made the app feel far more trustworthy.
             </li>
             <li>
-              <strong>Accessibility from the start:</strong> Designing for users like Natasha taught me that accessibility isn&apos;t a &apos;final coat of paint&apos; but a foundation. Checking the WebAIM contrast early on allowed me to confidently settle on a brand palette that was both visually appealing and inclusive from the very beginning.
+              <span>Accessibility from the start:</span> Designing for users like Natasha taught me that accessibility isn&apos;t a &apos;final coat of paint&apos; but a foundation. Checking the WebAIM contrast early on allowed me to confidently settle on a brand palette that was both visually appealing and inclusive from the very beginning.
             </li>
             <li>
-              <strong>Platform consistency:</strong> Moving from mobile to PC was a challenge at first, as the desktop version initially felt too sparse compared to traditional websites. However, I realised that maintaining this simplicity ensured the interface felt familiar and comfortable for users moving between devices, which was more valuable than adding unnecessary elements.
+              <span>Platform consistency:</span> Moving from mobile to PC was a challenge at first, as the desktop version initially felt too sparse compared to traditional websites. However, I realised that maintaining this simplicity ensured the interface felt familiar and comfortable for users moving between devices, which was more valuable than adding unnecessary elements.
             </li>
           </ul>
         </div>
@@ -458,13 +458,13 @@ export function HomePage() {
           <p className="takeaways-next-intro">If I were to continue developing Quantex, I would focus on the following:</p>
           <ul className="takeaways-rn-list">
             <li>
-              <strong>Onboarding guide:</strong> I would implement a short, interactive &apos;Quick Start&apos; guide for new users to explain the exchange process and build immediate confidence.
+              <span>Onboarding guide:</span> I would implement a short, interactive &apos;Quick Start&apos; guide for new users to explain the exchange process and build immediate confidence.
             </li>
             <li>
-              <strong>Multi-language support:</strong> To truly support international travel, I would expand the app to include multiple languages, ensuring the interface remains accessible to non-English speakers.
+              <span>Multi-language support:</span> To truly support international travel, I would expand the app to include multiple languages, ensuring the interface remains accessible to non-English speakers.
             </li>
             <li>
-              <strong>Smart alerts:</strong> I would add a feature for &apos;Rate Alerts&apos;, allowing users to set a target exchange rate and receive a notification when the market hits that number.
+              <span>Smart alerts:</span> I would add a feature for &apos;Rate Alerts&apos;, allowing users to set a target exchange rate and receive a notification when the market hits that number.
             </li>
           </ul>
         </div>
@@ -472,19 +472,19 @@ export function HomePage() {
 
 
       <section className="takeaways-metrics" aria-labelledby="takeaways-metrics-heading">
-        <h3 id="takeaways-metrics-heading" className="takeaways-metrics-heading">Metrics</h3>
+        <h4 id="takeaways-metrics-heading" className="takeaways-metrics-heading">Metrics</h4>
         <p className="takeaways-metrics-intro">
           As this is a conceptual project, I haven&apos;t tracked live user data. However, if Quantex were to launch, I would focus on the following metrics to evaluate the design&apos;s impact:
         </p>
         <ul className="takeaways-metrics-list">
           <li>
-            <strong>Task Success Rate:</strong> I would track how easily users can complete an exchange from start to finish. A high success rate would confirm that the &apos;simple and friendly&apos; approach is working.
+            <span>Task Success Rate:</span> I would track how easily users can complete an exchange from start to finish. A high success rate would confirm that the &apos;simple and friendly&apos; approach is working.
           </li>
           <li>
-            <strong>Drop-off Rate:</strong> By monitoring where users leave the flow I could identify if any part of the interface remains confusing or intimidating.
+            <span>Drop-off Rate:</span> By monitoring where users leave the flow I could identify if any part of the interface remains confusing or intimidating.
           </li>
           <li>
-            <strong>Accessibility Compliance:</strong> Regular audits would ensure the app continues to meet WCAG 2.1 Level AA standards as new currencies or features are added.
+            <span>Accessibility Compliance:</span> Regular audits would ensure the app continues to meet WCAG 2.1 Level AA standards as new currencies or features are added.
           </li>
         </ul>
         {METRICS_IMG && (
