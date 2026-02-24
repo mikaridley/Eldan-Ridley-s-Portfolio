@@ -1,8 +1,10 @@
 .stepper-header {
-  background-color: var(--baby-blue-bg);
-  padding-block: 2.5rem;
-  padding-inline: 2rem;
+  display: grid;
+  place-items: center;
+  margin-block:17rem;
+  height: 15rem;
   text-align: center;
+  background-color: var(--baby-blue-bg);
 
   .stepper-header-title {
     margin: 0;
