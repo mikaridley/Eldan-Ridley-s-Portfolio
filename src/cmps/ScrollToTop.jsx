@@ -1,7 +1,15 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import '../assets/styles/cmps/ScrollToTop.css'
 import backToTopImg from '../assets/imgs/quantex/Back to top.png'
 
 export function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   const onScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
