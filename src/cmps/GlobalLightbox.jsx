@@ -8,6 +8,7 @@ export function GlobalLightbox() {
     const onDocumentClick = (e) => {
       if (e.target.tagName !== 'IMG') return
       if (e.target.closest('.imgs-carousel')) return
+      if (e.target.closest('a')) return
       e.preventDefault()
       e.stopPropagation()
       const src = e.target.currentSrc || e.target.src
