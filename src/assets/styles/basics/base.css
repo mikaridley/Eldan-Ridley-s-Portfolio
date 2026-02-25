@@ -75,6 +75,15 @@ picture {
 }
 
 main img {
+  cursor: default;
+}
+
+/* Only images that open the lightbox show pointer */
+main img.research-personas-img,
+main img.research-empathy-img,
+main img.ideation-mapping-img,
+main img.design-visual-identity-img,
+main img.design-hifi-final-img {
   cursor: pointer;
 }
 
