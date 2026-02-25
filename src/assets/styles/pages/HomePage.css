@@ -3,60 +3,60 @@
   margin-inline: auto;
   padding-inline: var(--home-padding-inline);
   padding-block: 4rem 6rem;
-}
 
-.home-intro {
-  margin-block-end: 5rem;
+  .home-intro {
+    margin-block-end: 5rem;
 
-  .home-intro-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 700;
-    color: var(--dark-grey);
-    margin: 0 0 0.25rem 0;
+    .home-intro-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: var(--dark-grey);
+      margin: 0 0 0.25rem 0;
+    }
+
+    .home-intro-role {
+      font-size: 1.25rem;
+      color: var(--dark-grey);
+      margin: 0 0 1.5rem 0;
+    }
+
+    .home-intro-p {
+      font-size: 1.14rem;
+      line-height: 1.6;
+      color: var(--main-txt);
+      margin: 0;
+      max-width: 40rem;
+    }
   }
 
-  .home-intro-role {
-    font-size: 1.25rem;
-    color: var(--dark-grey);
-    margin: 0 0 1.5rem 0;
-  }
+  .home-project {
+    .home-project-link {
+      display: block;
+      margin-block-end: 1.5rem;
+      cursor: pointer;
+    }
 
-  .home-intro-p {
-    font-size: 1.14rem;
-    line-height: 1.6;
-    color: var(--main-txt);
-    margin: 0;
-    max-width: 40rem;
-  }
-}
+    .home-project-img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
 
-.home-project {
-  .home-project-link {
-    display: block;
-    margin-block-end: 1.5rem;
-    cursor: pointer;
-  }
+    .home-project-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--dark-grey);
+      margin: 0 0 1rem 0;
+    }
 
-  .home-project-img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .home-project-title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 700;
-    color: var(--dark-grey);
-    margin: 0 0 1rem 0;
-  }
-
-  .home-project-desc {
-    font-size: 1.14rem;
-    line-height: 1.6;
-    color: var(--main-txt);
-    margin: 0;
-    max-width: 55rem;
+    .home-project-desc {
+      font-size: 1.14rem;
+      line-height: 1.6;
+      color: var(--main-txt);
+      margin: 0;
+      max-width: 55rem;
+    }
   }
 }
