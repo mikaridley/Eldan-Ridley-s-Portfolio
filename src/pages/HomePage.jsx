@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { scrollToTopInstant } from '../utils/scrollToTop'
 import '../assets/styles/pages/HomePage.css'
 
 import homePageQuantexImg from '../assets/imgs/quantex/home-page-quantex.png'
@@ -15,7 +16,7 @@ export function HomePage() {
       </div>
 
       <div className="home-project">
-        <Link to="/quantex" className="home-project-link">
+        <Link to="/quantex" className="home-project-link" onClick={scrollToTopInstant}>
           <img src={homePageQuantexImg} alt="Quantex - laptop and phone" className="home-project-img" />
         </Link>
         <h2 className="home-project-title">Quantex</h2>
