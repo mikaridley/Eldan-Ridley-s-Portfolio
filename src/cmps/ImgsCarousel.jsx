@@ -10,6 +10,7 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
   const [viewportWidth, setViewportWidth] = useState(720)
   const [isTransitioning, setIsTransitioning] = useState(true)
   const viewportRef = useRef(null)
+  const isAnimatingRef = useRef(false)
   const n = images.length
   const displayImages = n > 0 ? [...images, ...images] : []
 
@@ -63,18 +64,27 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
       setIsTransitioning(false)
       setCurrentIndex(currentIndex % n)
       requestAnimationFrame(() => {
-        requestAnimationFrame(() => setIsTransitioning(true))
+        requestAnimationFrame(() => {
+          setIsTransitioning(true)
+          isAnimatingRef.current = false
+        })
       })
+    } else {
+      isAnimatingRef.current = false
     }
   }
 
   const goPrev = () => {
-    if (n === 0) return
+    if (n === 0 || isAnimatingRef.current) return
+    isAnimatingRef.current = true
     if (currentIndex === 0) {
       setIsTransitioning(false)
       setCurrentIndex(displayImages.length - 1)
       requestAnimationFrame(() => {
-        requestAnimationFrame(() => setIsTransitioning(true))
+        requestAnimationFrame(() => {
+          setIsTransitioning(true)
+          isAnimatingRef.current = false
+        })
       })
     } else {
       setCurrentIndex((i) => i - 1)
@@ -82,12 +92,16 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
   }
 
   const goNext = () => {
-    if (n === 0) return
+    if (n === 0 || isAnimatingRef.current) return
+    isAnimatingRef.current = true
     if (currentIndex === displayImages.length - 1) {
       setIsTransitioning(false)
       setCurrentIndex(0)
       requestAnimationFrame(() => {
-        requestAnimationFrame(() => setIsTransitioning(true))
+        requestAnimationFrame(() => {
+          setIsTransitioning(true)
+          isAnimatingRef.current = false
+        })
       })
     } else {
       setCurrentIndex((i) => i + 1)
