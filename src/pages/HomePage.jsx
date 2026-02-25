@@ -335,27 +335,23 @@ export function HomePage() {
         </div>
 
         <div className="design-hifi-before-after">
-          <div className="design-hifi-before">
-            <h4 className="design-hifi-ba-title">Before</h4>
-            <p className="design-hifi-ba-p">
+            <h4 className="design-hifi-ba-title before">Before</h4>
+            <p className="design-hifi-ba-p before">
               In the initial design, the exchange arrows were a flat icon without any button characteristics. This made it unclear if the element was interactive or simply a visual divider between the currency fields.
             </p>
             {BEFORE_HOMEPAGE_2_IMG && (
-              <img src={BEFORE_HOMEPAGE_2_IMG} alt="Quantex exchange screen - before" className="design-hifi-ba-img" />
+              <img src={BEFORE_HOMEPAGE_2_IMG} alt="Quantex exchange screen - before" className="design-hifi-ba-img before" />
             )}
-          </div>
           {LINE_IMG && (
             <img src={LINE_IMG} alt="" className="design-hifi-arrow" aria-hidden="true" />
           )}
-          <div className="design-hifi-after">
-            <h4 className="design-hifi-ba-title">After</h4>
-            <p className="design-hifi-ba-p">
+            <h4 className="design-hifi-ba-title after">After</h4>
+            <p className="design-hifi-ba-p after">
               I redesigned the arrows as a clear, shadowed button to signal interactivity. This change follows the app&apos;s established button styles, making it intuitive for users to tap and switch the exchange direction instantly.
             </p>
             {AFTER_HOMEPAGE_2_IMG && (
-              <img src={AFTER_HOMEPAGE_2_IMG} alt="Quantex exchange screen - after" className="design-hifi-ba-img" />
+              <img src={AFTER_HOMEPAGE_2_IMG} alt="Quantex exchange screen - after" className="design-hifi-ba-img after" />
             )}
-          </div>
         </div>
 
         <div className="design-hifi-iteration design-hifi-iteration--with-intro">
@@ -368,27 +364,23 @@ export function HomePage() {
           </p>
 
         <div className="design-hifi-before-after">
-          <div className="design-hifi-before">
-            <h4 className="design-hifi-ba-title">Before</h4>
-            <p className="design-hifi-ba-p">
+            <h4 className="design-hifi-ba-title before">Before</h4>
+            <p className="design-hifi-ba-p before">
               The initial green brand colour failed to meet the WCAG AA contrast standards for accessibility. The light text on the green background made primary actions difficult to read for users with low vision.
             </p>
             {BEFORE_HOMEPAGE_3_IMG && (
-              <img src={BEFORE_HOMEPAGE_3_IMG} alt="Quantex transaction summary - before accessibility update" className="design-hifi-ba-img" />
+              <img src={BEFORE_HOMEPAGE_3_IMG} alt="Quantex transaction summary - before accessibility update" className="design-hifi-ba-img before" />
             )}
-          </div>
           {LINE_IMG && (
             <img src={LINE_IMG} alt="" className="design-hifi-arrow" aria-hidden="true" />
           )}
-          <div className="design-hifi-after">
-            <h4 className="design-hifi-ba-title">After</h4>
-            <p className="design-hifi-ba-p">
+            <h4 className="design-hifi-ba-title after">After</h4>
+            <p className="design-hifi-ba-p after">
               I updated the brand palette to a deeper blue, which passed the WebAIM contrast test with a higher ratio. This change ensures that all text and icons are sharp and legible, providing a more inclusive experience without sacrificing the professional look of the app.
             </p>
             {AFTER_HOMEPAGE_3_IMG && (
-              <img src={AFTER_HOMEPAGE_3_IMG} alt="Quantex transaction summary - after accessibility update" className="design-hifi-ba-img" />
+              <img src={AFTER_HOMEPAGE_3_IMG} alt="Quantex transaction summary - after accessibility update" className="design-hifi-ba-img after" />
             )}
-          </div>
         </div>
 
         <div className="design-hifi-final">
