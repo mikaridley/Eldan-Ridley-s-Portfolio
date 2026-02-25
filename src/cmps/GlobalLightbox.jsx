@@ -3,6 +3,7 @@ import '../assets/styles/cmps/GlobalLightbox.css'
 
 export function GlobalLightbox() {
   const [lightboxSrc, setLightboxSrc] = useState(null)
+  const [lightboxSize, setLightboxSize] = useState(null)
 
   useEffect(() => {
     const onDocumentClick = (e) => {
@@ -11,19 +12,25 @@ export function GlobalLightbox() {
       e.preventDefault()
       e.stopPropagation()
       const src = e.target.currentSrc || e.target.src
-      if (src) setLightboxSrc(src)
+      if (!src) return
+      const size = e.target.dataset.lightboxSize || (e.target.classList.contains('research-empathy-img') ? 'large' : null)
+      setLightboxSrc(src)
+      setLightboxSize(size || null)
     }
     document.addEventListener('click', onDocumentClick, true)
     return () => document.removeEventListener('click', onDocumentClick, true)
   }, [])
 
-  const close = () => setLightboxSrc(null)
+  const close = () => {
+    setLightboxSrc(null)
+    setLightboxSize(null)
+  }
 
   if (!lightboxSrc) return null
 
   return (
     <div
-      className="global-lightbox"
+      className={`global-lightbox${lightboxSize === 'large' ? ' global-lightbox--large' : ''}`}
       onClick={close}
       role="dialog"
       aria-modal="true"

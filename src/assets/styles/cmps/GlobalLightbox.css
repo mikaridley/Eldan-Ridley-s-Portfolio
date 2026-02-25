@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -13,12 +13,21 @@
 }
 
 .global-lightbox-img {
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 95vw;
+  max-height: 95vh;
   width: auto;
   height: auto;
   object-fit: contain;
   display: block;
   cursor: default;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.global-lightbox--large {
+  padding: 0.5rem;
+}
+
+.global-lightbox--large .global-lightbox-img {
+  max-width: 98vw;
+  max-height: 98vh;
 }
