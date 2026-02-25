@@ -342,7 +342,7 @@
 
     .design-wireframes {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
         align-items: start;
         padding-block-end:5rem;
         max-width: 1200px;
@@ -351,7 +351,7 @@
         .design-wireframes-heading {
             grid-column: 1 / -1;
             color: var(--dark-grey);
-            margin: 22rem 0 5.7rem 0;
+            margin-block-end:5.7rem;
         }
 
         .design-wireframes-subtitle {
@@ -361,15 +361,14 @@
         }
 
         .design-wireframes-p {
-                grid-column:1/3;
+                grid-column:1;
                 color: var(--main-txt);
                 font-size: 1.14rem;
                 line-height: 1.6;
-                margin: 0 0 10rem 0;
+                margin-block-end:15rem;
         }
 
         .design-wireframes-notes {
-                margin-block-start:5rem;
                 padding-left: 1.5rem;
                 color: var(--main-txt);
                 font-size: 1.14rem;
@@ -386,7 +385,7 @@
         
         .design-wireframes-fig {
             grid-column: 2;
-            grid-row: 4;
+            grid-row: 3/6;
             display: flex;
             justify-content: flex-end;
             align-items: start;
@@ -480,10 +479,6 @@
             align-items: center;
             margin-block-end: 15rem;
 
-            &:last-child {
-                margin-block-end: 0;
-            }
-
             .design-visual-identity-subtitle {
                 align-self: end;
                 color: var(--dark-grey);
@@ -513,10 +508,6 @@
                     display: block;
                     max-width: 100%;
                     height: auto;
-
-                    &.secondary {
-                        margin-block-start:17rem;
-                    }
                 }
             }
         }

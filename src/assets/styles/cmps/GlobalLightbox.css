@@ -13,21 +13,12 @@
 }
 
 .global-lightbox-img {
-  max-width: 95vw;
-  max-height: 95vh;
+  max-width: 90vw;
+  max-height: 90vh;
   width: auto;
   height: auto;
   object-fit: contain;
   display: block;
   cursor: default;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.global-lightbox--large {
-  padding: 0.5rem;
-}
-
-.global-lightbox--large .global-lightbox-img {
-  max-width: 98vw;
-  max-height: 98vh;
 }
