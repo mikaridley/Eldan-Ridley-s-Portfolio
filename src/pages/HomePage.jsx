@@ -3,6 +3,7 @@ import { scrollToTopInstant } from '../utils/scrollToTop'
 import '../assets/styles/pages/HomePage.css'
 
 import homePageQuantexImg from '../assets/imgs/quantex/home-page-quantex.png'
+import homePageKindredImg from '../assets/imgs/kindred/Project image - Kindred.png'
 
 export function HomePage() {
   return (
@@ -15,15 +16,27 @@ export function HomePage() {
         </p>
       </div>
 
-      <div className="home-project">
-        <Link to="/quantex" className="home-project-link" onClick={scrollToTopInstant}>
-          <img src={homePageQuantexImg} alt="Quantex - laptop and phone" className="home-project-img" />
-        </Link>
-        <h2 className="home-project-title">Quantex</h2>
-        <p className="home-project-desc">
-          <span>UI/UX Designer (solo project).</span> A multi-currency wallet for travelers to exchange and spend local currencies worldwide via mobile app and responsive web.
-        </p>
-      </div>
+      <section className='projects'>
+      <div className="home-project-kindred">
+          <Link to="/quantex" className="home-project-link" onClick={scrollToTopInstant}>
+            <img src={homePageKindredImg} alt="Quantex - laptop and phone" className="home-project-img" />
+          </Link>
+          <h2 className="home-project-title">Kindred</h2>
+          <p className="home-project-desc">
+            <span>UI/UX Designer (solo project).</span> A community-driven mobile app connecting local food businesses with volunteer couriers to rescue and donate surplus food.ile app and responsive web.
+          </p>
+        </div>
+
+        <div className="home-project-quntex">
+          <Link to="/quantex" className="home-project-link" onClick={scrollToTopInstant}>
+            <img src={homePageQuantexImg} alt="Quantex - laptop and phone" className="home-project-img" />
+          </Link>
+          <h2 className="home-project-title">Quantex</h2>
+          <p className="home-project-desc">
+            <span>UI/UX Designer (solo project).</span> A multi-currency wallet for travelers to exchange and spend local currencies worldwide via mobile app and responsive web.
+          </p>
+        </div>
+      </section>
     </section>
   )
 }

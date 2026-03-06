@@ -28,40 +28,86 @@
     }
   }
 
-  .home-project {
-    .home-project-link {
-      display: block;
-      margin-block-end: 1.5rem;
-      cursor: pointer;
-    }
+  .projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14rem;
 
-    .home-project-img {
-      display: block;
-      width: 100%;
-      max-width: 51rem;
-      height: auto;
-      object-fit: contain;
-      margin-block-end: 2.8rem;
-      cursor: pointer;
-    }
-
-    .home-project-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--dark-grey);
-      margin: 0 0 1rem 0;
-    }
-
-    .home-project-desc {
-      font-size: 1.14rem;
-      line-height: 1.6;
-      color: var(--main-txt);
-      margin: 0;
-      max-width: 55rem;
-
-      & span {
-        color:var(--dark-grey);
+    .home-project-quntex {
+      .home-project-link {
+        display: block;
+        margin-block-end: 1.5rem;
+        cursor: pointer;
+      }
+  
+      .home-project-img {
+        display: block;
+        width: 100%;
+        max-width: 26rem;
+        height: auto;
+        object-fit: contain;
+        margin-block-end: 2.8rem;
+        cursor: pointer;
+      }
+  
+      .home-project-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--dark-grey);
+        margin: 0 0 1rem 0;
+      }
+  
+      .home-project-desc {
+        font-size: 1.14rem;
+        line-height: 1.6;
+        color: var(--main-txt);
+        margin: 0;
+        max-width: 26rem;
+  
+        & span {
+          color:var(--dark-grey);
+        }
       }
     }
+
+    .home-project-kindred {
+      .home-project-link {
+        display: block;
+        margin-block-end: 1.5rem;
+        cursor: pointer;
+      }
+  
+      .home-project-img {
+        display: block;
+        width: 100%;
+        max-width: 26rem;
+        height: auto;
+        object-fit: contain;
+        margin-block-end: 2.8rem;
+        cursor: pointer;
+      }
+  
+      .home-project-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--dark-grey);
+        margin: 0 0 1rem 0;
+      }
+  
+      .home-project-desc {
+        font-size: 1.14rem;
+        line-height: 1.6;
+        color: var(--main-txt);
+        margin: 0;
+        max-width: 26rem;
+  
+        & span {
+          color:var(--dark-grey);
+        }
+      }
+    }
+
   }
+
+
 }
