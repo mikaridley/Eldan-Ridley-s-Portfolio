@@ -3,7 +3,7 @@ import { ImgsCarousel } from '../cmps/ImgsCarousel'
 import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
 
-import kindredProjectImg from '../assets/imgs/kindred/Project image - Kindred.png'
+import kindredProjectImg from '../assets/imgs/home-page/Project image - Kindred.png'
 
 const kindredStepperModules = import.meta.glob('../assets/imgs/kindred/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
 const getKindredStepperImg = (name) => {

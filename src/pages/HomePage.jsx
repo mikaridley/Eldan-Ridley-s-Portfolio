@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import { scrollToTopInstant } from '../utils/scrollToTop'
 import '../assets/styles/pages/HomePage.css'
 
-import homePageQuantexImg from '../assets/imgs/quantex/home-page-quantex.png'
-import homePageKindredImg from '../assets/imgs/kindred/Project image - Kindred.png'
+import homePageQuantexImg from '../assets/imgs/home-page/Project image - Quantex.png'
+import homePageKindredImg from '../assets/imgs/home-page/Project image - Kindred.png'
 
 export function HomePage() {
   return (
