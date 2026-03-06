@@ -38,8 +38,10 @@
         grid-template-rows: auto 1fr;
         row-gap: 2rem;
         column-gap: 6rem;
-        padding-inline: var(--home-padding-inline);
         padding-block: 15rem;
+        justify-self: center;
+        max-width: var(--max-width);
+        margin-inline: var(--margin-inline);
 
 
         h4 {
@@ -66,27 +68,32 @@
         }
     }
 
-    .problem-solution {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem 20rem;
-        padding-inline: var(--home-padding-inline);
-        padding-block: 5rem;
+    .problem-solution-wrapper{
         background-color: var(--light-bg);
 
-        .problem-solution-heading {
-            font-size: 2.2rem;
-            font-weight: 600;
-            color: var(--dark-grey);
-            margin-block-end: 1rem;
-        }
-
-        .problem-solution-col {
-            p {
-                color: var(--main-txt);
-                font-size: 1.14rem;
-                line-height: 1.6;
-                margin: 0;
+        .problem-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 11rem;
+            padding-block: 5rem;
+            justify-self: center;
+            max-width: var(--max-width);
+            margin-inline: var(--margin-inline);
+    
+            .problem-solution-heading {
+                font-size: 2.2rem;
+                font-weight: 600;
+                color: var(--dark-grey);
+                margin-block-end: 1rem;
+            }
+    
+            .problem-solution-col {
+                p {
+                    color: var(--main-txt);
+                    font-size: 1.14rem;
+                    line-height: 1.6;
+                    margin: 0;
+                }
             }
         }
     }
@@ -95,9 +102,11 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
-        margin-inline: 21rem;
         padding-block: 15rem;
         background-color: var(--light-txt);
+        justify-self: center;
+        max-width: var(--max-width);
+        margin-inline: var(--margin-inline);
 
         .project-details-col {
             .project-details-heading {

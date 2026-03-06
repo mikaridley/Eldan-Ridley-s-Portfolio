@@ -1,7 +1,8 @@
 :root {
 --home-padding-inline:14rem;
 --home-padding-inline:13vw;
---max-width:1500px;
+--margin-inline:250px;
+--max-width:1420px;
 
 /* txt */
 --light-txt:#ffffff;

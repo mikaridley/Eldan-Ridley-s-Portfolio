@@ -40,6 +40,7 @@ export function Stepper({ activeStep = 1, onStepClick }) {
   return (
     <>
       <div ref={sentinelRef} className="stepper-sentinel" aria-hidden="true" />
+      <div className={`stepper-container ${isSticky ? 'is-sticky' : ''}`}>
       <div className={`stepper-wrapper ${isSticky ? 'is-sticky' : ''}`}>
       <div className="stepper" role="navigation" aria-label="Progress">
         {STEPS.map((step, index) => (
@@ -66,6 +67,7 @@ export function Stepper({ activeStep = 1, onStepClick }) {
             </span>
           </Fragment>
         ))}
+      </div>
       </div>
     </div>
     </>

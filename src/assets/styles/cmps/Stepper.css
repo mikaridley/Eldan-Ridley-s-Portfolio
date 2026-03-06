@@ -4,87 +4,95 @@
   pointer-events: none;
 }
 
-.stepper-wrapper {
+.stepper-container {
   position: sticky;
   top: 0;
   z-index: 10;
-
-  padding-block: 1.5rem;
-  padding-inline: 2rem;
-  margin-block-end: 22rem;
-
   background-color: var(--white-bg);
 
   &.is-sticky {
     border-bottom: 1px solid #c6c6c6;
   }
 
-  .stepper {
-    display: flex;
-    align-items: flex-start;
+  .stepper-wrapper {
+    padding-block: 1.5rem;
     max-width: 73rem;
+    margin-inline: var(--margin-inline);
     margin-inline: auto;
 
-    .stepper-connector {
-      flex: 1;
-      min-width: 20px;
-      height: 0;
-      border-top: 1px solid var(--dark-grey);
-      margin-inline: 1.5rem;
-      margin-top: 35px;
-      align-self: flex-start;
+    &.is-sticky {
+      max-width: 117rem;
     }
-
-    .stepper-step {
+  
+    .stepper {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex: 0 0 auto;
-
-      .stepper-circle {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          font-weight: 700;
-          font-size: 1.6rem;
-          background-color: #fff;
-          border: 1px solid var(--dark-grey);
+      align-items: flex-start;
+      margin-inline: auto;
+  
+      .stepper-connector {
+        flex: 1;
+        min-width: 20px;
+        height: 0;
+        border-top: 1px solid var(--dark-grey);
+        margin-inline: 1.5rem;
+        margin-top: 35px;
+        align-self: flex-start;
+      }
+  
+      .stepper-step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 auto;
+  
+        .stepper-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.6rem;
+            background-color: #fff;
+            border: 1px solid var(--dark-grey);
+            color: var(--dark-grey);
+            flex-shrink: 0;
+            padding: 0;
+            cursor: pointer;
+  
+            &.active {
+              background-color: var(--dark-grey, #363636);
+              border-color: var(--dark-grey, #363636);
+              color: #fff;
+            }
+  
+            .is-sticky & {
+              width: 50px;
+              height: 50px;
+              font-size: 1.5rem;
+            }
+          }
+  
+        .stepper-label {
+          margin-block-start: 0.75rem;
+          font-size: 1.14rem;
           color: var(--dark-grey);
-          flex-shrink: 0;
+          text-align: center;
+          background: none;
+          border: none;
           padding: 0;
+          font: inherit;
           cursor: pointer;
-
-          &.active {
-            background-color: var(--dark-grey, #363636);
-            border-color: var(--dark-grey, #363636);
-            color: #fff;
-          }
-
-          .is-sticky & {
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
-          }
         }
-
-      .stepper-label {
-        margin-block-start: 0.75rem;
-        font-size: 1.14rem;
-        color: var(--dark-grey);
-        text-align: center;
-        background: none;
-        border: none;
-        padding: 0;
-        font: inherit;
-        cursor: pointer;
+      }
+  
+      .is-sticky & {
+        max-width: 90%;
       }
     }
-
-    .is-sticky & {
-      max-width: 90%;
-    }
   }
+
 }
+
+
