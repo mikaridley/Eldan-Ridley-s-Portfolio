@@ -1,17 +1,21 @@
 .app-footer {
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  row-gap:2.12rem;
   align-items: center;
-  padding-block: 2rem;
-  margin-inline: 6rem;
+  padding-block: 3.5rem;
   margin-block: 10rem;
   border-top: 1px solid var(--main-txt);
+  max-width: var(--max-width);
 
 
   > img {
-justify-self: end;
-    width:70px;
+    justify-self: end;
+    width:8.8rem;
     grid-row: span 2;
   }
 
@@ -21,7 +25,7 @@ justify-self: end;
     color: var(--dark-grey);
 
     &.msg {
-      font-size: 2rem;
+      font-size: 2.25rem;
       font-weight: 400;
     }
 
@@ -33,9 +37,11 @@ justify-self: end;
 
   .copyright {
     position: absolute;
-    bottom: 0;
+    bottom: 2rem;
     right: 0;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--main-txt);
   }
 
   
