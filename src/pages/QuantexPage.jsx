@@ -1,4 +1,4 @@
-﻿import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import appScreen from '../assets/imgs/quantex/first-page.png'
 import appGif from '../assets/imgs/quantex/app-gif.gif'
 import { ImgsCarousel } from '../cmps/ImgsCarousel'
@@ -62,6 +62,7 @@ const FINAL_CAROUSEL_IMAGES = Object.keys(finalCarouselModules)
 
 
 const STEP_HEADER_OFFSET = 120
+const STEPPER_SCROLL_OFFSET = 100
 
 export function QuantexPage() {
   const step1Ref = useRef(null)
@@ -86,6 +87,14 @@ export function QuantexPage() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  const handleStepClick = (stepNumber) => {
+    const ref = stepRefs[stepNumber - 1]?.current
+    if (ref) {
+      const y = ref.getBoundingClientRect().top + window.scrollY - STEPPER_SCROLL_OFFSET
+      window.scrollTo({ top: y, behavior: 'smooth' })
+    }
+  }
 
   return (
     <section className="quantex-page">
@@ -150,7 +159,7 @@ export function QuantexPage() {
         </section>
       )}
 
-      <Stepper activeStep={activeStep} />
+      <Stepper activeStep={activeStep} onStepClick={handleStepClick} />
       <div ref={step1Ref}><StepperHeader number={1} word="Research" /></div>
 
       <section className="research-personas" aria-labelledby="research-personas-heading">

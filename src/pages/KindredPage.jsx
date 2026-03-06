@@ -18,6 +18,7 @@ const KINDRED_CAROUSEL_IMAGES = Object.keys(kindredCarouselModules)
   .filter(Boolean)
 
 const STEP_HEADER_OFFSET = 120
+const STEPPER_SCROLL_OFFSET = 100
 
 export function KindredPage() {
   const step1Ref = useRef(null)
@@ -42,6 +43,14 @@ export function KindredPage() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  const handleStepClick = (stepNumber) => {
+    const ref = stepRefs[stepNumber - 1]?.current
+    if (ref) {
+      const y = ref.getBoundingClientRect().top + window.scrollY - STEPPER_SCROLL_OFFSET
+      window.scrollTo({ top: y, behavior: 'smooth' })
+    }
+  }
 
   return (
     <section className="quantex-page">
@@ -110,7 +119,7 @@ export function KindredPage() {
         </section>
       )}
 
-      <Stepper activeStep={activeStep} />
+      <Stepper activeStep={activeStep} onStepClick={handleStepClick} />
       <div ref={step1Ref}><StepperHeader number={1} word="Research" /></div>
 
       <section className="research-personas" aria-labelledby="kindred-research-personas-heading">

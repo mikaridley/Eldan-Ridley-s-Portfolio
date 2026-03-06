@@ -8,7 +8,7 @@ const STEPS = [
   { id: 4, label: 'Takeaway' },
 ]
 
-export function Stepper({ activeStep = 1 }) {
+export function Stepper({ activeStep = 1, onStepClick }) {
   const sentinelRef = useRef(null)
   const [isSticky, setIsSticky] = useState(false)
 
@@ -31,6 +31,12 @@ export function Stepper({ activeStep = 1 }) {
     return () => observer.disconnect()
   }, [])
 
+  const handleStepClick = (stepId) => {
+    if (typeof onStepClick === 'function') {
+      onStepClick(stepId)
+    }
+  }
+
   return (
     <>
       <div ref={sentinelRef} className="stepper-sentinel" aria-hidden="true" />
@@ -40,13 +46,23 @@ export function Stepper({ activeStep = 1 }) {
           <Fragment key={step.id}>
             {index > 0 && <span className="stepper-connector" aria-hidden="true" />}
             <span className="stepper-step">
-              <span
+              <button
+                type="button"
                 className={`stepper-circle ${step.id === activeStep ? 'active' : ''}`}
                 aria-current={step.id === activeStep ? 'step' : undefined}
+                onClick={() => handleStepClick(step.id)}
+                aria-label={`Go to ${step.label}`}
               >
                 {step.id}
-              </span>
-              <span className="stepper-label">{step.label}</span>
+              </button>
+              <button
+                type="button"
+                className="stepper-label"
+                onClick={() => handleStepClick(step.id)}
+                aria-label={`Go to ${step.label}`}
+              >
+                {step.label}
+              </button>
             </span>
           </Fragment>
         ))}
