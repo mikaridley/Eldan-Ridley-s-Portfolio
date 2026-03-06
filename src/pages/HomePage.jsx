@@ -7,7 +7,7 @@ import homePageKindredImg from '../assets/imgs/kindred/Project image - Kindred.p
 
 export function HomePage() {
   return (
-    <section className="home-page">
+    <section className="home-page projects-layout">
       <div className="home-intro">
         <h1 className="home-intro-title">Hi! I&apos;m Eldan.</h1>
         <p className="home-intro-role">UI/UX Designer</p>

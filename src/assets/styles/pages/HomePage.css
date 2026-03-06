@@ -1,5 +1,4 @@
 .home-page {
-  margin-inline: var(--home-padding-inline);
   padding-block: 15rem 6rem;
 
   .home-intro {

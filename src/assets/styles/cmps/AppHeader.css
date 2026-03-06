@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   max-width: var(--max-width);
-  margin-inline: 150px;
+  margin-inline: auto;
 
   padding-block-start: 1rem;
 
