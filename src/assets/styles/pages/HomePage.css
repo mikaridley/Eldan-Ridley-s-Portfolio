@@ -30,7 +30,8 @@
   .projects{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 14rem;
+    justify-items: center;
+    gap: 5rem;
 
     .home-project-quntex {
       .home-project-link {
