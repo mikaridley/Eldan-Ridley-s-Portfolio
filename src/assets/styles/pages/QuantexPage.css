@@ -19,6 +19,11 @@
             align-self: end;
         }
 
+        h4{
+            max-width: 64rem;
+            font-size: 2.2rem;
+        }
+
 
         img {
             justify-self: center;
@@ -89,7 +94,7 @@
     .project-details {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        column-gap: 5rem;
+        justify-items: center;
         margin-inline: 21rem;
         padding-block: 15rem;
         background-color: var(--light-txt);
