@@ -97,13 +97,15 @@ export function QuantexPage() {
   }
 
   return (
-    <section className="quantex-page">
+    <section className="quantex-page projects-layout">
       
-      <section className="quantex-opening">
-        <h1>Quantex</h1>
-        <h4>A multi-currency wallet for travellers to spend local currencies worldwide via mobile app and responsive web.</h4>
-        <img src={appScreen} alt="app-screen" />
-      </section>
+      <div className="quantec-opening-bg"></div>
+        <section className="quantex-opening">
+          <h1>Quantex</h1>
+          <h4>A multi-currency wallet for travellers to spend local currencies worldwide via mobile app and responsive web.</h4>
+          <img src={appScreen} alt="app-screen" />
+        </section>
+
 
       <section className="overview">
       <h4>Overview</h4>
@@ -112,7 +114,7 @@ export function QuantexPage() {
       <img src={appGif} alt="Quantex app" className="overview-gif" />
       </section>
 
-      <div className="problem-solution-wrapper">
+      <div className="problem-solution-wrapper"></div>
         <section className="problem-solution">
           <div className="problem-solution-col">
             <h4 className="problem-solution-heading">Problem</h4>
@@ -123,7 +125,7 @@ export function QuantexPage() {
             <p>I designed Quantex to replace the physical errand with a digital-first approach. The platform allows users to convert currencies instantly with a single tap, enabling them to pay at cashiers or online without delay. By prioritising a simple, high-contrast interface, I ensured the product is easy to navigate for everyone, from tech-savvy travellers to those who typically struggle with complex digital tools.</p>
           </div>
         </section>
-      </div>
+      
 
       <section className="project-details">
         <div className="project-details-col">
@@ -161,10 +163,10 @@ export function QuantexPage() {
         </section>
       )}
 
-      <Stepper activeStep={activeStep} onStepClick={handleStepClick} />
+      <Stepper activeStep={activeStep} onStepClick={handleStepClick} className="stepper" />
       <div ref={step1Ref}><StepperHeader number={1} word="Research" /></div>
 
-      <section className="research-personas" aria-labelledby="research-personas-heading">
+      {/* <section className="research-personas" aria-labelledby="research-personas-heading">
         <h3 id="research-personas-heading" className="research-personas-heading">1.1. Defining the target audience</h3>
         <h4 className="research-personas-subtitle">Personas</h4>
         <p className="research-personas-intro">
@@ -175,9 +177,9 @@ export function QuantexPage() {
             <img key={index} src={src} alt="" className="research-personas-img" />
           ))}
         </div>
-      </section>
+      </section> */}
 
-      <section className="research-empathy" aria-labelledby="research-empathy-heading">
+      {/* <section className="research-empathy" aria-labelledby="research-empathy-heading">
         <h3 id="research-empathy-heading" className="research-empathy-heading">1.2. User research & synthesis</h3>
         <h4 className="research-empathy-subtitle">Empathy map</h4>
         <div className="research-empathy-text">
@@ -196,11 +198,11 @@ export function QuantexPage() {
             <img src={EMPATHY_MAP_IMG} alt="Empathy map for Robert - says, thinks, does, feels" className="research-empathy-img" />
           </div>
         )}
-      </section>
+      </section> */}
 
-      <div ref={step2Ref}><StepperHeader number={2} word="Ideation" /></div>
+      {/* <div ref={step2Ref}><StepperHeader number={2} word="Ideation" /></div> */}
 
-      <section className="ideation-user-stories" aria-labelledby="ideation-user-stories-heading">
+      {/* <section className="ideation-user-stories" aria-labelledby="ideation-user-stories-heading">
         <h3 id="ideation-user-stories-heading" className="ideation-user-stories-heading">2.1. User stories & requirements</h3>
 
         <div className="ideation-block">
@@ -228,9 +230,9 @@ export function QuantexPage() {
             <li>How might we help a busy parent complete a secure transaction in seconds?</li>
           </ul>
         </div>
-      </section>
+      </section> */}
 
-      <section className="ideation-mapping" aria-labelledby="ideation-mapping-heading">
+      {/* <section className="ideation-mapping" aria-labelledby="ideation-mapping-heading">
         <h3 id="ideation-mapping-heading" className="ideation-mapping-heading">2.2. Mapping the journey</h3>
         <h4 className="ideation-mapping-subtitle">Sitemap</h4>
         <p className="ideation-mapping-p">
@@ -241,11 +243,11 @@ export function QuantexPage() {
             <img src={PROJECT_IMAGE} alt="Quantex sitemap - Homepage, Profile, Exchange, Wallet, Rate History" className="ideation-mapping-img" />
           </div>
         )}
-      </section>
+      </section> */}
 
-      <div ref={step3Ref}><StepperHeader number={3} word="Design" /></div>
+      {/* <div ref={step3Ref}><StepperHeader number={3} word="Design" /></div> */}
 
-      <section className="design-wireframes" aria-labelledby="design-wireframes-heading">
+      {/* <section className="design-wireframes" aria-labelledby="design-wireframes-heading">
         <h3 id="design-wireframes-heading" className="design-wireframes-heading">3.1. Sketches to low-fidelity</h3>
         <h4 className="design-wireframes-subtitle">Paper wireframes</h4>
           <p className="design-wireframes-p">
@@ -274,9 +276,9 @@ export function QuantexPage() {
             </p>
           )}
         </div>
-      </section>
+      </section> */}
 
-      <section className="design-visual-identity" aria-labelledby="design-visual-identity-heading">
+      {/* <section className="design-visual-identity" aria-labelledby="design-visual-identity-heading">
         <h3 id="design-visual-identity-heading" className="design-visual-identity-heading">3.2. Visual identity & moodboard</h3>
 
         <div className="design-visual-identity-block">
@@ -311,9 +313,9 @@ export function QuantexPage() {
             After testing the initial designs, I identified several areas where the user flow could be further simplified. These iterations focus on refining the layout based on direct user feedback, ensuring that the most important tasks ΓÇö like checking rates and finalising an exchange ΓÇö are as seamless as possible.
           </p>
         </div>
-      </section>
+      </section> */}
 
-      <section className="design-hifi" aria-labelledby="design-hifi-heading">
+      {/* <section className="design-hifi" aria-labelledby="design-hifi-heading">
         <div className="design-hifi-iteration">
           <h4 className="design-hifi-iteration-title">Iteration #1</h4>
         </div>
@@ -435,13 +437,13 @@ export function QuantexPage() {
           </div>
         )}
 
-      </section>
+      </section> */}
 
-      <div ref={step4Ref}><StepperHeader number={4} word="Takeaways" /></div>
+      {/* <div ref={step4Ref}><StepperHeader number={4} word="Takeaways" /></div> */}
 
 
 
-      <section className="takeaways-reflections-next" aria-labelledby="takeaways-reflections-heading">
+      {/* <section className="takeaways-reflections-next" aria-labelledby="takeaways-reflections-heading">
         <div className="takeaways-reflections">
           <h3 id="takeaways-reflections-heading" className="takeaways-rn-heading">Reflections</h3>
           <ul className="takeaways-rn-list">
@@ -471,10 +473,10 @@ export function QuantexPage() {
             </li>
           </ul>
         </div>
-      </section>
+      </section> */}
 
 
-      <section className="takeaways-metrics" aria-labelledby="takeaways-metrics-heading">
+      {/* <section className="takeaways-metrics" aria-labelledby="takeaways-metrics-heading">
         <h4 id="takeaways-metrics-heading" className="takeaways-metrics-heading">Metrics</h4>
         <p className="takeaways-metrics-intro">
           As this is a conceptual project, I haven&apos;t tracked live user data. However, if Quantex were to launch, I would focus on the following metrics to evaluate the design&apos;s impact:
@@ -495,7 +497,7 @@ export function QuantexPage() {
             <img src={METRICS_IMG} alt="Metrics graph - Task success rate, Drop-off reduction, WCAG compliance" className="takeaways-metrics-img" />
           </div>
         )}
-      </section>
+      </section> */}
 
     </section>
   )

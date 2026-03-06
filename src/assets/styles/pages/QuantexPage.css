@@ -1,36 +1,44 @@
 .quantex-page {  
     
-    .quantex-opening {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        row-gap: 1rem;
-        padding-inline: var(--home-padding-inline);
-        margin-block-start: -5rem;
-        padding-block-start: 15rem;
-        padding-block-end: 5rem;
-
-
+    .quantec-opening-bg{
+        grid-column:1/-1;
+        grid-row: 1;
         background-image: url('../../imgs/quantex/home-bg.png');
         background-size: cover;
         background-position: top center;
-        color: var(--light-txt);
-
-        h1 {
-            align-self: end;
-        }
-
-        h4{
-            max-width: 64rem;
-            font-size: 2.2rem;
-        }
-
-
-        img {
-            justify-self: center;
-            grid-column: 2;
-            grid-row: 1 / span 2;
-        }
+        height:53rem;
     }
+
+        .quantex-opening {
+            grid-column: 2;
+            grid-row: 1;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            row-gap: 1rem;
+            margin-block-start:15rem;
+    
+    
+
+            color: var(--light-txt);
+    
+            h1 {
+                align-self: end;
+            }
+    
+            h4{
+                max-width: 64rem;
+                font-size: 2.2rem;
+            }
+    
+    
+            img {
+                justify-self: center;
+                grid-column: 2;
+                grid-row: 1 / span 2;
+            }
+        }
+    
+
 
     .overview {
         display: grid;
@@ -40,8 +48,6 @@
         column-gap: 6rem;
         padding-block: 15rem;
         justify-self: center;
-        max-width: var(--max-width);
-        margin-inline: var(--margin-inline);
 
 
         h4 {
@@ -69,44 +75,43 @@
     }
 
     .problem-solution-wrapper{
+        grid-row:3;
+        grid-column:1/-1;
         background-color: var(--light-bg);
+    }
 
-        .problem-solution {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 11rem;
-            padding-block: 5rem;
-            justify-self: center;
-            max-width: var(--max-width);
-            margin-inline: var(--margin-inline);
-    
-            .problem-solution-heading {
-                font-size: 2.2rem;
-                font-weight: 600;
-                color: var(--dark-grey);
-                margin-block-end: 1rem;
-            }
-    
-            .problem-solution-col {
-                p {
-                    color: var(--main-txt);
-                    font-size: 1.14rem;
-                    line-height: 1.6;
-                    margin: 0;
-                }
+    .problem-solution {
+        grid-row:3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 11rem;
+        padding-block: 5rem;
+        justify-self: center;
+
+        .problem-solution-heading {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--dark-grey);
+            margin-block-end: 1rem;
+        }
+
+        .problem-solution-col {
+            p {
+                color: var(--main-txt);
+                font-size: 1.14rem;
+                line-height: 1.6;
+                margin: 0;
             }
         }
     }
+    
 
     .project-details {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
         padding-block: 15rem;
-        background-color: var(--light-txt);
         justify-self: center;
-        max-width: var(--max-width);
-        margin-inline: var(--margin-inline);
 
         .project-details-col {
             .project-details-heading {

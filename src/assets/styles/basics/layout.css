@@ -1,10 +1,15 @@
 .main-layout {
   position: relative;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   height: 100vh;
 }
 
-.main-layout main {
-  padding-block-start: 5rem;
+.projects-layout{
+  display: grid;
+  grid-template-columns: minmax(150px,1fr) minmax(auto,var(--max-width)) minmax(150px,1fr);
+
+  > * {
+    grid-column: 2;
+  }
 }
