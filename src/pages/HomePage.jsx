@@ -18,8 +18,8 @@ export function HomePage() {
 
       <section className='projects'>
       <div className="home-project-kindred">
-          <Link to="/quantex" className="home-project-link" onClick={scrollToTopInstant}>
-            <img src={homePageKindredImg} alt="Quantex - laptop and phone" className="home-project-img" />
+          <Link to="/kindred" className="home-project-link" onClick={scrollToTopInstant}>
+            <img src={homePageKindredImg} alt="Kindred - project preview" className="home-project-img" />
           </Link>
           <h2 className="home-project-title">Kindred</h2>
           <p className="home-project-desc">
