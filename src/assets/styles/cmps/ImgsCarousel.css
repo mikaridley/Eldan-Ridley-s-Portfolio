@@ -63,21 +63,25 @@
     align-items: center;
     justify-content: center;
     transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
 
     &:active {
       transform: scale(0.96);
     }
 
     .imgs-carousel-arrow-icon {
+      position: relative;
+      left:1px;
       width: 24px;
       height: 24px;
       object-fit: contain;
       display: block;
       user-select: none;
+      cursor: pointer;
     }
+  }
 
-    &--left .imgs-carousel-arrow-icon {
-      transform: scaleX(-1);
-    }
+  .imgs-carousel-arrow--left {
+    transform: rotate(180deg);
   }
 }
