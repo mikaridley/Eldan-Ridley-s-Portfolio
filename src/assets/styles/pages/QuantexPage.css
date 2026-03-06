@@ -265,7 +265,6 @@
 
     .ideation-user-stories {
         padding-block-end: 14rem;
-        margin-inline: var(--home-padding-inline);
         max-width: 75rem;
 
         .ideation-user-stories-heading {
@@ -334,7 +333,6 @@
 
     .ideation-mapping {
         padding-inline: 2rem;
-        margin-inline: var(--home-padding-inline);
         max-width: 75rem;
 
         .ideation-mapping-heading {
@@ -367,7 +365,6 @@
         align-items: start;
         padding-block-end:5rem;
         max-width: 1200px;
-        margin-inline: auto;
 
         .design-wireframes-heading {
             grid-column: 1 / -1;
@@ -464,28 +461,9 @@
             }
         }
 
-        @media (max-width: 900px) {
-            grid-template-columns: 1fr;
-            row-gap: 1.5rem;
-
-            .design-wireframes-text {
-                grid-row: auto;
-            }
-
-            .design-wireframes-text,
-            .design-wireframes-fig {
-                grid-column: 1;
-            }
-
-            .design-wireframes-fig {
-                grid-row: auto;
-                justify-content: center;
-            }
-        }
     }
 
     .design-visual-identity {
-        margin-inline: var(--home-padding-inline);
 
         .design-visual-identity-heading {
             color: var(--dark-grey);
@@ -571,13 +549,21 @@
     }
 
     .design-hifi {
+        grid-column:1/-1;
+        display: grid;
+        grid-template-columns: subgrid;
+
+        > *{
+            grid-column: 2;
+        }
 
         .design-hifi-iteration {
+            grid-column:1 / span 3;
             background-color: var(--light-bg);
             padding-block: 2.6rem;
             align-items: center;
             justify-content: start;
-            padding-inline: var(--home-padding-inline);
+            text-align: center;
 
             .design-hifi-iteration-title {
                 color: var(--dark-grey);
@@ -595,10 +581,8 @@
                 }
             }
         }
-
         
         .design-hifi-iteration-subtitle {
-            margin-inline: var(--home-padding-inline);
             margin-block-end: 1.7rem;
             margin-block-start: 4.7rem;
             color: var(--dark-grey);
@@ -608,7 +592,6 @@
             font-size: 1.14rem;
             line-height: 1.6;
             color: var(--main-txt);
-            margin-inline: var(--home-padding-inline);
             max-width: 75rem;
             margin-block-end: 4.7rem;
         }
@@ -616,7 +599,6 @@
         .design-hifi-before-after {
             display: grid;
             grid-template-columns:320px repeat(2, auto) 1fr ;
-            margin-inline: var(--home-padding-inline);
             max-width: 90rem;
             padding-block: 4.6rem 15rem;
             position: relative;
@@ -672,7 +654,6 @@
         }
 
         .design-hifi-final {
-            padding-inline: var(--home-padding-inline);
             padding-block-end: 17rem;
 
             .design-hifi-final-heading {
@@ -691,14 +672,13 @@
             }
 
             .design-hifi-final-img {
-                display: block;
+                min-width:20rem;
                 max-width: 54rem;
                 object-fit: contain;
             }
         }
 
         .design-hifi-desktop {
-            padding-inline: var(--home-padding-inline);
             padding-block-end: 5.7rem;
 
             .design-hifi-desktop-heading {
@@ -722,7 +702,6 @@
         }
 
         .design-hifi-mobile {
-            padding-inline: var(--home-padding-inline);
             padding-block-end: 5.7rem;
 
             .design-hifi-mobile-heading {
@@ -777,7 +756,6 @@
         grid-template-columns: 1fr 1fr;
         column-gap: 12rem;
         align-items: start;
-        padding-inline: var(--home-padding-inline);
 
         .takeaways-reflections,
         .takeaways-next {
@@ -830,7 +808,6 @@
         grid-template-rows: auto minmax(0, 80px) auto;
         align-items: start;
         padding-block: 3rem 5rem;
-        margin-inline: var(--home-padding-inline);
 
         .takeaways-metrics-heading {
             align-self: end;
