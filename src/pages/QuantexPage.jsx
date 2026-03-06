@@ -164,9 +164,10 @@ export function QuantexPage() {
       )}
 
       <Stepper activeStep={activeStep} onStepClick={handleStepClick} className="stepper" />
-      <div ref={step1Ref}><StepperHeader number={1} word="Research" /></div>
 
-      {/* <section className="research-personas" aria-labelledby="research-personas-heading">
+      <div ref={step1Ref} className="stepper-header-container"><StepperHeader number={1} word="Research" /></div>
+
+      <section className="research-personas" aria-labelledby="research-personas-heading">
         <h3 id="research-personas-heading" className="research-personas-heading">1.1. Defining the target audience</h3>
         <h4 className="research-personas-subtitle">Personas</h4>
         <p className="research-personas-intro">
@@ -177,9 +178,9 @@ export function QuantexPage() {
             <img key={index} src={src} alt="" className="research-personas-img" />
           ))}
         </div>
-      </section> */}
+      </section>
 
-      {/* <section className="research-empathy" aria-labelledby="research-empathy-heading">
+      <section className="research-empathy" aria-labelledby="research-empathy-heading">
         <h3 id="research-empathy-heading" className="research-empathy-heading">1.2. User research & synthesis</h3>
         <h4 className="research-empathy-subtitle">Empathy map</h4>
         <div className="research-empathy-text">
@@ -198,7 +199,7 @@ export function QuantexPage() {
             <img src={EMPATHY_MAP_IMG} alt="Empathy map for Robert - says, thinks, does, feels" className="research-empathy-img" />
           </div>
         )}
-      </section> */}
+      </section>
 
       {/* <div ref={step2Ref}><StepperHeader number={2} word="Ideation" /></div> */}
 

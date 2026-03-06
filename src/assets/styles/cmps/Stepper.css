@@ -1,3 +1,8 @@
+.projects-layout > .stepper-sentinel,
+.projects-layout > .stepper-container {
+  grid-column: 1 / -1;
+}
+
 .stepper-sentinel {
   height: 1px;
   width: 100%;

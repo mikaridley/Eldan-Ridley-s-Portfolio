@@ -144,9 +144,12 @@
         }
     }
 
+    .stepper-header-container{
+        grid-column:1/-1;
+    }
+
     .research-personas {
         padding-block-end: 17rem;
-        margin-inline: var(--home-padding-inline);
 
         .research-personas-heading {
             font-size: 2.5rem;
@@ -193,10 +196,10 @@
         gap: 0 4rem;
         row-gap: 1rem;
         align-items: start;
-        margin-inline: var(--home-padding-inline);
 
         .research-empathy-heading {
-            grid-column: 1;
+            grid-column: 1 / 3;
+            grid-row: 1;
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--dark-grey);
@@ -232,11 +235,10 @@
         }
 
         .research-empathy-fig {
+            align-self: end;
             grid-column: 2;
             grid-row: 1 / span 4;
             display: flex;
-            justify-content: flex-end;
-            margin-top:16rem;
 
             .research-empathy-img {
                 display: block;
