@@ -13,7 +13,7 @@ const computerCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper
 const finalCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/final-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 
 const STEP_HEADER_OFFSET = 120
-const STEPPER_SCROLL_OFFSET = 100
+const STEPPER_SCROLL_OFFSET = -300
 
 // —— Helper functions ——————————————————————————————————————————————————————
 function getStepperImg(name) {
