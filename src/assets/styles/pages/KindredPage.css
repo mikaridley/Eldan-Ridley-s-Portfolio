@@ -176,7 +176,6 @@
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
         gap: 0 4rem;
-        row-gap: 1rem;
         align-items: start;
 
         .research-empathy-heading {
@@ -185,14 +184,14 @@
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--dark-grey);
-            margin: 0 0 11rem 0;
+            margin: 0 0 5rem 0;
         }
 
         .research-empathy-subtitle {
             font-size: 2.2rem;
             font-weight: 600;
             color: var(--dark-grey);
-            margin: 0 0 1.7rem 0;
+            margin: 0 0 1.5rem 0;
         }
 
         .research-empathy-text {
@@ -219,7 +218,7 @@
         .research-empathy-fig {
             align-self: end;
             grid-column: 2;
-            grid-row: 1 / span 4;
+            grid-row: 2 / span 3;
             display: flex;
 
             .research-empathy-img {

@@ -3,10 +3,8 @@ import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
 import { ImgsCarousel } from '../cmps/ImgsCarousel'
 import appScreen from '../assets/imgs/kindred/Hand showing Kindred app.png'
-import appGif from '../assets/imgs/quantex/app-gif.gif'
 
 // —— Constants (module globs & config) —————————————————————————————————————
-const stepperImgModules = import.meta.glob('../assets/imgs/quantex/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
 const kindredStepperModules = import.meta.glob('../assets/imgs/kindred/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
 const lowWireframesCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/low-wireframes-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 const computerCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/computer-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
@@ -16,11 +14,6 @@ const STEP_HEADER_OFFSET = 120
 const STEPPER_SCROLL_OFFSET = 100
 
 // —— Helper functions ——————————————————————————————————————————————————————
-function getStepperImg(name) {
-  const key = Object.keys(stepperImgModules).find((k) => k.toLowerCase().includes(name.toLowerCase()))
-  return key ? stepperImgModules[key].default : null
-}
-
 function getKindredStepperImg(name) {
   const key = Object.keys(kindredStepperModules).find((k) => k.toLowerCase().includes(name.toLowerCase()))
   return key ? kindredStepperModules[key].default : null
@@ -31,7 +24,7 @@ const KINDRED_PERSONA_IMAGES = [
   getKindredStepperImg('Persona - Marco'),
   getKindredStepperImg('Persona - Sarah'),
 ].filter(Boolean)
-const EMPATHY_MAP_IMG = getStepperImg('empathy')
+const EMPATHY_MAP_IMG = getKindredStepperImg('Empathy map')
 const STEPPER_STICKY_NOTE_IMAGES = Object.keys(stepperImgModules)
   .filter((k) => k.toLowerCase().includes('sticky'))
   .sort()
@@ -172,18 +165,13 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
         </div>
       </section>
 
-      {/* <section className="research-empathy" aria-labelledby="research-empathy-heading">
-        <h3 id="research-empathy-heading" className="research-empathy-heading">1.2. User research & synthesis</h3>
+      <section className="research-empathy" aria-labelledby="research-empathy-heading">
+        <h3 id="research-empathy-heading" className="research-empathy-heading">User research & synthesis</h3>
         <h4 className="research-empathy-subtitle">Empathy map</h4>
         <div className="research-empathy-text">
-          <p className="research-empathy-p darker">
-            The key insight from this map was that users didn&apos;t just want better rates - they wanted their time back.
-          </p>
           <p className="research-empathy-p">
-            I created this empathy map to align the product&apos;s core features with the real-world needs of my users.
-          </p>
-          <p className="research-empathy-p">
-            By mapping out what travellers say, think, do, and feel, I identified a clear demand for a digital-first solution that removes the &apos;chore&apos; of visiting a physical exchange centre. This allowed me to focus on creating a &apos;one-click&apos; exchange experience that feels accessible to everyone, regardless of their tech experience.
+          The empathy map highlighted that restaurant staff need an extremely fast process that doesn't disrupt their work.<br/>
+          By analysing what they said, thought, did, and felt, I identified a demand for a donation process that removes the logistical 'chore' of arranging pickups. This allowed me to focus on creating a fast, transparent experience that ensures staff can manage surplus food without being distracted from their primary duties.
           </p>
         </div>
         {EMPATHY_MAP_IMG && (
@@ -191,7 +179,7 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
             <img src={EMPATHY_MAP_IMG} alt="Empathy map for Robert - says, thinks, does, feels" className="research-empathy-img" />
           </div>
         )}
-      </section> */}
+      </section>
 
       {/* <div ref={step2Ref} className="stepper-header-container"><StepperHeader number={2} word="Ideation" /></div> */}
 
