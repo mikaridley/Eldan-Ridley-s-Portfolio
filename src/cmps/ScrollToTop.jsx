@@ -15,7 +15,7 @@ export function ScrollToTop() {
     scrollToTopInstant()
   }, [pathname])
 
-  const onScrollToTop = () => {
+  function onScrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 

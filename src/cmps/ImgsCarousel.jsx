@@ -17,8 +17,9 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
   const slideWidthWhenFixed = viewportWidth > 0 && visibleCount > 0
     ? (viewportWidth - (visibleCount - 1) * gap) / visibleCount
     : SLIDE_HEIGHT
-  const getSlideWidth = (idx) =>
-    visibleCount != null && visibleCount > 0 ? slideWidthWhenFixed : (slideWidths[idx] ?? SLIDE_HEIGHT)
+  function getSlideWidth(idx) {
+    return visibleCount != null && visibleCount > 0 ? slideWidthWhenFixed : (slideWidths[idx] ?? SLIDE_HEIGHT)
+  }
 
   const offsetByIndex = useMemo(() => {
     const offsets = [0]
@@ -31,7 +32,7 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
 
   const translateX = -offsetByIndex[currentIndex] ?? 0
 
-  const handleImageLoad = (idx, e) => {
+  function handleImageLoad(idx, e) {
     if (visibleCount != null && visibleCount > 0) return
     const { naturalWidth, naturalHeight } = e.target
     if (!naturalWidth || !naturalHeight) return
@@ -58,7 +59,7 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
     if (visibleCount == null || visibleCount <= 0) setSlideWidths([])
   }, [images, visibleCount])
 
-  const handleTransitionEnd = () => {
+  function handleTransitionEnd() {
     if (n === 0) return
     if (currentIndex >= n) {
       setIsTransitioning(false)
@@ -74,7 +75,7 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
     }
   }
 
-  const goPrev = () => {
+  function goPrev() {
     if (n === 0 || isAnimatingRef.current) return
     isAnimatingRef.current = true
     if (currentIndex === 0) {
@@ -91,7 +92,7 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
     }
   }
 
-  const goNext = () => {
+  function goNext() {
     if (n === 0 || isAnimatingRef.current) return
     isAnimatingRef.current = true
     if (currentIndex === displayImages.length - 1) {

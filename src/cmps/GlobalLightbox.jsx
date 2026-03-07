@@ -13,7 +13,7 @@ export function GlobalLightbox() {
   const [lightboxSrc, setLightboxSrc] = useState(null)
 
   useEffect(() => {
-    const onDocumentClick = (e) => {
+    function onDocumentClick(e) {
       if (e.target.tagName !== 'IMG') return
       const hasAllowedClass = LIGHTBOX_IMG_CLASSES.some((cls) =>
         e.target.classList.contains(cls)
@@ -29,7 +29,9 @@ export function GlobalLightbox() {
     return () => document.removeEventListener('click', onDocumentClick, true)
   }, [])
 
-  const close = () => setLightboxSrc(null)
+  function close() {
+    setLightboxSrc(null)
+  }
 
   if (!lightboxSrc) return null
 

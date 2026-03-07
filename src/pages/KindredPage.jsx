@@ -4,7 +4,7 @@ import appGif from '../assets/imgs/quantex/app-gif.gif'
 import { ImgsCarousel } from '../cmps/ImgsCarousel'
 
 const stepperImgModules = import.meta.glob('../assets/imgs/quantex/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
-const getStepperImg = (name) => {
+function getStepperImg(name) {
   const key = Object.keys(stepperImgModules).find((k) => k.toLowerCase().includes(name.toLowerCase()))
   return key ? stepperImgModules[key].default : null
 }
@@ -36,7 +36,7 @@ import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
 
 const kindredStepperModules = import.meta.glob('../assets/imgs/kindred/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
-const getKindredStepperImg = (name) => {
+function getKindredStepperImg(name) {
   const key = Object.keys(kindredStepperModules).find((k) => k.toLowerCase().includes(name.toLowerCase()))
   return key ? kindredStepperModules[key].default : null
 }
@@ -77,7 +77,7 @@ export function KindredPage() {
   const [activeStep, setActiveStep] = useState(1)
 
   useEffect(() => {
-    const onScroll = () => {
+    function onScroll() {
       let current = 1
       stepRefs.forEach((ref, i) => {
         if (ref.current) {
@@ -92,7 +92,7 @@ export function KindredPage() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const handleStepClick = (stepNumber) => {
+  function handleStepClick(stepNumber) {
     const ref = stepRefs[stepNumber - 1]?.current
     if (ref) {
       const y = ref.getBoundingClientRect().top + window.scrollY - STEPPER_SCROLL_OFFSET

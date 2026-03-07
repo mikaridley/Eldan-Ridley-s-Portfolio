@@ -31,7 +31,7 @@ export function Stepper({ activeStep = 1, onStepClick }) {
     return () => observer.disconnect()
   }, [])
 
-  const handleStepClick = (stepId) => {
+  function handleStepClick(stepId) {
     if (typeof onStepClick === 'function') {
       onStepClick(stepId)
     }
