@@ -148,9 +148,9 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
         </div>
       </section>
 
-      {/* <Stepper activeStep={activeStep} onStepClick={handleStepClick} className="stepper" /> */}
+      <Stepper activeStep={activeStep} onStepClick={handleStepClick} className="stepper" />
 
-      {/* <div ref={step1Ref} className="stepper-header-container"><StepperHeader number={1} word="Research" /></div> */}
+      <div ref={step1Ref} className="stepper-header-container"><StepperHeader number={1} word="Research & Discovery" /></div>
 
       {/* <section className="research-personas" aria-labelledby="research-personas-heading">
         <h3 id="research-personas-heading" className="research-personas-heading">1.1. Defining the target audience</h3>

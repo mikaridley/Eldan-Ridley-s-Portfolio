@@ -125,22 +125,9 @@
         }
     }
 
-    .quantex-page-carousel {
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
-        overflow-x: clip;
-        margin-block-end: 10rem;
-        background-color: var(--light-bg);
-        padding-block:5rem;
-
-        .imgs-carousel {
-            width: 100%;
-            height: 550px;
-        }
-    }
-
     .stepper-header-container{
         grid-column:1/-1;
+        color:var(--wine-bg);
     }
 
     .research-personas {

@@ -11,10 +11,12 @@ import { GlobalLightbox } from './cmps/GlobalLightbox'
 
 export function RootCmp() {
   const { pathname } = useLocation()
-  const isQuantex = pathname === '/quantex' || pathname === '/kindred'
+  const isProjectPage = pathname === '/quantex' || pathname === '/kindred'
+  const isQuantex = pathname === '/quantex'
+  const isKindred = pathname === '/kindred'
 
   return (
-    <div className={`main-layout${isQuantex ? ' on-home' : ''}`}>
+    <div className={`main-layout${isProjectPage ? ' on-home' : ''}${isQuantex ? ' on-quantex' : ''}${isKindred ? ' on-kindred' : ''}`}>
       <AppHeader />
       <main>
         <Routes>

@@ -4,7 +4,6 @@
   margin-block:17rem;
   height: 15rem;
   text-align: center;
-  background-color: var(--baby-blue-bg);
 
   .stepper-header-title {
     margin: 0;
@@ -13,4 +12,22 @@
     color: var(--dark-grey);
     letter-spacing: 0.02em;
   }
+}
+
+/* Quantex: baby blue (default above) */
+.main-layout.on-quantex .stepper-header {
+  background-color: var(--baby-blue-bg);
+}
+
+.main-layout.on-quantex .stepper-header .stepper-header-title {
+  color: var(--dark-grey);
+}
+
+/* Kindred: wine */
+.main-layout.on-kindred .stepper-header {
+  background-color: var(--wine-bg);
+}
+
+.main-layout.on-kindred .stepper-header .stepper-header-title {
+  color: var(--light-txt);
 }
