@@ -1,13 +1,27 @@
 import { useState, useRef, useEffect } from 'react'
+import { Stepper } from '../cmps/Stepper'
+import { StepperHeader } from '../cmps/StepperHeader'
+import { ImgsCarousel } from '../cmps/ImgsCarousel'
 import appScreen from '../assets/imgs/quantex/first-page.png'
 import appGif from '../assets/imgs/quantex/app-gif.gif'
-import { ImgsCarousel } from '../cmps/ImgsCarousel'
 
+// —— Constants (module globs & config) —————————————————————————————————————
 const stepperImgModules = import.meta.glob('../assets/imgs/quantex/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
+const quantexCarouselModules = import.meta.glob('../assets/imgs/quantex/carousel/*', { eager: true })
+const lowWireframesCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/low-wireframes-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
+const computerCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/computer-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
+const finalCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/final-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
+
+const STEP_HEADER_OFFSET = 120
+const STEPPER_SCROLL_OFFSET = 100
+
+// —— Helper functions ——————————————————————————————————————————————————————
 function getStepperImg(name) {
   const key = Object.keys(stepperImgModules).find((k) => k.toLowerCase().includes(name.toLowerCase()))
   return key ? stepperImgModules[key].default : null
 }
+
+// —— Derived data (uses helpers above) —————————————————————————————————————
 const STEPPER_PERSONA_IMAGES = [
   getStepperImg('Persona - Drake'),
   getStepperImg('Persona - Natasha'),
@@ -32,38 +46,24 @@ const LINE_IMG = getStepperImg('Line')
 const FINAL_DESIGN_IMG = getStepperImg('final-design')
 const METRICS_IMG = getStepperImg('metrics')
 
-import { Stepper } from '../cmps/Stepper'
-import { StepperHeader } from '../cmps/StepperHeader'
-
-const quantexCarouselModules = import.meta.glob('../assets/imgs/quantex/carousel/*', { eager: true })
 const QUANTEX_CAROUSEL_IMAGES = Object.keys(quantexCarouselModules)
   .sort()
   .map((key) => quantexCarouselModules[key].default)
   .filter(Boolean)
-
-const lowWireframesCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/low-wireframes-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 const LOW_WIREFRAMES_CAROUSEL_IMAGES = Object.keys(lowWireframesCarouselModules)
   .sort()
   .map((key) => lowWireframesCarouselModules[key].default)
   .filter(Boolean)
-
-const computerCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/computer-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 const COMPUTER_CAROUSEL_IMAGES = Object.keys(computerCarouselModules)
   .sort()
   .map((key) => computerCarouselModules[key].default)
   .filter(Boolean)
-
-const finalCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/final-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 const FINAL_CAROUSEL_IMAGES = Object.keys(finalCarouselModules)
   .sort()
   .map((key) => finalCarouselModules[key].default)
   .filter(Boolean)
 
-
-
-const STEP_HEADER_OFFSET = 120
-const STEPPER_SCROLL_OFFSET = 100
-
+// —— Component —————————————————————————————————————————————————────────────
 export function QuantexPage() {
   const step1Ref = useRef(null)
   const step2Ref = useRef(null)

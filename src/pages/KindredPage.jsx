@@ -1,16 +1,35 @@
 import { useState, useRef, useEffect } from 'react'
+import { Stepper } from '../cmps/Stepper'
+import { StepperHeader } from '../cmps/StepperHeader'
+import { ImgsCarousel } from '../cmps/ImgsCarousel'
 import appScreen from '../assets/imgs/kindred/Hand showing Kindred app.png'
 import appGif from '../assets/imgs/quantex/app-gif.gif'
-import { ImgsCarousel } from '../cmps/ImgsCarousel'
 
+// —— Constants (module globs & config) —————————————————————————————————————
 const stepperImgModules = import.meta.glob('../assets/imgs/quantex/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
+const kindredStepperModules = import.meta.glob('../assets/imgs/kindred/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
+const lowWireframesCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/low-wireframes-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
+const computerCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/computer-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
+const finalCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/final-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
+
+const STEP_HEADER_OFFSET = 120
+const STEPPER_SCROLL_OFFSET = 100
+
+// —— Helper functions ——————————————————————————————————————————————————————
 function getStepperImg(name) {
   const key = Object.keys(stepperImgModules).find((k) => k.toLowerCase().includes(name.toLowerCase()))
   return key ? stepperImgModules[key].default : null
 }
-const STEPPER_PERSONA_IMAGES = [
-  getStepperImg('Persona - Drake'),
-  getStepperImg('Persona - Natasha'),
+
+function getKindredStepperImg(name) {
+  const key = Object.keys(kindredStepperModules).find((k) => k.toLowerCase().includes(name.toLowerCase()))
+  return key ? kindredStepperModules[key].default : null
+}
+
+// —— Derived data (uses helpers above) —————————————————————————————————————
+const KINDRED_PERSONA_IMAGES = [
+  getKindredStepperImg('Persona - Marco'),
+  getKindredStepperImg('Persona - Sarah'),
 ].filter(Boolean)
 const EMPATHY_MAP_IMG = getStepperImg('empathy')
 const STEPPER_STICKY_NOTE_IMAGES = Object.keys(stepperImgModules)
@@ -32,42 +51,20 @@ const LINE_IMG = getStepperImg('Line')
 const FINAL_DESIGN_IMG = getStepperImg('final-design')
 const METRICS_IMG = getStepperImg('metrics')
 
-import { Stepper } from '../cmps/Stepper'
-import { StepperHeader } from '../cmps/StepperHeader'
-
-const kindredStepperModules = import.meta.glob('../assets/imgs/kindred/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
-function getKindredStepperImg(name) {
-  const key = Object.keys(kindredStepperModules).find((k) => k.toLowerCase().includes(name.toLowerCase()))
-  return key ? kindredStepperModules[key].default : null
-}
-const KINDRED_PERSONA_IMAGES = [
-  getKindredStepperImg('Persona - Marco'),
-  getKindredStepperImg('Persona - Sarah'),
-].filter(Boolean)
-
-const lowWireframesCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/low-wireframes-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 const LOW_WIREFRAMES_CAROUSEL_IMAGES = Object.keys(lowWireframesCarouselModules)
   .sort()
   .map((key) => lowWireframesCarouselModules[key].default)
   .filter(Boolean)
-
-const computerCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/computer-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 const COMPUTER_CAROUSEL_IMAGES = Object.keys(computerCarouselModules)
   .sort()
   .map((key) => computerCarouselModules[key].default)
   .filter(Boolean)
-
-const finalCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/final-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 const FINAL_CAROUSEL_IMAGES = Object.keys(finalCarouselModules)
   .sort()
   .map((key) => finalCarouselModules[key].default)
   .filter(Boolean)
 
-
-
-const STEP_HEADER_OFFSET = 120
-const STEPPER_SCROLL_OFFSET = 100
-
+// —— Component —————————————————————————————————————————————————────────────
 export function KindredPage() {
   const step1Ref = useRef(null)
   const step2Ref = useRef(null)
