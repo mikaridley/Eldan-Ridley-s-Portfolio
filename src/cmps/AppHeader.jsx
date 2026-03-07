@@ -4,8 +4,8 @@ import logoBlack from '../assets/imgs/logo-black.png'
 
 export function AppHeader() {
   const { pathname } = useLocation()
-  const isQuantex = pathname === '/quantex'
-  const logoSrc = isQuantex ? logo : logoBlack
+  const isLightLogo = pathname === '/quantex' || pathname === '/kindred'
+  const logoSrc = isLightLogo ? logo : logoBlack
 
   return (
     <header className="app-header">
