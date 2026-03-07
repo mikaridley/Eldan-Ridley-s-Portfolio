@@ -6,7 +6,7 @@ import appScreen from '../assets/imgs/kindred/Hand showing Kindred app.png'
 
 // —— Constants (module globs & config) —————————————————————————————————————
 const kindredStepperModules = import.meta.glob('../assets/imgs/kindred/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
-const lowWireframesCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/low-wireframes-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
+const lowWireframesCarouselModules = import.meta.glob('../assets/imgs/kindred/stepper/low-fi-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 const computerCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/computer-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 const finalCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/final-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 
@@ -25,24 +25,12 @@ const KINDRED_PERSONA_IMAGES = [
   getKindredStepperImg('Persona - Sarah'),
 ].filter(Boolean)
 const EMPATHY_MAP_IMG = getKindredStepperImg('Empathy map')
-const STEPPER_STICKY_NOTE_IMAGES = Object.keys(stepperImgModules)
-  .filter((k) => k.toLowerCase().includes('sticky'))
-  .sort()
-  .map((key) => stepperImgModules[key].default)
-  .filter(Boolean)
-const PROJECT_IMAGE = getStepperImg('project image')
-const PAPER_WIREFRAME_IMG = getStepperImg('paper wireframe')
-const MOODBOARD_IMG = getStepperImg('mood-board')
-const STICKER_SHEET_IMG = getStepperImg('sticker sheet') || getStepperImg('sticker')
-const BEFORE_HOMEPAGE_IMG = getStepperImg('App Homepage - Before 1')
-const AFTER_HOMEPAGE_IMG = getStepperImg('App Homepage - After 1')
-const BEFORE_HOMEPAGE_2_IMG = getStepperImg('App Homepage - Before 2')
-const AFTER_HOMEPAGE_2_IMG = getStepperImg('App Homepage - After 2')
-const BEFORE_HOMEPAGE_3_IMG = getStepperImg('App Homepage - Before 3')
-const AFTER_HOMEPAGE_3_IMG = getStepperImg('App Homepage - After 3')
-const LINE_IMG = getStepperImg('Line')
-const FINAL_DESIGN_IMG = getStepperImg('final-design')
-const METRICS_IMG = getStepperImg('metrics')
+const USER_JOURNEY_MAP_IMG = getKindredStepperImg('User journey map')
+const SITE_MAP_IMG = getKindredStepperImg('Sitemap')
+const ABOVE_THE_FOLD_IMG = getKindredStepperImg('Above the fold comparing')
+const MOODBOARD_IMG = getKindredStepperImg('Moodboard')
+const STICKER_SHEET_IMG = getKindredStepperImg('Sticker sheet')
+const COLOUR_PALETTE_IMG = getKindredStepperImg('Colour palette comparing')
 
 const LOW_WIREFRAMES_CAROUSEL_IMAGES = Object.keys(lowWireframesCarouselModules)
   .sort()
@@ -94,12 +82,11 @@ export function KindredPage() {
     <section className="kindred-page projects-layout">
       
       <div className="kindred-opening-bg"></div>
-        <section className="kindred-opening">
+      <section className="kindred-opening">
           <h1>Kindred</h1>
           <h4>A community-driven mobile app connecting local food businesses with volunteer couriers to rescue and donate surplus food.</h4>
           <img src={appScreen} alt="app-screen" />
-        </section>
-
+      </section>
 
       <section className="overview">
         <h4>Overview</h4>
@@ -181,72 +168,56 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
         )}
       </section>
 
-      {/* <div ref={step2Ref} className="stepper-header-container"><StepperHeader number={2} word="Ideation" /></div> */}
+      <div ref={step2Ref} className="stepper-header-container"><StepperHeader number={2} word="Ideation & Strategy" /></div>
 
-      {/* <section className="ideation-user-stories" aria-labelledby="ideation-user-stories-heading">
-        <h3 id="ideation-user-stories-heading" className="ideation-user-stories-heading">2.1. User stories & requirements</h3>
+      <section className="challenge" aria-labelledby="challenge">
+        <h3 id="challenge-heading" className="challenge-heading">Defining the Challenge</h3>
 
-        <div className="ideation-block">
-          <h4 className="ideation-block-title">User stories</h4>
-          <p className="ideation-block-p">
-            I drafted user stories to define the core needs of my personas. These statements ensured that every feature addressed a specific goal, such as Drake&apos;s need for efficiency as a single parent or Natasha&apos;s requirement for spontaneity and simplicity.
+        <div className="challenge-block">
+          <h4 className="challenge-block-title">How might we</h4>
+          <p className="challenge-block-p">
+          I translated my research findings and persona pain points into 'How Might We' statements, focusing specifically on the unique needs of the donor and the volunteer courier. This process allowed me to reframe logistical hurdles as design opportunities, ensuring the solution prioritised speed for businesses and flexibility for those on the move.
           </p>
-          {STEPPER_STICKY_NOTE_IMAGES.length > 0 && (
-            <div className="ideation-sticky-notes">
-              {STEPPER_STICKY_NOTE_IMAGES.map((src, index) => (
-                <img key={index} src={src} alt="" className="ideation-sticky-note-img" />
-              ))}
-            </div>
-          )}
-        </div>
-
-        <div className="ideation-block">
-          <h4 className="ideation-block-title">How might we</h4>
-          <p className="ideation-block-p">
-            I translated my research findings and user stories into &apos;How Might We&apos; statements. This process allowed me to reframe user pain points as design opportunities, ensuring the solution focused on accessibility, speed, and the removal of physical errands.
-          </p>
-          <ul className="ideation-hmw-list">
-            <li>How might we eliminate the need for travellers to visit physical exchange shops before or during their trip?</li>
-            <li>How might we design a currency exchange process that is intuitive for users with low technical knowledge or memory hurdles?</li>
-            <li>How might we help a busy parent complete a secure transaction in seconds?</li>
+          <ul className="challenge-hmw-list">
+            <li><span>For the Donor (Marco):</span> How might we make logging a food donation feel as effortless as possible?   </li>
+            <li><span>For the Courier (Sarah):</span> How might we provide 'at-a-glance' mission details so volunteers can navigate safely while on the move?</li>
+            <li><span>For the Handover:</span> How might we create a seamless, 'grab-and-go' experience that eliminates waiting time for both parties?</li>
           </ul>
         </div>
-      </section> */}
+      </section>
 
-      {/* <section className="ideation-mapping" aria-labelledby="ideation-mapping-heading">
-        <h3 id="ideation-mapping-heading" className="ideation-mapping-heading">2.2. Mapping the journey</h3>
-        <h4 className="ideation-mapping-subtitle">Sitemap</h4>
-        <p className="ideation-mapping-p">
-          I designed a sitemap to establish a clear and shallow information architecture. By keeping the navigation simple, I ensured that users could reach the exchange flow in a single tap.
+      <section className="user-journey-mapping" aria-labelledby="user-journey-mapping-heading">
+        <h3 id="user-journey-mapping-heading" className="user-journey-mapping-heading">Mapping the Experience</h3>
+        <h4 className="user-journey-mapping-subtitle">User journey map</h4>
+        <p className="user-journey-mapping-p">
+        To deeply understand Marco's experience, I mapped his journey from identifying food waste to completing a donation. This allowed me to pinpoint exactly when he feels the most pressure - during the log process - and highlighted the need for a 'grab-and-go' solution that respects his busy schedule.
         </p>
-        {PROJECT_IMAGE && (
-          <div className="ideation-mapping-fig">
-            <img src={PROJECT_IMAGE} alt="Quantex sitemap - Homepage, Profile, Exchange, Wallet, Rate History" className="ideation-mapping-img" />
+        {USER_JOURNEY_MAP_IMG && (
+          <div className="user-journey-mapping-fig">
+            <img src={USER_JOURNEY_MAP_IMG} alt="Kindred user journey map" className="user-journey-mapping-img" />
           </div>
         )}
-      </section> */}
+      </section>
 
-      {/* <div ref={step3Ref} className="stepper-header-container"><StepperHeader number={3} word="Design" /></div> */}
-
-      {/* <section className="design-wireframes" aria-labelledby="design-wireframes-heading">
-        <h3 id="design-wireframes-heading" className="design-wireframes-heading">3.1. Sketches to low-fidelity</h3>
-        <h4 className="design-wireframes-subtitle">Paper wireframes</h4>
-          <p className="design-wireframes-p">
-            I used paper wireframes to explore a layout that removes complexity for those less familiar with digital finance. By simplifying the steps between currency selection and the final exchange, I ensured the process feels intuitive and efficient, regardless of the user&apos;s technical experience.
-          </p>
-          <ul className="design-wireframes-notes">
-            <li><span>a.</span> Large, clear input fields allow users to quickly choose their currencies without searching through dense menus.</li>
-            <li><span>b.</span> Positioning the primary action at the bottom of the screen ensures it sits within the &apos;thumb zone&apos;. This ergonomic choice improves accessibility and allows for a more comfortable one-handed experience for all users.</li>
-          </ul>
-        {PAPER_WIREFRAME_IMG && (
-          <div className="design-wireframes-fig">
-            <img src={PAPER_WIREFRAME_IMG} alt="Paper wireframe - select amount screen for currency exchange" className="design-wireframes-img" />
+      <section className="user-journey-mapping" aria-labelledby="user-journey-mapping-heading">
+        <h3 id="user-journey-mapping-heading" className="user-journey-mapping-heading">Information Architecture</h3>
+        <h4 className="user-journey-mapping-subtitle">Sitemap</h4>
+        <p className="user-journey-mapping-p">
+        I designed the Information Architecture to ensure the donation process is as simplified as possible, directly addressing the need for efficiency during a busy restaurant shift. By prioritising a shallow menu structure and creating a dedicated 'Impact Centre', I focused on making the app easy and quick for the donor to use.
+        </p>
+        {SITE_MAP_IMG && (
+          <div className="user-journey-mapping-fig">
+            <img src={SITE_MAP_IMG} alt="Kindred user journey map" className="user-journey-mapping-img" />
           </div>
         )}
+      </section>
 
-        <h4 className="design-wireframes-subtitle design-wireframes-subtitle--block">Low-fidelity wireframes</h4>
+      <div ref={step3Ref} className="stepper-header-container"><StepperHeader number={3} word="Design" /></div>
+
+      <section className="design-wireframes" aria-labelledby="design-wireframes-heading">
+        <h4 className="design-wireframes-subtitle">Low-fidelity wireframes</h4>
         <p className="design-wireframes-lofi-p">
-          I transitioned my paper sketches into digital low-fidelity wireframes to focus on visual hierarchy and flow. During this stage, I refined the layout to ensure the core exchange process remained the central focus, allowing me to test the usability of the interface before introducing brand elements.
+        I developed low-fidelity wireframes to establish the core layout and functionality of the app. By focusing on a clean and simple interface, I ensured that Marco could navigate the primary tasks - such as logging a donation or checking his impact - without unnecessary visual distractions.
         </p>
         <div className="design-wireframes-carousel">
           {LOW_WIREFRAMES_CAROUSEL_IMAGES.length > 0 ? (
@@ -257,10 +228,17 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
             </p>
           )}
         </div>
-      </section> */}
 
-      {/* <section className="design-visual-identity" aria-labelledby="design-visual-identity-heading">
-        <h3 id="design-visual-identity-heading" className="design-visual-identity-heading">3.2. Visual identity & moodboard</h3>
+        <h4 className="design-wireframes-subtitle">From Insights to Iteration</h4>
+        <p className="design-wireframes-lofi-p">
+        During usability testing, I discovered that my "perfectly" aligned layout created a phantom floor. Because the top section ended exactly at the screen's edge, users assumed there was no more content and failed to scroll. This meant the most important action - the Donate button - was being completely missed.<br />
+To fix this, I moved the main CTA to the top of the page to ensure the primary user flow was immediately visible above the fold. I also intentionally cut off the bottom of the "Upcoming Pickups" section to provide a clear visual cue that more information exists below.
+        </p>
+        <img src={ABOVE_THE_FOLD_IMG} alt="above-the-fold-img" className="above-the-fold-img" />
+      </section>
+
+      <section className="design-visual-identity" aria-labelledby="design-visual-identity-heading">
+        <h3 id="design-visual-identity-heading" className="design-visual-identity-heading">Visual identity & moodboard</h3>
 
         <div className="design-visual-identity-block">
           <h4 className="design-visual-identity-subtitle">Moodboard</h4>
@@ -274,27 +252,29 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
           )}
         </div>
 
-        <div className="design-visual-identity-block">
-          <h4 className="design-visual-identity-subtitle">Style guide</h4>
-          <p className="design-visual-identity-p">
-            I designed these components to keep the experience intuitive and approachable. By using familiar iconography and a clean visual hierarchy, I ensured the interface feels friendly and simple to navigate, removing the &apos;intimidation factor&apos; usually found in banking apps.
-            <span>Accessibility in mind</span> I used universally recognised icons and high-contrast colours to support users who may find text-heavy interfaces overwhelming. This approach ensures that even at a glance, the app&apos;s functions remain clear and accessible to everyone.
-          </p>
-          {STICKER_SHEET_IMG && (
-            <div className="design-visual-identity-fig">
-              <img src={STICKER_SHEET_IMG} alt="Style guide - Quantex typography, colours, buttons, inputs, icons" className="design-visual-identity-img secondary" />
-            </div>
-          )}
-        </div>
+      </section>
 
-        <div className="design-hifi-intro">
-          <h3 id="design-hifi-heading" className="design-hifi-heading">3.3. High-fidelity mockups</h3>
-          <h4 className="design-hifi-subtitle">Iterations</h4>
-          <p className="design-hifi-p">
-            After testing the initial designs, I identified several areas where the user flow could be further simplified. These iterations focus on refining the layout based on direct user feedback, ensuring that the most important tasks ΓÇö like checking rates and finalising an exchange ΓÇö are as seamless as possible.
-          </p>
-        </div>
-      </section> */}
+      <section className="user-journey-mapping" aria-labelledby="user-journey-mapping-heading">
+        <h4 className="user-journey-mapping-subtitle">Style guide</h4>
+        <p className="user-journey-mapping-p">
+        I developed a library of reusable components to ensure a consistent and professional experience across the entire app. By using clear iconography and a structured visual hierarchy, I ensured that the interface remains intuitive for donors like Marco, allowing them to navigate complex tasks - such as managing multiple food categories or tracking deliveries - with ease.
+        </p>
+        {STICKER_SHEET_IMG && (
+          <div className="user-journey-mapping-fig">
+            <img src={STICKER_SHEET_IMG} alt="Kindred user journey map" className="user-journey-mapping-img" />
+          </div>
+        )}
+      </section>
+
+      <section className="hi-fi-design">
+        <h3 id="hi-fi-design-heading" className="hi-fi-design-heading">High-fidelity design</h3>
+        <p className="hi-fi-design-p">
+        The final designs bring the Kindred brand to life with a professional and trustworthy aesthetic. After establishing the core layout, I focused on refining the visual details to ensure the app felt reliable for business owners. This stage was about moving beyond the structure and ensuring the interface felt high-quality and ready for a real-world environment.
+        </p>
+
+        <h4 className="hi-fi-design-subtitle">Refining for accessibility (WCAG)</h4>
+        <img src={COLOUR_PALETTE_IMG} alt="Colour palette comparing" className="color-palette-img" />
+      </section>
 
       {/* <section className="design-hifi" aria-labelledby="design-hifi-heading">
         <div className="design-hifi-iteration">

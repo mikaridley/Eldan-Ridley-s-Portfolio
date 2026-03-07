@@ -178,10 +178,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 7rem;
 
-            @media (max-width: 900px) {
-                grid-template-columns: 1fr;
-            }
-
             .research-personas-img {
                 display: block;
                 max-width: 100%;
@@ -244,21 +240,6 @@
                 display: block;
                 max-width: 100%;
                 height: auto;
-            }
-        }
-
-        @media (max-width: 900px) {
-            grid-template-columns: 1fr;
-            row-gap: 1.5rem;
-
-            .research-empathy-text,
-            .research-empathy-fig {
-                grid-column: 1;
-                grid-row: auto;
-            }
-
-            .research-empathy-fig {
-                justify-content: center;
             }
         }
     }
@@ -332,7 +313,6 @@
     }
 
     .ideation-mapping {
-        padding-inline: 2rem;
         max-width: 75rem;
 
         .ideation-mapping-heading {
@@ -534,18 +514,6 @@
             }
         }
 
-        @media (max-width: 900px) {
-            .design-visual-identity-block {
-                grid-template-columns: 1fr;
-                row-gap: 1.5rem;
-            }
-
-            .design-visual-identity-fig {
-                grid-column: 1;
-                grid-row: auto;
-                justify-content: center;
-            }
-        }
     }
 
     .design-hifi {
@@ -795,10 +763,6 @@
             line-height: 1.6;
             margin: 0 0 1.7rem 0;
         }
-
-        @media (max-width: 900px) {
-            grid-template-columns: 1fr;
-        }
     }
 
     .takeaways-metrics {
@@ -863,15 +827,6 @@
             }
         }
 
-        @media (max-width: 900px) {
-            grid-template-columns: 1fr;
-
-            .takeaways-metrics-fig {
-                grid-column: 1;
-                grid-row: auto;
-                justify-content: center;
-            }
-        }
     }
 
 
