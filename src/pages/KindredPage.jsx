@@ -121,12 +121,9 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
           <h4 className="solution-heading">Solution</h4>
           <p className="problem-solution-p">I designed Kindred to eliminate this friction with a streamlined, "seconds-to-submit" donation flow. The platform connects businesses directly with volunteer couriers, providing total transparency regarding who is collecting the food and when.<br />
           By prioritising high-contrast visuals and a clear feedback loop, I ensured the app remains accessible and easy to navigate even in a hectic kitchen environment, allowing staff to complete a rescue and return to their work without delay.</p>
-
       </section>
 
-      
-
-      {/* <section className="project-details">
+      <section className="project-details">
         <div className="project-details-col">
           <h4 className="project-details-heading">My role</h4>
           <ul className="project-details-list">
@@ -144,7 +141,7 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
         <div className="project-details-col">
           <h4 className="project-details-heading">Duration</h4>
           <ul className="project-details-list">
-            <li>3 weeks</li>
+            <li>3.5 weeks</li>
           </ul>
         </div>
         <div className="project-details-col">
@@ -152,15 +149,16 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
           <ul className="project-details-list">
             <li>Figma</li>
             <li>Good old fashion pen & paper</li>
+            <li>Gen AI</li>
           </ul>
         </div>
-      </section> */}
+      </section>
 
-      {/* {QUANTEX_CAROUSEL_IMAGES.length > 0 && (
+      {QUANTEX_CAROUSEL_IMAGES.length > 0 && (
         <section className="quantex-page-carousel">
           <ImgsCarousel images={QUANTEX_CAROUSEL_IMAGES} gap={15} />
         </section>
-      )} */}
+      )}
 
       {/* <Stepper activeStep={activeStep} onStepClick={handleStepClick} className="stepper" /> */}
 
