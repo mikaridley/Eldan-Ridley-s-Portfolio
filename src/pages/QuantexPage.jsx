@@ -168,7 +168,7 @@ export function QuantexPage() {
       <div ref={step1Ref} className="stepper-header-container"><StepperHeader number={1} word="Research" /></div>
 
       <section className="research-personas" aria-labelledby="research-personas-heading">
-        <h3 id="research-personas-heading" className="research-personas-heading">1.1. Defining the target audience</h3>
+        <h3 id="research-personas-heading" className="research-personas-heading">Defining the target audience</h3>
         <h4 className="research-personas-subtitle">Personas</h4>
         <p className="research-personas-intro">
           These personas represent the core user groups identified during the research phase. They served as a guide for every design decision, helping me build a solution that simplifies the currency exchange process for everyone, from busy parents to users with specific accessibility requirements.
@@ -181,7 +181,7 @@ export function QuantexPage() {
       </section>
 
       <section className="research-empathy" aria-labelledby="research-empathy-heading">
-        <h3 id="research-empathy-heading" className="research-empathy-heading">1.2. User research & synthesis</h3>
+        <h3 id="research-empathy-heading" className="research-empathy-heading">User research & synthesis</h3>
         <h4 className="research-empathy-subtitle">Empathy map</h4>
         <div className="research-empathy-text">
           <p className="research-empathy-p darker">
@@ -204,7 +204,7 @@ export function QuantexPage() {
       <div ref={step2Ref} className="stepper-header-container"><StepperHeader number={2} word="Ideation" /></div>
 
       <section className="ideation-user-stories" aria-labelledby="ideation-user-stories-heading">
-        <h3 id="ideation-user-stories-heading" className="ideation-user-stories-heading">2.1. User stories & requirements</h3>
+        <h3 id="ideation-user-stories-heading" className="ideation-user-stories-heading">User stories & requirements</h3>
 
         <div className="ideation-block">
           <h4 className="ideation-block-title">User stories</h4>
@@ -234,7 +234,7 @@ export function QuantexPage() {
       </section>
 
       <section className="ideation-mapping" aria-labelledby="ideation-mapping-heading">
-        <h3 id="ideation-mapping-heading" className="ideation-mapping-heading">2.2. Mapping the journey</h3>
+        <h3 id="ideation-mapping-heading" className="ideation-mapping-heading">Mapping the journey</h3>
         <h4 className="ideation-mapping-subtitle">Sitemap</h4>
         <p className="ideation-mapping-p">
           I designed a sitemap to establish a clear and shallow information architecture. By keeping the navigation simple, I ensured that users could reach the exchange flow in a single tap.
@@ -249,7 +249,7 @@ export function QuantexPage() {
       <div ref={step3Ref} className="stepper-header-container"><StepperHeader number={3} word="Design" /></div>
 
       <section className="design-wireframes" aria-labelledby="design-wireframes-heading">
-        <h3 id="design-wireframes-heading" className="design-wireframes-heading">3.1. Sketches to low-fidelity</h3>
+        <h3 id="design-wireframes-heading" className="design-wireframes-heading">Sketches to low-fidelity</h3>
         <h4 className="design-wireframes-subtitle">Paper wireframes</h4>
           <p className="design-wireframes-p">
             I used paper wireframes to explore a layout that removes complexity for those less familiar with digital finance. By simplifying the steps between currency selection and the final exchange, I ensured the process feels intuitive and efficient, regardless of the user&apos;s technical experience.
@@ -280,7 +280,7 @@ export function QuantexPage() {
       </section>
 
       <section className="design-visual-identity" aria-labelledby="design-visual-identity-heading">
-        <h3 id="design-visual-identity-heading" className="design-visual-identity-heading">3.2. Visual identity & moodboard</h3>
+        <h3 id="design-visual-identity-heading" className="design-visual-identity-heading">Visual identity & moodboard</h3>
 
         <div className="design-visual-identity-block">
           <h4 className="design-visual-identity-subtitle">Moodboard</h4>
@@ -308,7 +308,7 @@ export function QuantexPage() {
         </div>
 
         <div className="design-hifi-intro">
-          <h3 id="design-hifi-heading" className="design-hifi-heading">3.3. High-fidelity mockups</h3>
+          <h3 id="design-hifi-heading" className="design-hifi-heading">High-fidelity mockups</h3>
           <h4 className="design-hifi-subtitle">Iterations</h4>
           <p className="design-hifi-p">
             After testing the initial designs, I identified several areas where the user flow could be further simplified. These iterations focus on refining the layout based on direct user feedback, ensuring that the most important tasks ΓÇö like checking rates and finalising an exchange ΓÇö are as seamless as possible.
