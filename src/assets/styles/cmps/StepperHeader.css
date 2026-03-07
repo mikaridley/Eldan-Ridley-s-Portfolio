@@ -1,7 +1,8 @@
 .stepper-header {
   display: grid;
   place-items: center;
-  margin-block:17rem;
+  margin-block-end:12.5rem;
+  margin-block-start:25rem;
   height: 15rem;
   text-align: center;
 

@@ -35,6 +35,16 @@ const METRICS_IMG = getStepperImg('metrics')
 import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
 
+const kindredStepperModules = import.meta.glob('../assets/imgs/kindred/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
+const getKindredStepperImg = (name) => {
+  const key = Object.keys(kindredStepperModules).find((k) => k.toLowerCase().includes(name.toLowerCase()))
+  return key ? kindredStepperModules[key].default : null
+}
+const KINDRED_PERSONA_IMAGES = [
+  getKindredStepperImg('Persona - Marco'),
+  getKindredStepperImg('Persona - Sarah'),
+].filter(Boolean)
+
 const lowWireframesCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/low-wireframes-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 const LOW_WIREFRAMES_CAROUSEL_IMAGES = Object.keys(lowWireframesCarouselModules)
   .sort()
@@ -152,18 +162,18 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
 
       <div ref={step1Ref} className="stepper-header-container"><StepperHeader number={1} word="Research & Discovery" /></div>
 
-      {/* <section className="research-personas" aria-labelledby="research-personas-heading">
-        <h3 id="research-personas-heading" className="research-personas-heading">1.1. Defining the target audience</h3>
+      <section className="research-personas" aria-labelledby="research-personas-heading">
+        <h3 id="research-personas-heading" className="research-personas-heading">Defining the target audience</h3>
         <h4 className="research-personas-subtitle">Personas</h4>
         <p className="research-personas-intro">
-          These personas represent the core user groups identified during the research phase. They served as a guide for every design decision, helping me build a solution that simplifies the currency exchange process for everyone, from busy parents to users with specific accessibility requirements.
+        These personas represent the primary user groups identified during the research phase, focusing on the real-world environments where the app would be used. They served as a guide for every design decision, helping me build a solution that balances the high-pressure needs of busy kitchen managers with the logistical requirements of volunteer couriers.
         </p>
         <div className="research-personas-imgs">
-          {STEPPER_PERSONA_IMAGES.map((src, index) => (
+          {KINDRED_PERSONA_IMAGES.map((src, index) => (
             <img key={index} src={src} alt="" className="research-personas-img" />
           ))}
         </div>
-      </section> */}
+      </section>
 
       {/* <section className="research-empathy" aria-labelledby="research-empathy-heading">
         <h3 id="research-empathy-heading" className="research-empathy-heading">1.2. User research & synthesis</h3>
