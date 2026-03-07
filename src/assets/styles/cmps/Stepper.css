@@ -52,20 +52,19 @@
         flex: 0 0 auto;
   
         .stepper-circle {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 1.6rem;
-            background-color: #fff;
-            border: 1px solid var(--dark-grey);
-            color: var(--dark-grey);
-            flex-shrink: 0;
-            padding: 0;
-            cursor: pointer;
+          display: grid;
+          place-items: center;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          font-weight: 700;
+          font-size: 1.6rem;
+          background-color: #fff;
+          border: 1px solid var(--dark-grey);
+          color: var(--dark-grey);
+          flex-shrink: 0;
+          padding: 0;
+          cursor: pointer;
   
             &.active {
               background-color: var(--dark-grey, #363636);
@@ -82,7 +81,7 @@
   
         .stepper-label {
           margin-block-start: 0.75rem;
-          font-size: 1.14rem;
+          font-size: 1rem;
           color: var(--dark-grey);
           text-align: center;
           background: none;

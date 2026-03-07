@@ -8,8 +8,7 @@ import kindredAppGif from '../assets/imgs/kindred/stepper/app-gif.gif'
 // —— Constants (module globs & config) —————————————————————————————————————
 const kindredStepperModules = import.meta.glob('../assets/imgs/kindred/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
 const lowWireframesCarouselModules = import.meta.glob('../assets/imgs/kindred/stepper/low-fi-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
-const computerCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/computer-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
-const finalCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/final-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
+const hiFiCarouselModules = import.meta.glob('../assets/imgs/kindred/stepper/hi-fi-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 
 const STEP_HEADER_OFFSET = 120
 const STEPPER_SCROLL_OFFSET = -300
@@ -38,14 +37,14 @@ const LOW_WIREFRAMES_CAROUSEL_IMAGES = Object.keys(lowWireframesCarouselModules)
   .sort()
   .map((key) => lowWireframesCarouselModules[key].default)
   .filter(Boolean)
-const COMPUTER_CAROUSEL_IMAGES = Object.keys(computerCarouselModules)
+
+const HI_FI_CAROUSEL_IMAGES = Object.keys(hiFiCarouselModules)
   .sort()
-  .map((key) => computerCarouselModules[key].default)
+  .map((key) => hiFiCarouselModules[key].default)
   .filter(Boolean)
-const FINAL_CAROUSEL_IMAGES = Object.keys(finalCarouselModules)
-  .sort()
-  .map((key) => finalCarouselModules[key].default)
-  .filter(Boolean)
+
+const KINDRED_FINAL_DESIGN_IMAGES = [kindredAppGif]
+
 
 // —— Component —————————————————————————————————————————————————────────────
 export function KindredPage() {
@@ -281,7 +280,9 @@ To fix this, I moved the main CTA to the top of the page to ensure the primary u
       <section className="kindred-final-design" aria-labelledby="kindred-final-design-heading">
         <div className="kindred-final-design-inner">
           <div className="kindred-final-design-media">
-            <img src={kindredAppGif} alt="Kindred app - Final design" className="kindred-final-design-img" />
+            {KINDRED_FINAL_DESIGN_IMAGES.map((src, index) => (
+              <img key={index} src={src} alt="Kindred app - Final design" className="kindred-final-design-img" />
+            ))}
           </div>
           <div className="kindred-final-design-content">
             <h3 id="kindred-final-design-heading" className="kindred-final-design-heading">Final design</h3>
@@ -295,8 +296,8 @@ To fix this, I moved the main CTA to the top of the page to ensure the primary u
       </section>
 
       <div className="hi-fi-carousel">
-          {LOW_WIREFRAMES_CAROUSEL_IMAGES.length > 0 ? (
-            <ImgsCarousel images={LOW_WIREFRAMES_CAROUSEL_IMAGES} gap={15} />
+          {HI_FI_CAROUSEL_IMAGES.length > 0 ? (
+            <ImgsCarousel images={HI_FI_CAROUSEL_IMAGES} gap={15} />
           ) : (
             <p className="hi-fi-carousel-placeholder">
               Add wireframe images to <code>src/assets/imgs/quantex/stepper/low-wireframes-carousel/</code> to see the carousel.

@@ -499,6 +499,7 @@
             width: 17rem;
             height: auto;
             object-fit: contain;
+            border-radius: 50px;
         }
 
         .kindred-final-design-heading {
@@ -534,7 +535,7 @@
             --imgs-carousel-slide-height: 700px;
         }
 
-        .hi-fi--carousel-placeholder {
+        .hi-fi-carousel-placeholder {
             color: var(--main-txt);
             font-size: 0.95rem;
             padding: 2rem;
