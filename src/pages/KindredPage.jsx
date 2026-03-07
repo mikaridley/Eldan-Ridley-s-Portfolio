@@ -32,6 +32,7 @@ const ABOVE_THE_FOLD_IMG = getKindredStepperImg('Above the fold comparing')
 const MOODBOARD_IMG = getKindredStepperImg('Moodboard')
 const STICKER_SHEET_IMG = getKindredStepperImg('Sticker sheet')
 const COLOUR_PALETTE_IMG = getKindredStepperImg('Colour palette comparing')
+const METRICS_IMG = getKindredStepperImg('Metrics')
 
 const LOW_WIREFRAMES_CAROUSEL_IMAGES = Object.keys(lowWireframesCarouselModules)
   .sort()
@@ -305,53 +306,52 @@ To fix this, I moved the main CTA to the top of the page to ensure the primary u
 
       <div ref={step4Ref} className="stepper-header-container"><StepperHeader number={4} word="Takeaways" /></div>
 
-      {/* <section className="takeaways-reflections-next" aria-labelledby="takeaways-reflections-heading">
+      <section className="takeaways-reflections-next" aria-labelledby="takeaways-reflections-heading">
         <div className="takeaways-reflections">
           <h3 id="takeaways-reflections-heading" className="takeaways-rn-heading">Reflections</h3>
           <ul className="takeaways-rn-list">
             <li>
-              <span>Simplicity is key:</span> I learnt that in fintech, less is almost always more. Removing the &apos;intimidation factor&apos; by using familiar iconography and plenty of white space made the app feel far more trustworthy.
+              <span>Design for the real world:</span> Working on Marco’s journey taught me that a design has to work in the user's actual environment. For a busy restaurant owner, this meant prioritising speed and clarity above all else, ensuring the app fits into a high-pressure kitchen routine rather than slowing it down.
             </li>
             <li>
-              <span>Accessibility from the start:</span> Designing for users like Natasha taught me that accessibility isn&apos;t a &apos;final coat of paint&apos; but a foundation. Checking the WebAIM contrast early on allowed me to confidently settle on a brand palette that was both visually appealing and inclusive from the very beginning.
+              <span>The danger of the 'perfect' layout:</span> My experience with the 'phantom floor' was a massive lesson in user behaviour. I learnt that a visually 'perfect' or tidy design can sometimes be a barrier to usability. Intentionally creating visual cues for scrolling is often more important than a static, 'complete' look.
             </li>
             <li>
-              <span>Platform consistency:</span> Moving from mobile to PC was a challenge at first, as the desktop version initially felt too sparse compared to traditional websites. However, I realised that maintaining this simplicity ensured the interface felt familiar and comfortable for users moving between devices, which was more valuable than adding unnecessary elements.
+              <span>brand vs accessibility:</span> I learnt that accessibility and brand identity should work in harmony. Swapping the placeholder green for the WCAG-compliant wine palette proved that you don't have to sacrifice a sophisticated aesthetic to meet inclusive design standards.
             </li>
           </ul>
         </div>
         <div className="takeaways-next">
           <h3 id="takeaways-next-heading" className="takeaways-rn-heading">Next steps</h3>
-          <p className="takeaways-next-intro">If I were to continue developing Quantex, I would focus on the following:</p>
+          <p className="takeaways-next-intro">If I were to continue developing Kindred, I would focus on the following:</p>
           <ul className="takeaways-rn-list">
             <li>
-              <span>Onboarding guide:</span> I would implement a short, interactive &apos;Quick Start&apos; guide for new users to explain the exchange process and build immediate confidence.
+              <span>The recipient experience:</span> I would design the secondary side of the app for community members. This would involve creating a discovery flow where users can browse available donations, filter by dietary requirements, and coordinate pick-ups.
             </li>
             <li>
-              <span>Multi-language support:</span> To truly support international travel, I would expand the app to include multiple languages, ensuring the interface remains accessible to non-English speakers.
+              <span>Communication & messaging:</span>  I would design a dedicated Messaging System to allow donors and couriers to coordinate smoothly, handling quick updates regarding collection times or building access.
             </li>
             <li>
-              <span>Smart alerts:</span> I would add a feature for &apos;Rate Alerts&apos;, allowing users to set a target exchange rate and receive a notification when the market hits that number.
+              <span>The impact centre:</span> While the homepage offers a teaser of the donor's contributions, I would design the full Impact Centre flow. This would include detailed data visualisations of food saved and the ability for businesses to share these milestones with their customers.
             </li>
           </ul>
         </div>
-      </section> */}
+      </section>
 
-
-      {/* <section className="takeaways-metrics" aria-labelledby="takeaways-metrics-heading">
+      <section className="takeaways-metrics" aria-labelledby="takeaways-metrics-heading">
         <h4 id="takeaways-metrics-heading" className="takeaways-metrics-heading">Metrics</h4>
         <p className="takeaways-metrics-intro">
-          As this is a conceptual project, I haven&apos;t tracked live user data. However, if Quantex were to launch, I would focus on the following metrics to evaluate the design&apos;s impact:
+        As this is a conceptual project, I haven't tracked live user data. However, To evaluate the success of Kindred in a real-world setting, I would track:
         </p>
         <ul className="takeaways-metrics-list">
           <li>
-            <span>Task Success Rate:</span> I would track how easily users can complete an exchange from start to finish. A high success rate would confirm that the &apos;simple and friendly&apos; approach is working.
+            <span>Time to donate:</span> I would measure the average time it takes for a donor to log a new item. For a user like Marco, success means completing the task in under 60 seconds.
           </li>
           <li>
-            <span>Drop-off Rate:</span> By monitoring where users leave the flow I could identify if any part of the interface remains confusing or intimidating.
+            <span>Scroll depth on homepage:</span>  Following my fix for the 'phantom floor', I would track how many users scroll below the fold to ensure the 'Upcoming Pickups' section is being utilised.
           </li>
           <li>
-            <span>Accessibility Compliance:</span> Regular audits would ensure the app continues to meet WCAG 2.1 Level AA standards as new currencies or features are added.
+            <span>Retention rate:</span> By monitoring how often businesses return to log donations, I could gauge if the app provides enough value and ease of use to become a regular part of their kitchen closing routine.
           </li>
         </ul>
         {METRICS_IMG && (
@@ -359,7 +359,7 @@ To fix this, I moved the main CTA to the top of the page to ensure the primary u
             <img src={METRICS_IMG} alt="Metrics graph - Task success rate, Drop-off reduction, WCAG compliance" className="takeaways-metrics-img" />
           </div>
         )}
-      </section> */}
+      </section>
 
     </section>
   )

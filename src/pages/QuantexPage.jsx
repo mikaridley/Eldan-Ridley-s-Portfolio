@@ -474,7 +474,6 @@ export function QuantexPage() {
         </div>
       </section>
 
-
       <section className="takeaways-metrics" aria-labelledby="takeaways-metrics-heading">
         <h4 id="takeaways-metrics-heading" className="takeaways-metrics-heading">Metrics</h4>
         <p className="takeaways-metrics-intro">
