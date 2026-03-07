@@ -107,24 +107,23 @@ export function KindredPage() {
         </section>
 
 
-      {/* <section className="overview">
-      <h4>Overview</h4>
-      <p>Quantex was born from a simple observation: the traditional way of exchanging money is a bit of a chore. Whether people are too busy to visit a physical exchange shop, can't find one nearby, or simply prefer the security of digital over physical cash, there is a clear need for a more flexible solution.
-        <br /><span className="p-gap" aria-hidden="true" />I designed this multi-currency wallet to give travellers total control. With just a few taps, users can convert their funds at fair rates and immediately use their device to pay at a cashier or online, anywhere in the world.</p>
-      <img src={appGif} alt="Quantex app" className="overview-gif" />
-      </section> */}
+      <section className="overview">
+        <h4>Overview</h4>
+        <p className="overview-p">Kindred was developed to address a significant gap in local food sustainability: the difficulty of getting surplus food from businesses to those who can use it. Many local food businesses want to reduce waste, but they often lack the time to manage logistics or a reliable way to connect with volunteers during a busy shift.
+        <br /><span className="p-gap" aria-hidden="true" />I designed this platform to bridge that gap by simplifying the donation process. By focusing on high-contrast accessibility and clear role transparency, Kindred allows business owners to schedule a rescue in seconds, ensuring that surplus food is efficiently redirected to the community instead of being thrown away.</p>
 
-      {/* <div className="problem-solution-wrapper"></div>
-        <section className="problem-solution">
-          <div className="problem-solution-col">
-            <h4 className="problem-solution-heading">Problem</h4>
-            <p>The traditional currency exchange process is an inconvenient hurdle. Many travellers are simply too busy to visit a physical exchange shop before a trip, or they find it difficult to locate one when they actually need it. Beyond the chore of the errand, many people now prefer the security and ease of digital payments over carrying bundles of physical cash.</p>
-          </div>
-          <div className="problem-solution-col">
-            <h4 className="problem-solution-heading">Solution</h4>
-            <p>I designed Quantex to replace the physical errand with a digital-first approach. The platform allows users to convert currencies instantly with a single tap, enabling them to pay at cashiers or online without delay. By prioritising a simple, high-contrast interface, I ensured the product is easy to navigate for everyone, from tech-savvy travellers to those who typically struggle with complex digital tools.</p>
-          </div>
-        </section> */}
+          <h4 className="problem-heading">Problem</h4>
+          <p className="problem-solution-p">The logistical gap between local businesses and food rescue initiatives is a significant hurdle for sustainability.<br />
+Many food business managers want to donate their surplus, but they are often too busy during a high-pressure shift to manage complex logistics or coordinate with volunteers.<br />
+Without a reliable and quick way to bridge this gap, high-quality food is frequently thrown away simply because the effort to donate it is too high.</p>
+
+
+          <h4 className="solution-heading">Solution</h4>
+          <p className="problem-solution-p">I designed Kindred to eliminate this friction with a streamlined, "seconds-to-submit" donation flow. The platform connects businesses directly with volunteer couriers, providing total transparency regarding who is collecting the food and when.<br />
+          By prioritising high-contrast visuals and a clear feedback loop, I ensured the app remains accessible and easy to navigate even in a hectic kitchen environment, allowing staff to complete a rescue and return to their work without delay.</p>
+
+      </section>
+
       
 
       {/* <section className="project-details">

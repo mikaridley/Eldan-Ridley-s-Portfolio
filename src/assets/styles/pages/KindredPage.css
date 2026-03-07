@@ -8,7 +8,7 @@
         background-position: top center;
     }
 
-        .kindred-opening {
+    .kindred-opening {
             grid-column: 2;
             grid-row: 1;
             display: grid;
@@ -29,7 +29,6 @@
     
             h4{
                 max-width: 64rem;
-                font-size: 2.2rem;
                 position: relative;
                 z-index: 10;
             }
@@ -55,75 +54,53 @@
                 background-color: black;
                 opacity: 0.4;
             }
-        }
-    
-
+    }
 
     .overview {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 1fr;
-        row-gap: 2rem;
-        column-gap: 6rem;
+        grid-template-rows: repeat(4,auto);
+        column-gap: 14.25rem;
         padding-block: 15rem;
         justify-self: center;
 
 
         h4 {
+            grid-column: 1 / -1;
             color:var(--dark-grey);
             align-self: end;
+            margin-block-end:1.5rem;
         }
 
-        p {
+        .overview-p {
+            grid-row: 2;
+            grid-column: 1 / -1;
             max-width: 55rem;
-            font-size: 1.14rem;
+            font-size: 1rem;
+            margin-block-end:5rem;
+            line-height: 166%;
             .p-gap {
                 display: block;
                 height: 2rem;
             }
         }
 
-        .overview-gif {
-            justify-self: center;
-            align-self: start;
+
+        .problem-heading{
+            grid-row: 3;
+        }
+        
+        .solution-heading{
             grid-column: 2;
-            grid-row: 1 / span 2;
-            display: block;
-            max-width: 250px;
-        }
-    }
-
-    .problem-solution-wrapper{
-        grid-row:3;
-        grid-column:1/-1;
-        background-color: var(--light-bg);
-    }
-
-    .problem-solution {
-        grid-row:3;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 11rem;
-        padding-block: 5rem;
-        justify-self: center;
-
-        .problem-solution-heading {
-            font-size: 2.2rem;
-            font-weight: 600;
-            color: var(--dark-grey);
-            margin-block-end: 1rem;
+            grid-row: 3;
         }
 
-        .problem-solution-col {
-            p {
-                color: var(--main-txt);
-                font-size: 1.14rem;
-                line-height: 1.6;
-                margin: 0;
-            }
+        .problem-solution-p{
+            line-height: 166%
         }
+
     }
-    
+  
 
     .project-details {
         display: grid;
