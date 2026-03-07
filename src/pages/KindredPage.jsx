@@ -3,6 +3,7 @@ import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
 import { ImgsCarousel } from '../cmps/ImgsCarousel'
 import appScreen from '../assets/imgs/kindred/Hand showing Kindred app.png'
+import kindredAppGif from '../assets/imgs/kindred/stepper/app-gif.gif'
 
 // —— Constants (module globs & config) —————————————————————————————————————
 const kindredStepperModules = import.meta.glob('../assets/imgs/kindred/stepper/*.{png,jpg,jpeg,webp}', { eager: true })
@@ -276,131 +277,33 @@ To fix this, I moved the main CTA to the top of the page to ensure the primary u
         <img src={COLOUR_PALETTE_IMG} alt="Colour palette comparing" className="color-palette-img" />
       </section>
 
-      {/* <section className="design-hifi" aria-labelledby="design-hifi-heading">
-        <div className="design-hifi-iteration">
-          <h4 className="design-hifi-iteration-title">Iteration #1</h4>
-        </div>
-
-        <div className="design-hifi-before-after">
-            <h4 className="design-hifi-ba-title before">Before</h4>
-            <p className="design-hifi-ba-p before">
-              The original layout relied on a vertical list of buttons, requiring users to navigate away from the home screen to view essential data like rate trends or transaction history.
-            </p>
-            {BEFORE_HOMEPAGE_IMG && (
-              <img src={BEFORE_HOMEPAGE_IMG} alt="Quantex app homepage - before redesign" className="design-hifi-ba-img before" />
-            )}
-
-          {LINE_IMG && (
-            <img src={LINE_IMG} alt="" className="design-hifi-arrow" aria-hidden="true" />
-          )}
-
-            <h4 className="design-hifi-ba-title after">After</h4>
-            <p className="design-hifi-ba-p after">
-              I redesigned the home screen to feature interactive widgets that display live data. By bringing the wallet balance and rate graph to the forefront, users can get an instant overview of their finances without additional navigation.
-            </p>
-            {AFTER_HOMEPAGE_IMG && (
-              <img src={AFTER_HOMEPAGE_IMG} alt="Quantex app homepage - after redesign" className="design-hifi-ba-img after" />
-            )}
-
-        </div>
-
-        <div className="design-hifi-iteration">
-          <h4 className="design-hifi-iteration-title">Iteration #2</h4>
-        </div>
-
-        <div className="design-hifi-before-after">
-            <h4 className="design-hifi-ba-title before">Before</h4>
-            <p className="design-hifi-ba-p before">
-              In the initial design, the exchange arrows were a flat icon without any button characteristics. This made it unclear if the element was interactive or simply a visual divider between the currency fields.
-            </p>
-            {BEFORE_HOMEPAGE_2_IMG && (
-              <img src={BEFORE_HOMEPAGE_2_IMG} alt="Quantex exchange screen - before" className="design-hifi-ba-img before" />
-            )}
-          {LINE_IMG && (
-            <img src={LINE_IMG} alt="" className="design-hifi-arrow" aria-hidden="true" />
-          )}
-            <h4 className="design-hifi-ba-title after">After</h4>
-            <p className="design-hifi-ba-p after">
-              I redesigned the arrows as a clear, shadowed button to signal interactivity. This change follows the app&apos;s established button styles, making it intuitive for users to tap and switch the exchange direction instantly.
-            </p>
-            {AFTER_HOMEPAGE_2_IMG && (
-              <img src={AFTER_HOMEPAGE_2_IMG} alt="Quantex exchange screen - after" className="design-hifi-ba-img after" />
-            )}
-        </div>
-
-        <div className="design-hifi-iteration design-hifi-iteration--with-intro">
-          <h4 className="design-hifi-iteration-title">Iteration #3</h4>
-        </div>
-
-        <h4 className="design-hifi-iteration-subtitle">Accessibility refinements</h4>
-          <p className="design-hifi-iteration-p">
-            I conducted an accessibility audit using WebAIM&apos;s contrast checker to ensure the interface meets industry standards for readability. These refinements focus on adjusting colour contrast and button visibility, making the app easier to navigate for users with visual impairments or those viewing the screen in challenging lighting conditions.
-          </p>
-
-        <div className="design-hifi-before-after">
-            <h4 className="design-hifi-ba-title before">Before</h4>
-            <p className="design-hifi-ba-p before">
-              The initial green brand colour failed to meet the WCAG AA contrast standards for accessibility. The light text on the green background made primary actions difficult to read for users with low vision.
-            </p>
-            {BEFORE_HOMEPAGE_3_IMG && (
-              <img src={BEFORE_HOMEPAGE_3_IMG} alt="Quantex transaction summary - before accessibility update" className="design-hifi-ba-img before" />
-            )}
-          {LINE_IMG && (
-            <img src={LINE_IMG} alt="" className="design-hifi-arrow" aria-hidden="true" />
-          )}
-            <h4 className="design-hifi-ba-title after">After</h4>
-            <p className="design-hifi-ba-p after">
-              I updated the brand palette to a deeper blue, which passed the WebAIM contrast test with a higher ratio. This change ensures that all text and icons are sharp and legible, providing a more inclusive experience without sacrificing the professional look of the app.
-            </p>
-            {AFTER_HOMEPAGE_3_IMG && (
-              <img src={AFTER_HOMEPAGE_3_IMG} alt="Quantex transaction summary - after accessibility update" className="design-hifi-ba-img after" />
-            )}
-        </div>
-
-        <div className="design-hifi-final">
-          <h3 className="design-hifi-final-heading">Final design</h3>
-          <p className="design-hifi-final-p">
-            The final phase of the project involved expanding Quantex across multiple platforms. By designing the mobile app alongside the desktop and mobile web versions, I made sure the app feels the same no matter where you use it. Whether a user is at home on a PC, using a mobile browser, or opening the app while travelling, the layout remains familiar and easy to navigate.
-          </p>
-          {FINAL_DESIGN_IMG && (
-            <img src={FINAL_DESIGN_IMG} alt="Quantex final design - Payment received screens across mobile and web" className="design-hifi-final-img" />
-          )}
-        </div>
-
-        <div className="design-hifi-desktop">
-          <h3 className="design-hifi-desktop-heading">Desktop website</h3>
-          <p className="design-hifi-desktop-p">
-            For the desktop version, I maintained the exact same layout and functionality as the mobile experience to ensure total consistency. By keeping the interface centred with generous margins, the app remains easy to focus on and doesn&apos;t feel stretched or overwhelming on a larger monitor.
-          </p>
-          <p className="design-hifi-desktop-p">
-            Using wide margins on the desktop version keeps the content in a narrow, readable column. This prevents long lines of text which can be difficult for many users to track and makes the overall interface feel more balanced.
-          </p>
-        </div>
-
-
-
-        {COMPUTER_CAROUSEL_IMAGES.length > 0 && (
-          <div className="design-hifi-computer-carousel">
-            <ImgsCarousel images={COMPUTER_CAROUSEL_IMAGES} visibleCount={3} />
+      <section className="kindred-final-design" aria-labelledby="kindred-final-design-heading">
+        <div className="kindred-final-design-inner">
+          <div className="kindred-final-design-media">
+            <img src={kindredAppGif} alt="Kindred app - Final design" className="kindred-final-design-img" />
           </div>
-        )}
+          <div className="kindred-final-design-content">
+            <h3 id="kindred-final-design-heading" className="kindred-final-design-heading">Final design</h3>
+            <p className="kindred-final-design-p">
+              The final high-fidelity screens represent a balance between a premium brand identity and practical utility.<br />
+              By focusing on a clean, single-column layout and high-contrast elements, I ensured the app remains functional in the fast-paced environment of a professional kitchen.<br />
+              Whether Marco is quickly logging a donation between orders or tracking a courier&apos;s arrival, the interface provides the clarity and speed he needs to manage food waste without disrupting his workflow.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <div className="design-hifi-mobile">
-          <h3 className="design-hifi-mobile-heading">Mobile website</h3>
-          <p className="design-hifi-mobile-p">
-            I kept the native app and mobile web designs almost identical. This ensures that users like Drake or Natasha get the same simple interface and accessible features, regardless of how they choose to log in while on the go.
-          </p>
+      <div className="hi-fi-carousel">
+          {LOW_WIREFRAMES_CAROUSEL_IMAGES.length > 0 ? (
+            <ImgsCarousel images={LOW_WIREFRAMES_CAROUSEL_IMAGES} gap={15} />
+          ) : (
+            <p className="hi-fi-carousel-placeholder">
+              Add wireframe images to <code>src/assets/imgs/quantex/stepper/low-wireframes-carousel/</code> to see the carousel.
+            </p>
+          )}
         </div>
 
-        {FINAL_CAROUSEL_IMAGES.length > 0 && (
-          <div className="design-hifi-final-carousel">
-            <ImgsCarousel images={FINAL_CAROUSEL_IMAGES} />
-          </div>
-        )}
-
-      </section> */}
-
-      {/* <div ref={step4Ref} className="stepper-header-container"><StepperHeader number={4} word="Takeaways" /></div> */}
+      <div ref={step4Ref} className="stepper-header-container"><StepperHeader number={4} word="Takeaways" /></div>
 
       {/* <section className="takeaways-reflections-next" aria-labelledby="takeaways-reflections-heading">
         <div className="takeaways-reflections">

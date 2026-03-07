@@ -471,6 +471,84 @@
             display: grid;
             grid-template-columns: 2fr 1fr;
         }
+
+        .color-palette-img{
+            margin-block-end: 12.5rem;
+        }
+    }
+
+    .kindred-final-design {
+        max-width: 1200px;
+        margin-block-end: 12.5rem;
+
+        .kindred-final-design-inner {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+            gap: 3rem 4rem;
+            align-items: start;
+        }
+
+        .kindred-final-design-media {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .kindred-final-design-img {
+            max-width: 100%;
+            width: 17rem;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .kindred-final-design-heading {
+            font-weight: 600;
+            font-size: 2.2rem;
+            color: var(--dark-grey);
+            margin: 0 0 1.7rem 0;
+        }
+
+        .kindred-final-design-p {
+            font-size: 1.14rem;
+            line-height: 1.6;
+            color: var(--main-txt);
+            margin: 0 0 1rem 0;
+        }
+
+        .kindred-final-design-p:last-child {
+            margin-block-end: 0;
+        }
+    }
+
+    .hi-fi-carousel {
+        grid-column: 1 / -1;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-block-end: 0;
+        background-color: var(--light-bg);
+        padding-block:5rem;
+
+        .imgs-carousel {
+            width: 100%;
+            height: 700px;
+            --imgs-carousel-slide-height: 700px;
+        }
+
+        .hi-fi--carousel-placeholder {
+            color: var(--main-txt);
+            font-size: 0.95rem;
+            padding: 2rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+            margin: 0;
+
+            code {
+                font-size: 0.85em;
+                background: rgba(0,0,0,0.06);
+                padding: 0.2em 0.4em;
+                border-radius: 4px;
+            }
+        }
     }
 
     .design-hifi {
