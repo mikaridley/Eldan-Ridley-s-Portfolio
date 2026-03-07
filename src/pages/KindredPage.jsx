@@ -35,12 +35,6 @@ const METRICS_IMG = getStepperImg('metrics')
 import { Stepper } from '../cmps/Stepper'
 import { StepperHeader } from '../cmps/StepperHeader'
 
-const quantexCarouselModules = import.meta.glob('../assets/imgs/quantex/carousel/*', { eager: true })
-const QUANTEX_CAROUSEL_IMAGES = Object.keys(quantexCarouselModules)
-  .sort()
-  .map((key) => quantexCarouselModules[key].default)
-  .filter(Boolean)
-
 const lowWireframesCarouselModules = import.meta.glob('../assets/imgs/quantex/stepper/low-wireframes-carousel/*.{png,jpg,jpeg,webp}', { eager: true })
 const LOW_WIREFRAMES_CAROUSEL_IMAGES = Object.keys(lowWireframesCarouselModules)
   .sort()
@@ -153,12 +147,6 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
           </ul>
         </div>
       </section>
-
-      {QUANTEX_CAROUSEL_IMAGES.length > 0 && (
-        <section className="quantex-page-carousel">
-          <ImgsCarousel images={QUANTEX_CAROUSEL_IMAGES} gap={15} />
-        </section>
-      )}
 
       {/* <Stepper activeStep={activeStep} onStepClick={handleStepClick} className="stepper" /> */}
 
