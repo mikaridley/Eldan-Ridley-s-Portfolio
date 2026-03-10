@@ -31,7 +31,8 @@ export function ScrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  if (!showButton) return null
+  const hideOnPages = ['/home', '/about-me']
+  if (!showButton || hideOnPages.includes(pathname)) return null
 
   return (
     <button

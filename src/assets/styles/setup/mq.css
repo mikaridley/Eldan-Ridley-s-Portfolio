@@ -9,6 +9,7 @@
 @media (max-width: 810px) {
     .app-header {
         align-items: flex-end;
+        padding-inline: 50px;
 
         .app-header-navigation.navigation {
             display: none ;
@@ -84,7 +85,7 @@
         align-items: center;
         padding-block: 1.2rem;
         margin-block: 4rem;
-        padding-inline: 50px;
+        margin-inline: 50px;
       
         > img {
           width:4.3rem;
