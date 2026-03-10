@@ -8,6 +8,7 @@ html {
   /* color-scheme: light dark; */
   font-family: manrope, sans-serif;
   font-size: 16px;
+  scrollbar-gutter: stable;
 }
 
 body {

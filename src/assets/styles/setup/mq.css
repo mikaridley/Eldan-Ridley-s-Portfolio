@@ -7,6 +7,18 @@
     }
 
 @media (max-width: 810px) {
+    .app-header {
+        align-items: flex-end;
+    }
+
+    .app-header .app-header-navigation.navigation {
+        display: none ;
+    }
+
+    .app-header .app-header-burger-btn {
+        display: flex ;
+    }
+
     .projects-layout{
         display: grid;
         grid-template-columns: minmax(50px,1fr) minmax(auto,var(--max-width)) minmax(50px,1fr);

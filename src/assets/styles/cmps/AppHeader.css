@@ -4,8 +4,10 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1001;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   max-width: var(--max-width);
   margin-inline: auto;
 
@@ -50,6 +52,105 @@
       }
     }
   }
+
+  .app-header-burger-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-block:auto
+  }
+
+  .app-header-burger-btn img {
+    display: block;
+    width: 44px;
+    height: 44px;
+  }
+
+  .app-header-close-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--dark-grey, #363636);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Full-screen overlay menu (mobile) – slides down behind header */
+.app-header-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: var(--white-bg, #fff);
+  transform: translateY(-100%);
+  transition: transform 0.35s ease-out;
+  pointer-events: none;
+  overflow: auto;
+}
+
+.app-header-overlay.is-open {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.app-header-overlay-inner {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-block-start: 6rem;
+}
+
+.app-header-overlay-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-block: 3rem;
+}
+
+.app-header-overlay-nav a {
+  position: relative;
+  font-size: 1.5rem;
+  color: var(--dark-grey, #363636);
+  text-decoration: none;
+  padding: 0.5rem 0;
+}
+
+.app-header-overlay-nav a:not(.active) {
+  color: rgba(54, 54, 54, 0.7);
+}
+
+.app-header-overlay-nav a.active {
+  color: var(--dark-grey, #363636);
+}
+
+.app-header-overlay-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.app-header-overlay-nav a:hover::after,
+.app-header-overlay-nav a.active::after {
+  transform: scaleX(1);
 }
 
 /* Header on /home: light text (dark bg) */
