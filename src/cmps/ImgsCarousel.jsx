@@ -4,34 +4,17 @@ import carouselArrowSvg from '../assets/imgs/quantex/Carousel Arrow.svg'
 
 const SLIDE_HEIGHT = 550
 
-export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
+export function ImgsCarousel({ images = [], gap = 15 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [slideWidths, setSlideWidths] = useState([])
-  const [viewportWidth, setViewportWidth] = useState(720)
   const [isTransitioning, setIsTransitioning] = useState(true)
-  const [useThreeSlides, setUseThreeSlides] = useState(false)
   const viewportRef = useRef(null)
   const isAnimatingRef = useRef(false)
   const n = images.length
   const displayImages = n > 0 ? [...images, ...images] : []
 
-  const effectiveVisibleCount = useThreeSlides ? 3 : visibleCount
-
-  useEffect(() => {
-    const mq = window.matchMedia('(max-width: 1200px)')
-    function onChange(e) {
-      setUseThreeSlides(e.matches)
-    }
-    onChange(mq)
-    mq.addEventListener('change', onChange)
-    return () => mq.removeEventListener('change', onChange)
-  }, [])
-
-  const slideWidthWhenFixed = viewportWidth > 0 && effectiveVisibleCount > 0
-    ? (viewportWidth - (effectiveVisibleCount - 1) * gap) / effectiveVisibleCount
-    : SLIDE_HEIGHT
   function getSlideWidth(idx) {
-    return effectiveVisibleCount != null && effectiveVisibleCount > 0 ? slideWidthWhenFixed : (slideWidths[idx] ?? SLIDE_HEIGHT)
+    return slideWidths[idx] ?? SLIDE_HEIGHT
   }
 
   const offsetByIndex = useMemo(() => {
@@ -41,12 +24,11 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
       offsets.push(offsets[i] + w + gap)
     }
     return offsets
-  }, [displayImages.length, slideWidths, gap, slideWidthWhenFixed, effectiveVisibleCount])
+  }, [displayImages.length, slideWidths, gap])
 
   const translateX = -offsetByIndex[currentIndex] ?? 0
 
   function handleImageLoad(idx, e) {
-    if (effectiveVisibleCount != null && effectiveVisibleCount > 0) return
     const { naturalWidth, naturalHeight } = e.target
     if (!naturalWidth || !naturalHeight) return
     const w = SLIDE_HEIGHT * (naturalWidth / naturalHeight)
@@ -58,19 +40,8 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
   }
 
   useEffect(() => {
-    const el = viewportRef.current
-    if (!el) return
-    const ro = new ResizeObserver(([entry]) => {
-      const w = entry?.contentRect?.width
-      if (typeof w === 'number') setViewportWidth(w)
-    })
-    ro.observe(el)
-    return () => ro.disconnect()
-  }, [])
-
-  useEffect(() => {
-    if (effectiveVisibleCount == null || effectiveVisibleCount <= 0) setSlideWidths([])
-  }, [images, effectiveVisibleCount])
+    if (images.length === 0) setSlideWidths([])
+  }, [images.length])
 
   function handleTransitionEnd() {
     if (n === 0) return
