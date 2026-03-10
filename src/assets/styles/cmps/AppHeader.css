@@ -10,6 +10,7 @@
   align-items: flex-start;
   max-width: var(--max-width);
   margin-inline: auto;
+  background-color: var(--white-bg);
 
   padding-block-start: 1rem;
 
