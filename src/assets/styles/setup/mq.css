@@ -1,3 +1,6 @@
+@media (max-width: 1200px) {
+}
+
 @media (max-width: 960px){
     .home-page {    
           .home-intro-p {
@@ -10,6 +13,7 @@
     .app-header {
         align-items: flex-end;
         padding-inline: 50px;
+        padding-block:3.47rem;
 
         .app-header-navigation.navigation {
             display: none ;
@@ -17,6 +21,10 @@
     
         .app-header-burger-btn {
             display: flex ;
+        }
+
+        .logo {
+            width: 6rem;
         }
     }
 
@@ -30,7 +38,7 @@
     }
 
     .home-page {   
-        padding-block: 11rem 6rem;
+        padding-block: 13rem 6rem;
       .home-intro {
         margin-block-end: 0;
     
@@ -116,10 +124,10 @@
             font-style: normal;
             font-weight: 400;
             bottom: 0.5rem;
-            right:20px;
+            right:0px;
         }
       
         
-      }
+    }
       
   }
