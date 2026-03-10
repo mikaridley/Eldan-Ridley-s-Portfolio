@@ -8,7 +8,8 @@ import '../assets/styles/cmps/AppHeader.css'
 export function AppHeader() {
   const { pathname } = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const isLightLogo = pathname === '/quantex' || pathname === '/kindred'
+  const isProjectPage = pathname === '/quantex' || pathname === '/kindred'
+  const isLightLogo = isProjectPage && !isMenuOpen
   const logoSrc = isLightLogo ? logo : logoBlack
 
   function openMenu() {
