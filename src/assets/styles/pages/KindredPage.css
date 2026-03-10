@@ -47,7 +47,7 @@
                 display: block;
                 position: absolute;
                 left: 50%;
-                bottom: 120px;
+                bottom: 97px;
                 transform: translateX(-50%);
                 width: 100vw;
                 height: 22rem;
@@ -118,7 +118,7 @@
 
             .project-details-list {
                 li {
-                    font-size: 1.14rem;
+                    font-size: 1rem;
                     line-height: 3;
                 }
             }
@@ -149,7 +149,7 @@
 
         .research-personas-intro {
             color: var(--main-txt);
-            font-size: 1.14rem;
+            font-size: 1rem;
             line-height: 1.6;
             margin: 0 0 5.8rem 0;
             max-width: 75rem;
@@ -196,7 +196,7 @@
 
             .research-empathy-p {
                 color: var(--main-txt);
-                font-size: 1.14rem;
+                font-size: 1rem;
                 line-height: 1.6;
                 margin: 0;
 
@@ -253,7 +253,7 @@
 
             .challenge-block-p {
                 color: var(--main-txt);
-                font-size: 1.14rem;
+                font-size: 1rem;
                 line-height: 1.6;
                 margin: 0 0 1.7rem 0;
             }
@@ -297,7 +297,7 @@
 
         .user-journey-mapping-p {
             color: var(--main-txt);
-            font-size: 1.14rem;
+            font-size: 1rem;
             line-height: 1.6;
             margin: 0 0 5rem 0;
         }
@@ -330,7 +330,7 @@
         .design-wireframes-lofi-p {
             grid-column: 1 / -1;
             color: var(--main-txt);
-            font-size: 1.14rem;
+            font-size: 1rem;
             line-height: 1.6;
             margin: 0 0 3.29rem 0;
             max-width: 75rem;
@@ -397,7 +397,7 @@
             .design-visual-identity-p {
                 grid-row:2;
                 align-self: start;
-                font-size: 1.14rem;
+                font-size: 1rem;
                 line-height: 1.6;
 
                 & span {
@@ -438,7 +438,7 @@
 
             .design-hifi-p {
                 color: var(--main-txt);
-                font-size: 1.14rem;
+                font-size: 1rem;
                 line-height: 1.6;
                 margin-block-end: 8rem;
                 max-width: 75rem;
@@ -510,7 +510,7 @@
         }
 
         .kindred-final-design-p {
-            font-size: 1.14rem;
+            font-size: 1rem;
             line-height: 1.6;
             color: var(--main-txt);
             margin: 0 0 1rem 0;
@@ -572,7 +572,7 @@
                 padding-left: 1.5rem;
                 list-style-type: disc;
                 color: var(--main-txt);
-                font-size: 1.14rem;
+                font-size: 1rem;
                 line-height: 1.6;
 
                 li::marker {
@@ -592,7 +592,7 @@
 
         .takeaways-next-intro {
             color: var(--dark-grey);
-            font-size: 1.14rem;
+            font-size: 1rem;
             line-height: 1.6;
             margin: 0 0 1.7rem 0;
         }
@@ -617,10 +617,10 @@
             margin: 0 0 1.7rem 0;
         }
 
-        .takeaways-metrics-intro {
+        .takeaways-metrics-intro { 
             grid-column: 1;
             color: var(--dark-grey);
-            font-size: 1.14rem;
+            font-size: 1rem;
             line-height: 1.6;
             margin: 0 0 1.5rem 0;
         }
@@ -629,7 +629,7 @@
             grid-column: 1;
             margin: 0;
             color: var(--main-txt);
-            font-size: 1.14rem;
+            font-size: 1rem;
             line-height: 1.6;
 
             li {
