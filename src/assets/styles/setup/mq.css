@@ -1,2 +1,69 @@
-@media (max-width: 800px) {
-}
+@media (max-width: 960px){
+    .home-page {    
+          .home-intro-p {
+            margin-block-end:12rem;
+          }
+        }
+    }
+
+@media (max-width: 810px) {
+    .projects-layout{
+        display: grid;
+        grid-template-columns: minmax(50px,1fr) minmax(auto,var(--max-width)) minmax(50px,1fr);
+      
+        > * {
+          grid-column: 2;
+        }
+    }
+
+    .home-page {   
+        padding-block: 11rem 6rem;
+      .home-intro {
+        margin-block-end: 0;
+    
+        .home-intro-title {
+          font-size: 2.25rem;
+          margin: 0 0 0.5rem 0;
+        }
+    
+        .home-intro-role {
+          font-size: 1rem;
+          margin: 0 0 0.5rem 0;
+        }
+    
+        .home-intro-p {
+          font-size: 0.875rem;
+          line-height: normal;
+          margin-block-end:6.25rem;
+        }
+      }
+    
+      .projects{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2.45rem;
+        width: 100%;
+        justify-items: stretch;
+
+        .home-project-quntex, .home-project-kindred {
+          min-width: 0;
+
+          .home-project-img {
+            max-width: none;
+            object-fit: cover;
+            margin-block-end: 1.05rem;
+          }
+      
+          .home-project-title {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem 0;
+          }
+      
+          .home-project-desc {
+            font-size: 0.875rem;
+            line-height: normal;
+          }
+        }
+    
+      }
+    }
+  }

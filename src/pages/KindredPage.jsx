@@ -130,6 +130,7 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
           <h4 className="project-details-heading">Tools</h4>
           <ul className="project-details-list">
             <li>Figma</li>
+            <li>FigJam</li>
             <li>Good old fashion pen & paper</li>
             <li>Gen AI</li>
           </ul>
@@ -138,7 +139,7 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
 
       <Stepper activeStep={activeStep} onStepClick={handleStepClick} className="stepper" />
 
-      <div ref={step1Ref} className="stepper-header-container"><StepperHeader number={1} word="Research & Discovery" /></div>
+      <div ref={step1Ref} className="stepper-header-container"><StepperHeader number={1} word="Research & discovery" /></div>
 
       <section className="research-personas" aria-labelledby="research-personas-heading">
         <h3 id="research-personas-heading" className="research-personas-heading">Defining the target audience</h3>
@@ -169,10 +170,10 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
         )}
       </section>
 
-      <div ref={step2Ref} className="stepper-header-container"><StepperHeader number={2} word="Ideation & Strategy" /></div>
+      <div ref={step2Ref} className="stepper-header-container"><StepperHeader number={2} word="Ideation & strategy" /></div>
 
       <section className="challenge" aria-labelledby="challenge">
-        <h3 id="challenge-heading" className="challenge-heading">Defining the Challenge</h3>
+        <h3 id="challenge-heading" className="challenge-heading">Defining the challenge</h3>
 
         <div className="challenge-block">
           <h4 className="challenge-block-title">How might we</h4>
@@ -188,7 +189,7 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
       </section>
 
       <section className="user-journey-mapping" aria-labelledby="user-journey-mapping-heading">
-        <h3 id="user-journey-mapping-heading" className="user-journey-mapping-heading">Mapping the Experience</h3>
+        <h3 id="user-journey-mapping-heading" className="user-journey-mapping-heading">Mapping the experience</h3>
         <h4 className="user-journey-mapping-subtitle">User journey map</h4>
         <p className="user-journey-mapping-p">
         To deeply understand Marco's experience, I mapped his journey from identifying food waste to completing a donation. This allowed me to pinpoint exactly when he feels the most pressure - during the log process - and highlighted the need for a 'grab-and-go' solution that respects his busy schedule.
@@ -201,7 +202,7 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
       </section>
 
       <section className="user-journey-mapping" aria-labelledby="user-journey-mapping-heading">
-        <h3 id="user-journey-mapping-heading" className="user-journey-mapping-heading">Information Architecture</h3>
+        <h3 id="user-journey-mapping-heading" className="user-journey-mapping-heading">Information architecture</h3>
         <h4 className="user-journey-mapping-subtitle">Sitemap</h4>
         <p className="user-journey-mapping-p">
         I designed the Information Architecture to ensure the donation process is as simplified as possible, directly addressing the need for efficiency during a busy restaurant shift. By prioritising a shallow menu structure and creating a dedicated 'Impact Centre', I focused on making the app easy and quick for the donor to use.

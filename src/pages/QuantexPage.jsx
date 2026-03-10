@@ -152,6 +152,7 @@ export function QuantexPage() {
           <h4 className="project-details-heading">Tools</h4>
           <ul className="project-details-list">
             <li>Figma</li>
+            <li>FigJam</li>
             <li>Good old fashion pen & paper</li>
           </ul>
         </div>
