@@ -9,14 +9,14 @@
 @media (max-width: 810px) {
     .app-header {
         align-items: flex-end;
-    }
 
-    .app-header .app-header-navigation.navigation {
-        display: none ;
-    }
-
-    .app-header .app-header-burger-btn {
-        display: flex ;
+        .app-header-navigation.navigation {
+            display: none ;
+        }
+    
+        .app-header-burger-btn {
+            display: flex ;
+        }
     }
 
     .projects-layout{
@@ -78,4 +78,47 @@
     
       }
     }
+
+    .app-footer {
+        row-gap:0.78rem;
+        align-items: center;
+        padding-block: 1.2rem;
+        margin-block: 4rem;
+        padding-inline: 50px;
+      
+        > img {
+          width:4.3rem;
+        }
+      
+        > p {
+      
+          &.msg {
+            align-self: end;
+            width:10.3rem;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+          }
+      
+          &.email {
+            align-self: start;
+            font-size: 0.625rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      
+        .copyright {
+            font-size: 0.5rem;
+            font-style: normal;
+            font-weight: 400;
+            bottom: 0.5rem;
+            right:20px;
+        }
+      
+        
+      }
+      
   }
