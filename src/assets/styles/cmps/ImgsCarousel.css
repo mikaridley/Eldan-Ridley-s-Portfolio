@@ -1,8 +1,5 @@
 .imgs-carousel {
   position: relative;
-  width: 720px;
-  height: 720px;
-  --imgs-carousel-slide-height: 550px;
 
   .imgs-carousel-viewport {
     position: absolute;
