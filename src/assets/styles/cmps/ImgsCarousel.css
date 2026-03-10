@@ -20,6 +20,7 @@
     justify-content: space-between;
 
     width: 100%;
+    height: 100%;
     padding-inline: 2rem;
     pointer-events: none;
   }
@@ -47,7 +48,9 @@
 
   .imgs-carousel-arrow {
     pointer-events: auto;
-    position: static;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     flex-shrink: 0;
     width: 48px;
     height: 48px;
@@ -63,7 +66,11 @@
     cursor: pointer;
 
     &:active {
-      transform: scale(0.96);
+      transform: translateY(-50%) scale(0.96);
+    }
+
+    &.imgs-carousel-arrow--left:active {
+      transform: translateY(-50%) rotate(180deg) scale(0.96);
     }
 
     .imgs-carousel-arrow-icon {
@@ -79,6 +86,11 @@
   }
 
   .imgs-carousel-arrow--left {
-    transform: rotate(180deg);
+    left: 2rem;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .imgs-carousel-arrow--right {
+    right: 2rem;
   }
 }

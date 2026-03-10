@@ -21,7 +21,29 @@
           .home-intro-p {
             margin-block-end:12rem;
           }
-        }
+    }
+
+    .imgs-carousel {
+        max-height: 450px;
+
+        .imgs-carousel-slide {
+            flex-shrink: 0;
+            height: var(--imgs-carousel-slide-height, 550px);
+        
+            img {
+              position: relative;
+              bottom:60px;
+
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              object-position: center;
+              cursor: default;
+            }
+          }
+    }
+
 }
 
 @media (max-width: 810px) {

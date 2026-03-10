@@ -7,14 +7,16 @@ const SLIDE_HEIGHT = 550
 export function ImgsCarousel({ images = [], gap = 15 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [slideWidths, setSlideWidths] = useState([])
+  const [slideHeight, setSlideHeight] = useState(SLIDE_HEIGHT)
   const [isTransitioning, setIsTransitioning] = useState(true)
   const viewportRef = useRef(null)
+  const naturalDimensionsRef = useRef({})
   const isAnimatingRef = useRef(false)
   const n = images.length
   const displayImages = n > 0 ? [...images, ...images] : []
 
   function getSlideWidth(idx) {
-    return slideWidths[idx] ?? SLIDE_HEIGHT
+    return slideWidths[idx] ?? slideHeight
   }
 
   const offsetByIndex = useMemo(() => {
@@ -29,18 +31,48 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
   const translateX = -offsetByIndex[currentIndex] ?? 0
 
   function handleImageLoad(idx, e) {
-    const { naturalWidth, naturalHeight } = e.target
-    if (!naturalWidth || !naturalHeight) return
-    const w = SLIDE_HEIGHT * (naturalWidth / naturalHeight)
+    const { naturalWidth: w, naturalHeight: h } = e.target
+    if (!w || !h) return
+    naturalDimensionsRef.current[idx] = { w, h }
+    const slideH = slideHeight
     setSlideWidths((prev) => {
       const next = [...prev]
-      next[idx] = w
+      next[idx] = slideH * (w / h)
       return next
     })
   }
 
   useEffect(() => {
-    if (images.length === 0) setSlideWidths([])
+    const el = viewportRef.current
+    if (!el) return
+    const ro = new ResizeObserver(([entry]) => {
+      const h = entry?.contentRect?.height
+      if (typeof h === 'number' && h > 0) {
+        setSlideHeight(h)
+      }
+    })
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const dims = naturalDimensionsRef.current
+    const h = slideHeight
+    setSlideWidths((prev) => {
+      const next = []
+      for (let i = 0; i < displayImages.length; i++) {
+        const d = dims[i]
+        next[i] = d ? h * (d.w / d.h) : (prev[i] ?? slideHeight)
+      }
+      return next.length ? next : prev
+    })
+  }, [slideHeight, displayImages.length])
+
+  useEffect(() => {
+    if (images.length === 0) {
+      setSlideWidths([])
+      naturalDimensionsRef.current = {}
+    }
   }, [images.length])
 
   function handleTransitionEnd() {
