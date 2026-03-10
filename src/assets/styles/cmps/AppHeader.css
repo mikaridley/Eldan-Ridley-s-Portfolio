@@ -10,7 +10,6 @@
   align-items: flex-start;
   max-width: var(--max-width);
   margin-inline: 150px;
-  background-color: var(--white-bg);
 
   padding-block-start: 1rem;
 
@@ -153,6 +152,11 @@
 .app-header-overlay-nav a:hover::after,
 .app-header-overlay-nav a.active::after {
   transform: scaleX(1);
+}
+
+/* White header background only on home and about-me */
+.main-layout.header-white-bg .app-header {
+  background-color: var(--white-bg);
 }
 
 /* Header on /home: light text (dark bg) */
