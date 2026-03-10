@@ -9,16 +9,29 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
   const [slideWidths, setSlideWidths] = useState([])
   const [viewportWidth, setViewportWidth] = useState(720)
   const [isTransitioning, setIsTransitioning] = useState(true)
+  const [useThreeSlides, setUseThreeSlides] = useState(false)
   const viewportRef = useRef(null)
   const isAnimatingRef = useRef(false)
   const n = images.length
   const displayImages = n > 0 ? [...images, ...images] : []
 
-  const slideWidthWhenFixed = viewportWidth > 0 && visibleCount > 0
-    ? (viewportWidth - (visibleCount - 1) * gap) / visibleCount
+  const effectiveVisibleCount = useThreeSlides ? 3 : visibleCount
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 1200px)')
+    function onChange(e) {
+      setUseThreeSlides(e.matches)
+    }
+    onChange(mq)
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
+  }, [])
+
+  const slideWidthWhenFixed = viewportWidth > 0 && effectiveVisibleCount > 0
+    ? (viewportWidth - (effectiveVisibleCount - 1) * gap) / effectiveVisibleCount
     : SLIDE_HEIGHT
   function getSlideWidth(idx) {
-    return visibleCount != null && visibleCount > 0 ? slideWidthWhenFixed : (slideWidths[idx] ?? SLIDE_HEIGHT)
+    return effectiveVisibleCount != null && effectiveVisibleCount > 0 ? slideWidthWhenFixed : (slideWidths[idx] ?? SLIDE_HEIGHT)
   }
 
   const offsetByIndex = useMemo(() => {
@@ -28,12 +41,12 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
       offsets.push(offsets[i] + w + gap)
     }
     return offsets
-  }, [displayImages.length, slideWidths, gap, slideWidthWhenFixed, visibleCount])
+  }, [displayImages.length, slideWidths, gap, slideWidthWhenFixed, effectiveVisibleCount])
 
   const translateX = -offsetByIndex[currentIndex] ?? 0
 
   function handleImageLoad(idx, e) {
-    if (visibleCount != null && visibleCount > 0) return
+    if (effectiveVisibleCount != null && effectiveVisibleCount > 0) return
     const { naturalWidth, naturalHeight } = e.target
     if (!naturalWidth || !naturalHeight) return
     const w = SLIDE_HEIGHT * (naturalWidth / naturalHeight)
@@ -56,8 +69,8 @@ export function ImgsCarousel({ images = [], gap = 15, visibleCount = 4 }) {
   }, [])
 
   useEffect(() => {
-    if (visibleCount == null || visibleCount <= 0) setSlideWidths([])
-  }, [images, visibleCount])
+    if (effectiveVisibleCount == null || effectiveVisibleCount <= 0) setSlideWidths([])
+  }, [images, effectiveVisibleCount])
 
   function handleTransitionEnd() {
     if (n === 0) return
