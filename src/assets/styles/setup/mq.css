@@ -270,7 +270,7 @@
         border-radius: 0;
         height: auto;
         width: 100%;
-        margin-block-start:4rem;
+        margin-block-start: 4rem;
       }
 
       &::after {
@@ -279,5 +279,121 @@
         height: 11.25rem;
       }
     }
+
+    .overview {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-block: 6.25rem;
+      justify-self: center;
+
+      h4 {
+        grid-column: 1;
+        font-size: 1rem;
+        margin-block-end: 0.5rem;
+      }
+
+      .overview-p {
+        grid-column: 1;
+        margin-block-end: 6.25rem;
+        font-size: 0.875rem;
+        line-height: normal;
+        .p-gap {
+          height: 1rem;
+        }
+      }
+
+      .problem-heading {
+        grid-column: 1;
+      }
+
+      .solution-heading {
+        grid-column: 1;
+        grid-row: 5;
+      }
+
+      .problem-solution-p {
+        line-height: normal;
+      }
+    }
+
+    .project-details {
+      margin-block-end: 6.25rem;
+
+      .project-details-col {
+        .project-details-heading {
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 166%;
+        }
+
+        .project-details-list {
+          li {
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+    }
+
+    .stepper-wrapper {
+      .stepper {
+        .stepper-connector {
+          margin-inline: 0.5rem;
+        }
+      }
+    }
+
+    .stepper-header {
+      margin-block-end: 6.25rem;
+      margin-block-start: 12.5rem;
+      height: 6.25rem;
+
+      .stepper-header-title {
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+
+    .research-personas {
+      padding-block-end: 0rem;
+      margin-block-end: 6.25rem;
+
+      .research-personas-heading {
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166%;
+        margin: 0 0 2.5rem 0;
+      }
+
+      .research-personas-subtitle {
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166%;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .research-personas-intro {
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0 0 2.5rem 0;
+      }
+
+      .research-personas-imgs {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+      }
   }
+
+  }
+}
+
+@media (max-width: 810px) {
 }
