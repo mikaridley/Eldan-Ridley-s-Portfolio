@@ -23,7 +23,6 @@
   .stepper-wrapper {
     padding-block: 1.5rem;
     max-width: 73rem;
-    margin-inline: var(--margin-inline);
     margin-inline: auto;
 
     &.is-sticky {
@@ -37,7 +36,6 @@
   
       .stepper-connector {
         flex: 1;
-        min-width: 20px;
         height: 0;
         border-top: 1px solid var(--dark-grey);
         margin-inline: 1.5rem;
