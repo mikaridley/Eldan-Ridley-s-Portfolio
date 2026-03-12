@@ -39,7 +39,7 @@ export function AboutMePage() {
         </div>
         <img src={eldanImg2} alt="Eldan" className="eldan-img-2"/>
 
-        <div className="about-me-page-carousel">
+        <div className="about-me-page-carousel imgs-carousel-wrapper">
           <ImgsCarousel images={CAROUSEL_IMAGES} />
         </div>
       </section>

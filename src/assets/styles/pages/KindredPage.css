@@ -318,13 +318,7 @@
       margin-left: calc(50% - 50vw);
       margin-block-end: 10.79rem;
       background-color: var(--light-bg);
-      padding-block: 5rem;
-
-      .imgs-carousel {
-        width: 100%;
-        height: 700px;
-        --imgs-carousel-slide-height: 700px;
-      }
+      padding-block: var(--imgs-carousel-wrapper-padding);
 
       .design-wireframes-carousel-placeholder {
         color: var(--main-txt);
@@ -510,13 +504,7 @@
     margin-left: calc(50% - 50vw);
     margin-block-end: 0;
     background-color: var(--light-bg);
-    padding-block: 5rem;
-
-    .imgs-carousel {
-      width: 100%;
-      height: 700px;
-      --imgs-carousel-slide-height: 700px;
-    }
+    padding-block: var(--imgs-carousel-wrapper-padding);
 
     .hi-fi-carousel-placeholder {
       color: var(--main-txt);

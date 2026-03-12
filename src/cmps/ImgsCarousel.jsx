@@ -2,12 +2,10 @@ import { useState, useRef, useEffect, useMemo } from 'react'
 import '../assets/styles/cmps/ImgsCarousel.css'
 import carouselArrowSvg from '../assets/imgs/quantex/Carousel Arrow.svg'
 
-const SLIDE_HEIGHT = 550
-
 export function ImgsCarousel({ images = [], gap = 15 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [slideWidths, setSlideWidths] = useState([])
-  const [slideHeight, setSlideHeight] = useState(SLIDE_HEIGHT)
+  const [slideHeight, setSlideHeight] = useState(550)
   const [isTransitioning, setIsTransitioning] = useState(true)
   const viewportRef = useRef(null)
   const naturalDimensionsRef = useRef({})

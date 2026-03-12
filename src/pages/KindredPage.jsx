@@ -372,7 +372,7 @@ export function KindredPage() {
           logging a donation or checking his impact - without unnecessary visual
           distractions.
         </p>
-        <div className="design-wireframes-carousel">
+        <div className="design-wireframes-carousel imgs-carousel-wrapper">
           {LOW_WIREFRAMES_CAROUSEL_IMAGES.length > 0 ? (
             <ImgsCarousel images={LOW_WIREFRAMES_CAROUSEL_IMAGES} gap={15} />
           ) : (
@@ -558,7 +558,7 @@ export function KindredPage() {
         </div>
       </section>
 
-      <div className="hi-fi-carousel">
+      <div className="hi-fi-carousel imgs-carousel-wrapper">
         {HI_FI_CAROUSEL_IMAGES.length > 0 ? (
           <ImgsCarousel images={HI_FI_CAROUSEL_IMAGES} gap={15} />
         ) : (

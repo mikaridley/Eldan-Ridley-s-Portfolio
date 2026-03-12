@@ -159,7 +159,7 @@ export function QuantexPage() {
       </section>
 
       {QUANTEX_CAROUSEL_IMAGES.length > 0 && (
-        <section className="quantex-page-carousel">
+        <section className="quantex-page-carousel imgs-carousel-wrapper">
           <ImgsCarousel images={QUANTEX_CAROUSEL_IMAGES} gap={15} />
         </section>
       )}
@@ -269,7 +269,7 @@ export function QuantexPage() {
         <p className="design-wireframes-lofi-p">
           I transitioned my paper sketches into digital low-fidelity wireframes to focus on visual hierarchy and flow. During this stage, I refined the layout to ensure the core exchange process remained the central focus, allowing me to test the usability of the interface before introducing brand elements.
         </p>
-        <div className="design-wireframes-carousel">
+        <div className="design-wireframes-carousel imgs-carousel-wrapper">
           {LOW_WIREFRAMES_CAROUSEL_IMAGES.length > 0 ? (
             <ImgsCarousel images={LOW_WIREFRAMES_CAROUSEL_IMAGES} gap={15} />
           ) : (
@@ -421,8 +421,8 @@ export function QuantexPage() {
 
 
         {COMPUTER_CAROUSEL_IMAGES.length > 0 && (
-          <div className="design-hifi-computer-carousel">
-            <ImgsCarousel images={COMPUTER_CAROUSEL_IMAGES} visibleCount={3} />
+          <div className="design-hifi-computer-carousel imgs-carousel-wrapper">
+            <ImgsCarousel images={COMPUTER_CAROUSEL_IMAGES} gap={15} />
           </div>
         )}
 
@@ -434,7 +434,7 @@ export function QuantexPage() {
         </div>
 
         {FINAL_CAROUSEL_IMAGES.length > 0 && (
-          <div className="design-hifi-final-carousel">
+          <div className="design-hifi-final-carousel imgs-carousel-wrapper">
             <ImgsCarousel images={FINAL_CAROUSEL_IMAGES} />
           </div>
         )}

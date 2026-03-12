@@ -71,18 +71,17 @@
     }
   }
 
-  .imgs-carousel {
-    max-height: 450px;
-
-    .imgs-carousel-slide {
-      img {
-        bottom: 60px;
-      }
-    }
+  .imgs-carousel-wrapper {
+    --imgs-carousel-slide-height: 40rem;
   }
 }
 
 @media (max-width: 810px) {
+  .imgs-carousel-wrapper {
+    --imgs-carousel-slide-height: 32rem;
+    --imgs-carousel-wrapper-padding: 3.75rem;
+  }
+
   h1 {
     font-size: 36px;
     font-weight: 700;

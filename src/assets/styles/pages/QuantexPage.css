@@ -122,12 +122,7 @@
         overflow-x: clip;
         margin-block-end: 10rem;
         background-color: var(--light-bg);
-        padding-block:5rem;
-
-        .imgs-carousel {
-            width: 100%;
-            height: 550px;
-        }
+        padding-block: var(--imgs-carousel-wrapper-padding);
     }
 
     .stepper-header-container{
@@ -375,13 +370,7 @@
             margin-left: calc(50% - 50vw);
             margin-block-end: 17rem;
             background-color: var(--light-bg);
-            padding-block:5rem;
-
-            .imgs-carousel {
-                width: 100%;
-                height: 700px;
-                --imgs-carousel-slide-height: 700px;
-            }
+            padding-block: var(--imgs-carousel-wrapper-padding);
 
             .design-wireframes-carousel-placeholder {
                 color: var(--main-txt);
@@ -630,14 +619,9 @@
             margin-left: calc(50% - 50vw);
             overflow-x: clip;
             margin-block: 2rem 4rem;
-            background-color: var(--light-bg);
             margin-block-end: 17rem;
-
-            .imgs-carousel {
-                width: 100%;
-                height: 500px;
-                --imgs-carousel-slide-height: 500px;
-            }
+            background-color: var(--light-bg);
+            padding-block: var(--imgs-carousel-wrapper-padding);
         }
 
         .design-hifi-final-carousel {
@@ -646,13 +630,7 @@
             overflow-x: clip;
             margin-block-end: 17rem;
             background-color: var(--light-bg);
-            padding-block:5rem;
-
-            .imgs-carousel {
-                width: 100%;
-                height: 500px;
-                --imgs-carousel-slide-height: 500px;
-            }
+            padding-block: var(--imgs-carousel-wrapper-padding);
         }
     }
 

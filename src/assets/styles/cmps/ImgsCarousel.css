@@ -1,5 +1,21 @@
+/* ==========================================================================
+   Carousel configuration – single place to control height & padding
+   Override --imgs-carousel-slide-height and --imgs-carousel-wrapper-padding
+   on the wrapper (e.g. .design-wireframes-carousel) as needed.
+   ========================================================================== */
+.imgs-carousel-wrapper {
+  --imgs-carousel-slide-height: 40rem;
+  --imgs-carousel-wrapper-padding: 3.75rem;
+}
+
+/* ==========================================================================
+   Carousel layout
+   ========================================================================== */
 .imgs-carousel {
   position: relative;
+  width: 100%;
+  height: var(--imgs-carousel-slide-height, 40rem);
+  min-height: 0;
 
   .imgs-carousel-viewport {
     position: absolute;
@@ -8,17 +24,14 @@
     z-index: 0;
   }
 
-  /* Centered wrapper so arrows stay inside visible content area (no cropping) */
   .imgs-carousel-arrows {
     position: absolute;
     inset: 0;
     left: 50%;
     transform: translateX(-50%);
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     width: 100%;
     height: 100%;
     padding-inline: 2rem;
@@ -34,7 +47,7 @@
 
   .imgs-carousel-slide {
     flex-shrink: 0;
-    height: var(--imgs-carousel-slide-height, 550px);
+    height: var(--imgs-carousel-slide-height, 40rem);
 
     img {
       display: block;
@@ -63,7 +76,6 @@
     align-items: center;
     justify-content: center;
     transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-    cursor: pointer;
 
     &:active {
       transform: translateY(-50%) scale(0.96);
@@ -75,7 +87,7 @@
 
     .imgs-carousel-arrow-icon {
       position: relative;
-      left:1px;
+      left: 1px;
       width: 24px;
       height: 24px;
       object-fit: contain;
