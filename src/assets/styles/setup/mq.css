@@ -387,11 +387,150 @@
       }
 
       .research-personas-imgs {
-          grid-template-columns: 1fr;
-          gap: 2.5rem;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
       }
-  }
+    }
 
+    .research-empathy {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0 0rem;
+
+      .research-empathy-heading {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166%;
+        margin: 0 0 2.5rem 0;
+      }
+
+      .research-empathy-subtitle {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166%;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .research-empathy-text {
+        grid-column: 1;
+        grid-row: 3;
+        margin: 0 0 2.5rem 0;
+
+        .research-empathy-p {
+          grid-column: 1;
+          grid-row: 4;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+      .research-empathy-fig {
+        grid-column: 1;
+        grid-row: 5;
+      }
+    }
+
+    .challenge {
+      padding-block-end: 3.25rem;
+
+      .challenge-heading {
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166%;
+        margin: 0 0 2.5rem 0;
+      }
+
+      .challenge-block {
+        margin-block-end: 2.5rem;
+
+        .challenge-block-title {
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 166%;
+          margin: 0 0 0.5rem 0;
+        }
+
+        .challenge-block-p {
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin: 0 0 0.5rem 0;
+        }
+
+        .challenge-hmw-list {
+          padding-left: 1.5rem;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+
+    .user-journey-mapping {
+      margin-block-end: 6.25rem;
+
+      .user-journey-mapping-heading {
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166%;
+        margin: 0 0 2.5rem 0;
+      }
+
+      .user-journey-mapping-subtitle {
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166%;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .user-journey-mapping-p {
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0 0 2.5rem 0;
+      }
+    }
+
+    .design-wireframes {
+      grid-template-columns: 1fr;
+      margin-block-end: 6.25rem;
+
+      .design-wireframes-subtitle {
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166%;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .design-wireframes-lofi-p {
+        grid-column: 1 ;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0 0 2.5rem 0;
+      }
+
+      .above-the-fold-img {
+        grid-column: 1;
+      }
+    }
   }
 }
 
