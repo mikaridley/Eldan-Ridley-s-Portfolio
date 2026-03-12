@@ -341,8 +341,13 @@
       }
     }
 
-    .above-the-fold-img {
-      grid-column: 1 / -1;
+    .above-the-fold-img-1 {
+      grid-column: 1;
+      justify-self: center;
+    }
+
+    .above-the-fold-img-2 {
+      justify-self: center;
     }
   }
 
@@ -417,6 +422,8 @@
   }
 
   .hi-fi-design {
+    display: grid;
+    margin-block-end: 12.5rem;
     .hi-fi-design-heading {
       color: var(--dark-grey);
       margin: 0 0 5rem 0;
@@ -431,13 +438,28 @@
       margin: 0 0 1.7rem 0;
     }
 
-    .hi-fi-design-fig {
+    .hi-fi-imgs {
       display: grid;
-      grid-template-columns: 2fr 1fr;
-    }
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
 
-    .color-palette-img {
-      margin-block-end: 12.5rem;
+      h4 {
+        color: var(--dark-grey);
+        text-align: center;
+      }
+
+      .color-palette-img-1 {
+        grid-column: 1;
+      }
+
+      .color-palette-img-2 {
+        grid-column: 2;
+      }
+
+      .color-palette-img-3 {
+        grid-column: 3;
+        margin-block-start: 1.9rem;
+      }
     }
   }
 

@@ -474,22 +474,52 @@
     }
 
     .hi-fi-design {
+      margin: 0 0 6.25rem 0;
       .hi-fi-design-heading {
         margin: 0 0 2.5rem 0;
       }
 
       .hi-fi-design-p {
-        margin-block-end: 6.25rem;
+        margin-block-end: 2.5rem;
       }
 
       .hi-fi-design-subtitle {
         margin: 0 0 0.5rem 0;
       }
 
-      .hi-fi-design-fig {
-        display: grid;
+      .hi-fi-imgs {
         grid-template-columns: 1fr;
+  
+        h4 {
+          font-size: 32px;
+          font-weight: 600;
+          &:nth-child(2){
+            grid-row:3
+          }
+
+          &:nth-child(3){
+            grid-row:5
+          }
+
+        }
+  
+        .color-palette-img-1 {
+          grid-column: 1;
+          grid-row:2
+        }
+  
+        .color-palette-img-2 {
+          grid-column: 1;
+          grid-row:4
+        }
+  
+        .color-palette-img-3 {
+          grid-column: 1;
+          margin-block-start: 1.9rem;
+          width: 23rem;
+        }
       }
+
     }
 
     .kindred-final-design {
