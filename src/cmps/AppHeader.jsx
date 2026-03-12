@@ -3,6 +3,8 @@ import { NavLink, useLocation } from 'react-router-dom'
 import logo from '../assets/imgs/logo.png'
 import logoBlack from '../assets/imgs/logo-black.png'
 import burgerIcon from '../assets/imgs/Burger menu.svg'
+import burgerIconLight from '../assets/imgs/Burger menu - light.svg'
+import closeIcon from '../assets/imgs/Close Icon.svg'
 import '../assets/styles/cmps/AppHeader.css'
 
 export function AppHeader() {
@@ -11,6 +13,7 @@ export function AppHeader() {
   const isProjectPage = pathname === '/quantex' || pathname === '/kindred'
   const isLightLogo = isProjectPage && !isMenuOpen
   const logoSrc = isLightLogo ? logo : logoBlack
+  const burgerSrc = isProjectPage ? burgerIconLight : burgerIcon
 
   function openMenu() {
     setIsMenuOpen(true)
@@ -58,9 +61,9 @@ export function AppHeader() {
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         >
           {isMenuOpen ? (
-            <span className="app-header-close-icon" aria-hidden>×</span>
+            <img src={closeIcon} className="app-header-close-icon"/>
           ) : (
-            <img src={burgerIcon} alt="" />
+            <img src={burgerSrc} alt="" />
           )}
         </button>
       </header>
