@@ -98,9 +98,8 @@
   .project-details {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
     margin-block-end: 12.5rem;
-    justify-self: center;
+    justify-items: start;
 
     .project-details-col {
       .project-details-heading {
@@ -109,6 +108,9 @@
       }
 
       .project-details-list {
+        list-style-position: inside;
+        padding-left: 0;
+
         li {
           line-height: 3;
         }

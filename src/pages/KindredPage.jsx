@@ -125,7 +125,7 @@ Without a reliable and quick way to bridge this gap, high-quality food is freque
           <ul className="project-details-list">
             <li>3.5 weeks</li>
           </ul>
-        </div>
+        </div>      
         <div className="project-details-col">
           <h4 className="project-details-heading">Tools</h4>
           <ul className="project-details-list">
