@@ -171,10 +171,9 @@ export function QuantexPage() {
               struggle with complex digital tools.
             </p>
           </div>
-        </section>
-      
+        </section>   
 
-      {/* <section className="project-details">
+      <section className="project-details">
         <div className="project-details-col">
           <h4 className="project-details-heading">My role</h4>
           <ul className="project-details-list">
@@ -203,25 +202,25 @@ export function QuantexPage() {
             <li>Good old fashion pen & paper</li>
           </ul>
         </div>
-      </section> */}
+      </section>
 
-      {/* {QUANTEX_CAROUSEL_IMAGES.length > 0 && (
+      {QUANTEX_CAROUSEL_IMAGES.length > 0 && (
         <section className="quantex-page-carousel imgs-carousel-wrapper">
           <ImgsCarousel images={QUANTEX_CAROUSEL_IMAGES} gap={15} />
         </section>
-      )} */}
+      )}
 
-      {/* <Stepper
+      <Stepper
         activeStep={activeStep}
         onStepClick={handleStepClick}
         className="stepper"
-      /> */}
+      />
 
-      {/* <div ref={step1Ref} className="stepper-header-container">
+      <div ref={step1Ref} className="stepper-header-container">
         <StepperHeader number={1} word="Research" />
-      </div> */}
+      </div>
 
-      {/* <section
+      <section
         className="research-personas"
         aria-labelledby="research-personas-heading"
       >
@@ -249,9 +248,9 @@ export function QuantexPage() {
             />
           ))}
         </div>
-      </section> */}
+      </section>
 
-      {/* <section
+      <section
         className="research-empathy"
         aria-labelledby="research-empathy-heading"
       >
@@ -286,13 +285,13 @@ export function QuantexPage() {
             />
           </div>
         )}
-      </section> */}
+      </section>
 
-      {/* <div ref={step2Ref} className="stepper-header-container">
+      <div ref={step2Ref} className="stepper-header-container">
         <StepperHeader number={2} word="Ideation" />
-      </div> */}
+      </div>
 
-      {/* <section
+      <section
         className="ideation-user-stories"
         aria-labelledby="ideation-user-stories-heading"
       >
@@ -348,9 +347,9 @@ export function QuantexPage() {
             </li>
           </ul>
         </div>
-      </section> */}
+      </section>
 
-      {/* <section
+      <section
         className="ideation-mapping"
         aria-labelledby="ideation-mapping-heading"
       >
@@ -372,13 +371,13 @@ export function QuantexPage() {
             />
           </div>
         )}
-      </section> */}
+      </section>
 
-      {/* <div ref={step3Ref} className="stepper-header-container">
+      <div ref={step3Ref} className="stepper-header-container">
         <StepperHeader number={3} word="Design" />
-      </div> */}
+      </div>
 
-      {/* <section
+      <section
         className="design-wireframes"
         aria-labelledby="design-wireframes-heading"
       >
@@ -441,9 +440,9 @@ export function QuantexPage() {
             </p>
           )}
         </div>
-      </section> */}
+      </section>
 
-      {/* <section
+      <section
         className="design-visual-identity"
         aria-labelledby="design-visual-identity-heading"
       >
@@ -512,9 +511,9 @@ export function QuantexPage() {
             exchange ΓÇö are as seamless as possible.
           </p>
         </div>
-      </section> */}
+      </section>
 
-      {/* <section className="design-hifi" aria-labelledby="design-hifi-heading">
+      <section className="design-hifi" aria-labelledby="design-hifi-heading">
         <div className="design-hifi-iteration">
           <h4 className="design-hifi-iteration-title">Iteration #1</h4>
         </div>
@@ -559,11 +558,11 @@ export function QuantexPage() {
           )}
         </div>
 
-        <div className="design-hifi-iteration">
+        {/* <div className="design-hifi-iteration">
           <h4 className="design-hifi-iteration-title">Iteration #2</h4>
-        </div>
+        </div> */}
 
-        <div className="design-hifi-before-after">
+        {/* <div className="design-hifi-before-after">
           <h4 className="design-hifi-ba-title before">Before</h4>
           <p className="design-hifi-ba-p before">
             In the initial design, the exchange arrows were a flat icon without
@@ -599,24 +598,25 @@ export function QuantexPage() {
               className="design-hifi-ba-img after"
             />
           )}
-        </div>
+        </div> */}
 
-        <div className="design-hifi-iteration design-hifi-iteration--with-intro">
+        {/* <div className="design-hifi-iteration design-hifi-iteration--with-intro">
           <h4 className="design-hifi-iteration-title">Iteration #3</h4>
-        </div>
+        </div> */}
 
-        <h4 className="design-hifi-iteration-subtitle">
+        {/* <h4 className="design-hifi-iteration-subtitle">
           Accessibility refinements
-        </h4>
-        <p className="design-hifi-iteration-p">
+        </h4> */}
+
+        {/* <p className="design-hifi-iteration-p">
           I conducted an accessibility audit using WebAIM&apos;s contrast
           checker to ensure the interface meets industry standards for
           readability. These refinements focus on adjusting colour contrast and
           button visibility, making the app easier to navigate for users with
           visual impairments or those viewing the screen in challenging lighting
           conditions.
-        </p>
-
+        </p> */}
+{/* 
         <div className="design-hifi-before-after">
           <h4 className="design-hifi-ba-title before">Before</h4>
           <p className="design-hifi-ba-p before">
@@ -653,9 +653,9 @@ export function QuantexPage() {
               className="design-hifi-ba-img after"
             />
           )}
-        </div>
+        </div> */}
 
-        <div className="design-hifi-final">
+        {/* <div className="design-hifi-final">
           <h3 className="design-hifi-final-heading">Final design</h3>
           <p className="design-hifi-final-p">
             The final phase of the project involved expanding Quantex across
@@ -672,9 +672,9 @@ export function QuantexPage() {
               className="design-hifi-final-img"
             />
           )}
-        </div>
+        </div> */}
 
-        <div className="design-hifi-desktop">
+        {/* <div className="design-hifi-desktop">
           <h3 className="design-hifi-desktop-heading">Desktop website</h3>
           <p className="design-hifi-desktop-p">
             For the desktop version, I maintained the exact same layout and
@@ -689,15 +689,15 @@ export function QuantexPage() {
             be difficult for many users to track and makes the overall interface
             feel more balanced.
           </p>
-        </div>
+        </div> */}
 
-        {COMPUTER_CAROUSEL_IMAGES.length > 0 && (
+        {/* {COMPUTER_CAROUSEL_IMAGES.length > 0 && (
           <div className="design-hifi-computer-carousel imgs-carousel-wrapper">
             <ImgsCarousel images={COMPUTER_CAROUSEL_IMAGES} gap={15} />
           </div>
-        )}
+        )} */}
 
-        <div className="design-hifi-mobile">
+        {/* <div className="design-hifi-mobile">
           <h3 className="design-hifi-mobile-heading">Mobile website</h3>
           <p className="design-hifi-mobile-p">
             I kept the native app and mobile web designs almost identical. This
@@ -705,14 +705,14 @@ export function QuantexPage() {
             interface and accessible features, regardless of how they choose to
             log in while on the go.
           </p>
-        </div>
+        </div> */}
 
-        {FINAL_CAROUSEL_IMAGES.length > 0 && (
+        {/* {FINAL_CAROUSEL_IMAGES.length > 0 && (
           <div className="design-hifi-final-carousel imgs-carousel-wrapper">
             <ImgsCarousel images={FINAL_CAROUSEL_IMAGES} />
           </div>
-        )}
-      </section> */}
+        )} */}
+      </section>
 
       {/* <div ref={step4Ref} className="stepper-header-container">
         <StepperHeader number={4} word="Takeaways" />

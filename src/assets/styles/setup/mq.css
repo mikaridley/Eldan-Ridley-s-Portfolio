@@ -634,6 +634,249 @@
       gap: var(--related-elements-space);
       padding-block: 0;
     }
+
+    .project-details {
+      .project-details-col {
+        .project-details-list {
+          li {
+            line-height: 1;
+          }
+        }
+      }
+    }
+
+    .stepper-wrapper {
+      .stepper {
+        .stepper-connector {
+          margin-inline: 0.5rem;
+        }
+      }
+    }
+
+    .stepper-header {
+      margin-block-end: 6.25rem;
+      margin-block-start: 12.5rem;
+      height: 6.25rem;
+    }
+
+    .research-personas {
+      margin-block-end: var(--unrelated-elements-space);
+
+      .research-personas-imgs {
+        grid-template-columns: 1fr;
+        gap: var(--related-elements-space);
+      }
+    }
+
+    .research-empathy {
+      grid-template-columns: 1fr;
+
+      .research-empathy-heading {
+        grid-column: 1;
+      }
+
+      .research-empathy-fig {
+        grid-column: 1;
+        grid-row: 4;
+      }
+    }
+
+    .ideation-user-stories {
+      .ideation-block {
+        .ideation-sticky-notes {
+          grid-template-columns: 1fr;
+          gap: var(--related-elements-space);
+        }
+      }
+    }
+
+    .design-wireframes {
+      grid-template-columns: 1fr;
+      .design-wireframes-p {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      .design-wireframes-notes {
+        margin-block-end: var(--related-elements-space);
+      }
+
+      .design-wireframes-fig {
+        grid-column: 1;
+        grid-row: 5;
+      }
+    }
+
+    .design-visual-identity {
+      .design-visual-identity-block {
+        grid-template-columns: 1fr;
+        row-gap: 0;
+
+        .design-visual-identity-p {
+          margin-block-end: var(--related-elements-space);
+        }
+  
+        .design-visual-identity-fig {
+          grid-column: 1;
+          grid-row: 3;
+        }
+      }
+  
+      .design-hifi-intro {
+        color: var(--light-txt);
+  
+        .design-hifi-heading {
+          color: var(--dark-txt);
+          margin-block-end: var(--header-to-subheader);
+        }
+  
+        .design-hifi-subtitle {
+          color: var(--dark-txt);
+          margin-block-end:var(--subheader-to-paragraph);
+        }
+  
+        .design-hifi-p {
+          color: var(--main-txt);
+          margin-block-end: var(--related-elements-space);
+          max-width: 75rem;
+        }
+      }
+    }
+
+    .design-hifi {
+      .design-hifi-iteration {
+        padding-block: 1.4rem;
+  
+        .design-hifi-iteration-title {
+          color: var(--dark-grey);
+          margin: 0;
+        }
+  
+        &.design-hifi-iteration--with-intro {
+          align-items: center;
+          text-align: center;
+          gap: 0.75rem;
+  
+          .design-hifi-iteration-p {
+            margin-inline: auto;
+          }
+        }
+      }
+  
+      .design-hifi-before-after {
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(3, auto) 5rem repeat(3, auto);
+  
+        .design-hifi-ba-title {
+          grid-column: 1;
+          grid-row: 1;
+  
+          &.after {
+            grid-column: 1;
+            grid-row: 5;
+          }
+        }
+  
+        .design-hifi-ba-p {
+          grid-column: 1;
+          grid-row: 2;
+  
+          &.after {
+            grid-column: 1;
+            grid-row: 6;
+            width:auto;
+          }
+        }
+  
+        .design-hifi-ba-img {
+          justify-self: center;
+          grid-column: 1;
+          grid-row: 3;
+  
+          &.after {
+            grid-column: 1;
+            grid-row: 7;
+          }
+        }
+  
+        .design-hifi-arrow {
+          grid-column: 1;
+          height: 4.375rem;
+          margin-top: 0rem;
+        }
+      }
+  
+      .design-hifi-final {
+        margin-block-end: var(--unrelated-elements-space);
+  
+        .design-hifi-final-heading {
+          color: var(--dark-grey);
+          margin-block-end: var(--subheader-to-paragraph);
+        }
+  
+        .design-hifi-final-p {
+          color: var(--main-txt);
+          margin-block-end:var(--related-elements-space);
+          max-width: 75rem;
+        }
+  
+        .design-hifi-final-img {
+          min-width: 20rem;
+          max-width: 54rem;
+          object-fit: contain;
+        }
+      }
+  
+      .design-hifi-desktop {
+          margin-block-end:var(--related-elements-space);
+  
+        .design-hifi-desktop-heading {
+          color: var(--dark-grey);
+          margin-block-end: var(--subheader-to-paragraph);
+        }
+  
+        .design-hifi-desktop-p {
+          color: var(--main-txt);
+          margin-block-end: var(--subheader-to-paragraph);
+          max-width: 53rem;
+  
+          &:last-child {
+            margin-block-end: 0;
+          }
+        }
+      }
+  
+      .design-hifi-mobile {
+          margin-block-end:var(--related-elements-space);
+  
+        .design-hifi-mobile-heading {
+          color: var(--dark-grey);
+          margin-block-end: var(--subheader-to-paragraph);
+        }
+  
+        .design-hifi-mobile-p {
+          color: var(--main-txt);
+          margin: 0;
+          max-width: 53rem;
+        }
+      }
+  
+      .design-hifi-computer-carousel {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        overflow-x: clip;
+        background-color: var(--light-bg);
+        padding-block: var(--imgs-carousel-wrapper-padding);
+      }
+  
+      .design-hifi-final-carousel {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        overflow-x: clip;
+        background-color: var(--light-bg);
+        padding-block: var(--imgs-carousel-wrapper-padding);
+      }
+    }
   }
 }
 
@@ -649,7 +892,6 @@
 }
 
 @media (max-width: 440px) {
-
   .projects-layout {
     grid-template-columns:
       minmax(20px, 1fr) minmax(auto, var(--max-width))

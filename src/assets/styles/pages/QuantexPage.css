@@ -93,7 +93,8 @@
   .project-details {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
+    justify-items: start;
+    gap:0.5rem;
     margin-block-start: var(--beginning-of-section);
     margin-block-end:var(--unrelated-elements-space);
     justify-self: center;
@@ -307,7 +308,7 @@
     .design-wireframes-p {
       grid-column: 1;
       color: var(--main-txt);
-      margin-block-end: var(--unrelated-elements-space);
+      margin-block-end: var(--related-elements-space);
     }
 
     .design-wireframes-notes {
