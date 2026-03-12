@@ -3,6 +3,8 @@
   place-items: center;
   margin-block-end:12.5rem;
   margin-block-start:25rem;
+  margin-block-start: var(--end-of-section);
+  margin-block-end:var(--beginning-of-section);
   height: 15rem;
   text-align: center;
 

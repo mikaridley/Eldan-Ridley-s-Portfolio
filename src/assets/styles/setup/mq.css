@@ -62,6 +62,16 @@
       }
     }
   }
+
+  .quantex-page {
+    .quantex-opening {
+      grid-template-columns: 1fr;
+      img {
+        grid-column: 1;
+        grid-row: 3;
+      }
+    }
+  }
 }
 
 @media (max-width: 960px) {
@@ -77,9 +87,13 @@
 }
 
 @media (max-width: 810px) {
-  .imgs-carousel-wrapper {
-    --imgs-carousel-slide-height: 32rem;
-    --imgs-carousel-wrapper-padding: 3.75rem;
+  :root {
+    --related-elements-space: 2.5rem;
+    --unrelated-elements-space: 6.25rem;
+    --beginning-of-section: 6.25rem;
+    --end-of-section: 12.5rem;
+    --header-to-subheader: 2.5rem;
+    --subheader-to-paragraph: 0.5rem;
   }
 
   h1 {
@@ -108,6 +122,11 @@
     font-size: 14px;
     line-height: auto;
     text-wrap: auto;
+  }
+
+  .imgs-carousel-wrapper {
+    --imgs-carousel-slide-height: 32rem;
+    --imgs-carousel-wrapper-padding: 3.75rem;
   }
 
   .app-header {
@@ -582,15 +601,43 @@
       }
     }
   }
+
+  .quantex-page {
+    .quantec-opening-bg {
+      height: 25rem;
+    }
+
+    .quantex-opening {
+      margin-block-start: calc(var(--beginning-of-section) + 7rem);
+
+      img {
+        display: none;
+      }
+    }
+
+    .overview {
+      grid-template-columns: 1fr;
+
+      .overview-gif {
+        grid-column: 1;
+        grid-row: 1;
+        margin-block-end: var(--related-elements-space);
+      }
+    }
+
+    .problem-solution-wrapper {
+      display: none;
+    }
+
+    .problem-solution {
+      grid-template-columns: 1fr;
+      gap: var(--related-elements-space);
+      padding-block: 0;
+    }
+  }
 }
 
 @media (max-width: 600px) {
-  .projects-layout {
-    grid-template-columns:
-      minmax(20px, 1fr) minmax(auto, var(--max-width))
-      minmax(20px, 1fr);
-  }
-
   .kindred-page {
     .kindred-opening {
       grid-template-columns: 1fr;
@@ -602,6 +649,13 @@
 }
 
 @media (max-width: 440px) {
+
+  .projects-layout {
+    grid-template-columns:
+      minmax(20px, 1fr) minmax(auto, var(--max-width))
+      minmax(20px, 1fr);
+  }
+
   .kindred-page {
     .kindred-opening {
       grid-template-columns: 1fr;

@@ -4,6 +4,14 @@
 --margin-inline:250px;
 --max-width:1420px;
 
+--related-elements-space:5rem;
+--unrelated-elements-space:12.5rem;
+--beginning-of-section:12.5rem;
+--end-of-section:25rem;
+--header-to-subheader:5rem;
+--subheader-to-paragraph:1.5rem;
+
+
 /* txt */
 --light-txt:#ffffff;
 --main-txt:#868686;
