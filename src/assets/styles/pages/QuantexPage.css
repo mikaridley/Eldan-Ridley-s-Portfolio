@@ -308,7 +308,7 @@
     .design-wireframes-p {
       grid-column: 1;
       color: var(--main-txt);
-      margin-block-end: var(--related-elements-space);
+      margin-block-end: var(--unrelated-elements-space);
     }
 
     .design-wireframes-notes {
@@ -454,9 +454,10 @@
       grid-column: 1 / span 3;
       background-color: var(--light-bg);
       padding-block: 2.6rem;
+      margin-block-end: var(--related-elements-space);
       align-items: center;
       justify-content: start;
-      text-align: center;
+      padding-inline:150px;
 
       .design-hifi-iteration-title {
         color: var(--dark-grey);
@@ -537,6 +538,7 @@
         grid-row: 4;
         width: 17rem;
         margin-top: 10rem;
+        padding-inline:1rem;
         object-fit: contain;
       }
     }
