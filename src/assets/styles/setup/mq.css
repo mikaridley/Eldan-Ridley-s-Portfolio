@@ -87,6 +87,33 @@
 }
 
 @media (max-width: 810px) {
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  p,
+  li {
+    font-size: 14px;
+    line-height: auto;
+  }
+
   .app-header {
     align-items: flex-end;
     margin-inline: 50px;
@@ -117,17 +144,14 @@
       margin-block-end: 0;
 
       .home-intro-title {
-        font-size: 2.25rem;
         margin: 0 0 0.5rem 0;
       }
 
       .home-intro-role {
-        font-size: 1rem;
         margin: 0 0 0.5rem 0;
       }
 
       .home-intro-p {
-        font-size: 0.875rem;
         line-height: normal;
         margin-block-end: 6.25rem;
       }
@@ -150,12 +174,10 @@
         }
 
         .home-project-title {
-          font-size: 1.5rem;
           margin: 0 0 0.5rem 0;
         }
 
         .home-project-desc {
-          font-size: 0.875rem;
           line-height: normal;
         }
       }
@@ -177,25 +199,14 @@
       &.msg {
         align-self: end;
         width: 10.3rem;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
       }
 
       &.email {
         align-self: start;
-        font-size: 0.625rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
       }
     }
 
     .copyright {
-      font-size: 0.5rem;
-      font-style: normal;
-      font-weight: 400;
       bottom: 0.5rem;
       right: 0px;
     }
@@ -224,17 +235,13 @@
       margin-block-end: 6.25rem;
 
       h4 {
-        font-size: 1rem;
         font-style: normal;
-        font-weight: 400;
         line-height: 166%;
         padding-block: 0.5rem;
       }
 
       p {
-        font-size: 0.875rem;
         font-style: normal;
-        font-weight: 400;
         line-height: normal;
       }
     }
@@ -254,15 +261,11 @@
 
       h1 {
         margin-inline: 50px;
-        font-size: 2.25rem;
-        font-weight: 700;
         line-height: normal;
       }
 
       h4 {
         margin-inline: 50px;
-        font-size: 1rem;
-        font-weight: 400;
         line-height: 166%;
       }
 
@@ -288,14 +291,12 @@
 
       h4 {
         grid-column: 1;
-        font-size: 1rem;
         margin-block-end: 0.5rem;
       }
 
       .overview-p {
         grid-column: 1;
         margin-block-end: 6.25rem;
-        font-size: 0.875rem;
         line-height: normal;
         .p-gap {
           height: 1rem;
@@ -318,23 +319,6 @@
 
     .project-details {
       margin-block-end: 6.25rem;
-
-      .project-details-col {
-        .project-details-heading {
-          font-size: 1rem;
-          font-weight: 400;
-          line-height: 166%;
-        }
-
-        .project-details-list {
-          li {
-            font-size: 0.875rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-          }
-        }
-      }
     }
 
     .stepper-wrapper {
@@ -349,13 +333,6 @@
       margin-block-end: 6.25rem;
       margin-block-start: 12.5rem;
       height: 6.25rem;
-
-      .stepper-header-title {
-        font-size: 1.5rem;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-      }
     }
 
     .research-personas {
@@ -363,26 +340,14 @@
       margin-block-end: 6.25rem;
 
       .research-personas-heading {
-        font-size: 1.25rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 166%;
         margin: 0 0 2.5rem 0;
       }
 
       .research-personas-subtitle {
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 166%;
         margin: 0 0 0.5rem 0;
       }
 
       .research-personas-intro {
-        font-size: 0.875rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
         margin: 0 0 2.5rem 0;
       }
 
@@ -400,20 +365,12 @@
       .research-empathy-heading {
         grid-column: 1;
         grid-row: 1;
-        font-size: 1.25rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 166%;
         margin: 0 0 2.5rem 0;
       }
 
       .research-empathy-subtitle {
         grid-column: 1;
         grid-row: 2;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 166%;
         margin: 0 0 0.5rem 0;
       }
 
@@ -425,10 +382,6 @@
         .research-empathy-p {
           grid-column: 1;
           grid-row: 4;
-          font-size: 0.875rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
         }
       }
 
@@ -442,10 +395,6 @@
       padding-block-end: 3.25rem;
 
       .challenge-heading {
-        font-size: 1.25rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 166%;
         margin: 0 0 2.5rem 0;
       }
 
@@ -453,27 +402,15 @@
         margin-block-end: 2.5rem;
 
         .challenge-block-title {
-          font-size: 1rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 166%;
           margin: 0 0 0.5rem 0;
         }
 
         .challenge-block-p {
-          font-size: 0.875rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
           margin: 0 0 0.5rem 0;
         }
 
         .challenge-hmw-list {
           padding-left: 1.5rem;
-          font-size: 0.875rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
         }
       }
     }
@@ -482,26 +419,14 @@
       margin-block-end: 6.25rem;
 
       .user-journey-mapping-heading {
-        font-size: 1.25rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 166%;
         margin: 0 0 2.5rem 0;
       }
 
       .user-journey-mapping-subtitle {
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 166%;
         margin: 0 0 0.5rem 0;
       }
 
       .user-journey-mapping-p {
-        font-size: 0.875rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
         margin: 0 0 2.5rem 0;
       }
     }
@@ -511,24 +436,121 @@
       margin-block-end: 6.25rem;
 
       .design-wireframes-subtitle {
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
         line-height: 166%;
         margin: 0 0 0.5rem 0;
       }
 
       .design-wireframes-lofi-p {
-        grid-column: 1 ;
-        font-size: 0.875rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        grid-column: 1;
         margin: 0 0 2.5rem 0;
       }
 
       .above-the-fold-img {
         grid-column: 1;
+      }
+    }
+
+    .design-visual-identity {
+      .design-visual-identity-heading {
+        margin: 0 0 2.5rem 0;
+      }
+
+      .design-visual-identity-block {
+        grid-template-columns: 1fr;
+        align-items: center;
+        margin-block-end: 6.25rem;
+
+        .design-visual-identity-subtitle {
+          margin: 0 0 0.5rem 0;
+        }
+
+        .design-visual-identity-p {
+          grid-row: 2;
+          grid-column: 1;
+        }
+
+        .design-visual-identity-fig {
+          grid-column: 1;
+          grid-row: 3;
+        }
+      }
+    }
+
+    .hi-fi-design {
+      .hi-fi-design-heading {
+        margin: 0 0 2.5rem 0;
+      }
+
+      .hi-fi-design-p {
+        margin-block-end: 6.25rem;
+      }
+
+      .hi-fi-design-subtitle {
+        margin: 0 0 0.5rem 0;
+      }
+
+      .hi-fi-design-fig {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .kindred-final-design {
+      margin-block-end: 6.25rem;
+
+      .kindred-final-design-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .kindred-final-design-media {
+        grid-row: 3;
+      }
+
+      .kindred-final-design-heading {
+        margin: 0 0 0.5rem 0;
+      }
+
+      .kindred-final-design-p {
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    .takeaways-reflections-next {
+      grid-template-columns: 1fr;
+
+      .takeaways-reflections,
+      .takeaways-next {
+        .takeaways-rn-heading {
+          margin: 0 0 0.5rem 0;
+        }
+
+        .takeaways-rn-list {
+          margin-block-end: 6.25rem;
+        }
+      }
+
+      .takeaways-next-intro {
+        color: var(--dark-grey);
+        margin: 0 0 0.5rem 0;
+      }
+    }
+
+    .takeaways-metrics {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+      padding-block: 0rem 6.25rem;
+
+      .takeaways-metrics-heading {
+        margin: 0 0 0.5rem 0;
+      }
+
+      .takeaways-metrics-intro {
+        margin: 0 0 0.5rem 0;
+      }
+
+      .takeaways-metrics-fig {
+        grid-row: 4;
       }
     }
   }

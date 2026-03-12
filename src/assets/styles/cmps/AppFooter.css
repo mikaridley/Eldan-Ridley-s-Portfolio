@@ -19,17 +19,14 @@
 
   > p {
     margin:0;
-    font-size: 1.2rem;
     color: var(--dark-grey);
 
     &.msg {
-      font-size: 2.25rem;
       font-weight: 400;
     }
 
     &.email {
       grid-row: 2;
-      font-size: 0.9rem;
     }
   }
 
@@ -37,10 +34,6 @@
     position: absolute;
     bottom: 2rem;
     right: 0;
-    font-size: 0.875rem;
-    font-weight: 400;
     color: var(--main-txt);
-  }
-
-  
+  } 
 }

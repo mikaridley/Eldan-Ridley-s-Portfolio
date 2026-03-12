@@ -11,7 +11,6 @@
 
   background-color: var(--clr-bg-dark);
   color: var(--clr-bg-light);
-  font-size: 0.9em;
 
   translate: 150%;
   transition: 600ms ease-in-out;

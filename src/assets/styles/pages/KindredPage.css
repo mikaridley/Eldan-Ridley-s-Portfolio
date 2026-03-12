@@ -73,7 +73,6 @@
       grid-row: 2;
       grid-column: 1 / -1;
       max-width: 55rem;
-      font-size: 1rem;
       margin-block-end: 5rem;
       line-height: 166%;
       .p-gap {
@@ -105,15 +104,12 @@
 
     .project-details-col {
       .project-details-heading {
-        font-size: 2.25rem;
-        font-weight: 600;
         color: var(--dark-grey);
         margin-block-end: 1rem;
       }
 
       .project-details-list {
         li {
-          font-size: 1rem;
           line-height: 3;
         }
       }
@@ -129,22 +125,17 @@
     padding-block-end: 17rem;
 
     .research-personas-heading {
-      font-size: 2.5rem;
-      font-weight: 700;
       color: var(--dark-grey);
       margin: 0 0 5rem 0;
     }
 
     .research-personas-subtitle {
-      font-size: 2.2rem;
-      font-weight: 600;
       color: var(--dark-grey);
       margin: 0 0 3rem 0;
     }
 
     .research-personas-intro {
       color: var(--main-txt);
-      font-size: 1rem;
       line-height: 1.6;
       margin: 0 0 5.8rem 0;
       max-width: 75rem;
@@ -172,15 +163,11 @@
     .research-empathy-heading {
       grid-column: 1 / 3;
       grid-row: 1;
-      font-size: 2.5rem;
-      font-weight: 700;
       color: var(--dark-grey);
       margin: 0 0 5rem 0;
     }
 
     .research-empathy-subtitle {
-      font-size: 2.2rem;
-      font-weight: 600;
       color: var(--dark-grey);
       margin: 0 0 1.5rem 0;
     }
@@ -191,7 +178,6 @@
 
       .research-empathy-p {
         color: var(--main-txt);
-        font-size: 1rem;
         line-height: 1.6;
         margin: 0;
 
@@ -225,8 +211,6 @@
     max-width: 75rem;
 
     .challenge-heading {
-      font-size: 2.5rem;
-      font-weight: 700;
       color: var(--dark-grey);
       margin: 0 0 5rem 0;
     }
@@ -239,15 +223,12 @@
       }
 
       .challenge-block-title {
-        font-size: 2.2rem;
-        font-weight: 600;
         color: var(--dark-grey);
         margin: 0 0 1.7rem 0;
       }
 
       .challenge-block-p {
         color: var(--main-txt);
-        font-size: 1rem;
         line-height: 1.6;
         margin: 0 0 1.7rem 0;
       }
@@ -257,7 +238,6 @@
         padding-left: 1.5rem;
         list-style-type: disc;
         color: var(--main-txt);
-        font-size: 1rem;
         line-height: 1.7;
 
         li {
@@ -295,7 +275,6 @@
 
     .user-journey-mapping-p {
       color: var(--main-txt);
-      font-size: 1rem;
       line-height: 1.6;
       margin: 0 0 5rem 0;
     }
@@ -326,7 +305,6 @@
     .design-wireframes-lofi-p {
       grid-column: 1 / -1;
       color: var(--main-txt);
-      font-size: 1rem;
       line-height: 1.6;
       margin: 0 0 3.29rem 0;
       max-width: 75rem;
@@ -348,14 +326,12 @@
 
       .design-wireframes-carousel-placeholder {
         color: var(--main-txt);
-        font-size: 0.95rem;
         padding: 2rem;
         background: var(--light-bg);
         border-radius: 8px;
         margin: 0;
 
         code {
-          font-size: 0.85em;
           background: rgba(0, 0, 0, 0.06);
           padding: 0.2em 0.4em;
           border-radius: 4px;
@@ -391,7 +367,6 @@
       .design-visual-identity-p {
         grid-row: 2;
         align-self: start;
-        font-size: 1rem;
         line-height: 1.6;
 
         & span {
@@ -432,7 +407,6 @@
 
       .design-hifi-p {
         color: var(--main-txt);
-        font-size: 1rem;
         line-height: 1.6;
         margin-block-end: 8rem;
         max-width: 75rem;
@@ -447,10 +421,6 @@
     }
 
     .hi-fi-design-p {
-      font-size: 1rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 166%;
       margin-block-end: 12.5rem;
     }
 
@@ -495,14 +465,11 @@
     }
 
     .kindred-final-design-heading {
-      font-weight: 600;
-      font-size: 2.2rem;
       color: var(--dark-grey);
       margin: 0 0 1.7rem 0;
     }
 
     .kindred-final-design-p {
-      font-size: 1rem;
       line-height: 1.6;
       color: var(--main-txt);
       margin: 0 0 1rem 0;
@@ -529,14 +496,12 @@
 
     .hi-fi-carousel-placeholder {
       color: var(--main-txt);
-      font-size: 0.95rem;
       padding: 2rem;
       background: var(--light-bg);
       border-radius: 8px;
       margin: 0;
 
       code {
-        font-size: 0.85em;
         background: rgba(0, 0, 0, 0.06);
         padding: 0.2em 0.4em;
         border-radius: 4px;
@@ -553,8 +518,6 @@
     .takeaways-reflections,
     .takeaways-next {
       .takeaways-rn-heading {
-        font-size: 2.2rem;
-        font-weight: 600;
         color: var(--dark-grey);
         margin: 0 0 1.7rem 0;
       }
@@ -564,7 +527,6 @@
         padding-left: 1.5rem;
         list-style-type: disc;
         color: var(--main-txt);
-        font-size: 1rem;
         line-height: 1.6;
 
         li::marker {
@@ -573,7 +535,6 @@
 
         li {
           margin-block-end: 0.75rem;
-          font-weight: 500;
 
           & span {
             color: var(--dark-grey);
@@ -584,7 +545,6 @@
 
     .takeaways-next-intro {
       color: var(--dark-grey);
-      font-size: 1rem;
       line-height: 1.6;
       margin: 0 0 1.7rem 0;
     }
@@ -593,7 +553,6 @@
   .takeaways-metrics {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: repeat(3, auto);
     grid-template-rows: auto minmax(0, 80px) auto;
     column-gap: 6rem;
     align-items: start;
@@ -602,8 +561,6 @@
     .takeaways-metrics-heading {
       align-self: end;
       grid-column: 1;
-      font-size: 2.2rem;
-      font-weight: 600;
       color: var(--dark-grey);
       margin: 0 0 1.7rem 0;
     }
@@ -611,8 +568,6 @@
     .takeaways-metrics-intro {
       grid-column: 1;
       color: var(--dark-grey);
-      font-size: 1rem;
-      line-height: 1.6;
       margin: 0 0 1.5rem 0;
     }
 
@@ -620,12 +575,10 @@
       grid-column: 1;
       margin: 0;
       color: var(--main-txt);
-      font-size: 1rem;
-      line-height: 1.6;
+      padding-left: 1.5rem;
 
       li {
         margin-block-end: 0.75rem;
-        font-weight: 500;
         list-style: disc;
 
         & span {

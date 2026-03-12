@@ -72,7 +72,6 @@
   }
 
   .app-header-close-icon {
-    font-size: 2.5rem;
     line-height: 1;
     color: var(--dark-grey, #363636);
     width: 44px;
@@ -123,7 +122,6 @@
 
 .app-header-overlay-nav a {
   position: relative;
-  font-size: 1.5rem;
   color: var(--dark-grey, #363636);
   text-decoration: none;
   padding: 0.5rem 0;
