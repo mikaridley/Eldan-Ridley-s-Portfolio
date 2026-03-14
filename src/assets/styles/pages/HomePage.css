@@ -2,7 +2,7 @@
   padding-block: 15rem 6rem;
 
   .home-intro {
-    margin-block-end: 5rem;
+    margin-block-end: 0;
 
     .home-intro-title {
       color: var(--dark-grey);
@@ -18,8 +18,8 @@
       line-height: 1.6;
       color: var(--main-txt);
       margin: 0;
-      max-width: 71rem;
-      margin-block-end:14rem;
+      max-width: 50rem;
+      margin-block-end:12.5rem;
     }
   }
 
@@ -39,7 +39,7 @@
       .home-project-img {
         display: block;
         width: 100%;
-        max-width: 26rem;
+        max-width: 26.75rem;
         height: auto;
         object-fit: contain;
         margin-block-end: 2.8rem;
@@ -74,7 +74,7 @@
       .home-project-img {
         display: block;
         width: 100%;
-        max-width: 26rem;
+        max-width: 26.75rem;
         height: auto;
         object-fit: contain;
         margin-block-end: 2.8rem;

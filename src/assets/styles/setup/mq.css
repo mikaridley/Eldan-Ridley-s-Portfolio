@@ -5,8 +5,7 @@
 
   .projects-layout {
     grid-template-columns:
-      minmax(50px, 1fr) minmax(auto, var(--max-width))
-      minmax(50px, 1fr);
+      minmax(50px, 1fr) minmax(auto, var(--max-width)) minmax(50px, 1fr);
   }
 
   .quantex-page {
@@ -27,7 +26,7 @@
   }
 }
 
-@media (max-width: 1150px){
+@media (max-width: 1150px) {
   .quantex-page {
     .design-hifi {
       .design-hifi-before-after {
@@ -124,6 +123,7 @@
   .quantex-page {
     .quantex-opening {
       grid-template-columns: 1fr;
+
       img {
         grid-column: 1;
         grid-row: 3;
@@ -207,12 +207,12 @@
 
   .projects-layout {
     grid-template-columns:
-      minmax(50px, 1fr) minmax(auto, var(--max-width))
-      minmax(50px, 1fr);
+      minmax(50px, 1fr) minmax(auto, var(--max-width)) minmax(50px, 1fr);
   }
 
   .home-page {
     padding-block: 13rem 6rem;
+
     .home-intro {
       margin-block-end: 0;
 
@@ -264,24 +264,30 @@
     margin-block: 4rem;
     margin-inline: 50px;
 
-    > img {
+    >img {
       width: 4.3rem;
     }
 
-    > p {
+    >p {
       &.msg {
         align-self: end;
         width: 10.3rem;
+        font-size: 1rem;
+        font-weight: 300;
       }
 
       &.email {
         align-self: start;
+        font-size: 0.625rem;
+        font-weight: 400;
       }
     }
 
     .copyright {
       bottom: 0.5rem;
       right: 0px;
+      font-size: 0.5rem;
+      font-weight: 400;
     }
   }
 
@@ -371,6 +377,7 @@
         grid-column: 1;
         margin-block-end: 6.25rem;
         line-height: normal;
+
         .p-gap {
           height: 1rem;
         }
@@ -555,6 +562,7 @@
 
     .hi-fi-design {
       margin: 0 0 6.25rem 0;
+
       .hi-fi-design-heading {
         margin: 0 0 2.5rem 0;
       }
@@ -573,6 +581,7 @@
         h4 {
           font-size: 32px;
           font-weight: 600;
+
           &:nth-child(2) {
             grid-row: 3;
           }
@@ -750,6 +759,7 @@
 
     .design-wireframes {
       grid-template-columns: 1fr;
+
       .design-wireframes-p {
         grid-column: 1;
         grid-row: 3;
@@ -870,7 +880,7 @@
         .design-hifi-final-img {
           min-width: none;
           max-width: auto;
-          width:100%;
+          width: 100%;
         }
       }
 
@@ -886,8 +896,8 @@
     }
 
     .takeaways-metrics {
-      grid-template-columns:1fr;
-  
+      grid-template-columns: 1fr;
+
       .takeaways-metrics-fig {
         align-self: end;
         grid-column: 1;
@@ -902,6 +912,7 @@
   .kindred-page {
     .kindred-opening {
       grid-template-columns: 1fr;
+
       &::after {
         top: -20px;
       }
@@ -912,13 +923,18 @@
 @media (max-width: 440px) {
   .projects-layout {
     grid-template-columns:
-      minmax(20px, 1fr) minmax(auto, var(--max-width))
-      minmax(20px, 1fr);
+      minmax(20px, 1fr) minmax(auto, var(--max-width)) minmax(20px, 1fr);
+  }
+
+  .app-header,
+  .app-footer {
+    margin-inline: 20px;
   }
 
   .kindred-page {
     .kindred-opening {
       grid-template-columns: 1fr;
+
       &::after {
         top: -5px;
       }

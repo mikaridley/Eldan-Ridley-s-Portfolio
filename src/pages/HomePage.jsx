@@ -21,7 +21,7 @@ export function HomePage() {
           <Link to="/kindred" className="home-project-link" onClick={scrollToTopInstant}>
             <img src={homePageKindredImg} alt="Kindred - project preview" className="home-project-img" />
           </Link>
-          <h2 className="home-project-title">Kindred</h2>
+          <h3 className="home-project-title">Kindred</h3>
           <p className="home-project-desc">
             <span>UI/UX Designer (solo project).</span> A community-driven mobile app connecting local food businesses with volunteer couriers to rescue and donate surplus food.ile app and responsive web.
           </p>
@@ -31,7 +31,7 @@ export function HomePage() {
           <Link to="/quantex" className="home-project-link" onClick={scrollToTopInstant}>
             <img src={homePageQuantexImg} alt="Quantex - laptop and phone" className="home-project-img" />
           </Link>
-          <h2 className="home-project-title">Quantex</h2>
+          <h3 className="home-project-title">Quantex</h3>
           <p className="home-project-desc">
             <span>UI/UX Designer (solo project).</span> A multi-currency wallet for travelers to exchange and spend local currencies worldwide via mobile app and responsive web.
           </p>

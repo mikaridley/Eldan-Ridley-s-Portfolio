@@ -6,7 +6,7 @@ export function AppFooter() {
       <p className="msg">Send me a message!</p>
       <p className="email">eldanridley7@gmail.com</p>
       <img src={logo} />
-      <p className="copyright">© 2026 All rights reserved to Eldan Ridley</p>
+      <p className="copyright p2">© 2026 All rights reserved to Eldan Ridley</p>
     </footer>
   )
 }
