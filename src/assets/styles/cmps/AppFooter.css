@@ -35,7 +35,7 @@
 
   .copyright {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
     right: 0;
     color: var(--main-txt);
   }

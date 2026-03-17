@@ -226,7 +226,7 @@
 
       .ideation-block-p {
         color: var(--main-txt);
-        margin-block-end: var(--subheader-to-paragraph);
+        margin-block-end: var(--related-elements-space);
       }
 
       .ideation-sticky-notes {
@@ -466,7 +466,6 @@
 
       &.design-hifi-iteration--with-intro {
         align-items: center;
-        text-align: center;
         gap: 0.75rem;
 
         .design-hifi-iteration-p {

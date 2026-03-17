@@ -142,6 +142,54 @@
   .imgs-carousel-wrapper {
     --imgs-carousel-slide-height: 40rem;
   }
+
+  .kindred-page {
+    .stepper-wrapper {
+      padding-block: 1rem;
+
+      .stepper {
+        .stepper-connector {
+          margin-inline: 0.25rem;
+          margin-top: 20px;
+        }
+
+        .stepper-step {
+          .stepper-circle {
+            width: 40px;
+            height: 40px;
+            font-size: 0.875rem;
+          }
+
+          .stepper-label {
+            margin-block-start: 0.5rem;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+
+    .stepper-header {
+      margin-block-end: 6.25rem;
+      margin-block-start: 12.5rem;
+      height: 6.25rem;
+    }
+  }
+
+  .quantex-page {
+    .stepper-wrapper {
+      .stepper {
+        .stepper-connector {
+          margin-inline: 0.5rem;
+        }
+      }
+    }
+
+    .stepper-header {
+      margin-block-end: 6.25rem;
+      margin-block-start: 12.5rem;
+      height: 6.25rem;
+    }
+  }
 }
 
 @media (max-width: 810px) {
@@ -409,36 +457,6 @@
           }
         }
       }
-    }
-
-    .stepper-wrapper {
-      padding-block: 1rem;
-
-      .stepper {
-        .stepper-connector {
-          margin-inline: 0.25rem;
-          margin-top: 20px;
-        }
-
-        .stepper-step {
-          .stepper-circle {
-            width: 40px;
-            height: 40px;
-            font-size: 0.875rem;
-          }
-
-          .stepper-label {
-            margin-block-start: 0.5rem;
-            font-size: 0.8125rem;
-          }
-        }
-      }
-    }
-
-    .stepper-header {
-      margin-block-end: 6.25rem;
-      margin-block-start: 12.5rem;
-      height: 6.25rem;
     }
 
     .research-personas {
@@ -738,20 +756,6 @@
       }
     }
 
-    .stepper-wrapper {
-      .stepper {
-        .stepper-connector {
-          margin-inline: 0.5rem;
-        }
-      }
-    }
-
-    .stepper-header {
-      margin-block-end: 6.25rem;
-      margin-block-start: 12.5rem;
-      height: 6.25rem;
-    }
-
     .research-personas {
       margin-block-end: var(--unrelated-elements-space);
 
@@ -962,7 +966,8 @@
       grid-template-columns: 1fr;
 
       &::after {
-        top: -5px;
+        height: 200px;
+        top: -15px;
       }
     }
   }
