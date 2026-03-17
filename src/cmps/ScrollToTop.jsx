@@ -5,10 +5,13 @@ import '../assets/styles/cmps/ScrollToTop.css'
 import backToTopImg from '../assets/imgs/quantex/Back to top.png'
 
 const SCROLL_THRESHOLD = 300
+const BASE_BOTTOM_PX = 24
+const FOOTER_GUARD_PX = 320
 
 export function ScrollToTop() {
   const { pathname } = useLocation()
   const [showButton, setShowButton] = useState(false)
+  const [bottomOffset, setBottomOffset] = useState(BASE_BOTTOM_PX)
 
   useEffect(() => {
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
@@ -20,7 +23,17 @@ export function ScrollToTop() {
 
   useEffect(() => {
     function onScroll() {
-      setShowButton(window.scrollY > SCROLL_THRESHOLD)
+      const scrollY = window.scrollY
+      const viewportHeight = window.innerHeight
+      const docHeight = document.documentElement.scrollHeight
+
+      setShowButton(scrollY > SCROLL_THRESHOLD)
+
+      const overlap =
+        scrollY + viewportHeight - (docHeight - FOOTER_GUARD_PX)
+
+      const extraOffset = overlap > 0 ? overlap : 0
+      setBottomOffset(BASE_BOTTOM_PX + extraOffset)
     }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
@@ -38,6 +51,7 @@ export function ScrollToTop() {
     <button
       type="button"
       className="scroll-to-top"
+      style={{ bottom: `${bottomOffset}px` }}
       onClick={onScrollToTop}
       aria-label="Scroll to top"
     >
