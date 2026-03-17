@@ -31,12 +31,14 @@
       position: relative;
       cursor: pointer;
       padding: 1rem;
+      text-shadow: none;
+      transition: color 0.2s ease, text-shadow 0.2s ease;
 
       &::after {
         content: "";
         position: absolute;
         left: 50%;
-        bottom: 5px;
+        bottom: 10px;
         transform: translateX(-50%);
         width: 0;
         height: 1px;
@@ -47,6 +49,7 @@
       &:hover,
       &.active {
         color: var(--dark-txt);
+        text-shadow: 0.02em 0 0 currentColor, -0.02em 0 0 currentColor;
         &::after {
           width: 90%;
         }
@@ -123,6 +126,8 @@
   color: var(--dark-grey, #363636);
   text-decoration: none;
   padding: 0.5rem 0;
+  text-shadow: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .app-header-overlay-nav a:not(.active) {
@@ -148,6 +153,11 @@
 .app-header-overlay-nav a:hover::after,
 .app-header-overlay-nav a.active::after {
   transform: scaleX(1);
+}
+
+.app-header-overlay-nav a:hover,
+.app-header-overlay-nav a.active {
+  text-shadow: 0.02em 0 0 currentColor, -0.02em 0 0 currentColor;
 }
 
 /* White header background only on home and about-me */

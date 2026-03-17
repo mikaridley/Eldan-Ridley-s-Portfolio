@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom'
 import { scrollToTopInstant } from '../utils/scrollToTop'
 import '../assets/styles/pages/HomePage.css'
 
-import homePageQuantexImg from '../assets/imgs/home-page/Project image - Quantex.png'
-import homePageKindredImg from '../assets/imgs/home-page/Project image - Kindred.png'
+import homePageQuantexBgImg from '../assets/imgs/home-page/Project image - Quantex.png'
+import homePageQuantexImg from '../assets/imgs/home-page/Quantex.png'
+import homePageKindredBgImg from '../assets/imgs/home-page/Project image - Kindred.png'
+import homePageKindredImg from '../assets/imgs/home-page/Kindred.png'
 
 export function HomePage() {
   return (
@@ -19,17 +21,23 @@ export function HomePage() {
       <section className='projects'>
       <div className="home-project-kindred">
           <Link to="/kindred" className="home-project-link" onClick={scrollToTopInstant}>
-            <img src={homePageKindredImg} alt="Kindred - project preview" className="home-project-img" />
+            <span className="home-project-media">
+              <img src={homePageKindredBgImg} alt="" className="home-project-img home-project-img--bg" />
+              <img src={homePageKindredImg} alt="Kindred - project preview" className="home-project-img home-project-img--fg" />
+            </span>
           </Link>
           <h3 className="home-project-title">Kindred</h3>
           <p className="home-project-desc">
-            <span>UI/UX Designer (solo project).</span> A community-driven mobile app connecting local food businesses with volunteer couriers to rescue and donate surplus food.ile app and responsive web.
+            <span>UI/UX Designer (solo project).</span> A community-driven mobile app connecting local food businesses with volunteer couriers to rescue and donate surplus food.
           </p>
         </div>
 
         <div className="home-project-quntex">
           <Link to="/quantex" className="home-project-link" onClick={scrollToTopInstant}>
-            <img src={homePageQuantexImg} alt="Quantex - laptop and phone" className="home-project-img" />
+            <span className="home-project-media">
+              <img src={homePageQuantexBgImg} alt="" className="home-project-img home-project-img--bg" />
+              <img src={homePageQuantexImg} alt="Quantex - laptop and phone" className="home-project-img home-project-img--fg" />
+            </span>
           </Link>
           <h3 className="home-project-title">Quantex</h3>
           <p className="home-project-desc">

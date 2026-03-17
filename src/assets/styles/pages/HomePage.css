@@ -29,20 +29,41 @@
     justify-items: center;
     gap: 5rem;
 
+    .home-project-media {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: stretch;
+      width: 100%;
+      max-width: 100%;
+      margin-block-end: 2.8rem;
+      
+      .home-project-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        cursor: pointer;
+        grid-area: 1 / 1;
+      }
+
+      .home-project-img--bg {
+        z-index: 0;
+      }
+
+      .home-project-img--fg {
+        align-self: center;
+        z-index: 1;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.07);
+        }
+      }
+    }
+
     .home-project-quntex {
       .home-project-link {
         display: block;
         margin-block-end: 1.5rem;
-        cursor: pointer;
-      }
-  
-      .home-project-img {
-        display: block;
-        width: 100%;
-        max-width: 26.75rem;
-        height: auto;
-        object-fit: contain;
-        margin-block-end: 2.8rem;
         cursor: pointer;
       }
   
@@ -74,11 +95,18 @@
       .home-project-img {
         display: block;
         width: 100%;
-        max-width: 26.75rem;
         height: auto;
         object-fit: contain;
-        margin-block-end: 2.8rem;
         cursor: pointer;
+        grid-area: 1 / 1;
+      }
+
+      .home-project-img--bg {
+        z-index: 0;
+      }
+
+      .home-project-img--fg {
+        z-index: 1;
       }
   
       .home-project-title {
