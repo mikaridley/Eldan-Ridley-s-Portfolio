@@ -118,11 +118,6 @@
     }
   }
 
-  .stepper-header-container {
-    grid-column: 1/-1;
-    color: var(--wine-bg);
-  }
-
   .research-personas {
     padding-block-end: 17rem;
 

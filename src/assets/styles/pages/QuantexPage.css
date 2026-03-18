@@ -122,10 +122,6 @@
     padding-block: var(--imgs-carousel-wrapper-padding);
   }
 
-  .stepper-header-container {
-    grid-column: 1/-1;
-  }
-
   .research-personas {
     margin-block-end:var(--unrelated-elements-space);
 
@@ -543,6 +539,7 @@
     }
 
     .design-hifi-final {
+      display: grid;
       margin-block-end: var(--unrelated-elements-space);
 
       .design-hifi-final-heading {
@@ -557,7 +554,7 @@
       }
 
       .design-hifi-final-img {
-        min-width: 20rem;
+        width:100%;
         max-width: 54rem;
         object-fit: contain;
       }

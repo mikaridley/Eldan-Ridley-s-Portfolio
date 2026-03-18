@@ -15,6 +15,14 @@
   }
 }
 
+/* Make the header span full viewport width (works inside centered grids) */
+.stepper-header-container {
+  grid-column: 1 / -1;
+  width: 100vw;
+  /* Center the 100vw element over the page while keeping grid layout intact */
+  margin-left: calc(50% - 50vw);
+}
+
 /* Quantex: baby blue (default above) */
 .main-layout.on-quantex .stepper-header {
   background-color: var(--baby-blue-bg);

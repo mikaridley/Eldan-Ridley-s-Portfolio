@@ -96,14 +96,6 @@
       column-gap: 5rem;
     }
 
-    .stepper-header {
-      height: 150px;
-    }
-
-    .stepper-wrapper {
-      margin-inline: 2rem;
-    }
-
     .takeaways-reflections-next {
       column-gap: 5rem;
     }
@@ -118,6 +110,14 @@
         margin-block-start: 3rem;
       }
     }
+  }
+
+  .stepper-header {
+    height: 150px;
+  }
+
+  .stepper-wrapper {
+    margin-inline: 2rem;
   }
 
   .quantex-page {
@@ -151,24 +151,22 @@
   }
 
   .stepper-wrapper {
-    padding-block: 1rem;
+    padding-block: 1.5rem;
 
     .stepper {
       .stepper-connector {
-        margin-inline: 0.35rem;
-        margin-top: 20px;
+        margin-inline: 0rem;
       }
 
       .stepper-step {
         .stepper-circle {
-          width: 44px;
-          height: 44px;
-          font-size: 0.875rem;
+          width: 40px;
+          height: 40px;
         }
 
         .stepper-label {
-          margin-block-start: 0.5rem;
-          font-size: 0.8125rem;
+          margin-block-start: 0.75rem;
+          font-size: inherit;
         }
       }
     }
@@ -178,26 +176,7 @@
     --imgs-carousel-slide-height: 40rem;
   }
 
-  .kindred-page {
-    .stepper-wrapper .stepper {
-      .stepper-connector {
-        margin-inline: 0.25rem;
-      }
-
-      .stepper-step .stepper-circle {
-        width: 40px;
-        height: 40px;
-      }
-    }
-
-    .stepper-header {
-      margin-block-end: 6.25rem;
-      margin-block-start: 12.5rem;
-      height: 6.25rem;
-    }
-  }
-
-  .quantex-page .stepper-header {
+  .stepper-header {
     margin-block-end: 6.25rem;
     margin-block-start: 12.5rem;
     height: 6.25rem;
@@ -275,6 +254,34 @@
   .projects-layout {
     grid-template-columns:
       minmax(50px, 1fr) minmax(auto, var(--max-width)) minmax(50px, 1fr);
+  }
+
+  /* Stepper responsive (mobile) – keep it identical on all pages */
+  .stepper-wrapper {
+    padding-block: 1rem;
+
+    .stepper-connector {
+      margin-inline: 0.25rem;
+      margin-top: 20px;
+    }
+
+    .stepper-step {
+      .stepper-circle {
+        width: 40px;
+        height: 40px;
+      }
+
+      .stepper-label {
+        margin-block-start: 0.5rem;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  /* Prevent sticky state from overriding circle size */
+  .stepper-wrapper.is-sticky .stepper-circle {
+    width: 40px;
+    height: 40px;
   }
 
   .home-page {
