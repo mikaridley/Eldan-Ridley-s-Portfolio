@@ -4,9 +4,10 @@ import { scrollToTopInstant } from '../utils/scrollToTop'
 import '../assets/styles/cmps/ScrollToTop.css'
 import backToTopImg from '../assets/imgs/quantex/Back to top.png'
 
-const SCROLL_THRESHOLD = 300
+const SCROLL_THRESHOLD = 600
 const BASE_BOTTOM_PX = 24
-const FOOTER_GUARD_PX = 320
+const FOOTER_GUARD_PX = 210
+const MOBILE_FOOTER_GUARD_PX = 100
 
 export function ScrollToTop() {
   const { pathname } = useLocation()
@@ -29,8 +30,11 @@ export function ScrollToTop() {
 
       setShowButton(scrollY > SCROLL_THRESHOLD)
 
+      const isMobile = window.innerWidth < 810
+      const footerGuardPx = isMobile ? MOBILE_FOOTER_GUARD_PX : FOOTER_GUARD_PX
+
       const overlap =
-        scrollY + viewportHeight - (docHeight - FOOTER_GUARD_PX)
+        scrollY + viewportHeight - (docHeight - footerGuardPx)
 
       const extraOffset = overlap > 0 ? overlap : 0
       setBottomOffset(BASE_BOTTOM_PX + extraOffset)
