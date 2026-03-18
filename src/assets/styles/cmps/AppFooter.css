@@ -11,10 +11,17 @@
   max-width: var(--max-width);
 
 
-  >img {
+  > a {
     justify-self: end;
     width: 8.8rem;
     grid-row: span 2;
+    display: block;
+  }
+
+  > a > img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   >p {

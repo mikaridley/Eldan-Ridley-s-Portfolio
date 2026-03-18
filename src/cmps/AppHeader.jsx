@@ -44,9 +44,9 @@ export function AppHeader() {
   return (
     <>
       <header className="app-header">
-        <div className="app-header-logo logo">
+        <NavLink to="/home" className="app-header-logo logo" aria-label="Go to home">
           <img src={logoSrc} alt="Logo" />
-        </div>
+        </NavLink>
         <nav className="app-header-navigation navigation">
           {navLinks.map(({ to, label }) => (
             <NavLink key={to} to={to}>
