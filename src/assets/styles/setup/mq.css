@@ -364,8 +364,9 @@
     margin-block: 4rem;
     margin-inline: 50px;
 
-    >img {
+    > a > img {
       width: 4.3rem;
+      justify-self: end;
     }
 
     >p {
