@@ -141,7 +141,7 @@
 
   .stepper-wrapper.is-sticky {
     max-width: 100%;
-    padding-inline: clamp(1rem, 4vw, 2rem);
+    padding-inline: 0.3rem;
     box-sizing: border-box;
   }
 
@@ -166,7 +166,7 @@
 
         .stepper-label {
           margin-block-start: 0.75rem;
-          font-size: inherit;
+          font-size: 0.875rem;
         }
       }
     }
@@ -260,8 +260,12 @@
   .stepper-wrapper {
     padding-block: 1rem;
 
+    .stepper {
+      width: 100%;
+    }
+
     .stepper-connector {
-      margin-inline: 0.25rem;
+      margin-inline: 0;
       margin-top: 20px;
     }
 
@@ -282,6 +286,13 @@
   .stepper-wrapper.is-sticky .stepper-circle {
     width: 40px;
     height: 40px;
+  }
+
+  /* Keep sticky stepper full width so connectors can stretch */
+  .stepper-wrapper.is-sticky .stepper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .home-page {
