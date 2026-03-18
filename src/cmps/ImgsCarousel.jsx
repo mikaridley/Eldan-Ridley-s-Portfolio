@@ -7,9 +7,13 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
   const [slideWidths, setSlideWidths] = useState([])
   const [slideHeight, setSlideHeight] = useState(550)
   const [isTransitioning, setIsTransitioning] = useState(true)
+  const [dragOffsetX, setDragOffsetX] = useState(0)
+  const [isDragging, setIsDragging] = useState(false)
+  const pointerIdRef = useRef(null)
   const viewportRef = useRef(null)
   const naturalDimensionsRef = useRef({})
   const isAnimatingRef = useRef(false)
+  const dragStartClientXRef = useRef(0)
   const n = images.length
   const displayImages = n > 0 ? [...images, ...images] : []
 
@@ -27,6 +31,7 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
   }, [displayImages.length, slideWidths, gap])
 
   const translateX = -offsetByIndex[currentIndex] ?? 0
+  const translateXWithDrag = translateX + dragOffsetX
 
   function handleImageLoad(idx, e) {
     const { naturalWidth: w, naturalHeight: h } = e.target
@@ -123,17 +128,71 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
     }
   }
 
+  function onPointerDown(e) {
+    if (n === 0) return
+    // Only treat touch/pen as drag; ignore mouse to keep desktop UX stable.
+    if (e.pointerType === 'mouse') return
+
+    pointerIdRef.current = e.pointerId
+    dragStartClientXRef.current = e.clientX
+    setDragOffsetX(0)
+    setIsDragging(true)
+
+    try {
+      e.currentTarget.setPointerCapture(e.pointerId)
+    } catch {}
+  }
+
+  function onPointerMove(e) {
+    if (!isDragging) return
+    if (pointerIdRef.current !== e.pointerId) return
+
+    const deltaX = e.clientX - dragStartClientXRef.current
+    setDragOffsetX(deltaX)
+  }
+
+  function finishDrag(e) {
+    if (!isDragging) return
+    if (pointerIdRef.current !== e.pointerId) return
+
+    const deltaX = e.clientX - dragStartClientXRef.current
+    const swipeThresholdPx = 45
+
+    setIsDragging(false)
+    setDragOffsetX(0)
+
+    if (Math.abs(deltaX) < swipeThresholdPx) return
+    if (deltaX < 0) goNext()
+    else goPrev()
+  }
+
+  function onPointerUp(e) {
+    finishDrag(e)
+  }
+
+  function onPointerCancel(e) {
+    finishDrag(e)
+  }
+
   if (!images.length) return null
 
   return (
     <div className="imgs-carousel">
-      <div className="imgs-carousel-viewport" ref={viewportRef}>
+      <div
+        className="imgs-carousel-viewport"
+        ref={viewportRef}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerCancel}
+      >
         <div
           className="imgs-carousel-track"
           style={{
-            transform: `translateX(${translateX}px)`,
+            transform: `translateX(${translateXWithDrag}px)`,
             gap: `${gap}px`,
-            transition: isTransitioning ? 'transform 0.3s ease' : 'none',
+            transition:
+              isDragging || !isTransitioning ? 'none' : 'transform 0.3s ease',
           }}
           onTransitionEnd={handleTransitionEnd}
         >

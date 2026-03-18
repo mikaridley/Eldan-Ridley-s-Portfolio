@@ -247,6 +247,13 @@
     --imgs-carousel-wrapper-padding: 3.75rem;
   }
 
+  .imgs-carousel {
+    .imgs-carousel-arrows {
+      display: none;
+    }
+  }
+
+
   .app-header {
     align-items: flex-end;
     margin-inline: 50px;
