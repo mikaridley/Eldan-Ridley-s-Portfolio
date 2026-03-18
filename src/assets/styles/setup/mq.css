@@ -69,7 +69,22 @@
           width: 4.375rem;
           height: 4.375rem;
           margin-top: 2rem;
+          margin-bottom: 2rem;
         }
+      }
+    }
+  }
+}
+
+/* Ensure the arrow style applies as early as 1150px (not depending on .design-hifi nesting) */
+@media (max-width: 1150px) {
+  .quantex-page {
+    .design-hifi-before-after {
+      .design-hifi-arrow {
+        grid-column: 1;
+        width: 4.375rem;
+        height: 4.375rem;
+        margin-top: 2rem;
       }
     }
   }
@@ -893,49 +908,6 @@
           .design-hifi-iteration-p {
             margin-inline: auto;
           }
-        }
-      }
-
-      .design-hifi-before-after {
-        grid-template-columns: 1fr;
-
-        .design-hifi-ba-title {
-          grid-column: 1;
-          grid-row: 1;
-
-          &.after {
-            grid-column: 1;
-            grid-row: 5;
-          }
-        }
-
-        .design-hifi-ba-p {
-          grid-column: 1;
-          grid-row: 2;
-
-          &.after {
-            grid-column: 1;
-            grid-row: 6;
-            width: auto;
-          }
-        }
-
-        .design-hifi-ba-img {
-          justify-self: center;
-          grid-column: 1;
-          grid-row: 3;
-
-          &.after {
-            grid-column: 1;
-            grid-row: 7;
-          }
-        }
-
-        .design-hifi-arrow {
-          grid-column: 1;
-          width: 4.375rem;
-          height: 4.375rem;
-          margin-top: 2rem;
         }
       }
 

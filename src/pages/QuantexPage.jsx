@@ -97,11 +97,11 @@ export function QuantexPage() {
   const stepRefs = [step1Ref, step2Ref, step3Ref, step4Ref];
   const [activeStep, setActiveStep] = useState(1);
   const [useSmallLine, setUseSmallLine] = useState(
-    () => window.matchMedia("(max-width: 810px)").matches
+    () => window.matchMedia("(max-width: 1150px)").matches
   );
 
   useEffect(() => {
-    const mq = window.matchMedia("(max-width: 810px)");
+    const mq = window.matchMedia("(max-width: 1150px)");
     const handler = () => setUseSmallLine(mq.matches);
     mq.addEventListener("change", handler);
     return () => mq.removeEventListener("change", handler);
