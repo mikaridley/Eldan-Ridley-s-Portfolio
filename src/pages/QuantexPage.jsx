@@ -28,7 +28,6 @@ const finalCarouselModules = import.meta.glob(
 );
 
 const STEP_HEADER_OFFSET = 120;
-const STEPPER_SCROLL_OFFSET = -300;
 
 // —— Helper functions ——————————————————————————————————————————————————————
 function getStepperImg(name) {
@@ -124,14 +123,26 @@ export function QuantexPage() {
   }, []);
 
   function handleStepClick(stepNumber) {
-    const ref = stepRefs[stepNumber - 1]?.current;
-    if (ref) {
-      const y =
-        ref.getBoundingClientRect().top +
-        window.scrollY -
-        STEPPER_SCROLL_OFFSET;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
+    const containerEl = stepRefs[stepNumber - 1]?.current
+    if (!containerEl) return
+
+    const headerEl = containerEl.querySelector('.stepper-header')
+    const marginBlockStartPx = headerEl
+      ? parseFloat(getComputedStyle(headerEl).marginBlockStart) || 0
+      : 0
+
+    const stickyStepperEl = document.querySelector('.stepper-container')
+    const stickyStepperHeight = stickyStepperEl
+      ? stickyStepperEl.getBoundingClientRect().height
+      : 0
+
+    const y =
+      containerEl.getBoundingClientRect().top +
+      window.scrollY +
+      marginBlockStartPx -
+      stickyStepperHeight
+
+    window.scrollTo({ top: y, behavior: 'smooth' })
   }
 
   return (
