@@ -14,7 +14,8 @@
 .imgs-carousel {
   position: relative;
   width: 100%;
-  height: var(--imgs-carousel-slide-height, 40rem);
+  /* Cap carousel height so images never exceed 500px */
+  height: min(var(--imgs-carousel-slide-height, 40rem), 500px);
   min-height: 0;
 
   .imgs-carousel-viewport {
@@ -48,7 +49,7 @@
 
   .imgs-carousel-slide {
     flex-shrink: 0;
-    height: var(--imgs-carousel-slide-height, 40rem);
+    height: min(var(--imgs-carousel-slide-height, 40rem), 500px);
 
     img {
       display: block;
