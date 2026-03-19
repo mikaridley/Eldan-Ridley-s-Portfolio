@@ -7,23 +7,23 @@ import appGif from "../assets/imgs/quantex/app-gif.gif";
 
 // —— Constants (module globs & config) —————————————————————————————————————
 const stepperImgModules = import.meta.glob(
-  "../assets/imgs/quantex/stepper/*.{png,jpg,jpeg,webp}",
+  "../assets/imgs/quantex/stepper/*.{png,jpg,jpeg,webp,svg}",
   { eager: true },
 );
 const quantexCarouselModules = import.meta.glob(
-  "../assets/imgs/quantex/carousel/*",
+  "../assets/imgs/quantex/carousel/*.{png,jpg,jpeg,webp,svg}",
   { eager: true },
 );
 const lowWireframesCarouselModules = import.meta.glob(
-  "../assets/imgs/quantex/stepper/low-wireframes-carousel/*.{png,jpg,jpeg,webp}",
+  "../assets/imgs/quantex/stepper/low-wireframes-carousel/*.{png,jpg,jpeg,webp,svg}",
   { eager: true },
 );
 const computerCarouselModules = import.meta.glob(
-  "../assets/imgs/quantex/stepper/computer-carousel/*.{png,jpg,jpeg,webp}",
+  "../assets/imgs/quantex/stepper/computer-carousel/*.{png,jpg,jpeg,webp,svg}",
   { eager: true },
 );
 const finalCarouselModules = import.meta.glob(
-  "../assets/imgs/quantex/stepper/final-carousel/*.{png,jpg,jpeg,webp}",
+  "../assets/imgs/quantex/stepper/final-carousel/*.{png,jpg,jpeg,webp,svg}",
   { eager: true },
 );
 
@@ -31,9 +31,13 @@ const STEP_HEADER_OFFSET = 120;
 
 // —— Helper functions ——————————————————————————————————————————————————————
 function getStepperImg(name) {
-  const key = Object.keys(stepperImgModules).find((k) =>
-    k.toLowerCase().includes(name.toLowerCase()),
+  const nameLower = name.toLowerCase();
+  const matches = Object.keys(stepperImgModules).filter((k) =>
+    k.toLowerCase().includes(nameLower),
   );
+  // Prefer SVG when both PNG + SVG exist for the same "name".
+  const svgKey = matches.find((k) => k.toLowerCase().endsWith('.svg'));
+  const key = svgKey ?? matches[0];
   return key ? stepperImgModules[key].default : null;
 }
 
@@ -72,18 +76,22 @@ const METRICS_IMG = getStepperImg("metrics");
 
 const QUANTEX_CAROUSEL_IMAGES = Object.keys(quantexCarouselModules)
   .sort()
+  .filter((k) => k.toLowerCase().endsWith('.svg'))
   .map((key) => quantexCarouselModules[key].default)
   .filter(Boolean);
 const LOW_WIREFRAMES_CAROUSEL_IMAGES = Object.keys(lowWireframesCarouselModules)
   .sort()
+  .filter((k) => k.toLowerCase().endsWith('.svg'))
   .map((key) => lowWireframesCarouselModules[key].default)
   .filter(Boolean);
 const COMPUTER_CAROUSEL_IMAGES = Object.keys(computerCarouselModules)
   .sort()
+  .filter((k) => k.toLowerCase().endsWith('.svg'))
   .map((key) => computerCarouselModules[key].default)
   .filter(Boolean);
 const FINAL_CAROUSEL_IMAGES = Object.keys(finalCarouselModules)
   .sort()
+  .filter((k) => k.toLowerCase().endsWith('.svg'))
   .map((key) => finalCarouselModules[key].default)
   .filter(Boolean);
 

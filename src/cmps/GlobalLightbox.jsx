@@ -5,6 +5,7 @@ const LIGHTBOX_IMG_CLASSES = [
   'research-personas-img',
   'research-empathy-img',
   'ideation-mapping-img',
+  'user-journey-mapping-img',
   'design-visual-identity-img',
   'design-hifi-final-img',
 ]

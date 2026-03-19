@@ -11,11 +11,11 @@ const kindredStepperModules = import.meta.glob(
   { eager: true },
 );
 const lowWireframesCarouselModules = import.meta.glob(
-  "../assets/imgs/kindred/stepper/low-fi-carousel/*.{png,jpg,jpeg,webp}",
+  "../assets/imgs/kindred/stepper/low-fi-carousel/*.{png,jpg,jpeg,webp,svg}",
   { eager: true },
 );
 const hiFiCarouselModules = import.meta.glob(
-  "../assets/imgs/kindred/stepper/hi-fi-carousel/*.{png,jpg,jpeg,webp}",
+  "../assets/imgs/kindred/stepper/hi-fi-carousel/*.{png,jpg,jpeg,webp,svg}",
   { eager: true },
 );
 
@@ -56,11 +56,13 @@ const METRICS_IMG = getKindredStepperImg("Metrics");
 
 const LOW_WIREFRAMES_CAROUSEL_IMAGES = Object.keys(lowWireframesCarouselModules)
   .sort()
+  .filter((k) => k.toLowerCase().endsWith('.svg'))
   .map((key) => lowWireframesCarouselModules[key].default)
   .filter(Boolean);
 
 const HI_FI_CAROUSEL_IMAGES = Object.keys(hiFiCarouselModules)
   .sort()
+  .filter((k) => k.toLowerCase().endsWith('.svg'))
   .map((key) => hiFiCarouselModules[key].default)
   .filter(Boolean);
 
