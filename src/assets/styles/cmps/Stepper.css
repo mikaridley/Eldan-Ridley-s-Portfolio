@@ -1,5 +1,5 @@
-.projects-layout > .stepper-sentinel,
-.projects-layout > .stepper-container {
+.projects-layout>.stepper-sentinel,
+.projects-layout>.stepper-container {
   grid-column: 1 / -1;
 }
 
@@ -10,7 +10,8 @@
 }
 
 .stepper-container {
-  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 2rem 1fr 2rem;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -21,63 +22,55 @@
   }
 
   .stepper-wrapper {
+    justify-self: center;
+    grid-column: 2;
+    width: 100%;
+    max-width: 65rem;
     display: grid;
     place-items: center;
-    padding-block: 1.5rem;
-    margin-inline: 0.3rem;
+    margin-block: 1.5rem;
 
-    &.is-sticky {
-      width: 100%;
-    }
-  
     .stepper {
-      display: flex;
-      align-items: flex-start;
-      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 6rem 1fr 6rem 1fr 6rem 1fr 6rem;
       width: 100%;
-      max-width: 800px;
-  
+
       .stepper-connector {
         flex: 1;
         height: 0;
         border-top: 1px solid var(--dark-grey);
-        margin-inline: 0.3rem;
-        margin-top: 25px;
+        margin-top: 32px;
         align-self: flex-start;
       }
-  
+
       .stepper-step {
         display: flex;
         flex-direction: column;
         align-items: center;
         flex: 0 0 auto;
-  
+
         .stepper-circle {
           display: grid;
           place-items: center;
-          width: 50px;
-          height: 50px;
+          width: 4rem;
+          height: 4rem;
           border-radius: 50%;
           font-weight: 700;
+          font-size: 1.5rem;
           background-color: #fff;
           border: 1px solid var(--dark-grey);
           color: var(--dark-grey);
           flex-shrink: 0;
           padding: 0;
           cursor: pointer;
-  
-            &.active {
-              background-color: var(--dark-grey, #363636);
-              border-color: var(--dark-grey, #363636);
-              color: #fff;
-            }
-  
-            .is-sticky & {
-              width: 50px;
-              height: 50px;
-            }
+
+          &.active {
+            background-color: var(--dark-grey, #363636);
+            border-color: var(--dark-grey, #363636);
+            color: #fff;
           }
-  
+        }
+
         .stepper-label {
           margin-block-start: 0.75rem;
           color: var(--dark-grey);
@@ -85,7 +78,7 @@
           background: none;
           border: none;
           padding: 0;
-          font: 0.875rem;
+          font-size: 0.875rem;
           cursor: pointer;
         }
       }
@@ -94,5 +87,3 @@
   }
 
 }
-
-
