@@ -6,6 +6,7 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [slideWidths, setSlideWidths] = useState([])
   const [slideHeight, setSlideHeight] = useState(550)
+  const [viewportWidth, setViewportWidth] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(true)
   const [dragOffsetX, setDragOffsetX] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
@@ -30,7 +31,12 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
     return offsets
   }, [displayImages.length, slideWidths, gap])
 
-  const translateX = -offsetByIndex[currentIndex] ?? 0
+  const currentOffsetX = offsetByIndex[currentIndex] ?? 0
+  const currentSlideWidth = getSlideWidth(currentIndex)
+  // Center the active slide in the viewport (x-axis), regardless of screen size.
+  const translateX = viewportWidth
+    ? (viewportWidth - currentSlideWidth) / 2 - currentOffsetX
+    : -currentOffsetX
   const translateXWithDrag = translateX + dragOffsetX
 
   function handleImageLoad(idx, e) {
@@ -50,8 +56,12 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
     if (!el) return
     const ro = new ResizeObserver(([entry]) => {
       const h = entry?.contentRect?.height
+      const w = entry?.contentRect?.width
       if (typeof h === 'number' && h > 0) {
         setSlideHeight(h)
+      }
+      if (typeof w === 'number' && w > 0) {
+        setViewportWidth(w)
       }
     })
     ro.observe(el)
