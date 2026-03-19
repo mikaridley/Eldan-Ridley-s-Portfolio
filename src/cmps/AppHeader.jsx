@@ -35,10 +35,14 @@ export function AppHeader() {
   }, [isMenuOpen])
 
   const navLinks = [
-    { to: '/home', label: 'Home' },
-    { to: '/about-me', label: 'About me' },
-    { to: '/resume', label: 'Resume' },
-    { to: '/linkedin', label: 'LinkedIn' },
+    { to: '/home', label: 'Home', isExternal: false },
+    { to: '/about-me', label: 'About me', isExternal: false },
+    { to: '/resume', label: 'Resume', isExternal: false },
+    {
+      href: 'https://www.linkedin.com/in/eldan-ridley',
+      label: 'LinkedIn',
+      isExternal: true,
+    },
   ]
 
   return (
@@ -48,11 +52,26 @@ export function AppHeader() {
           <img src={logoSrc} alt="Logo" />
         </NavLink>
         <nav className="app-header-navigation navigation">
-          {navLinks.map(({ to, label }) => (
-            <NavLink key={to} to={to}>
-              {label}
-            </NavLink>
-          ))}
+          {navLinks.map((link) => {
+            if (link.isExternal) {
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  {link.label}
+                </a>
+              )
+            }
+
+            return (
+              <NavLink key={link.to} to={link.to}>
+                {link.label}
+              </NavLink>
+            )
+          })}
         </nav>
         <button
           type="button"
@@ -74,16 +93,32 @@ export function AppHeader() {
       >
         <div className="app-header-overlay-inner">
           <nav className="app-header-overlay-nav">
-            {navLinks.map(({ to, label }) => (
-              <NavLink
-                key={to}
-                to={to}
-                onClick={closeMenu}
-                className={({ isActive }) => (isActive ? 'active' : '')}
-              >
-                {label}
-              </NavLink>
-            ))}
+            {navLinks.map((link) => {
+              if (link.isExternal) {
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target='_blank'
+                    rel='noreferrer'
+                    onClick={closeMenu}
+                  >
+                    {link.label}
+                  </a>
+                )
+              }
+
+              return (
+                <NavLink
+                  key={link.to}
+                  to={link.to}
+                  onClick={closeMenu}
+                  className={({ isActive }) => (isActive ? 'active' : '')}
+                >
+                  {link.label}
+                </NavLink>
+              )
+            })}
           </nav>
         </div>
       </div>
