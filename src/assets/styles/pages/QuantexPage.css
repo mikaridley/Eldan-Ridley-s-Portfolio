@@ -91,14 +91,14 @@
   }
 
   .project-details {
+    justify-self: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin-block-start: var(--beginning-of-section);
+    margin-block-end:var(--unrelated-elements-space);
     justify-items: start;
     max-width: 53rem;
     column-gap:8rem;
-    margin-block-start: var(--beginning-of-section);
-    margin-block-end:var(--unrelated-elements-space);
-    justify-self: center;
 
     .project-details-col {
       .project-details-heading {
@@ -107,6 +107,9 @@
       }
 
       .project-details-list {
+        list-style-position: inside;
+        padding-left: 0;
+
         li {
         }
       }
@@ -482,7 +485,7 @@
 
     .design-hifi-before-after {
       display: grid;
-      grid-template-columns: 320px repeat(2, auto) 1fr;
+      grid-template-columns: 320px repeat(2, 10rem) 1fr;
       max-width: 90rem;
       margin-block-end: var(--unrelated-elements-space);
       position: relative;
