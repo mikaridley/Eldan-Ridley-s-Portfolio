@@ -34,8 +34,6 @@
       grid-template-columns: 1fr;
       justify-items: stretch;
       width: 100%;
-      max-width: 100%;
-      margin-block-end: 2.8rem;
       
       .home-project-img {
         width: 100%;
@@ -61,16 +59,17 @@
     }
 
     .home-project-quntex {
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+
       .home-project-link {
-        display: block;
-        margin-block-end: 1.5rem;
         cursor: pointer;
       }
   
       .home-project-title {
         font-weight: 700;
         color: var(--dark-grey);
-        margin: 0 0 1rem 0;
+        margin: 1.5rem 0 0.5rem 0;
       }
   
       .home-project-desc {
@@ -86,9 +85,10 @@
     }
 
     .home-project-kindred {
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+
       .home-project-link {
-        display: block;
-        margin-block-end: 1.5rem;
         cursor: pointer;
       }
   
@@ -111,7 +111,7 @@
   
       .home-project-title {
         color: var(--dark-grey);
-        margin: 0 0 1rem 0;
+        margin: 1.5rem 0 0.5rem 0;
       }
   
       .home-project-desc {

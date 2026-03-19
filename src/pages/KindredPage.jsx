@@ -648,12 +648,12 @@ export function KindredPage() {
         className="takeaways-metrics"
         aria-labelledby="takeaways-metrics-heading"
       >
-        <h4
+        <h3
           id="takeaways-metrics-heading"
           className="takeaways-metrics-heading"
         >
           Metrics
-        </h4>
+        </h3>
         <p className="takeaways-metrics-intro">
           As this is a conceptual project, I haven't tracked live user data.
           However, To evaluate the success of Kindred in a real-world setting, I

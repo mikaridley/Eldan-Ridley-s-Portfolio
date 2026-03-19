@@ -350,7 +350,6 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
       gap: 0 4rem;
-      row-gap: 1rem;
       align-items: center;
       margin-block-end: 12.5rem;
 

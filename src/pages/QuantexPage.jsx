@@ -164,31 +164,31 @@ export function QuantexPage() {
       </section>
 
       <div className="problem-solution-wrapper"></div>
-        <section className="problem-solution">
-          <div className="problem-solution-col">
-            <h4 className="problem-solution-heading">Problem</h4>
-            <p>
-              The traditional currency exchange process is an inconvenient
-              hurdle. Many travellers are simply too busy to visit a physical
-              exchange shop before a trip, or they find it difficult to locate
-              one when they actually need it. Beyond the chore of the errand,
-              many people now prefer the security and ease of digital payments
-              over carrying bundles of physical cash.
-            </p>
-          </div>
-          <div className="problem-solution-col">
-            <h4 className="problem-solution-heading">Solution</h4>
-            <p>
-              I designed Quantex to replace the physical errand with a
-              digital-first approach. The platform allows users to convert
-              currencies instantly with a single tap, enabling them to pay at
-              cashiers or online without delay. By prioritising a simple,
-              high-contrast interface, I ensured the product is easy to navigate
-              for everyone, from tech-savvy travellers to those who typically
-              struggle with complex digital tools.
-            </p>
-          </div>
-        </section>   
+      <section className="problem-solution">
+        <div className="problem-solution-col">
+          <h4 className="problem-solution-heading">Problem</h4>
+          <p>
+            The traditional currency exchange process is an inconvenient
+            hurdle. Many travellers are simply too busy to visit a physical
+            exchange shop before a trip, or they find it difficult to locate
+            one when they actually need it. Beyond the chore of the errand,
+            many people now prefer the security and ease of digital payments
+            over carrying bundles of physical cash.
+          </p>
+        </div>
+        <div className="problem-solution-col">
+          <h4 className="problem-solution-heading">Solution</h4>
+          <p>
+            I designed Quantex to replace the physical errand with a
+            digital-first approach. The platform allows users to convert
+            currencies instantly with a single tap, enabling them to pay at
+            cashiers or online without delay. By prioritising a simple,
+            high-contrast interface, I ensured the product is easy to navigate
+            for everyone, from tech-savvy travellers to those who typically
+            struggle with complex digital tools.
+          </p>
+        </div>
+      </section>
 
       <section className="project-details">
         <div className="project-details-col">
@@ -768,7 +768,7 @@ export function QuantexPage() {
       </section>
 
       <section className="takeaways-metrics" aria-labelledby="takeaways-metrics-heading">
-        <h4 id="takeaways-metrics-heading" className="takeaways-metrics-heading">Metrics</h4>
+        <h3 id="takeaways-metrics-heading" className="takeaways-metrics-heading">Metrics</h3>
         <p className="takeaways-metrics-intro">
           As this is a conceptual project, I haven&apos;t tracked live user data. However, if Quantex were to launch, I would focus on the following metrics to evaluate the design&apos;s impact:
         </p>

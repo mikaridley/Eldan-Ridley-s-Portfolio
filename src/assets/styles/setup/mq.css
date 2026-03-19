@@ -293,11 +293,10 @@
         .home-project-img {
           max-width: none;
           object-fit: cover;
-          margin-block-end: 1.05rem;
         }
 
         .home-project-title {
-          margin: 0 0 0.5rem 0;
+          margin: 0.5rem 0 1rem 0;
         }
 
         .home-project-desc {
