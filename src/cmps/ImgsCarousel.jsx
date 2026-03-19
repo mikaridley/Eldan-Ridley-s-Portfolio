@@ -3,7 +3,9 @@ import '../assets/styles/cmps/ImgsCarousel.css'
 import carouselArrowSvg from '../assets/imgs/quantex/Carousel Arrow.svg'
 
 export function ImgsCarousel({ images = [], gap = 15 }) {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  // Start from the "second copy" of the duplicated list so the active slide
+  // always has neighbors on both sides (no empty space on the left).
+  const [currentIndex, setCurrentIndex] = useState(() => images.length)
   const [slideWidths, setSlideWidths] = useState([])
   const [slideHeight, setSlideHeight] = useState(550)
   const [viewportWidth, setViewportWidth] = useState(0)
@@ -90,18 +92,7 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
 
   function handleTransitionEnd() {
     if (n === 0) return
-    if (currentIndex >= n) {
-      setIsTransitioning(false)
-      setCurrentIndex(currentIndex % n)
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          setIsTransitioning(true)
-          isAnimatingRef.current = false
-        })
-      })
-    } else {
-      isAnimatingRef.current = false
-    }
+    isAnimatingRef.current = false
   }
 
   function goPrev() {
