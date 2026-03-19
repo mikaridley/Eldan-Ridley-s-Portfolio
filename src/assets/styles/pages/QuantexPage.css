@@ -94,7 +94,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: start;
-    gap:0.5rem;
+    max-width: 53rem;
+    column-gap:8rem;
     margin-block-start: var(--beginning-of-section);
     margin-block-end:var(--unrelated-elements-space);
     justify-self: center;
@@ -107,7 +108,6 @@
 
       .project-details-list {
         li {
-          line-height: 3;
         }
       }
     }
@@ -222,7 +222,7 @@
 
       .ideation-block-p {
         color: var(--main-txt);
-        margin-block-end: var(--related-elements-space);
+        margin-block-end: var(--subheader-to-paragraph);
       }
 
       .ideation-sticky-notes {
@@ -304,7 +304,7 @@
     .design-wireframes-p {
       grid-column: 1;
       color: var(--main-txt);
-      margin-block-end: var(--unrelated-elements-space);
+      margin-block-end: var(--related-elements-space);
     }
 
     .design-wireframes-notes {
@@ -381,7 +381,6 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
       gap: 0 4rem;
-      row-gap: 1rem;
       align-items: center;
       margin-block-end: var(--unrelated-elements-space);
 
@@ -472,7 +471,6 @@
 
     .design-hifi-iteration-subtitle {
       margin-block-end: var(--subheader-to-paragraph);
-      margin-block-start: var(--header-to-subheader);
       color: var(--dark-grey);
     }
 
@@ -540,7 +538,7 @@
 
     .design-hifi-final {
       display: grid;
-      margin-block-end: var(--unrelated-elements-space);
+      margin-block-end: var(--end-of-section);
 
       .design-hifi-final-heading {
         color: var(--dark-grey);
@@ -623,6 +621,7 @@
     .takeaways-next {
       .takeaways-rn-heading {
         color: var(--dark-grey);
+        margin-block-end: var(--subheader-to-paragraph);
       }
 
       .takeaways-rn-list {
@@ -656,8 +655,8 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: repeat(3, auto);
-    grid-template-rows: auto minmax(0, 80px) auto;
     align-items: start;
+    column-gap: 6rem;
 
     .takeaways-metrics-heading {
       align-self: end;
@@ -681,6 +680,7 @@
         margin-block-end: 0.75rem;
         font-weight: 500;
         list-style: disc;
+        margin-inline-start:1.5rem;
 
         & span {
           color: var(--dark-grey);

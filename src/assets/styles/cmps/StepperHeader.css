@@ -5,7 +5,7 @@
   margin-block-start:25rem;
   margin-block-start: var(--end-of-section);
   margin-block-end:var(--beginning-of-section);
-  height: 15rem;
+  height: 13rem;
   text-align: center;
 
   .stepper-header-title {

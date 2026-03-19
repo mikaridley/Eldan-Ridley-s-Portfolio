@@ -1,7 +1,7 @@
 .about-me-page{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 5rem;
+    column-gap: 9rem;
     row-gap: 15rem;
 
     margin-block-start: 12rem;

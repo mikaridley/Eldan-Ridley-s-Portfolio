@@ -235,7 +235,7 @@ export function QuantexPage() {
           <ul className="project-details-list">
             <li>Figma</li>
             <li>FigJam</li>
-            <li>Good old fashion pen & paper</li>
+            <li>Good old fashion<br/> pen & paper</li>
           </ul>
         </div>
       </section>

@@ -199,7 +199,7 @@ export function KindredPage() {
           <ul className="project-details-list">
             <li>Figma</li>
             <li>FigJam</li>
-            <li>Good old fashion pen & paper</li>
+            <li>Good old fashion<br/> pen & paper</li>
             <li>Gen AI</li>
           </ul>
         </div>
@@ -404,7 +404,7 @@ export function KindredPage() {
         </div>
 
         <h4 className="design-wireframes-subtitle">
-          From Insights to Iteration
+          From insights to iteration
         </h4>
         <p className="design-wireframes-lofi-p">
           During usability testing, I discovered that my "perfectly" aligned
@@ -504,11 +504,11 @@ export function KindredPage() {
         </h4>
         <p className="hi-fi-design-p">
           While the initial green palette served as a placeholder, I found that
-          it did not meet the necessary WCAG contrast standards or reflect the
+          it did not meet the necessary <span>WCAG</span> contrast standards or reflect the
           premium feel of the Kindred brand. I decided to iterate on the colour
           scheme, transitioning to a deep wine and purple palette. This change
-          was a dual success. Technically, the new primary colour (#872847)
-          achieved a 8.66:1 contrast ratio, exceeding WCAG AAA standards for
+          was a dual success.<br/> Technically, the new primary colour (#872847)
+          achieved a 8.66:1 contrast ratio, exceeding <span>WCAG AAA</span> standards for
           maximum readability. Visually, it replaced the generic green with a
           warm, trustworthy, and high-quality aesthetic that perfectly captures
           the Kindred brand identity. This final palette ensures the interface
@@ -517,7 +517,7 @@ export function KindredPage() {
         <div className="hi-fi-imgs">
           <h4>Before</h4>
           <h4>After</h4>
-          <h4>Accessibility Validation</h4>
+          <h4>Accessibility validation</h4>
           <img
             src={PHONE_LO_FI_IMG}
             alt="above-the-fold-img"
