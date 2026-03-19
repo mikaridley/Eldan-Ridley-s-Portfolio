@@ -5,6 +5,7 @@ import logoBlack from '../assets/imgs/logo-black.png'
 import burgerIcon from '../assets/imgs/Burger menu.svg'
 import burgerIconLight from '../assets/imgs/Burger menu - light.svg'
 import closeIcon from '../assets/imgs/Close Icon.svg'
+import resumePdf from '../assets/files/Full Stack Developer - Mika Ridley.pdf'
 import '../assets/styles/cmps/AppHeader.css'
 
 export function AppHeader() {
@@ -37,7 +38,11 @@ export function AppHeader() {
   const navLinks = [
     { to: '/home', label: 'Home', isExternal: false },
     { to: '/about-me', label: 'About me', isExternal: false },
-    { to: '/resume', label: 'Resume', isExternal: false },
+    {
+      href: resumePdf,
+      label: 'Resume',
+      isExternal: true,
+    },
     {
       href: 'https://www.linkedin.com/in/eldan-ridley',
       label: 'LinkedIn',
