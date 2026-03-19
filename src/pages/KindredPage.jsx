@@ -7,7 +7,7 @@ import kindredAppGif from "../assets/imgs/kindred/stepper/app-gif.gif";
 
 // —— Constants (module globs & config) —————————————————————————————————————
 const kindredStepperModules = import.meta.glob(
-  "../assets/imgs/kindred/stepper/*.{png,jpg,jpeg,webp}",
+  "../assets/imgs/kindred/stepper/*.{png,jpg,jpeg,webp,svg}",
   { eager: true },
 );
 const lowWireframesCarouselModules = import.meta.glob(
@@ -23,10 +23,14 @@ const STEP_HEADER_OFFSET = 120;
 
 // —— Helper functions ——————————————————————————————————————————————————————
 function getKindredStepperImg(name) {
-  const key = Object.keys(kindredStepperModules).find((k) =>
-    k.toLowerCase().includes(name.toLowerCase()),
-  );
-  return key ? kindredStepperModules[key].default : null;
+  const nameLower = name.toLowerCase()
+  const matches = Object.keys(kindredStepperModules).filter((k) =>
+    k.toLowerCase().includes(nameLower),
+  )
+  // Prefer SVG when both PNG + SVG exist for the same "name".
+  const svgKey = matches.find((k) => k.toLowerCase().endsWith('.svg'))
+  const key = svgKey ?? matches[0]
+  return key ? kindredStepperModules[key].default : null
 }
 
 // —— Derived data (uses helpers above) —————————————————————————————————————
