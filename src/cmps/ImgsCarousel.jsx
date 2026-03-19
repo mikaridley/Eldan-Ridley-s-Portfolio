@@ -10,13 +10,12 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
   const [isTransitioning, setIsTransitioning] = useState(true)
   const [dragOffsetX, setDragOffsetX] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
-  // Used to keep the track visually continuous when we "snap" indexes
-  // for infinite looping.
-  const [xShift, setXShift] = useState(0)
   const pointerIdRef = useRef(null)
   const viewportRef = useRef(null)
   const naturalDimensionsRef = useRef({})
   const isAnimatingRef = useRef(false)
+  const animTimeoutRef = useRef(null)
+  const currentIndexRef = useRef(currentIndex)
   const dragStartClientXRef = useRef(0)
   const n = images.length
   // 3 copies: we animate inside the extended track, then snap back to the
@@ -44,7 +43,7 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
 
   // Center the active slide in the viewport (x-axis), regardless of screen size.
   const translateXCentered = calcTranslateXCenteredForIndex(currentIndex)
-  const translateX = translateXCentered + xShift
+  const translateX = translateXCentered
   const translateXWithDrag = translateX + dragOffsetX
 
   function handleImageLoad(idx, e) {
@@ -96,31 +95,70 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
     }
 
     // If the carousel content changes, reset looping state so indexes stay valid.
-    setXShift(0)
     setCurrentIndex(images.length)
     setDragOffsetX(0)
     setIsTransitioning(true)
     isAnimatingRef.current = false
   }, [images.length])
 
+  useEffect(() => {
+    return () => {
+      if (animTimeoutRef.current) {
+        clearTimeout(animTimeoutRef.current)
+        animTimeoutRef.current = null
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    currentIndexRef.current = currentIndex
+  }, [currentIndex])
+
+  function armAnimUnlock() {
+    if (animTimeoutRef.current) {
+      clearTimeout(animTimeoutRef.current)
+      animTimeoutRef.current = null
+    }
+    animTimeoutRef.current = window.setTimeout(() => {
+      isAnimatingRef.current = false
+      animTimeoutRef.current = null
+    }, 360)
+  }
+
   function handleTransitionEnd() {
     if (n === 0) return
 
+    const endedIndex = currentIndexRef.current
+
     // Snap the index back into the middle copy to keep infinite looping.
     // - middle copy range: [n .. 2n-1]
-    if (currentIndex < n || currentIndex >= 2 * n) {
-      const fromIdx = currentIndex
-      const toIdx = currentIndex < n ? currentIndex + n : currentIndex - n
-
-      const centeredOld = calcTranslateXCenteredForIndex(fromIdx)
-      const centeredNew = calcTranslateXCenteredForIndex(toIdx)
-      const diff = centeredOld - centeredNew
-
+    if (endedIndex < n) {
+      // We moved left into the first copy (only possible target: n-1),
+      // snap back to the same slide in the middle copy.
       setIsTransitioning(false)
-      // Keep the effective translateX the same, so snapping is invisible.
-      setXShift((prev) => prev + diff)
-      setCurrentIndex(toIdx)
+      setCurrentIndex(2 * n - 1)
+      if (animTimeoutRef.current) {
+        clearTimeout(animTimeoutRef.current)
+        animTimeoutRef.current = null
+      }
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setIsTransitioning(true)
+          isAnimatingRef.current = false
+        })
+      })
+      return
+    }
 
+    if (endedIndex >= 2 * n) {
+      // We moved right into the third copy (only possible target: 2n),
+      // snap back to the same slide in the middle copy.
+      setIsTransitioning(false)
+      setCurrentIndex(n)
+      if (animTimeoutRef.current) {
+        clearTimeout(animTimeoutRef.current)
+        animTimeoutRef.current = null
+      }
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           setIsTransitioning(true)
@@ -131,18 +169,30 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
     }
 
     isAnimatingRef.current = false
+    if (animTimeoutRef.current) {
+      clearTimeout(animTimeoutRef.current)
+      animTimeoutRef.current = null
+    }
   }
 
   function goPrev() {
     if (n === 0 || isAnimatingRef.current) return
     isAnimatingRef.current = true
-    setCurrentIndex((i) => i - 1)
+    armAnimUnlock()
+    const minIndex = n - 1
+    const next = Math.max(currentIndexRef.current - 1, minIndex)
+    currentIndexRef.current = next
+    setCurrentIndex(next)
   }
 
   function goNext() {
     if (n === 0 || isAnimatingRef.current) return
     isAnimatingRef.current = true
-    setCurrentIndex((i) => i + 1)
+    armAnimUnlock()
+    const maxIndex = 2 * n
+    const next = Math.min(currentIndexRef.current + 1, maxIndex)
+    currentIndexRef.current = next
+    setCurrentIndex(next)
   }
 
   function onPointerDown(e) {
