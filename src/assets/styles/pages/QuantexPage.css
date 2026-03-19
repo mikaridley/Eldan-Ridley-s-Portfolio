@@ -581,7 +581,7 @@
 
     .design-hifi-mobile {
         margin-block-end:var(--related-elements-space);
-        margin-block-start:var(--end-of-section);
+        margin-block-start:var(--unrelated-elements-space);
 
       .design-hifi-mobile-heading {
         color: var(--dark-grey);
