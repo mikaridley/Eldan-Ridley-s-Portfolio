@@ -1,6 +1,7 @@
 @media (max-width: 1350px) {
   .about-me-page {
-    column-gap: 2rem;
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 4rem;
   }
 
   .projects-layout {
@@ -26,8 +27,18 @@
   }
 }
 
+/* Ensure the arrow style applies as early as 1150px (not depending on .design-hifi nesting) */
 @media (max-width: 1150px) {
   .quantex-page {
+    .design-hifi-before-after {
+      .design-hifi-arrow {
+        grid-column: 1;
+        width: 4.375rem;
+        height: 4.375rem;
+        margin-top: 2rem;
+      }
+    }
+
     .design-hifi {
       .design-hifi-before-after {
         grid-template-columns: 1fr;
@@ -71,20 +82,6 @@
           margin-top: 2rem;
           margin-bottom: 2rem;
         }
-      }
-    }
-  }
-}
-
-/* Ensure the arrow style applies as early as 1150px (not depending on .design-hifi nesting) */
-@media (max-width: 1150px) {
-  .quantex-page {
-    .design-hifi-before-after {
-      .design-hifi-arrow {
-        grid-column: 1;
-        width: 4.375rem;
-        height: 4.375rem;
-        margin-top: 2rem;
       }
     }
   }
@@ -159,10 +156,20 @@
         grid-row: 3;
       }
     }
+
+    .project-details {
+      column-gap: 5rem;
+    }
   }
 }
 
-@media (max-width: 810px) {
+.kindred-page {
+  .project-details {
+    column-gap: 5rem;
+  }
+}
+
+@media (max-width: 860px) {
   :root {
     --related-elements-space: 2.5rem;
     --unrelated-elements-space: 6.25rem;
@@ -213,18 +220,19 @@
 
   .stepper-container {
     grid-template-columns: 1.5rem 1fr 1.5rem;
-  
+
     .stepper-wrapper {
       margin-block: 1rem;
-  
+
       .stepper {
         grid-template-columns: 4rem 1fr 4rem 1fr 4rem 1fr 4rem;
+
         .stepper-connector {
           margin-top: 20px;
         }
-  
+
         .stepper-step {
-  
+
           .stepper-circle {
             width: 2.5rem;
             height: 2.5rem;
@@ -232,10 +240,10 @@
           }
 
         }
-  
+
       }
     }
-  
+
   }
 
   .app-header {
@@ -314,7 +322,7 @@
     margin-block: 4rem;
     margin-inline: 50px;
 
-    > a > img {
+    >a>img {
       width: 4.3rem;
       justify-self: end;
     }
@@ -450,11 +458,11 @@
 
     .project-details {
       margin-block-end: 6.25rem;
-      column-gap:1rem;
+      column-gap: 1rem;
 
       .project-details-col {
         .project-details-list {
-  
+
           li {
             line-height: 1;
           }
@@ -626,7 +634,7 @@
         grid-template-columns: 1fr;
 
         h4 {
-          font-size: 32px;
+          font-size: 25px;
           font-weight: 600;
 
           &:nth-child(2) {
@@ -751,11 +759,11 @@
 
     .project-details {
       margin-block-end: 6.25rem;
-      column-gap:1rem;
+      column-gap: 1rem;
 
       .project-details-col {
         .project-details-list {
-  
+
           li {
             line-height: 1;
           }
