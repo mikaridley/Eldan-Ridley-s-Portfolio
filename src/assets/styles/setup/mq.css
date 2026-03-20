@@ -148,15 +148,6 @@
   }
 
   .quantex-page {
-    .quantex-opening {
-      grid-template-columns: 1fr;
-
-      img {
-        grid-column: 1;
-        grid-row: 3;
-      }
-    }
-
     .project-details {
       column-gap: 5rem;
     }
@@ -291,7 +282,6 @@
 
     .projects {
       grid-template-columns: repeat(1, 1fr);
-      gap: 2.45rem;
       width: 100%;
       justify-items: stretch;
 
@@ -305,7 +295,7 @@
         }
 
         .home-project-title {
-          margin: 0.5rem 0 1rem 0;
+          margin: 1rem 0 0.5rem 0;
         }
 
         .home-project-desc {
@@ -730,6 +720,7 @@
     }
 
     .quantex-opening {
+      grid-template-columns: 1fr;
       margin-block-start: calc(var(--beginning-of-section) + 7rem);
 
       img {

@@ -362,7 +362,7 @@ export function QuantexPage() {
 
         <div className="ideation-block">
           <h4 className="ideation-block-title">How might we</h4>
-          <p className="ideation-block-p">
+          <p className="ideation-block-p2">
             I translated my research findings and user stories into &apos;How
             Might We&apos; statements. This process allowed me to reframe user
             pain points as design opportunities, ensuring the solution focused
@@ -692,7 +692,7 @@ export function QuantexPage() {
         </div>
 
         <div className="design-hifi-final">
-          <h3 className="design-hifi-final-heading">Final design</h3>
+          <h4 className="design-hifi-final-heading">Final design</h4>
           <p className="design-hifi-final-p">
             The final phase of the project involved expanding Quantex across
             multiple platforms. By designing the mobile app alongside the
@@ -711,7 +711,7 @@ export function QuantexPage() {
         </div>
 
         <div className="design-hifi-desktop">
-          <h3 className="design-hifi-desktop-heading">Desktop website</h3>
+          <h4 className="design-hifi-desktop-heading">Desktop website</h4>
           <p className="design-hifi-desktop-p">
             For the desktop version, I maintained the exact same layout and
             functionality as the mobile experience to ensure total consistency.
@@ -734,7 +734,7 @@ export function QuantexPage() {
         )}
 
         <div className="design-hifi-mobile">
-          <h3 className="design-hifi-mobile-heading">Mobile website</h3>
+          <h4 className="design-hifi-mobile-heading">Mobile website</h4>
           <p className="design-hifi-mobile-p">
             I kept the native app and mobile web designs almost identical. This
             ensures that users like Drake or Natasha get the same simple
@@ -756,7 +756,7 @@ export function QuantexPage() {
 
       <section className="takeaways-reflections-next" aria-labelledby="takeaways-reflections-heading">
         <div className="takeaways-reflections">
-          <h3 id="takeaways-reflections-heading" className="takeaways-rn-heading">Reflections</h3>
+          <h4 id="takeaways-reflections-heading" className="takeaways-rn-heading">Reflections</h4>
           <ul className="takeaways-rn-list">
             <li>
               <span>Simplicity is key:</span> I learnt that in fintech, less is almost always more. Removing the &apos;intimidation factor&apos; by using familiar iconography and plenty of white space made the app feel far more trustworthy.
@@ -770,7 +770,7 @@ export function QuantexPage() {
           </ul>
         </div>
         <div className="takeaways-next">
-          <h3 id="takeaways-next-heading" className="takeaways-rn-heading">Next steps</h3>
+          <h4 id="takeaways-next-heading" className="takeaways-rn-heading">Next steps</h4>
           <p className="takeaways-next-intro">If I were to continue developing Quantex, I would focus on the following:</p>
           <ul className="takeaways-rn-list">
             <li>
@@ -787,7 +787,7 @@ export function QuantexPage() {
       </section>
 
       <section className="takeaways-metrics" aria-labelledby="takeaways-metrics-heading">
-        <h3 id="takeaways-metrics-heading" className="takeaways-metrics-heading">Metrics</h3>
+        <h4 id="takeaways-metrics-heading" className="takeaways-metrics-heading">Metrics</h4>
         <p className="takeaways-metrics-intro">
           As this is a conceptual project, I haven&apos;t tracked live user data. However, if Quantex were to launch, I would focus on the following metrics to evaluate the design&apos;s impact:
         </p>
