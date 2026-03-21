@@ -35,6 +35,15 @@ export function AppHeader() {
     }
   }, [isMenuOpen])
 
+  function navLinkClassName(to) {
+    return ({ isActive }) => {
+      if (to === '/home') {
+        return isActive || pathname === '/' ? 'active' : ''
+      }
+      return isActive ? 'active' : ''
+    }
+  }
+
   const navLinks = [
     { to: '/home', label: 'Home', isExternal: false },
     { to: '/about-me', label: 'About me', isExternal: false },
@@ -72,7 +81,11 @@ export function AppHeader() {
             }
 
             return (
-              <NavLink key={link.to} to={link.to}>
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={navLinkClassName(link.to)}
+              >
                 {link.label}
               </NavLink>
             )
@@ -118,7 +131,7 @@ export function AppHeader() {
                   key={link.to}
                   to={link.to}
                   onClick={closeMenu}
-                  className={({ isActive }) => (isActive ? 'active' : '')}
+                  className={navLinkClassName(link.to)}
                 >
                   {link.label}
                 </NavLink>
