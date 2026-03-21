@@ -41,7 +41,7 @@ export function HomePage() {
           </Link>
           <h3 className="home-project-title">Quantex</h3>
           <p className="home-project-desc">
-            <span>UI/UX Designer (solo project).</span> A multi-currency wallet for travelers to exchange and spend local currencies worldwide via mobile app and responsive web.
+            <span>UI/UX Designer (solo project).</span> A multi-currency wallet for travelers to exchange and spend local currencies worldwide via mobile app and responsive website.
           </p>
         </div>
       </section>

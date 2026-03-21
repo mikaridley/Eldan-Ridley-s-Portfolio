@@ -830,12 +830,12 @@
         color: var(--light-txt);
 
         .design-hifi-heading {
-          color: var(--dark-txt);
+          color: var(--dark-grey);
           margin-block-end: var(--header-to-subheader);
         }
 
         .design-hifi-subtitle {
-          color: var(--dark-txt);
+          color: var(--dark-grey);
           margin-block-end: var(--subheader-to-paragraph);
         }
 

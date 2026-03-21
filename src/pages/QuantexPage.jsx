@@ -160,7 +160,7 @@ export function QuantexPage() {
         <h1>Quantex</h1>
         <h4>
           A multi-currency wallet for travellers to spend local currencies
-          worldwide via mobile app and responsive web.
+          worldwide via mobile app and responsive website.
         </h4>
         <img src={appScreen} alt="app-screen" />
       </section>
@@ -235,7 +235,7 @@ export function QuantexPage() {
           <ul className="project-details-list">
             <li>Figma</li>
             <li>FigJam</li>
-            <li>Good old fashion<br/> pen & paper</li>
+            <li>Pen & paper</li>
           </ul>
         </div>
       </section>

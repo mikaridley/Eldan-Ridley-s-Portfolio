@@ -199,7 +199,7 @@ export function KindredPage() {
           <ul className="project-details-list">
             <li>Figma</li>
             <li>FigJam</li>
-            <li>Good old fashion<br/> pen & paper</li>
+            <li>Pen & paper</li>
             <li>Gen AI</li>
           </ul>
         </div>

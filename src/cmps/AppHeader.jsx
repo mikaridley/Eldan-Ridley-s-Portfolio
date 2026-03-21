@@ -5,7 +5,7 @@ import logoBlack from '../assets/imgs/logo-black.png'
 import burgerIcon from '../assets/imgs/Burger menu.svg'
 import burgerIconLight from '../assets/imgs/Burger menu - light.svg'
 import closeIcon from '../assets/imgs/Close Icon.svg'
-import resumePdf from '../assets/files/Full Stack Developer - Mika Ridley.pdf'
+import resumePdf from '../assets/files/Eldan Ridley UX Designer Resume.pdf'
 import '../assets/styles/cmps/AppHeader.css'
 
 export function AppHeader() {

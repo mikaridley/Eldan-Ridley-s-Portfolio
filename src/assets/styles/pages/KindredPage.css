@@ -102,7 +102,7 @@
     margin-block-end:var(--unrelated-elements-space);
     justify-items: start;
     max-width: 53rem;
-    column-gap:8rem;
+    column-gap:7.5rem;
 
     .project-details-col {
       .project-details-heading {
@@ -393,12 +393,12 @@
       padding-block: 3rem 3rem;
 
       .design-hifi-heading {
-        color: var(--dark-txt);
+        color: var(--dark-grey);
         margin: 0 0 5.7rem 0;
       }
 
       .design-hifi-subtitle {
-        color: var(--dark-txt);
+        color: var(--dark-grey);
         margin: 0 0 1.7rem 0;
       }
 

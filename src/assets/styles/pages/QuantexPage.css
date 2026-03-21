@@ -98,7 +98,7 @@
     margin-block-end:var(--unrelated-elements-space);
     justify-items: start;
     max-width: 53rem;
-    column-gap:8rem;
+    column-gap:7.5rem;
 
     .project-details-col {
       .project-details-heading {
@@ -425,12 +425,12 @@
       color: var(--light-txt);
 
       .design-hifi-heading {
-        color: var(--dark-txt);
+        color: var(--dark-grey);
         margin-block-end: var(--header-to-subheader);
       }
 
       .design-hifi-subtitle {
-        color: var(--dark-txt);
+        color: var(--dark-grey);
         margin-block-end:var(--subheader-to-paragraph);
       }
 
@@ -495,7 +495,7 @@
       overflow-x: visible;
 
       .design-hifi-ba-title {
-        color: var(--dark-txt);
+        color: var(--dark-grey);
         margin-block-end: var(--subheader-to-paragraph);
 
         &.after {
@@ -544,7 +544,7 @@
 
     .design-hifi-final {
       display: grid;
-      margin-block-end: var(--end-of-section);
+      margin-block-end: var(--unrelated-elements-space);
 
       .design-hifi-final-heading {
         color: var(--dark-grey);
