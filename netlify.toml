@@ -1,0 +1,12 @@
+# Netlify reads this from the repo root (see deploy/README.md).
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback: refresh on /home, /quantex, etc. must serve index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
