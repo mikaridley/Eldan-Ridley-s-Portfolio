@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useMemo } from 'react'
 import '../assets/styles/cmps/ImgsCarousel.css'
 import carouselArrowSvg from '../assets/imgs/quantex/Carousel Arrow.svg'
 
-export function ImgsCarousel({ images = [], gap = 15 }) {
+export function ImgsCarousel({ images = [], gap = 60 }) {
   const [currentIndex, setCurrentIndex] = useState(() => images.length)
   const [slideWidths, setSlideWidths] = useState([])
   const [slideHeight, setSlideHeight] = useState(550)
@@ -17,7 +17,12 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
   const animTimeoutRef = useRef(null)
   const currentIndexRef = useRef(currentIndex)
   const dragStartClientXRef = useRef(0)
+  const dragStartClientYRef = useRef(0)
+  /** null until finger moves enough; then 'horizontal' (carousel) or 'vertical' (page scroll) */
+  const dragAxisRef = useRef(null)
   const n = images.length
+
+  const AXIS_LOCK_PX = 14
   // 3 copies: we animate inside the extended track, then snap back to the
   // middle copy after the transition ends.
   const displayImages = n > 0 ? [...images, ...images, ...images] : []
@@ -202,6 +207,8 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
 
     pointerIdRef.current = e.pointerId
     dragStartClientXRef.current = e.clientX
+    dragStartClientYRef.current = e.clientY
+    dragAxisRef.current = null
     setDragOffsetX(0)
     setIsDragging(true)
 
@@ -215,6 +222,26 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
     if (pointerIdRef.current !== e.pointerId) return
 
     const deltaX = e.clientX - dragStartClientXRef.current
+    const deltaY = e.clientY - dragStartClientYRef.current
+
+    // Wait until movement is clearly horizontal vs vertical (avoids scrolling the page moving the track).
+    if (dragAxisRef.current === null) {
+      if (
+        Math.abs(deltaX) < AXIS_LOCK_PX &&
+        Math.abs(deltaY) < AXIS_LOCK_PX
+      ) {
+        setDragOffsetX(0)
+        return
+      }
+      dragAxisRef.current =
+        Math.abs(deltaX) > Math.abs(deltaY) ? 'horizontal' : 'vertical'
+    }
+
+    if (dragAxisRef.current === 'vertical') {
+      setDragOffsetX((prev) => (prev !== 0 ? 0 : prev))
+      return
+    }
+
     setDragOffsetX(deltaX)
   }
 
@@ -224,10 +251,14 @@ export function ImgsCarousel({ images = [], gap = 15 }) {
 
     const deltaX = e.clientX - dragStartClientXRef.current
     const swipeThresholdPx = 45
+    const axis = dragAxisRef.current
 
     setIsDragging(false)
     setDragOffsetX(0)
+    dragAxisRef.current = null
 
+    // Only change slide after an intentional horizontal swipe.
+    if (axis !== 'horizontal') return
     if (Math.abs(deltaX) < swipeThresholdPx) return
     if (deltaX < 0) goNext()
     else goPrev()

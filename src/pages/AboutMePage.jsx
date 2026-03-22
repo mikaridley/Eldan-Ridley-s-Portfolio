@@ -7,7 +7,6 @@ import eldanImg6 from '../assets/imgs/eldan6.png'
 import eldanImg7 from '../assets/imgs/eldan7.png'
 import eldanImg8 from '../assets/imgs/eldan8.png'
 import eldanImg9 from '../assets/imgs/eldan9.png'
-import { AppHeader } from '../cmps/AppHeader'
 import { ImgsCarousel } from '../cmps/ImgsCarousel'
 
 const CAROUSEL_IMAGES = [
@@ -40,7 +39,7 @@ export function AboutMePage() {
         <img src={eldanImg2} alt="Eldan" className="eldan-img-2"/>
 
         <div className="about-me-page-carousel imgs-carousel-wrapper">
-          <ImgsCarousel images={CAROUSEL_IMAGES} />
+          <ImgsCarousel images={CAROUSEL_IMAGES} gap={60}/>
         </div>
       </section>
     </div>

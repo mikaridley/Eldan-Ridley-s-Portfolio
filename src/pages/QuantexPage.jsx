@@ -242,7 +242,7 @@ export function QuantexPage() {
 
       {QUANTEX_CAROUSEL_IMAGES.length > 0 && (
         <section className="quantex-page-carousel imgs-carousel-wrapper">
-          <ImgsCarousel images={QUANTEX_CAROUSEL_IMAGES} gap={15} />
+          <ImgsCarousel images={QUANTEX_CAROUSEL_IMAGES} />
         </section>
       )}
 
@@ -465,7 +465,7 @@ export function QuantexPage() {
         </p>
         <div className="design-wireframes-carousel imgs-carousel-wrapper">
           {LOW_WIREFRAMES_CAROUSEL_IMAGES.length > 0 ? (
-            <ImgsCarousel images={LOW_WIREFRAMES_CAROUSEL_IMAGES} gap={15} />
+            <ImgsCarousel images={LOW_WIREFRAMES_CAROUSEL_IMAGES}/>
           ) : (
             <p className="design-wireframes-carousel-placeholder">
               Add wireframe images to{" "}
@@ -729,7 +729,7 @@ export function QuantexPage() {
 
         {COMPUTER_CAROUSEL_IMAGES.length > 0 && (
           <div className="design-hifi-computer-carousel imgs-carousel-wrapper">
-            <ImgsCarousel images={COMPUTER_CAROUSEL_IMAGES} gap={15} />
+            <ImgsCarousel images={COMPUTER_CAROUSEL_IMAGES} />
           </div>
         )}
 
