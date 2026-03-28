@@ -25,7 +25,7 @@
 
   .projects{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 5rem;
     margin-block-end:20rem;
@@ -59,7 +59,7 @@
       }
     }
 
-    .home-project-quntex {
+    .home-project {
       display: grid;
       grid-template-rows: auto auto 1fr;
 
@@ -84,49 +84,6 @@
         }
       }
     }
-
-    .home-project-kindred {
-      display: grid;
-      grid-template-rows: auto auto 1fr;
-
-      .home-project-link {
-        cursor: pointer;
-      }
-  
-      .home-project-img {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        cursor: pointer;
-        grid-area: 1 / 1;
-      }
-
-      .home-project-img--bg {
-        z-index: 0;
-      }
-
-      .home-project-img--fg {
-        z-index: 1;
-      }
-  
-      .home-project-title {
-        font-weight: 700;
-        color: var(--dark-grey);
-        margin: 1.5rem 0 0.5rem 0;
-      }
-  
-      .home-project-desc {
-        color: var(--main-txt);
-        margin: 0;
-        max-width: 26rem;
-  
-        & span {
-          color:var(--dark-grey);
-        }
-      }
-    }
-
   }
 }
 

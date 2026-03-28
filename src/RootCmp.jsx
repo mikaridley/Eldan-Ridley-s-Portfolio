@@ -4,6 +4,7 @@ import { HomePage } from './pages/HomePage'
 import { QuantexPage } from './pages/QuantexPage'
 import { KindredPage } from './pages/KindredPage'
 import { AboutMePage } from './pages/AboutMePage'
+import { EfficasafePage } from './pages/EfficasafePage'
 import { AppHeader } from './cmps/AppHeader'
 import { AppFooter } from './cmps/AppFooter'
 import { ScrollToTop } from './cmps/ScrollToTop'
@@ -14,7 +15,8 @@ export function RootCmp() {
   const isProjectPage = pathname === '/quantex' || pathname === '/kindred'
   const isQuantex = pathname === '/quantex'
   const isKindred = pathname === '/kindred'
-  const isHomeOrAboutMe = pathname === '/' || pathname === '/home' || pathname === '/about-me'
+  const isHomeOrAboutMe =
+    pathname === '/' || pathname === '/home' || pathname === '/about-me' || pathname === '/efficasafe'
 
   return (
     <div className={`main-layout${isProjectPage ? ' on-home' : ''}${isQuantex ? ' on-quantex' : ''}${isKindred ? ' on-kindred' : ''}${isHomeOrAboutMe ? ' header-white-bg' : ''}`}>
@@ -25,6 +27,7 @@ export function RootCmp() {
           <Route path="home" element={<HomePage />} />
           <Route path="/quantex" element={<QuantexPage />} />
           <Route path="/kindred" element={<KindredPage />} />
+          <Route path="/efficasafe" element={<EfficasafePage />} />
           <Route path="about-me" element={<AboutMePage />} />
         </Routes>
       </main>

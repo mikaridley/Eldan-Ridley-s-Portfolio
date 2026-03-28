@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import logo from '../assets/imgs/logo-black.png'
-
+import logo from '../assets/imgs/logo-black.svg'
 export function AppFooter() {
   return (
     <footer className="app-footer">

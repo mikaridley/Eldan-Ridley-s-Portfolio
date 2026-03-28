@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom'
-import { scrollToTopInstant } from '../utils/scrollToTop'
 import '../assets/styles/pages/HomePage.css'
 
 import homePageQuantexBgImg from '../assets/imgs/home-page/Project image - Quantex.png'
 import homePageQuantexImg from '../assets/imgs/home-page/Quantex.png'
 import homePageKindredBgImg from '../assets/imgs/home-page/Project image - Kindred.png'
 import homePageKindredImg from '../assets/imgs/home-page/Kindred.png'
+import homePageEfficasafeBgImg from '../assets/imgs/home-page/Project image - Efficasafe.png'
+import homePageEfficasafeImg from '../assets/imgs/home-page/Efficasafe.png'
+import { ProjectPreview } from '../cmps/projects-cmps/ProjectPreview'
 
 export function HomePage() {
   return (
@@ -19,31 +20,38 @@ export function HomePage() {
       </div>
 
       <section className='projects'>
-      <div className="home-project-kindred">
-          <Link to="/kindred" className="home-project-link" onClick={scrollToTopInstant}>
-            <span className="home-project-media">
-              <img src={homePageKindredBgImg} alt="" className="home-project-img home-project-img--bg" />
-              <img src={homePageKindredImg} alt="Kindred - project preview" className="home-project-img home-project-img--fg" />
-            </span>
-          </Link>
-          <h3 className="home-project-title">Kindred</h3>
-          <p className="home-project-desc">
-            <span>UI/UX Designer (solo project).</span> A community-driven mobile app connecting local food businesses with volunteer couriers to rescue and donate surplus food.
-          </p>
-        </div>
+        <ProjectPreview
+          className="home-project"
+          to="/kindred"
+          bgSrc={homePageKindredBgImg}
+          fgSrc={homePageKindredImg}
+          fgAlt="Kindred - project preview"
+          title="Kindred"
+          rolePrefix="UI/UX Designer (solo project)."
+          description="A community-driven mobile app connecting local food businesses with volunteer couriers to rescue and donate surplus food."
+        />
 
-        <div className="home-project-quntex">
-          <Link to="/quantex" className="home-project-link" onClick={scrollToTopInstant}>
-            <span className="home-project-media">
-              <img src={homePageQuantexBgImg} alt="" className="home-project-img home-project-img--bg" />
-              <img src={homePageQuantexImg} alt="Quantex - laptop and phone" className="home-project-img home-project-img--fg" />
-            </span>
-          </Link>
-          <h3 className="home-project-title">Quantex</h3>
-          <p className="home-project-desc">
-            <span>UI/UX Designer (solo project).</span> A multi-currency wallet for travelers to exchange and spend local currencies worldwide via mobile app and responsive website.
-          </p>
-        </div>
+        <ProjectPreview
+          className="home-project"
+          to="/quantex"
+          bgSrc={homePageQuantexBgImg}
+          fgSrc={homePageQuantexImg}
+          fgAlt="Quantex - laptop and phone"
+          title="Quantex"
+          rolePrefix="UI/UX Designer (solo project)."
+          description="A multi-currency wallet for travelers to exchange and spend local currencies worldwide via mobile app and responsive website."
+        />
+
+        <ProjectPreview
+          className="home-project"
+          to="/efficasafe"
+          bgSrc={homePageEfficasafeBgImg}
+          fgSrc={homePageEfficasafeImg}
+          fgAlt="Efficasafe - project preview"
+          title="Efficasafe"
+          rolePrefix="UI/UX Designer."
+          description="A B2B e-commerce widget enabling shoppers to manage and verify supplement compatibility with their medications in real time during checkout."
+        />
       </section>
     </section>
   )

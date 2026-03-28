@@ -1,0 +1,14 @@
+.efficasafe-page {
+  padding-block: 12rem 6rem;
+
+  .efficasafe-page-title {
+    color: var(--dark-grey);
+    margin: 0 0 1rem 0;
+  }
+
+  .efficasafe-page-placeholder {
+    color: var(--main-txt);
+    margin: 0;
+    line-height: 1.6;
+  }
+}

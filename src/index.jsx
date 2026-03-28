@@ -7,7 +7,7 @@ import * as serviceWorkerRegistration from './services/serviceWorkerRegistration
 import { RootCmp } from './RootCmp'
 
 import './assets/styles/main.css'
-import logoUrl from './assets/imgs/logo.png'
+import logoUrl from './assets/imgs/logo.svg'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
