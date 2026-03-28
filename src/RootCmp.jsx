@@ -15,11 +15,16 @@ export function RootCmp() {
   const isProjectPage = pathname === '/quantex' || pathname === '/kindred'
   const isQuantex = pathname === '/quantex'
   const isKindred = pathname === '/kindred'
+  const normalizedPath = pathname.replace(/\/+$/, '') || '/'
+  const isEfficasafe = normalizedPath === '/efficasafe'
   const isHomeOrAboutMe =
-    pathname === '/' || pathname === '/home' || pathname === '/about-me' || pathname === '/efficasafe'
+    normalizedPath === '/' ||
+    normalizedPath === '/home' ||
+    normalizedPath === '/about-me' ||
+    normalizedPath === '/efficasafe'
 
   return (
-    <div className={`main-layout${isProjectPage ? ' on-home' : ''}${isQuantex ? ' on-quantex' : ''}${isKindred ? ' on-kindred' : ''}${isHomeOrAboutMe ? ' header-white-bg' : ''}`}>
+    <div className={`main-layout${isProjectPage ? ' on-home' : ''}${isQuantex ? ' on-quantex' : ''}${isKindred ? ' on-kindred' : ''}${isEfficasafe ? ' on-efficasafe' : ''}${isHomeOrAboutMe ? ' header-white-bg' : ''}`}>
       <AppHeader />
       <main>
         <Routes>

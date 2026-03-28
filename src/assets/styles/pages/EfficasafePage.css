@@ -1,14 +1,127 @@
 .efficasafe-page {
   padding-block: 12rem 6rem;
 
-  .efficasafe-page-title {
-    color: var(--dark-grey);
-    margin: 0 0 1rem 0;
+  .efficasafe-line-bg {
+    grid-column: 1/-1;
+    margin-block-end: var(--header-to-subheader);
   }
 
-  .efficasafe-page-placeholder {
-    color: var(--main-txt);
-    margin: 0;
-    line-height: 1.6;
+  .efficasafe-openning {
+    display: grid;
+    column-gap: 8rem;
+    margin-block-end: var(--header-to-subheader);
+
+    .efficasafe-page-header {
+      .efficasafe-page-title {
+        color: var(--dark-grey);
+        margin-block-end: var(--subheader-to-paragraph);
+      }
+
+      .efficasafe-page-subtitle {
+        color: var(--dark-grey);
+        margin-block-end: var(--subheader-to-paragraph);
+      }
+
+      .efficasafe-page-placeholder {
+        color: var(--dark-grey);
+        margin-block-end: var(--header-to-subheader);
+        text-wrap:wrap ;
+      }
+    }
+
+    .overview {
+      grid-column: 1;
+      display: grid;
+      row-gap: var(--subheader-to-paragraph);
+
+      h4 {
+        color: var(--dark-grey);
+        align-self: end;
+      }
+
+      p {
+        max-width: 55rem;
+        .p-gap {
+          display: block;
+          height: 2rem;
+        }
+      }
+    }
+
+    .efficasafe-page-img {
+      grid-column: 2;
+      grid-row: 1 / 3;
+    }
+  }
+
+  .problem-solution {
+    display: grid;
+    column-gap: 14rem;
+
+    .problem-heading {
+      color: var(--dark-grey);
+      margin-block-end: var(--subheader-to-paragraph);
+    }
+
+    .solution-heading {
+      grid-column: 2;
+      grid-row: 1;
+      margin-block-end: var(--subheader-to-paragraph);
+      color: var(--dark-grey);
+    }
+  }
+
+  .project-details {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-block-start: var(--beginning-of-section);
+    margin-block-end:var(--unrelated-elements-space);
+    justify-items: start;
+    max-width: 53rem;
+    column-gap:7.5rem;
+
+    .project-details-col {
+      .project-details-heading {
+        color: var(--dark-grey);
+        margin-block-end: 1rem;
+      }
+
+      .project-details-list {
+        list-style-position: inside;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .efficasafe-step-section {
+    margin-block-end: var(--unrelated-elements-space);
+
+    .efficasafe-step-section-title {
+      color: var(--dark-grey);
+      margin: 0 0 var(--subheader-to-paragraph) 0;
+    }
+
+    .efficasafe-step-section-p {
+      color: var(--main-txt);
+      line-height: 1.6;
+      max-width: 55rem;
+      margin: 0;
+    }
+  }
+
+  .efficasafe-step-section--last {
+    margin-block-end: var(--end-of-section);
+  }
+
+  .stepper-header-container .stepper-header {
+    background-image: url("../../imgs/efficasafe/stepper/stepper header.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+
+  .stepper-header-container .stepper-header .stepper-header-title {
+    color: var(--light-txt);
   }
 }

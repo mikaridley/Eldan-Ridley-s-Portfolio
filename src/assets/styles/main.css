@@ -13,6 +13,7 @@
 @import 'pages/KindredPage.css';
 @import 'pages/EfficasafePage.css';
 @import 'pages/AboutMePage.css';
+@import 'pages/SharedCmps.css';
 
 /* cmps */
 @import 'cmps/AppHeader.css';
