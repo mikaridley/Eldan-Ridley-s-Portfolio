@@ -146,7 +146,7 @@
   }
 }
 
-/* Journey / IA / style-guide blocks: IdeationStrategy + Kindred sections outside it */
+/* Journey / IA blocks: IdeationStrategy (Kindred + EfficaSafe) + Kindred-only sections (e.g. style guide) */
 .ideation-strategy .user-journey-mapping,
 .kindred-page .user-journey-mapping {
   max-width: 75rem;
@@ -178,4 +178,30 @@
 .ideation-strategy .user-journey-mapping + .user-journey-mapping,
 .kindred-page .user-journey-mapping + .user-journey-mapping {
   margin-block-end: 0;
+}
+
+/* EfficaSafe IdeationStrategy — IA / sitemap: text + diagram side by side */
+.ideation-strategy .user-journey-mapping.user-journey-mapping--efficasafe-ia {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 0 4rem;
+  align-items: start;
+
+  .user-journey-mapping-heading {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-block-end: var(--header-to-subheader);
+  }
+
+  .user-journey-mapping-p {
+    grid-column: 1;
+    grid-row: 2;
+    margin-block-end: 0;
+  }
+
+  .user-journey-mapping-fig {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+  }
 }

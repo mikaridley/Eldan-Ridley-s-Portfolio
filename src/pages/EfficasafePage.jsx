@@ -215,6 +215,7 @@ export function EfficasafePage() {
       </div>
 
       <IdeationStrategy
+        mappingSectionClassName="user-journey-mapping--efficasafe"
         howMightWeIntro={
           <>
             The research phase uncovered clear friction points, particularly
@@ -267,7 +268,7 @@ export function EfficasafePage() {
             id: "efficasafe-sitemap",
             headingId: "efficasafe-sitemap-heading",
             heading: "Information architecture (IA)",
-            subtitle: "",
+            sectionClassName: "user-journey-mapping--efficasafe-ia",
             body: (
               <>
                 I designed the Information Architecture to transform complex

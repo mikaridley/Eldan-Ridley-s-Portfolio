@@ -477,6 +477,26 @@
     }
   }
 
+  .ideation-strategy .user-journey-mapping.user-journey-mapping--efficasafe-ia {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    .user-journey-mapping-heading {
+      margin: 0 0 2.5rem 0;
+    }
+
+    .user-journey-mapping-p {
+      grid-column: 1;
+      grid-row: 2;
+      margin: 0 0 2.5rem 0;
+    }
+
+    .user-journey-mapping-fig {
+      grid-column: 1;
+      grid-row: 3;
+    }
+  }
+
   .kindred-page {
     .kindred-opening-bg {
       grid-column: 1/-1;

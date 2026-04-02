@@ -6,7 +6,18 @@ export function IdeationStrategy({
   howMightWeIntro,
   howMightWeItems = [],
   mappingSections = [],
+  mappingSectionClassName,
 }) {
+  function mappingSectionClassNames(section) {
+    return [
+      'user-journey-mapping',
+      mappingSectionClassName,
+      section.sectionClassName,
+    ]
+      .filter(Boolean)
+      .join(' ')
+  }
+
   return (
     <div className="ideation-strategy">
       <section
@@ -36,7 +47,7 @@ export function IdeationStrategy({
       {mappingSections.map((section, index) => (
         <section
           key={section.id ?? index}
-          className="user-journey-mapping"
+          className={mappingSectionClassNames(section)}
           aria-labelledby={section.headingId}
         >
           <h3
@@ -45,7 +56,12 @@ export function IdeationStrategy({
           >
             {section.heading}
           </h3>
-          <h4 className="user-journey-mapping-subtitle">{section.subtitle}</h4>
+          {section.subtitle != null &&
+          String(section.subtitle).trim() !== '' ? (
+            <h4 className="user-journey-mapping-subtitle">
+              {section.subtitle}
+            </h4>
+          ) : null}
           <div className="user-journey-mapping-p">{section.body}</div>
           {section.imageSrc ? (
             <div className="user-journey-mapping-fig">
