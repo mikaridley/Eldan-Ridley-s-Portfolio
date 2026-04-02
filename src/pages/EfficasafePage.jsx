@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import efficasafeLineBg from "../assets/imgs/efficasafe/line bg.png";
-import efficasafeImg from "../assets/imgs/efficasafe/efficasafe preview.svg";
+import { efficasafeMedia } from "../config/efficasafeMedia";
 import { Stepper } from "../cmps/Stepper";
 import { StepperHeader } from "../cmps/StepperHeader";
 
@@ -54,9 +53,14 @@ export function EfficasafePage() {
   }
 
   return (
-    <section className="efficasafe-page projects-layout">
+    <section
+      className="efficasafe-page projects-layout"
+      style={{
+        '--efficasafe-stepper-header-bg': `url("${String(efficasafeMedia.stepperHeader)}")`,
+      }}
+    >
       <div className="efficasafe-line-bg">
-        <img src={efficasafeLineBg} alt="Efficasafe line background" />
+        <img src={efficasafeMedia.lineBg} alt="Efficasafe line background" />
       </div>
 
       <section className="efficasafe-openning">
@@ -93,7 +97,7 @@ export function EfficasafePage() {
         </section>
 
         <img
-          src={efficasafeImg}
+          src={efficasafeMedia.preview}
           alt="Efficasafe page image"
           className="efficasafe-page-img"
         />
