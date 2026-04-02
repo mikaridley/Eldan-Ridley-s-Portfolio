@@ -331,21 +331,33 @@ export function EfficasafePage() {
         <h4 className="design-wireframes-subtitle after">
           After
         </h4>
-        <img
-          src={efficasafeMedia.iterationCompareBefore}
-          alt="EfficaSafe iteration — before (screen 1)"
-          className="above-the-fold-img-1"
-        />
-        <img
-          src={efficasafeMedia.iterationCompareBefore}
-          alt="EfficaSafe iteration — before (screen 2)"
-          className="above-the-fold-img-2"
-        />
-        <img
-          src={efficasafeMedia.iterationCompareAfter}
-          alt="EfficaSafe iteration — after"
-          className="above-the-fold-img-3"
-        />
+        <div
+          className="efficasafe-iteration-compare"
+          role="group"
+          aria-label="Before and after: two steps combined into one"
+        >
+          <img
+            src={efficasafeMedia.iterationCompareBefore}
+            alt="EfficaSafe iteration — before (screen 1)"
+            className="efficasafe-iteration-img"
+          />
+          <span className="efficasafe-iteration-op" aria-hidden="true">
+            +
+          </span>
+          <img
+            src={efficasafeMedia.iterationCompareBefore}
+            alt="EfficaSafe iteration — before (screen 2)"
+            className="efficasafe-iteration-img"
+          />
+          <span className="efficasafe-iteration-op" aria-hidden="true">
+            =
+          </span>
+          <img
+            src={efficasafeMedia.iterationCompareAfter}
+            alt="EfficaSafe iteration — after"
+            className="efficasafe-iteration-img"
+          />
+        </div>
       </section>
     </section>
   );
