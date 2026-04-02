@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Stepper } from "../cmps/Stepper";
 import { StepperHeader } from "../cmps/StepperHeader";
 import { ImgsCarousel } from "../cmps/ImgsCarousel";
+import { TargetAudience } from "../cmps/projects-cmps/TargetAudience";
 import appScreen from "../assets/imgs/quantex/first-page.png";
 import appGif from "../assets/imgs/quantex/app-gif.gif";
 
@@ -256,72 +257,40 @@ export function QuantexPage() {
         <StepperHeader number={1} word="Research" />
       </div>
 
-      <section
-        className="research-personas"
-        aria-labelledby="research-personas-heading"
-      >
-        <h3
-          id="research-personas-heading"
-          className="research-personas-heading"
-        >
-          Defining the target audience
-        </h3>
-        <h4 className="research-personas-subtitle">Personas</h4>
-        <p className="research-personas-intro">
-          These personas represent the core user groups identified during the
-          research phase. They served as a guide for every design decision,
-          helping me build a solution that simplifies the currency exchange
-          process for everyone, from busy parents to users with specific
-          accessibility requirements.
-        </p>
-        <div className="research-personas-imgs">
-          {STEPPER_PERSONA_IMAGES.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt=""
-              className="research-personas-img"
-            />
-          ))}
-        </div>
-      </section>
-
-      <section
-        className="research-empathy"
-        aria-labelledby="research-empathy-heading"
-      >
-        <h3 id="research-empathy-heading" className="research-empathy-heading">
-          User research & synthesis
-        </h3>
-        <h4 className="research-empathy-subtitle">Empathy map</h4>
-        <div className="research-empathy-text">
-          <p className="research-empathy-p darker">
-            The key insight from this map was that users didn&apos;t just want
-            better rates - they wanted their time back.
-          </p>
-          <p className="research-empathy-p">
-            I created this empathy map to align the product&apos;s core features
-            with the real-world needs of my users.
-          </p>
-          <p className="research-empathy-p">
-            By mapping out what travellers say, think, do, and feel, I
-            identified a clear demand for a digital-first solution that removes
-            the &apos;chore&apos; of visiting a physical exchange centre. This
-            allowed me to focus on creating a &apos;one-click&apos; exchange
-            experience that feels accessible to everyone, regardless of their
-            tech experience.
-          </p>
-        </div>
-        {EMPATHY_MAP_IMG && (
-          <div className="research-empathy-fig">
-            <img
-              src={EMPATHY_MAP_IMG}
-              alt="Empathy map for Robert - says, thinks, does, feels"
-              className="research-empathy-img"
-            />
-          </div>
-        )}
-      </section>
+      <TargetAudience
+        personaImages={STEPPER_PERSONA_IMAGES}
+        personasIntro={
+          <>
+            These personas represent the core user groups identified during the
+            research phase. They served as a guide for every design decision,
+            helping me build a solution that simplifies the currency exchange
+            process for everyone, from busy parents to users with specific
+            accessibility requirements.
+          </>
+        }
+        empathyChildren={
+          <>
+            <p className="research-empathy-p darker">
+              The key insight from this map was that users didn&apos;t just want
+              better rates - they wanted their time back.
+            </p>
+            <p className="research-empathy-p">
+              I created this empathy map to align the product&apos;s core features
+              with the real-world needs of my users.
+            </p>
+            <p className="research-empathy-p">
+              By mapping out what travellers say, think, do, and feel, I
+              identified a clear demand for a digital-first solution that removes
+              the &apos;chore&apos; of visiting a physical exchange centre. This
+              allowed me to focus on creating a &apos;one-click&apos; exchange
+              experience that feels accessible to everyone, regardless of their
+              tech experience.
+            </p>
+          </>
+        }
+        empathyMapSrc={EMPATHY_MAP_IMG}
+        empathyMapAlt="Empathy map for Robert - says, thinks, does, feels"
+      />
 
       <div ref={step2Ref} className="stepper-header-container">
         <StepperHeader number={2} word="Ideation" />

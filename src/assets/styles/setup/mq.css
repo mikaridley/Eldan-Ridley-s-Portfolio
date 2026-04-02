@@ -375,6 +375,65 @@
     }
   }
 
+  /* TargetAudience — one mobile layout for Kindred, Quantex, etc. */
+  .target-audience {
+    .research-personas {
+      padding-block-end: 0;
+      margin-block-end: var(--unrelated-elements-space);
+
+      .research-personas-heading {
+        margin: 0 0 2.5rem 0;
+      }
+
+      .research-personas-subtitle {
+        margin: 0 0 0.5rem 0;
+      }
+
+      .research-personas-intro {
+        margin: 0 0 2.5rem 0;
+      }
+
+      .research-personas-imgs {
+        grid-template-columns: 1fr;
+        gap: var(--related-elements-space);
+      }
+    }
+
+    .research-empathy {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+
+      .research-empathy-heading {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0 0 2.5rem 0;
+      }
+
+      .research-empathy-subtitle {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .research-empathy-text {
+        grid-column: 1;
+        grid-row: 3;
+        margin: 0 0 2.5rem 0;
+
+        .research-empathy-p {
+          grid-column: 1;
+          grid-row: 4;
+        }
+      }
+
+      .research-empathy-fig {
+        grid-column: 1;
+        grid-row: 5;
+      }
+    }
+  }
+
   .kindred-page {
     .kindred-opening-bg {
       grid-column: 1/-1;
@@ -457,62 +516,6 @@
             line-height: 1;
           }
         }
-      }
-    }
-
-    .research-personas {
-      padding-block-end: 0rem;
-      margin-block-end: 6.25rem;
-
-      .research-personas-heading {
-        margin: 0 0 2.5rem 0;
-      }
-
-      .research-personas-subtitle {
-        margin: 0 0 0.5rem 0;
-      }
-
-      .research-personas-intro {
-        margin: 0 0 2.5rem 0;
-      }
-
-      .research-personas-imgs {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-    }
-
-    .research-empathy {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0 0rem;
-
-      .research-empathy-heading {
-        grid-column: 1;
-        grid-row: 1;
-        margin: 0 0 2.5rem 0;
-      }
-
-      .research-empathy-subtitle {
-        grid-column: 1;
-        grid-row: 2;
-        margin: 0 0 0.5rem 0;
-      }
-
-      .research-empathy-text {
-        grid-column: 1;
-        grid-row: 3;
-        margin: 0 0 2.5rem 0;
-
-        .research-empathy-p {
-          grid-column: 1;
-          grid-row: 4;
-        }
-      }
-
-      .research-empathy-fig {
-        grid-column: 1;
-        grid-row: 5;
       }
     }
 
@@ -759,28 +762,6 @@
             line-height: 1;
           }
         }
-      }
-    }
-
-    .research-personas {
-      margin-block-end: var(--unrelated-elements-space);
-
-      .research-personas-imgs {
-        grid-template-columns: 1fr;
-        gap: var(--related-elements-space);
-      }
-    }
-
-    .research-empathy {
-      grid-template-columns: 1fr;
-
-      .research-empathy-heading {
-        grid-column: 1;
-      }
-
-      .research-empathy-fig {
-        grid-column: 1;
-        grid-row: 4;
       }
     }
 

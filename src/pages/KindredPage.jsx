@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Stepper } from "../cmps/Stepper";
 import { StepperHeader } from "../cmps/StepperHeader";
 import { ImgsCarousel } from "../cmps/ImgsCarousel";
+import { TargetAudience } from "../cmps/projects-cmps/TargetAudience";
 import appScreen from "../assets/imgs/kindred/Hand showing Kindred app.png";
 import kindredAppGif from "../assets/imgs/kindred/stepper/app-gif.gif";
 
@@ -215,67 +216,33 @@ export function KindredPage() {
         <StepperHeader number={1} word="Research & discovery" />
       </div>
 
-      <section
-        className="research-personas"
-        aria-labelledby="research-personas-heading"
-      >
-        <h3
-          id="research-personas-heading"
-          className="research-personas-heading"
-        >
-          Defining the target audience
-        </h3>
-        <h4 className="research-personas-subtitle">Personas</h4>
-        <p className="research-personas-intro">
-          These personas represent the primary user groups identified during the
-          research phase, focusing on the real-world environments where the app
-          would be used. They served as a guide for every design decision,
-          helping me build a solution that balances the high-pressure needs of
-          busy kitchen managers with the logistical requirements of volunteer
-          couriers.
-        </p>
-        <div className="research-personas-imgs">
-          {KINDRED_PERSONA_IMAGES.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt=""
-              className="research-personas-img"
-            />
-          ))}
-        </div>
-      </section>
-
-      <section
-        className="research-empathy"
-        aria-labelledby="research-empathy-heading"
-      >
-        <h3 id="research-empathy-heading" className="research-empathy-heading">
-          User research & synthesis
-        </h3>
-        <h4 className="research-empathy-subtitle">Empathy map</h4>
-        <div className="research-empathy-text">
+      <TargetAudience
+        personaImages={KINDRED_PERSONA_IMAGES}
+        personasIntro={
+          <>
+            These personas represent the primary user groups identified during the
+            research phase, focusing on the real-world environments where the app
+            would be used. They served as a guide for every design decision,
+            helping me build a solution that balances the high-pressure needs of
+            busy kitchen managers with the logistical requirements of volunteer
+            couriers.
+          </>
+        }
+        empathyChildren={
           <p className="research-empathy-p">
             The empathy map highlighted that restaurant staff need an extremely
-            fast process that doesn't disrupt their work.
+            fast process that doesn&apos;t disrupt their work.
             <br />
             By analysing what they said, thought, did, and felt, I identified a
-            demand for a donation process that removes the logistical 'chore' of
+            demand for a donation process that removes the logistical &apos;chore&apos; of
             arranging pickups. This allowed me to focus on creating a fast,
             transparent experience that ensures staff can manage surplus food
             without being distracted from their primary duties.
           </p>
-        </div>
-        {EMPATHY_MAP_IMG && (
-          <div className="research-empathy-fig">
-            <img
-              src={EMPATHY_MAP_IMG}
-              alt="Empathy map for Robert - says, thinks, does, feels"
-              className="research-empathy-img"
-            />
-          </div>
-        )}
-      </section>
+        }
+        empathyMapSrc={EMPATHY_MAP_IMG}
+        empathyMapAlt="Empathy map for Robert - says, thinks, does, feels"
+      />
 
       <div ref={step2Ref} className="stepper-header-container">
         <StepperHeader number={2} word="Ideation & strategy" />
