@@ -2,6 +2,12 @@ import { useState, useRef, useEffect } from "react";
 import { efficasafeMedia } from "../config/efficasafeMedia";
 import { Stepper } from "../cmps/Stepper";
 import { StepperHeader } from "../cmps/StepperHeader";
+import { TargetAudience } from "../cmps/projects-cmps/TargetAudience";
+
+const EFFICASAFE_PERSONA_IMAGES = [
+  efficasafeMedia.personaMargret,
+  efficasafeMedia.personaDavid,
+];
 
 const STEP_HEADER_OFFSET = 120;
 
@@ -167,6 +173,39 @@ export function EfficasafePage() {
       <div ref={step1Ref} className="stepper-header-container">
         <StepperHeader number={1} word="Research & discovery" />
       </div>
+
+      <TargetAudience
+        personaImages={EFFICASAFE_PERSONA_IMAGES}
+        personasIntro={
+          <>
+            These personas represent the primary user groups identified during
+            the research phase, focusing on the real-world environments where the
+            app would be used. They served as a guide for every design decision,
+            helping me build a solution that balances the need for reliable
+            clinical guidance with the pace and expectations of online checkout.
+          </>
+        }
+        empathyChildren={
+          <>
+            <p className="research-empathy-p darker">
+              The empathy map revealed a tension between the need for clinical
+              certainty and a fast shopping flow. By analysing user thoughts and
+              behaviours, I identified a demand for a tool that acts as a
+              medical authority without disrupting the e-commerce experience.
+            </p>
+            <p className="research-empathy-p">
+              This analysis showed that users are jarred by layout shifts and
+              annoyed by extra clicks. These insights led me to focus on
+              stability and transparency. I ensured that critical data, such as
+              caution alerts and references, is accessible in seconds. This
+              prevents the user from feeling like they have left their primary
+              task of completing a purchase.
+            </p>
+          </>
+        }
+        empathyMapSrc={efficasafeMedia.empathyMap}
+        empathyMapAlt="Empathy map — says, thinks, does, feels"
+      />
 
     </section>
   );

@@ -6,6 +6,9 @@
  *   VITE_EFFICASAFE_LINE_BG=https://res.cloudinary.com/your-cloud/image/upload/v123/efficasafe/line-bg.png
  *   VITE_EFFICASAFE_PREVIEW=https://res.cloudinary.com/your-cloud/image/upload/v123/efficasafe/preview.svg
  *   VITE_EFFICASAFE_STEPPER_HEADER=https://res.cloudinary.com/your-cloud/image/upload/v123/efficasafe/stepper-header.png
+ *   VITE_EFFICASAFE_PERSONA_MARGRET=...
+ *   VITE_EFFICASAFE_PERSONA_DAVID=...
+ *   VITE_EFFICASAFE_EMPATHY_MAP=...
  */
 export const efficasafeMedia = {
   lineBg:
@@ -17,4 +20,13 @@ export const efficasafeMedia = {
   stepperHeader:
     import.meta.env.VITE_EFFICASAFE_STEPPER_HEADER ||
     'https://res.cloudinary.com/dvqvqadww/image/upload/v1775132529/stepper_header_a6pm9g.png',
+  personaMargret:
+    import.meta.env.VITE_EFFICASAFE_PERSONA_MARGRET ||
+    'https://res.cloudinary.com/dvqvqadww/image/upload/v1775136735/Persona_-_Margret_mbyarp.svg',
+  personaDavid:
+    import.meta.env.VITE_EFFICASAFE_PERSONA_DAVID ||
+    'https://res.cloudinary.com/dvqvqadww/image/upload/v1775136745/Persona_-_David_ewpyzb.svg',
+  empathyMap:
+    import.meta.env.VITE_EFFICASAFE_EMPATHY_MAP ||
+    'https://res.cloudinary.com/dvqvqadww/image/upload/v1775136744/Empathy_map_plm8zm.svg',
 }
