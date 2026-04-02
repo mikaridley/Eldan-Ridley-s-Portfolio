@@ -187,13 +187,14 @@ export function EfficasafePage() {
         }
         empathyChildren={
           <>
-            <p className="research-empathy-p darker">
+            <p className="research-empathy-p">
               The empathy map revealed a tension between the need for clinical
               certainty and a fast shopping flow. By analysing user thoughts and
               behaviours, I identified a demand for a tool that acts as a
               medical authority without disrupting the e-commerce experience.
             </p>
             <p className="research-empathy-p">
+            <br/>
               This analysis showed that users are jarred by layout shifts and
               annoyed by extra clicks. These insights led me to focus on
               stability and transparency. I ensured that critical data, such as
@@ -206,6 +207,10 @@ export function EfficasafePage() {
         empathyMapSrc={efficasafeMedia.empathyMap}
         empathyMapAlt="Empathy map — says, thinks, does, feels"
       />
+
+      <div ref={step2Ref} className="stepper-header-container">
+        <StepperHeader number={2} word="Ideation & strategy" />
+      </div>
 
     </section>
   );
