@@ -434,6 +434,49 @@
     }
   }
 
+  .ideation-strategy {
+    .challenge {
+      padding-block-end: 3.25rem;
+
+      .challenge-heading {
+        margin: 0 0 2.5rem 0;
+      }
+
+      .challenge-block {
+        margin-block-end: 2.5rem;
+
+        .challenge-block-title {
+          margin: 0 0 0.5rem 0;
+        }
+
+        .challenge-block-p {
+          margin: 0 0 0.5rem 0;
+        }
+
+        .challenge-hmw-list {
+          padding-left: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .ideation-strategy .user-journey-mapping,
+  .kindred-page .user-journey-mapping {
+    margin-block-end: 6.25rem;
+
+    .user-journey-mapping-heading {
+      margin: 0 0 2.5rem 0;
+    }
+
+    .user-journey-mapping-subtitle {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .user-journey-mapping-p {
+      margin: 0 0 2.5rem 0;
+    }
+  }
+
   .kindred-page {
     .kindred-opening-bg {
       grid-column: 1/-1;
@@ -516,46 +559,6 @@
             line-height: 1;
           }
         }
-      }
-    }
-
-    .challenge {
-      padding-block-end: 3.25rem;
-
-      .challenge-heading {
-        margin: 0 0 2.5rem 0;
-      }
-
-      .challenge-block {
-        margin-block-end: 2.5rem;
-
-        .challenge-block-title {
-          margin: 0 0 0.5rem 0;
-        }
-
-        .challenge-block-p {
-          margin: 0 0 0.5rem 0;
-        }
-
-        .challenge-hmw-list {
-          padding-left: 1.5rem;
-        }
-      }
-    }
-
-    .user-journey-mapping {
-      margin-block-end: 6.25rem;
-
-      .user-journey-mapping-heading {
-        margin: 0 0 2.5rem 0;
-      }
-
-      .user-journey-mapping-subtitle {
-        margin: 0 0 0.5rem 0;
-      }
-
-      .user-journey-mapping-p {
-        margin: 0 0 2.5rem 0;
       }
     }
 

@@ -3,6 +3,7 @@ import { efficasafeMedia } from "../config/efficasafeMedia";
 import { Stepper } from "../cmps/Stepper";
 import { StepperHeader } from "../cmps/StepperHeader";
 import { TargetAudience } from "../cmps/projects-cmps/TargetAudience";
+import { IdeationStrategy } from "../cmps/projects-cmps/IdeationStrategy";
 
 const EFFICASAFE_PERSONA_IMAGES = [
   efficasafeMedia.personaMargret,
@@ -211,6 +212,69 @@ export function EfficasafePage() {
       <div ref={step2Ref} className="stepper-header-container">
         <StepperHeader number={2} word="Ideation & strategy" />
       </div>
+
+      <IdeationStrategy
+        howMightWeIntro={
+          <>
+            I translated research and persona pain points into &apos;How Might
+            We&apos; statements focused on the shopper managing medications and
+            supplements during checkout. This reframed clinical and UX
+            constraints as design opportunities: keep the flow fast, make
+            safety visible, and avoid breaking trust at the moment of purchase.
+          </>
+        }
+        howMightWeItems={[
+          {
+            lead: 'For Margret (busy parent):',
+            text: 'How might we surface interaction risk without turning checkout into a medical questionnaire?',
+          },
+          {
+            lead: 'For David (health-conscious shopper):',
+            text: "How might we give evidence-backed reassurance in seconds so he never doubts the widget's authority?",
+          },
+          {
+            lead: 'For the purchase flow:',
+            text: 'How might we keep users oriented in the cart so critical cautions never feel like a detour?',
+          },
+        ]}
+        mappingSections={[
+          {
+            id: 'efficasafe-journey',
+            headingId: 'efficasafe-user-journey-heading',
+            heading: 'Mapping the experience',
+            subtitle: 'User journey map',
+            body: (
+              <>
+                I mapped the journey from reviewing a supplement in the cart
+                through adding medications, running the compatibility check, and
+                completing checkout. It highlighted where hesitation and
+                cognitive load spike—especially when results conflict with the
+                user’s intent to buy—and informed how I prioritised clarity and
+                stability in the UI.
+              </>
+            ),
+            imageSrc: efficasafeMedia.userJourneyMap || undefined,
+            imageAlt: 'EfficaSafe user journey map',
+          },
+          {
+            id: 'efficasafe-sitemap',
+            headingId: 'efficasafe-sitemap-heading',
+            heading: 'Information architecture',
+            subtitle: 'Sitemap',
+            body: (
+              <>
+                I structured the widget so users can manage medications, view
+                tiered compatibility results, and access references without
+                leaving the checkout context. The goal was a shallow hierarchy
+                with a single clear path back to the cart, reducing extra clicks
+                and layout shifts.
+              </>
+            ),
+            imageSrc: efficasafeMedia.sitemap || undefined,
+            imageAlt: 'EfficaSafe sitemap',
+          },
+        ]}
+      />
 
     </section>
   );

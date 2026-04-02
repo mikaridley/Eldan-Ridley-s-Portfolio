@@ -3,6 +3,7 @@ import { Stepper } from "../cmps/Stepper";
 import { StepperHeader } from "../cmps/StepperHeader";
 import { ImgsCarousel } from "../cmps/ImgsCarousel";
 import { TargetAudience } from "../cmps/projects-cmps/TargetAudience";
+import { IdeationStrategy } from "../cmps/projects-cmps/IdeationStrategy";
 import appScreen from "../assets/imgs/kindred/Hand showing Kindred app.png";
 import kindredAppGif from "../assets/imgs/kindred/stepper/app-gif.gif";
 
@@ -248,97 +249,70 @@ export function KindredPage() {
         <StepperHeader number={2} word="Ideation & strategy" />
       </div>
 
-      <section className="challenge" aria-labelledby="challenge">
-        <h3 id="challenge-heading" className="challenge-heading">
-          Defining the challenge
-        </h3>
-
-        <div className="challenge-block">
-          <h4 className="challenge-block-title">How might we</h4>
-          <p className="challenge-block-p">
+      <IdeationStrategy
+        howMightWeIntro={
+          <>
             I translated my research findings and persona pain points into 'How
             Might We' statements, focusing specifically on the unique needs of
             the donor and the volunteer courier. This process allowed me to
             reframe logistical hurdles as design opportunities, ensuring the
             solution prioritised speed for businesses and flexibility for those
             on the move.
-          </p>
-          <ul className="challenge-hmw-list">
-            <li>
-              <span>For the Donor (Marco):</span> How might we make logging a
-              food donation feel as effortless as possible?{" "}
-            </li>
-            <li>
-              <span>For the Courier (Sarah):</span> How might we provide
-              'at-a-glance' mission details so volunteers can navigate safely
-              while on the move?
-            </li>
-            <li>
-              <span>For the Handover:</span> How might we create a seamless,
-              'grab-and-go' experience that eliminates waiting time for both
-              parties?
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section
-        className="user-journey-mapping"
-        aria-labelledby="user-journey-mapping-heading"
-      >
-        <h3
-          id="user-journey-mapping-heading"
-          className="user-journey-mapping-heading"
-        >
-          Mapping the experience
-        </h3>
-        <h4 className="user-journey-mapping-subtitle">User journey map</h4>
-        <p className="user-journey-mapping-p">
-          To deeply understand Marco's experience, I mapped his journey from
-          identifying food waste to completing a donation. This allowed me to
-          pinpoint exactly when he feels the most pressure - during the log
-          process - and highlighted the need for a 'grab-and-go' solution that
-          respects his busy schedule.
-        </p>
-        {USER_JOURNEY_MAP_IMG && (
-          <div className="user-journey-mapping-fig">
-            <img
-              src={USER_JOURNEY_MAP_IMG}
-              alt="Kindred user journey map"
-              className="user-journey-mapping-img"
-            />
-          </div>
-        )}
-      </section>
-
-      <section
-        className="user-journey-mapping"
-        aria-labelledby="user-journey-mapping-heading"
-      >
-        <h3
-          id="user-journey-mapping-heading"
-          className="user-journey-mapping-heading"
-        >
-          Information architecture
-        </h3>
-        <h4 className="user-journey-mapping-subtitle">Sitemap</h4>
-        <p className="user-journey-mapping-p">
-          I designed the Information Architecture to ensure the donation process
-          is as simplified as possible, directly addressing the need for
-          efficiency during a busy restaurant shift. By prioritising a shallow
-          menu structure and creating a dedicated 'Impact Centre', I focused on
-          making the app easy and quick for the donor to use.
-        </p>
-        {SITE_MAP_IMG && (
-          <div className="user-journey-mapping-fig">
-            <img
-              src={SITE_MAP_IMG}
-              alt="Kindred user journey map"
-              className="user-journey-mapping-img"
-            />
-          </div>
-        )}
-      </section>
+          </>
+        }
+        howMightWeItems={[
+          {
+            lead: 'For the Donor (Marco):',
+            text: "How might we make logging a food donation feel as effortless as possible?",
+          },
+          {
+            lead: 'For the Courier (Sarah):',
+            text: "How might we provide 'at-a-glance' mission details so volunteers can navigate safely while on the move?",
+          },
+          {
+            lead: 'For the Handover:',
+            text: "How might we create a seamless, 'grab-and-go' experience that eliminates waiting time for both parties?",
+          },
+        ]}
+        mappingSections={[
+          {
+            id: 'kindred-journey',
+            headingId: 'kindred-user-journey-heading',
+            heading: 'Mapping the experience',
+            subtitle: 'User journey map',
+            body: (
+              <>
+                To deeply understand Marco&apos;s experience, I mapped his
+                journey from identifying food waste to completing a donation.
+                This allowed me to pinpoint exactly when he feels the most
+                pressure - during the log process - and highlighted the need for
+                a &apos;grab-and-go&apos; solution that respects his busy
+                schedule.
+              </>
+            ),
+            imageSrc: USER_JOURNEY_MAP_IMG,
+            imageAlt: 'Kindred user journey map',
+          },
+          {
+            id: 'kindred-sitemap',
+            headingId: 'kindred-sitemap-heading',
+            heading: 'Information architecture',
+            subtitle: 'Sitemap',
+            body: (
+              <>
+                I designed the Information Architecture to ensure the donation
+                process is as simplified as possible, directly addressing the
+                need for efficiency during a busy restaurant shift. By
+                prioritising a shallow menu structure and creating a dedicated
+                &apos;Impact Centre&apos;, I focused on making the app easy and
+                quick for the donor to use.
+              </>
+            ),
+            imageSrc: SITE_MAP_IMG,
+            imageAlt: 'Kindred sitemap',
+          },
+        ]}
+      />
 
       <div ref={step3Ref} className="stepper-header-container">
         <StepperHeader number={3} word="Design" />
