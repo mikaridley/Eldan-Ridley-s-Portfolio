@@ -11,6 +11,8 @@
  *   VITE_EFFICASAFE_EMPATHY_MAP=...
  *   VITE_EFFICASAFE_USER_JOURNEY_MAP=...
  *   VITE_EFFICASAFE_SITEMAP=...
+ *   VITE_EFFICASAFE_LO_FI_CAROUSEL=https://...,https://...  (comma-separated, optional)
+ *   VITE_EFFICASAFE_ITERATION_BEFORE=...  VITE_EFFICASAFE_ITERATION_AFTER=...
  */
 export const efficasafeMedia = {
   lineBg:
@@ -37,4 +39,31 @@ export const efficasafeMedia = {
   sitemap:
     import.meta.env.VITE_EFFICASAFE_SITEMAP ||
     'https://res.cloudinary.com/dvqvqadww/image/upload/v1775137741/Sitemap_wrb4rt.svg',
+  iterationCompareBefore:
+    import.meta.env.VITE_EFFICASAFE_ITERATION_BEFORE ||
+    'https://res.cloudinary.com/dvqvqadww/image/upload/v1775148797/Before_2_fpre2p.svg',
+  iterationCompareAfter:
+    import.meta.env.VITE_EFFICASAFE_ITERATION_AFTER ||
+    'https://res.cloudinary.com/dvqvqadww/image/upload/v1775148796/After_piaf28.svg',
 }
+
+/** Low-fi wireframe carousel (Design step). Override via comma-separated VITE_EFFICASAFE_LO_FI_CAROUSEL URLs if needed. */
+const DEFAULT_LO_FI_CAROUSEL = [
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775147963/Phone_lo-fi_1._Onboarding_qtslgm.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775147964/Phone_lo-fi_2._Disclaimer_oc1fcv.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775147965/Phone_lo-fi_3._Search_gwglcl.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775147967/Phone_lo-fi_4._Compatibility_aa1aqg.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775147970/Phone_lo-fi_4a._Compatibility_-_chip_options_dropdown_hwvvez.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775147974/Phone_lo-fi_4c._Directory_prompt_overlay_b1phyi.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775147972/Phone_lo-fi_5._Learn_more_-_caution_i56ecz.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775147969/Phone_lo-fi_5._Learn_more_-_depletions_xeiluw.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775147975/Phone_lo-fi_5a._Learn_more_-_scientific_references_clxlha.svg',
+]
+
+export const efficasafeLoFiCarouselImages = import.meta.env
+  .VITE_EFFICASAFE_LO_FI_CAROUSEL
+  ? String(import.meta.env.VITE_EFFICASAFE_LO_FI_CAROUSEL)
+      .split(',')
+      .map((s) => s.trim())
+      .filter(Boolean)
+  : DEFAULT_LO_FI_CAROUSEL

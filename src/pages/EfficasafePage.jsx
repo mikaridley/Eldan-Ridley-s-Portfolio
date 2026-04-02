@@ -1,5 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import { efficasafeMedia } from "../config/efficasafeMedia";
+import {
+  efficasafeMedia,
+  efficasafeLoFiCarouselImages,
+} from "../config/efficasafeMedia";
+import { ImgsCarousel } from "../cmps/ImgsCarousel";
 import { Stepper } from "../cmps/Stepper";
 import { StepperHeader } from "../cmps/StepperHeader";
 import { TargetAudience } from "../cmps/projects-cmps/TargetAudience";
@@ -286,6 +290,63 @@ export function EfficasafePage() {
           },
         ]}
       />
+
+      <div ref={step3Ref} className="stepper-header-container">
+        <StepperHeader number={3} word="Design" />
+      </div>
+
+      <section
+        className="design-wireframes"
+        aria-labelledby="design-wireframes-heading"
+      >
+        <h4 className="design-wireframes-subtitle">Low-fidelity wireframes</h4>
+        <p className="design-wireframes-lofi-p">
+          I developed low-fidelity wireframes to establish the core layout and
+          flows of the widget—from onboarding and search through compatibility
+          states, learn-more panels, and reference content—while keeping the
+          checkout context clear and low-friction.
+        </p>
+        <div className="design-wireframes-carousel imgs-carousel-wrapper">
+          {efficasafeLoFiCarouselImages.length > 0 ? (
+            <ImgsCarousel images={efficasafeLoFiCarouselImages} />
+          ) : null}
+        </div>
+
+        <h4 className="design-wireframes-subtitle">
+          From insights to iteration
+        </h4>
+        <p className="design-wireframes-lofi-p">
+          <span>1. Reducing click fatigue -</span> During testing, I noticed that a
+          multi-step onboarding process felt too slow for a fast e-commerce
+          environment. To fix this, I merged the 'Medication Check' and
+          'Compatibility' prompts into a single, clear question. This small
+          change cut down on unnecessary clicks and allowed users to get to
+          their safety results much faster.
+        </p>
+
+        <h4 className="design-wireframes-subtitle before">
+          Before
+        </h4>
+
+        <h4 className="design-wireframes-subtitle after">
+          After
+        </h4>
+        <img
+          src={efficasafeMedia.iterationCompareBefore}
+          alt="EfficaSafe iteration — before (screen 1)"
+          className="above-the-fold-img-1"
+        />
+        <img
+          src={efficasafeMedia.iterationCompareBefore}
+          alt="EfficaSafe iteration — before (screen 2)"
+          className="above-the-fold-img-2"
+        />
+        <img
+          src={efficasafeMedia.iterationCompareAfter}
+          alt="EfficaSafe iteration — after"
+          className="above-the-fold-img-3"
+        />
+      </section>
     </section>
   );
 }

@@ -901,6 +901,29 @@
       }
     }
   }
+
+  .efficasafe-page {
+    .design-wireframes {
+      grid-template-columns: 1fr;
+
+      .design-wireframes-subtitle.before {
+        grid-column: 1;
+        justify-self: start;
+      }
+
+      .design-wireframes-subtitle.after {
+        grid-column: 1;
+        justify-self: start;
+      }
+
+      .above-the-fold-img-1,
+      .above-the-fold-img-2,
+      .above-the-fold-img-3 {
+        grid-column: 1;
+        justify-self: center;
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
