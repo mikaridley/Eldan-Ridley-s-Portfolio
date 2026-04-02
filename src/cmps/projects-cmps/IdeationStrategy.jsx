@@ -21,7 +21,7 @@ export function IdeationStrategy({
         </h3>
 
         <div className="challenge-block">
-          <h4 className="challenge-block-title">How might we</h4>
+          <h4 className="challenge-block-title">How might we (HMW)</h4>
           <div className="challenge-block-p">{howMightWeIntro}</div>
           <ul className="challenge-hmw-list">
             {howMightWeItems.map((item, index) => (

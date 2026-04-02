@@ -63,7 +63,7 @@ export function EfficasafePage() {
     <section
       className="efficasafe-page projects-layout"
       style={{
-        '--efficasafe-stepper-header-bg': `url("${String(efficasafeMedia.stepperHeader)}")`,
+        "--efficasafe-stepper-header-bg": `url("${String(efficasafeMedia.stepperHeader)}")`,
       }}
     >
       <div className="efficasafe-line-bg">
@@ -180,10 +180,11 @@ export function EfficasafePage() {
         personasIntro={
           <>
             These personas represent the primary user groups identified during
-            the research phase, focusing on the real-world environments where the
-            app would be used. They served as a guide for every design decision,
-            helping me build a solution that balances the need for reliable
-            clinical guidance with the pace and expectations of online checkout.
+            the research phase, focusing on the real-world environments where
+            the app would be used. They served as a guide for every design
+            decision, helping me build a solution that balances the need for
+            reliable clinical guidance with the pace and expectations of online
+            checkout.
           </>
         }
         empathyChildren={
@@ -195,7 +196,7 @@ export function EfficasafePage() {
               medical authority without disrupting the e-commerce experience.
             </p>
             <p className="research-empathy-p">
-            <br/>
+              <br />
               This analysis showed that users are jarred by layout shifts and
               annoyed by extra clicks. These insights led me to focus on
               stability and transparency. I ensured that critical data, such as
@@ -216,66 +217,74 @@ export function EfficasafePage() {
       <IdeationStrategy
         howMightWeIntro={
           <>
-            I translated research and persona pain points into &apos;How Might
-            We&apos; statements focused on the shopper managing medications and
-            supplements during checkout. This reframed clinical and UX
-            constraints as design opportunities: keep the flow fast, make
-            safety visible, and avoid breaking trust at the moment of purchase.
+            The research phase uncovered clear friction points, particularly
+            regarding user trust and the speed of the checkout process. To
+            bridge the gap between these pain points and the final design, I
+            framed the core challenges as How Might We statements. These served
+            as my guiding principles to ensure that every feature, from clinical
+            insights to real-time cart updates, directly addressed a specific
+            user need.
           </>
         }
         howMightWeItems={[
           {
-            lead: 'For Margret (busy parent):',
-            text: 'How might we surface interaction risk without turning checkout into a medical questionnaire?',
+            lead: "Trust:",
+            text: "How might we provide credible, science-based safety information without overwhelming the user with medical jargon?",
           },
           {
-            lead: 'For David (health-conscious shopper):',
-            text: "How might we give evidence-backed reassurance in seconds so he never doubts the widget's authority?",
+            lead: "Speed:",
+            text: "How might we allow shoppers to manage their medication lists quickly so the safety check does not feel like a chore?",
           },
           {
-            lead: 'For the purchase flow:',
-            text: 'How might we keep users oriented in the cart so critical cautions never feel like a detour?',
+            lead: "Confidence:",
+            text: "How might we enable users to update their cart in real time based on clinical advice to ensure a safe purchase?",
+          },
+          {
+            lead: "Stability:",
+            text: "How might we integrate the widget into the Amazon checkout flow while maintaining a consistent and non-intrusive layout?",
           },
         ]}
         mappingSections={[
           {
-            id: 'efficasafe-journey',
-            headingId: 'efficasafe-user-journey-heading',
-            heading: 'Mapping the experience',
-            subtitle: 'User journey map',
+            id: "efficasafe-journey",
+            headingId: "efficasafe-user-journey-heading",
+            heading: "Mapping the experience",
+            subtitle: "User journey map",
             body: (
               <>
-                I mapped the journey from reviewing a supplement in the cart
-                through adding medications, running the compatibility check, and
-                completing checkout. It highlighted where hesitation and
-                cognitive load spike—especially when results conflict with the
-                user’s intent to buy—and informed how I prioritised clarity and
-                stability in the UI.
+                I created a User Journey to map the experience of a shopper
+                during a high stakes checkout. By documenting the shift from
+                initial health anxiety to informed confidence, I identified
+                exactly where clinical transparency was needed. This process
+                ensured the final flow felt like a supportive health assistant
+                rather than a disruptive hurdle.
               </>
             ),
             imageSrc: efficasafeMedia.userJourneyMap || undefined,
-            imageAlt: 'EfficaSafe user journey map',
+            imageAlt: "EfficaSafe user journey map",
           },
           {
-            id: 'efficasafe-sitemap',
-            headingId: 'efficasafe-sitemap-heading',
-            heading: 'Information architecture',
-            subtitle: 'Sitemap',
+            id: "efficasafe-sitemap",
+            headingId: "efficasafe-sitemap-heading",
+            heading: "Information architecture (IA)",
+            subtitle: "",
             body: (
               <>
-                I structured the widget so users can manage medications, view
-                tiered compatibility results, and access references without
-                leaving the checkout context. The goal was a shallow hierarchy
-                with a single clear path back to the cart, reducing extra clicks
-                and layout shifts.
+                I designed the Information Architecture to transform complex
+                medical data into a clear and actionable checkout experience. By
+                categorising findings into a tiered system of Caution,
+                Replenish, and Optimisers, I focused on reducing the user's
+                cognitive load. This structured approach ensures that shoppers
+                can quickly identify critical safety risks while also
+                discovering ways to support their long term health without
+                leaving the Amazon platform.
               </>
             ),
             imageSrc: efficasafeMedia.sitemap || undefined,
-            imageAlt: 'EfficaSafe sitemap',
+            imageAlt: "EfficaSafe sitemap",
           },
         ]}
       />
-
     </section>
   );
 }

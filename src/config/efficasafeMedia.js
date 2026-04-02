@@ -31,6 +31,10 @@ export const efficasafeMedia = {
   empathyMap:
     import.meta.env.VITE_EFFICASAFE_EMPATHY_MAP ||
     'https://res.cloudinary.com/dvqvqadww/image/upload/v1775136744/Empathy_map_plm8zm.svg',
-  userJourneyMap: import.meta.env.VITE_EFFICASAFE_USER_JOURNEY_MAP || '',
-  sitemap: import.meta.env.VITE_EFFICASAFE_SITEMAP || '',
+  userJourneyMap:
+    import.meta.env.VITE_EFFICASAFE_USER_JOURNEY_MAP ||
+    'https://res.cloudinary.com/dvqvqadww/image/upload/v1775137742/User_journey_map_ocwfs0.svg',
+  sitemap:
+    import.meta.env.VITE_EFFICASAFE_SITEMAP ||
+    'https://res.cloudinary.com/dvqvqadww/image/upload/v1775137741/Sitemap_wrb4rt.svg',
 }

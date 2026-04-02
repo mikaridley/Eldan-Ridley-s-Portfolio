@@ -127,7 +127,7 @@
         line-height: 1.7;
 
         li {
-          margin-block-end: 0.5rem;
+          margin-block-end: 0rem;
 
           &:last-child {
             margin-block-end: 0;
