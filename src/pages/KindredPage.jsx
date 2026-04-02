@@ -620,7 +620,7 @@ export function KindredPage() {
               scrolling is often more important than a static, 'complete' look.
             </li>
             <li>
-              <span>brand vs accessibility:</span> I learnt that accessibility
+              <span>Brand vs accessibility:</span> I learnt that accessibility
               and brand identity should work in harmony. Swapping the
               placeholder green for the WCAG-compliant wine palette proved that
               you don't have to sacrifice a sophisticated aesthetic to meet

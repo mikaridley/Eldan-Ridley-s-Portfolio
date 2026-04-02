@@ -9,6 +9,7 @@ html {
   font-family: manrope, sans-serif;
   font-size: 16px;
   scrollbar-gutter: stable;
+  line-height: 1.4;
 }
 
 body {
