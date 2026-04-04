@@ -477,7 +477,8 @@
     }
   }
 
-  .ideation-strategy .user-journey-mapping.user-journey-mapping--efficasafe-ia {
+  .ideation-strategy .user-journey-mapping.user-journey-mapping--efficasafe-ia,
+  .efficasafe-page .user-journey-mapping.user-journey-mapping--efficasafe-moodboard {
     grid-template-columns: 1fr;
     gap: 0;
 

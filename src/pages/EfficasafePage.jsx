@@ -402,6 +402,38 @@ export function EfficasafePage() {
           />
         </div>
       </section>
+
+      <section
+        className="user-journey-mapping user-journey-mapping--efficasafe user-journey-mapping--efficasafe-moodboard"
+        aria-labelledby="efficasafe-moodboard-heading"
+      >
+        <h3
+          id="efficasafe-moodboard-heading"
+          className="user-journey-mapping-heading"
+        >
+          Moodboard
+        </h3>
+        <div className="user-journey-mapping-p">
+          <p>
+            I started with EfficaSafe&apos;s current web and widget designs as a
+            foundation to stay consistent with the brand. From there, I looked
+            for ways to elevate the UI - specifically by refining the typography
+            and opening up the spacing to make the data feel less cramped.
+          </p>
+          <p>
+            My goal was to take their existing functional aesthetic and evolve it
+            into a cleaner, more modern interface that handles complex clinical
+            information with much better clarity.
+          </p>
+        </div>
+        <div className="user-journey-mapping-fig">
+          <img
+            src={efficasafeMedia.moodboard}
+            alt="EfficaSafe moodboard"
+            className="user-journey-mapping-img"
+          />
+        </div>
+      </section>
     </section>
   );
 }
