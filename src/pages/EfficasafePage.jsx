@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import {
   efficasafeMedia,
   efficasafeLoFiCarouselImages,
+  efficasafeHiFiCarouselImages,
 } from "../config/efficasafeMedia";
 import { ImgsCarousel } from "../cmps/ImgsCarousel";
 import { Stepper } from "../cmps/Stepper";
@@ -421,9 +422,9 @@ export function EfficasafePage() {
             and opening up the spacing to make the data feel less cramped.
           </p>
           <p>
-            My goal was to take their existing functional aesthetic and evolve it
-            into a cleaner, more modern interface that handles complex clinical
-            information with much better clarity.
+            My goal was to take their existing functional aesthetic and evolve
+            it into a cleaner, more modern interface that handles complex
+            clinical information with much better clarity.
           </p>
         </div>
         <div className="user-journey-mapping-fig">
@@ -432,6 +433,50 @@ export function EfficasafePage() {
             alt="EfficaSafe moodboard"
             className="user-journey-mapping-img"
           />
+        </div>
+      </section>
+
+      <section className="style-guide">
+        <h4>Style guide</h4>
+        <p>
+          I built this sticker sheet with a library of components designed for
+          maximum flexibility across different e-commerce platforms. The goal
+          was to create a professional, clinical feel that works anywhere, so I
+          used a neutral but trustworthy colour palette and focused heavily on
+          highly readable typography for accessibility.
+          <br /> By building these as modular components, I made it easy to
+          switch, edit, and scale the widget while keeping the design system
+          perfectly consistent.
+        </p>
+        <img
+          src={efficasafeMedia.stickerSheet}
+          alt="EfficaSafe style guide sticker sheet: typography, colours, buttons, search, chips, and icons"
+          className="style-guide-img"
+        />
+      </section>
+
+      <section
+        className="hifi-design"
+        aria-labelledby="efficasafe-hifi-design-heading"
+      >
+        <h3
+          id="efficasafe-hifi-design-heading"
+          className="hifi-design-heading"
+        >
+          High-fidelity design
+        </h3>
+        <p className="hifi-design-p">
+          The final design creates a clean, professional look that fits into any
+          mobile e-commerce app while keeping its clinical identity. I
+          prioritised readable typography and a clear hierarchy to make complex
+          medical data easy to scan on smaller screens.
+          <br /> By keeping the interface neutral and accessible, I ensured the
+          widget feels trustworthy and remains easy to use for all mobile users.
+        </p>
+        <div className="efficasafe-hifi-carousel imgs-carousel-wrapper">
+          {efficasafeHiFiCarouselImages.length > 0 ? (
+            <ImgsCarousel images={efficasafeHiFiCarouselImages} />
+          ) : null}
         </div>
       </section>
     </section>

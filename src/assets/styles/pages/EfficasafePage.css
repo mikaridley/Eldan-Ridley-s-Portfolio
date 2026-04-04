@@ -190,7 +190,6 @@
         'phone1 op-plus phone2 op-eq phone3';
       column-gap: clamp(0.35rem, 2vw, 1.25rem);
       align-items: end;
-      margin-block-end: var(--unrelated-elements-space);
     }
 
     .efficasafe-iteration-label {
@@ -288,6 +287,53 @@
       font-size: 3.42857rem;
       font-style: normal;
       font-weight: 700;
+    }
+  }
+
+  .style-guide {
+    max-width: 75rem;
+    margin-block-end: 12.5rem;
+
+    h4 {
+      color: var(--dark-grey);
+      margin-block-end: var(--subheader-to-paragraph);
+    }
+
+    p {
+      color: var(--main-txt);
+      line-height: 1.6;
+      margin-block-end: var(--header-to-subheader);
+      max-width: 55rem;
+    }
+
+    .style-guide-img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .hifi-design {
+    max-width: 75rem;
+    margin-block-end: 12.5rem;
+
+    .hifi-design-heading {
+      color: var(--dark-grey);
+      margin: 0 0 var(--subheader-to-paragraph) 0;
+    }
+
+    .hifi-design-p {
+      color: var(--main-txt);
+      line-height: 1.6;
+      margin: 0 0 var(--header-to-subheader) 0;
+      max-width: 55rem;
+    }
+
+    .efficasafe-hifi-carousel {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      background-color: var(--light-bg);
+      padding-block: var(--imgs-carousel-wrapper-padding);
     }
   }
 }

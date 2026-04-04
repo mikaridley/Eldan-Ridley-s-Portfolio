@@ -12,7 +12,9 @@
  *   VITE_EFFICASAFE_USER_JOURNEY_MAP=...
  *   VITE_EFFICASAFE_SITEMAP=...
  *   VITE_EFFICASAFE_MOODBOARD=...
+ *   VITE_EFFICASAFE_STICKER_SHEET=...
  *   VITE_EFFICASAFE_LO_FI_CAROUSEL=https://...,https://...  (comma-separated, optional)
+ *   VITE_EFFICASAFE_HI_FI_CAROUSEL=https://...,https://...  (comma-separated, optional)
  *   VITE_EFFICASAFE_ITERATION_BEFORE=...  VITE_EFFICASAFE_ITERATION_AFTER=...
  *   VITE_EFFICASAFE_ITERATION_BEFORE_V2=...  VITE_EFFICASAFE_ITERATION_AFTER_V2=...
  */
@@ -44,6 +46,9 @@ export const efficasafeMedia = {
   moodboard:
     import.meta.env.VITE_EFFICASAFE_MOODBOARD ||
     'https://res.cloudinary.com/dvqvqadww/image/upload/v1775321245/Moodboard_ksbcmp.svg',
+  stickerSheet:
+    import.meta.env.VITE_EFFICASAFE_STICKER_SHEET ||
+    'https://res.cloudinary.com/dvqvqadww/image/upload/v1775322130/Sticker_sheet_mo2lll.svg',
   iterationCompareBefore:
     import.meta.env.VITE_EFFICASAFE_ITERATION_BEFORE ||
     'https://res.cloudinary.com/dvqvqadww/image/upload/v1775148797/Before_2_fpre2p.svg',
@@ -78,3 +83,26 @@ export const efficasafeLoFiCarouselImages = import.meta.env
       .map((s) => s.trim())
       .filter(Boolean)
   : DEFAULT_LO_FI_CAROUSEL
+
+/** Hi-fi phone carousel (Design / high-fidelity section). Order: onboarding through learn-more states. */
+const DEFAULT_HI_FI_CAROUSEL = [
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775322760/Phone_hi-fi_1._Onboarding_cznfni.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775322760/Phone_hi-fi_2._Disclaimer_mesp4j.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775322760/Phone_hi-fi_3._Search_h8l06g.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775322760/Phone_hi-fi_3a._Search_results_dropdown_c4gexy.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775322760/Phone_hi-fi_4._Compatibility_v5qowx.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775322761/Phone_hi-fi_4a._Compatibility_chips_dropdown_u53uyk.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775322765/Phone_hi-fi_4c._Directory_prompt_overlay_g4mmu8.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775322764/Phone_hi-fi_5._Learn_more_-_caution_oact9o.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775322762/Phone_hi-fi_5._Learn_more_-_depletions_k0jh9a.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775322763/Phone_hi-fi_5._Learn_more_-_optimizers_zpwujb.svg',
+  'https://res.cloudinary.com/dvqvqadww/image/upload/v1775322766/Phone_hi-fi_5a._Learn_more_-_scientific_references_ww7bkm.svg',
+]
+
+export const efficasafeHiFiCarouselImages = import.meta.env
+  .VITE_EFFICASAFE_HI_FI_CAROUSEL
+  ? String(import.meta.env.VITE_EFFICASAFE_HI_FI_CAROUSEL)
+      .split(',')
+      .map((s) => s.trim())
+      .filter(Boolean)
+  : DEFAULT_HI_FI_CAROUSEL
