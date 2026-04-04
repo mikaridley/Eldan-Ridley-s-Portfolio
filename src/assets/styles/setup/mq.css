@@ -6,7 +6,8 @@
 
   .projects-layout {
     grid-template-columns:
-      minmax(50px, 1fr) minmax(auto, var(--max-width)) minmax(50px, 1fr);
+      minmax(50px, 1fr) minmax(auto, var(--max-width))
+      minmax(50px, 1fr);
   }
 
   .quantex-page {
@@ -127,7 +128,6 @@
   .stepper-header {
     height: 150px;
   }
-
 }
 
 @media (max-width: 960px) {
@@ -151,12 +151,6 @@
     .project-details {
       column-gap: 5rem;
     }
-  }
-}
-
-.kindred-page {
-  .project-details {
-    column-gap: 5rem;
   }
 }
 
@@ -223,18 +217,14 @@
         }
 
         .stepper-step {
-
           .stepper-circle {
             width: 2.5rem;
             height: 2.5rem;
             font-size: 1rem;
           }
-
         }
-
       }
     }
-
   }
 
   .app-header {
@@ -257,7 +247,8 @@
 
   .projects-layout {
     grid-template-columns:
-      minmax(50px, 1fr) minmax(auto, var(--max-width)) minmax(50px, 1fr);
+      minmax(50px, 1fr) minmax(auto, var(--max-width))
+      minmax(50px, 1fr);
   }
 
   .home-page {
@@ -312,12 +303,12 @@
     margin-block: 4rem;
     margin-inline: 50px;
 
-    >a>img {
+    > a > img {
       width: 4.3rem;
       justify-self: end;
     }
 
-    >p {
+    > p {
       &.msg {
         align-self: end;
         width: 10.3rem;
@@ -478,7 +469,8 @@
   }
 
   .ideation-strategy .user-journey-mapping.user-journey-mapping--efficasafe-ia,
-  .efficasafe-page .user-journey-mapping.user-journey-mapping--efficasafe-moodboard {
+  .efficasafe-page
+    .user-journey-mapping.user-journey-mapping--efficasafe-moodboard {
     grid-template-columns: 1fr;
     gap: 0;
 
@@ -575,7 +567,6 @@
 
       .project-details-col {
         .project-details-list {
-
           li {
             line-height: 1;
           }
@@ -781,7 +772,6 @@
 
       .project-details-col {
         .project-details-list {
-
           li {
             line-height: 1;
           }
@@ -898,12 +888,54 @@
         align-self: end;
         grid-column: 1;
         grid-row: 4;
-
       }
     }
   }
 
   .efficasafe-page {
+    .efficasafe-openning {
+      grid-template-columns: 1fr;
+      margin-block-end: var(--unrelated-elements-space);
+
+      .efficasafe-page-img {
+        justify-self: center;
+        grid-column: 1;
+        grid-row: 2;
+        margin-block-end: var(--unrelated-elements-space);
+      }
+    }
+
+    /* Single column: Problem (heading + body) then Solution (heading + body), like stacked case-study copy */
+    .problem-solution {
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      align-items: start;
+      justify-items: start;
+      row-gap: var(--subheader-to-paragraph);
+
+      .problem-heading {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .problem-solution-p:first-of-type {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .solution-heading {
+        grid-column: 1;
+        grid-row: 3;
+        margin-block-start: var(--header-to-subheader);
+      }
+
+      .problem-solution-p:last-of-type {
+        grid-column: 1;
+        grid-row: 4;
+      }
+    }
+
     .design-wireframes {
       grid-template-columns: 1fr;
 
@@ -1058,7 +1090,8 @@
 @media (max-width: 440px) {
   .projects-layout {
     grid-template-columns:
-      minmax(20px, 1fr) minmax(auto, var(--max-width)) minmax(20px, 1fr);
+      minmax(20px, 1fr) minmax(auto, var(--max-width))
+      minmax(20px, 1fr);
   }
 
   .app-header,

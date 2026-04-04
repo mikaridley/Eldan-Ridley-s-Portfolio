@@ -75,10 +75,13 @@
     }
 
     .research-empathy-fig {
-      align-self: end;
+      align-self: start;
+      justify-self: start;
       grid-column: 2;
-      grid-row: 1 / span 4;
+      grid-row: 3 / span 2;
       display: flex;
+      flex-direction: column;
+      align-items: flex-start;
 
       .research-empathy-img {
         display: block;
