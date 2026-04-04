@@ -479,6 +479,67 @@ export function EfficasafePage() {
           ) : null}
         </div>
       </section>
+
+      
+      <section
+        className="efficasafe-inclusive-content"
+        aria-labelledby="efficasafe-inclusive-heading"
+      >
+        <h3
+          id="efficasafe-inclusive-heading"
+          className="efficasafe-inclusive-title"
+        >
+          Inclusive content & clarity
+        </h3>
+        <p className="efficasafe-inclusive-intro">
+          I focused on translating technical clinical warnings into clear,
+          actionable language. By swapping professional jargon for plain English,
+          I ensured that critical safety information is easy for any user to
+          understand, reducing the risk of confusion and making the widget more
+          inclusive.
+        </p>
+
+        <div className="efficasafe-inclusive-pair">
+          <div className="efficasafe-inclusive-pair-grid">
+            <h4 className="efficasafe-inclusive-label">Before</h4>
+            <img
+              src={efficasafeMedia.inclusiveContentBefore}
+              alt="Compatibility screen with technical caution copy"
+              className="efficasafe-inclusive-mockup"
+              loading="lazy"
+              decoding="async"
+            />
+            <blockquote className="efficasafe-inclusive-quote">
+              <p>
+                &lsquo;Concurrent use of <strong>St. John&apos;s Wort</strong>{' '}
+                and <strong>Warfarin</strong> is clinically discouraged. This
+                interaction may compromise therapeutic efficacy and elevate the
+                risk of thromboembolic complications.&rsquo;
+              </p>
+            </blockquote>
+          </div>
+        </div>
+
+        <div className="efficasafe-inclusive-pair">
+          <div className="efficasafe-inclusive-pair-grid">
+            <h4 className="efficasafe-inclusive-label">After</h4>
+            <img
+              src={efficasafeMedia.inclusiveContentAfter}
+              alt="Compatibility screen with plain-language caution copy"
+              className="efficasafe-inclusive-mockup"
+              loading="lazy"
+              decoding="async"
+            />
+            <blockquote className="efficasafe-inclusive-quote">
+              <p>
+                &lsquo;Avoid taking <strong>St. John&apos;s Wort</strong> with{' '}
+                <strong>Warfarin</strong>. This combination may reduce medication
+                effectiveness and increase blood clot risk.&rsquo;
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
     </section>
   );
 }

@@ -959,6 +959,41 @@
         font-size: clamp(1.5rem, 5vw, 2rem);
       }
     }
+
+    .efficasafe-inclusive-content {
+      .efficasafe-inclusive-pair-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        justify-items: center;
+        text-align: center;
+        row-gap: 1rem;
+
+        .efficasafe-inclusive-label {
+          grid-column: 1;
+          grid-row: 1;
+          justify-self: center;
+        }
+
+        .efficasafe-inclusive-mockup {
+          grid-column: 1;
+          grid-row: 2;
+        }
+
+        .efficasafe-inclusive-quote {
+          grid-column: 1;
+          grid-row: 3;
+          align-self: stretch;
+          width: 100%;
+          max-width: min(100%, 36rem);
+        }
+
+        .efficasafe-inclusive-quote :is(p) {
+          padding-inline-start: 0;
+          border-inline-start: none;
+          text-align: center;
+        }
+      }
+    }
   }
 }
 

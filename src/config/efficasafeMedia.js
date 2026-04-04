@@ -17,6 +17,7 @@
  *   VITE_EFFICASAFE_HI_FI_CAROUSEL=https://...,https://...  (comma-separated, optional)
  *   VITE_EFFICASAFE_ITERATION_BEFORE=...  VITE_EFFICASAFE_ITERATION_AFTER=...
  *   VITE_EFFICASAFE_ITERATION_BEFORE_V2=...  VITE_EFFICASAFE_ITERATION_AFTER_V2=...
+ *   VITE_EFFICASAFE_INCLUSIVE_BEFORE=...  VITE_EFFICASAFE_INCLUSIVE_AFTER=...  (UX writing before/after mockups)
  */
 export const efficasafeMedia = {
   lineBg:
@@ -61,6 +62,12 @@ export const efficasafeMedia = {
   iterationCompareAfterV2:
     import.meta.env.VITE_EFFICASAFE_ITERATION_AFTER_V2 ||
     'https://res.cloudinary.com/dvqvqadww/image/upload/v1775320609/After_v2_adhrfw.svg',
+  inclusiveContentBefore:
+    import.meta.env.VITE_EFFICASAFE_INCLUSIVE_BEFORE ||
+    'https://res.cloudinary.com/dvqvqadww/image/upload/v1775323902/Before_v3_wiixl9.svg',
+  inclusiveContentAfter:
+    import.meta.env.VITE_EFFICASAFE_INCLUSIVE_AFTER ||
+    'https://res.cloudinary.com/dvqvqadww/image/upload/v1775323902/After_v3_glrwid.svg',
 }
 
 /** Low-fi wireframe carousel (Design step). Override via comma-separated VITE_EFFICASAFE_LO_FI_CAROUSEL URLs if needed. */

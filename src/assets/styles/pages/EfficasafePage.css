@@ -4,6 +4,12 @@
   .efficasafe-line-bg {
     grid-column: 1/-1;
     margin-block-end: var(--header-to-subheader);
+
+    :is(img) {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   .efficasafe-openning {
@@ -41,6 +47,7 @@
 
       p {
         max-width: 55rem;
+
         .p-gap {
           display: block;
           height: 2rem;
@@ -61,6 +68,12 @@
     .problem-heading {
       color: var(--dark-grey);
       margin-block-end: var(--subheader-to-paragraph);
+    }
+
+    .problem-solution-p {
+      color: var(--main-txt);
+      line-height: 1.6;
+      max-width: 55rem;
     }
 
     .solution-heading {
@@ -90,6 +103,10 @@
       .project-details-list {
         list-style-position: inside;
         padding-left: 0;
+
+        li {
+          color: var(--main-txt);
+        }
       }
     }
   }
@@ -181,7 +198,7 @@
       }
     }
 
-    /* 3-phone + = row: labels share the same 5-column grid as phones so “Before” sits above + and “After” above the third phone */
+    /* 3-phone + = row: labels share the same 5-column grid as phones */
     .efficasafe-iteration-block {
       grid-column: 1 / -1;
       display: grid;
@@ -192,69 +209,68 @@
         'phone1 op-plus phone2 op-eq phone3';
       column-gap: clamp(0.35rem, 2vw, 1.25rem);
       align-items: end;
-    }
 
-    .efficasafe-iteration-label {
-      color: var(--dark-grey);
-      margin: 0 0 1.5rem 0;
-    }
+      .efficasafe-iteration-label {
+        color: var(--dark-grey);
+        margin: 0 0 1.5rem 0;
+      }
 
-    .efficasafe-iteration-label--before {
-      grid-area: label-before;
-      justify-self: center;
-      align-self: end;
-    }
+      .efficasafe-iteration-label--before {
+        grid-area: label-before;
+        justify-self: center;
+        align-self: end;
+      }
 
-    .efficasafe-iteration-label--after {
-      grid-area: label-after;
-      justify-self: center;
-      align-self: end;
-    }
+      .efficasafe-iteration-label--after {
+        grid-area: label-after;
+        justify-self: center;
+        align-self: end;
+      }
 
-    .efficasafe-iteration-block > .efficasafe-iteration-img:nth-child(3) {
-      grid-area: phone1;
-    }
+      & > .efficasafe-iteration-img:nth-child(3) {
+        grid-area: phone1;
+      }
 
-    .efficasafe-iteration-block > .efficasafe-iteration-op:nth-child(4) {
-      grid-area: op-plus;
-    }
+      & > .efficasafe-iteration-op:nth-child(4) {
+        grid-area: op-plus;
+      }
 
-    .efficasafe-iteration-block > .efficasafe-iteration-img:nth-child(5) {
-      grid-area: phone2;
-    }
+      & > .efficasafe-iteration-img:nth-child(5) {
+        grid-area: phone2;
+      }
 
-    .efficasafe-iteration-block > .efficasafe-iteration-op:nth-child(6) {
-      grid-area: op-eq;
-    }
+      & > .efficasafe-iteration-op:nth-child(6) {
+        grid-area: op-eq;
+      }
 
-    .efficasafe-iteration-block > .efficasafe-iteration-img:nth-child(7) {
-      grid-area: phone3;
-    }
+      & > .efficasafe-iteration-img:nth-child(7) {
+        grid-area: phone3;
+      }
 
-    .efficasafe-iteration-block .efficasafe-iteration-img {
-      display: block;
-      width: 100%;
-      min-width: 0;
-      max-width: 16.6rem;
-      height: auto;
-      justify-self: center;
-    }
+      .efficasafe-iteration-img {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        max-width: 16.6rem;
+        height: auto;
+        justify-self: center;
+      }
 
-    .efficasafe-iteration-block .efficasafe-iteration-op {
-      align-self: center;
-    }
+      .efficasafe-iteration-op {
+        align-self: center;
+      }
 
-    /* Two phones only: Before / After each centered above its image */
-    .efficasafe-iteration-block--pair {
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas:
-        'label-before label-after'
-        'phone1 phone2';
-      column-gap: clamp(0.75rem, 4vw, 2.5rem);
-    }
+      &.efficasafe-iteration-block--pair {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          'label-before label-after'
+          'phone1 phone2';
+        column-gap: clamp(0.75rem, 4vw, 2.5rem);
 
-    .efficasafe-iteration-block--pair > .efficasafe-iteration-img:nth-child(4) {
-      grid-area: phone2;
+        & > .efficasafe-iteration-img:nth-child(4) {
+          grid-area: phone2;
+        }
+      }
     }
 
     .efficasafe-iteration-compare {
@@ -268,27 +284,106 @@
       width: 100%;
       max-width: 100%;
       margin-block-end: var(--unrelated-elements-space);
-    }
 
-    .efficasafe-iteration-img {
-      display: block;
-      flex: 1 1 0;
-      min-width: 0;
-      max-width: 16.6rem;
-      height: auto;
-    }
+      .efficasafe-iteration-img {
+        display: block;
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 16.6rem;
+        height: auto;
+      }
 
-    .efficasafe-iteration-op {
-      flex: 0 0 auto;
-      align-self: center;
-      justify-self: center;
-      font-size: clamp(1.25rem, 3.5vw, 2.25rem);
+      .efficasafe-iteration-op {
+        flex: 0 0 auto;
+        align-self: center;
+        justify-self: center;
+        font-size: clamp(1.25rem, 3.5vw, 2.25rem);
+        color: var(--dark-grey);
+        user-select: none;
+        font-family: Montserrat;
+        font-size: 3.42857rem;
+        font-style: normal;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .efficasafe-inclusive-content {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: 75rem;
+    margin-block-end: 12.5rem;
+
+    .efficasafe-inclusive-title {
       color: var(--dark-grey);
-      user-select: none;
-      font-family: Montserrat;
-      font-size: 3.42857rem;
-      font-style: normal;
-      font-weight: 700;
+      margin: 0 0 var(--subheader-to-paragraph) 0;
+    }
+
+    .efficasafe-inclusive-intro {
+      color: var(--main-txt);
+      line-height: 1.6;
+      margin: 0 0 var(--header-to-subheader) 0;
+      max-width: 55rem;
+    }
+
+    .efficasafe-inclusive-pair {
+      margin-block-end: var(--header-to-subheader);
+
+      &:last-child {
+        margin-block-end: 0;
+      }
+
+      .efficasafe-inclusive-pair-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
+        grid-template-rows: auto auto;
+        column-gap: clamp(1.5rem, 4vw, 2.75rem);
+        row-gap: 1rem;
+        column-gap: 2.5rem;
+        align-items: start;
+
+        .efficasafe-inclusive-label {
+          grid-column: 1;
+          grid-row: 1;
+          justify-self: center;
+          text-align: center;
+          color: var(--dark-grey);
+          margin: 0;
+        }
+
+        .efficasafe-inclusive-mockup {
+          grid-column: 1;
+          grid-row: 2;
+          display: block;
+          width: 100%;
+          max-width: 18rem;
+          height: auto;
+          justify-self: center;
+        }
+
+        .efficasafe-inclusive-quote {
+          grid-column: 2;
+          grid-row: 1 / 3;
+          align-self: center;
+          margin: 0;
+          padding: 0;
+          border: none;
+
+          p {
+            margin: 0;
+            max-width: 55rem;
+            color: var(--main-txt);
+            line-height: 1.65;
+            font-size: clamp(1rem, 1.1vw + 0.85rem, 1.25rem);
+          }
+
+          strong {
+            color: var(--dark-grey);
+            font-weight: 600;
+          }
+        }
+      }
     }
   }
 
