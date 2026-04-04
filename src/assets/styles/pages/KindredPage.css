@@ -125,7 +125,9 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: start;
     margin-block-end: 12.5rem;
+    width: 100%;
     max-width: 1200px;
+    justify-self: center;
 
     .design-wireframes-subtitle {
       color: var(--dark-grey);

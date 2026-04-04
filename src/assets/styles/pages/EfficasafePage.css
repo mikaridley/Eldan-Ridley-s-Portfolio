@@ -126,7 +126,9 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
     margin-block-end: 12.5rem;
+    width: 100%;
     max-width: 1200px;
+    justify-self: center;
 
     .design-wireframes-subtitle {
       grid-column: 1 / -1;
