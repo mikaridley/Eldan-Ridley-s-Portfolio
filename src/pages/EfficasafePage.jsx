@@ -373,14 +373,23 @@ export function EfficasafePage() {
           predictable for the shopper.
         </p>
 
-        <h4 className="design-wireframes-subtitle before">Before</h4>
-
-        <h4 className="design-wireframes-subtitle after">After</h4>
         <div
-          className="efficasafe-iteration-compare"
+          className="efficasafe-iteration-block efficasafe-iteration-block--pair"
           role="group"
-          aria-label="Before and after: standardised widget height"
+          aria-labelledby="efficasafe-iteration-before-v2-heading efficasafe-iteration-after-v2-heading"
         >
+          <h4
+            id="efficasafe-iteration-before-v2-heading"
+            className="efficasafe-iteration-label efficasafe-iteration-label--before"
+          >
+            Before
+          </h4>
+          <h4
+            id="efficasafe-iteration-after-v2-heading"
+            className="efficasafe-iteration-label efficasafe-iteration-label--after"
+          >
+            After
+          </h4>
           <img
             src={efficasafeMedia.iterationCompareBeforeV2}
             alt="EfficaSafe iteration — before (standardised widget height)"

@@ -243,6 +243,19 @@
       align-self: center;
     }
 
+    /* Two phones only: Before / After each centered above its image */
+    .efficasafe-iteration-block--pair {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        'label-before label-after'
+        'phone1 phone2';
+      column-gap: clamp(0.75rem, 4vw, 2.5rem);
+    }
+
+    .efficasafe-iteration-block--pair > .efficasafe-iteration-img:nth-child(4) {
+      grid-area: phone2;
+    }
+
     .efficasafe-iteration-compare {
       grid-column: 1 / -1;
       display: flex;
