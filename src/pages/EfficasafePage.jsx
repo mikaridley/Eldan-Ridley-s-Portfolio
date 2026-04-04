@@ -399,8 +399,9 @@ export function EfficasafePage() {
           id="efficasafe-moodboard-heading"
           className="user-journey-mapping-heading"
         >
-          Moodboard
+          Visual identity & moodboard
         </h3>
+        <h4 className="user-journey-mapping-subtitle">Moodboard</h4>
         <div className="user-journey-mapping-p">
           <p>
             I started with EfficaSafe&apos;s current web and widget designs as a

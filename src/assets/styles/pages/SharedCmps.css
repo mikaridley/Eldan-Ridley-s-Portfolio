@@ -63,10 +63,6 @@
         line-height: 1.6;
         margin: 0;
 
-        &:last-of-type {
-          margin-block-end: 5rem;
-        }
-
         &.darker {
           color: var(--dark-grey);
           margin-bottom: var(--subheader-to-paragraph);
@@ -247,7 +243,7 @@
   }
 }
 
-/* EfficaSafe — moodboard (page end): same layout as IA */
+/* EfficaSafe — moodboard (page end): title full width; subtitle + body col 1; fig col 2 from row 2 (with IA) */
 .efficasafe-page .user-journey-mapping.user-journey-mapping--efficasafe-moodboard {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
@@ -260,15 +256,21 @@
     margin-block-end: var(--header-to-subheader);
   }
 
-  .user-journey-mapping-p {
+  .user-journey-mapping-subtitle {
     grid-column: 1;
     grid-row: 2;
+    margin-block-end: var(--subheader-to-paragraph);
+  }
+
+  .user-journey-mapping-p {
+    grid-column: 1;
+    grid-row: 3;
     margin-block-end: 0;
   }
 
   .user-journey-mapping-fig {
     grid-column: 2;
-    grid-row: 2;
-    align-self: end;
+    grid-row: 2 / span 3;
+    align-self: start;
   }
 }

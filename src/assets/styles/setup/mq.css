@@ -479,9 +479,7 @@
     }
   }
 
-  .ideation-strategy .user-journey-mapping.user-journey-mapping--efficasafe-ia,
-  .efficasafe-page
-    .user-journey-mapping.user-journey-mapping--efficasafe-moodboard {
+  .ideation-strategy .user-journey-mapping.user-journey-mapping--efficasafe-ia {
     grid-template-columns: 1fr;
     gap: 0;
 
@@ -498,6 +496,32 @@
     .user-journey-mapping-fig {
       grid-column: 1;
       grid-row: 3;
+    }
+  }
+
+  .efficasafe-page .user-journey-mapping.user-journey-mapping--efficasafe-moodboard {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    .user-journey-mapping-heading {
+      margin: 0 0 2.5rem 0;
+    }
+
+    .user-journey-mapping-subtitle {
+      grid-column: 1;
+      grid-row: 2;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .user-journey-mapping-p {
+      grid-column: 1;
+      grid-row: 3;
+      margin: 0 0 2.5rem 0;
+    }
+
+    .user-journey-mapping-fig {
+      grid-column: 1;
+      grid-row: 4;
     }
   }
 
@@ -934,18 +958,69 @@
         justify-self: start;
       }
 
+      /* Stack like design: Before → phone → + → phone → = → After → phone */
       .efficasafe-iteration-block {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.75rem;
+        gap: clamp(1rem, 4vw, 1.75rem);
+
+        /* Desktop grid used align-self: end; in a column flex that pins items to the inline end */
+        .efficasafe-iteration-label--before,
+        .efficasafe-iteration-label--after {
+          margin: 0;
+          align-self: stretch;
+          width: 100%;
+          text-align: center;
+        }
       }
 
-      .efficasafe-iteration-label--before,
-      .efficasafe-iteration-label--after {
-        margin: 0;
-        align-self: center;
-        text-align: center;
+      .efficasafe-iteration-block:not(.efficasafe-iteration-block--pair) {
+        .efficasafe-iteration-label--before {
+          order: 1;
+        }
+
+        & > .efficasafe-iteration-img:nth-child(3) {
+          order: 2;
+        }
+
+        & > .efficasafe-iteration-op:nth-child(4) {
+          order: 3;
+        }
+
+        & > .efficasafe-iteration-img:nth-child(5) {
+          order: 4;
+        }
+
+        & > .efficasafe-iteration-op:nth-child(6) {
+          order: 5;
+        }
+
+        .efficasafe-iteration-label--after {
+          order: 6;
+        }
+
+        & > .efficasafe-iteration-img:nth-child(7) {
+          order: 7;
+        }
+      }
+
+      .efficasafe-iteration-block--pair {
+        .efficasafe-iteration-label--before {
+          order: 1;
+        }
+
+        & > .efficasafe-iteration-img:nth-child(3) {
+          order: 2;
+        }
+
+        .efficasafe-iteration-label--after {
+          order: 3;
+        }
+
+        & > .efficasafe-iteration-img:nth-child(4) {
+          order: 4;
+        }
       }
 
       .efficasafe-iteration-block > .efficasafe-iteration-img:nth-child(n) {
@@ -974,6 +1049,7 @@
 
       .efficasafe-iteration-op {
         font-size: clamp(1.5rem, 5vw, 2rem);
+        color: var(--dark-grey);
       }
     }
 
