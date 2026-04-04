@@ -179,6 +179,70 @@
       }
     }
 
+    /* 3-phone + = row: labels share the same 5-column grid as phones so “Before” sits above + and “After” above the third phone */
+    .efficasafe-iteration-block {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        '. label-before . . label-after'
+        'phone1 op-plus phone2 op-eq phone3';
+      column-gap: clamp(0.35rem, 2vw, 1.25rem);
+      align-items: end;
+      margin-block-end: var(--unrelated-elements-space);
+    }
+
+    .efficasafe-iteration-label {
+      color: var(--dark-grey);
+      margin: 0 0 1.5rem 0;
+    }
+
+    .efficasafe-iteration-label--before {
+      grid-area: label-before;
+      justify-self: center;
+      align-self: end;
+    }
+
+    .efficasafe-iteration-label--after {
+      grid-area: label-after;
+      justify-self: center;
+      align-self: end;
+    }
+
+    .efficasafe-iteration-block > .efficasafe-iteration-img:nth-child(3) {
+      grid-area: phone1;
+    }
+
+    .efficasafe-iteration-block > .efficasafe-iteration-op:nth-child(4) {
+      grid-area: op-plus;
+    }
+
+    .efficasafe-iteration-block > .efficasafe-iteration-img:nth-child(5) {
+      grid-area: phone2;
+    }
+
+    .efficasafe-iteration-block > .efficasafe-iteration-op:nth-child(6) {
+      grid-area: op-eq;
+    }
+
+    .efficasafe-iteration-block > .efficasafe-iteration-img:nth-child(7) {
+      grid-area: phone3;
+    }
+
+    .efficasafe-iteration-block .efficasafe-iteration-img {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      max-width: 16.6rem;
+      height: auto;
+      justify-self: center;
+    }
+
+    .efficasafe-iteration-block .efficasafe-iteration-op {
+      align-self: center;
+    }
+
     .efficasafe-iteration-compare {
       grid-column: 1 / -1;
       display: flex;
@@ -203,6 +267,7 @@
     .efficasafe-iteration-op {
       flex: 0 0 auto;
       align-self: center;
+      justify-self: center;
       font-size: clamp(1.25rem, 3.5vw, 2.25rem);
       color: var(--dark-grey);
       user-select: none;

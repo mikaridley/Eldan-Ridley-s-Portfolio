@@ -324,14 +324,23 @@ export function EfficasafePage() {
           their safety results much faster.
         </p>
 
-        <h4 className="design-wireframes-subtitle before">Before</h4>
-
-        <h4 className="design-wireframes-subtitle after">After</h4>
         <div
-          className="efficasafe-iteration-compare"
+          className="efficasafe-iteration-block"
           role="group"
-          aria-label="Before and after: two steps combined into one"
+          aria-labelledby="efficasafe-iteration-before-heading efficasafe-iteration-after-heading"
         >
+          <h4
+            id="efficasafe-iteration-before-heading"
+            className="efficasafe-iteration-label efficasafe-iteration-label--before"
+          >
+            Before
+          </h4>
+          <h4
+            id="efficasafe-iteration-after-heading"
+            className="efficasafe-iteration-label efficasafe-iteration-label--after"
+          >
+            After
+          </h4>
           <img
             src={efficasafeMedia.iterationCompareBefore}
             alt="EfficaSafe iteration — before (screen 1)"

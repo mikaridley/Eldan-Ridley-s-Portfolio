@@ -916,6 +916,33 @@
         justify-self: start;
       }
 
+      .efficasafe-iteration-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .efficasafe-iteration-label--before,
+      .efficasafe-iteration-label--after {
+        margin: 0;
+        align-self: center;
+        text-align: center;
+      }
+
+      .efficasafe-iteration-block > .efficasafe-iteration-img:nth-child(n) {
+        grid-area: unset;
+      }
+
+      .efficasafe-iteration-block > .efficasafe-iteration-op:nth-child(n) {
+        grid-area: unset;
+      }
+
+      .efficasafe-iteration-block .efficasafe-iteration-img {
+        flex: 0 1 auto;
+        max-width: min(100%, 20rem);
+      }
+
       .efficasafe-iteration-compare {
         flex-direction: column;
         align-items: center;
