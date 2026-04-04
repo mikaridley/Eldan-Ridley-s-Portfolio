@@ -316,21 +316,17 @@ export function EfficasafePage() {
           From insights to iteration
         </h4>
         <p className="design-wireframes-lofi-p">
-          <span>1. Reducing click fatigue -</span> During testing, I noticed that a
-          multi-step onboarding process felt too slow for a fast e-commerce
-          environment. To fix this, I merged the 'Medication Check' and
-          'Compatibility' prompts into a single, clear question. This small
+          <span>1. Reducing click fatigue -</span> During testing, I noticed
+          that a multi-step onboarding process felt too slow for a fast
+          e-commerce environment. To fix this, I merged the 'Medication Check'
+          and 'Compatibility' prompts into a single, clear question. This small
           change cut down on unnecessary clicks and allowed users to get to
           their safety results much faster.
         </p>
 
-        <h4 className="design-wireframes-subtitle before">
-          Before
-        </h4>
+        <h4 className="design-wireframes-subtitle before">Before</h4>
 
-        <h4 className="design-wireframes-subtitle after">
-          After
-        </h4>
+        <h4 className="design-wireframes-subtitle after">After</h4>
         <div
           className="efficasafe-iteration-compare"
           role="group"
@@ -355,6 +351,35 @@ export function EfficasafePage() {
           <img
             src={efficasafeMedia.iterationCompareAfter}
             alt="EfficaSafe iteration — after"
+            className="efficasafe-iteration-img"
+          />
+        </div>
+
+        <p className="design-wireframes-lofi-p">
+          <span>2. Standardising widget height -</span> The initial design had
+          varying overlay heights, which caused the Amazon page to jump around -
+          a problem known as 'layout thrashing'. I updated the interface so that
+          every screen, from clinical insights to scientific references, shares
+          a consistent height. This keeps the browsing experience steady and
+          predictable for the shopper.
+        </p>
+
+        <h4 className="design-wireframes-subtitle before">Before</h4>
+
+        <h4 className="design-wireframes-subtitle after">After</h4>
+        <div
+          className="efficasafe-iteration-compare"
+          role="group"
+          aria-label="Before and after: standardised widget height"
+        >
+          <img
+            src={efficasafeMedia.iterationCompareBeforeV2}
+            alt="EfficaSafe iteration — before (standardised widget height)"
+            className="efficasafe-iteration-img"
+          />
+          <img
+            src={efficasafeMedia.iterationCompareAfterV2}
+            alt="EfficaSafe iteration — after (standardised widget height)"
             className="efficasafe-iteration-img"
           />
         </div>
