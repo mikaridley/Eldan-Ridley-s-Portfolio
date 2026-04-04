@@ -540,6 +540,76 @@ export function EfficasafePage() {
           </div>
         </div>
       </section>
+
+      <div ref={step4Ref} className="stepper-header-container">
+        <StepperHeader number={4} word="Takeaways" />
+      </div>
+
+      <section
+        className="takeaways-reflections-next"
+        aria-labelledby="efficasafe-takeaways-reflections-heading"
+      >
+        <div className="takeaways-reflections">
+          <h4
+            id="efficasafe-takeaways-reflections-heading"
+            className="takeaways-rn-heading"
+          >
+            Reflections
+          </h4>
+          <p className="takeaways-reflections-intro">
+            Working on a med-tech product was an eye-opening challenge that
+            required balancing user needs with strict legal and medical
+            constraints.
+          </p>
+          <ul className="takeaways-rn-list">
+            <li>
+              <span>Weight of language:</span> I learnt that every word carries
+              significant weight when dealing with clinical safety and user
+              trust.
+            </li>
+            <li>
+              <span>Legal constraints:</span> I enjoyed the challenge of
+              navigating what can and cannot be said within medical-tech
+              regulations.
+            </li>
+            <li>
+              <span>Inclusive writing:</span> Interpreting complex jargon into
+              plain English reinforced that UX writing is as vital as visual
+              design for accessibility.
+            </li>
+          </ul>
+        </div>
+        <div className="takeaways-next">
+          <h4
+            id="efficasafe-takeaways-next-heading"
+            className="takeaways-rn-heading"
+          >
+            Next steps
+          </h4>
+          <p className="takeaways-next-intro">
+            Since the project is currently in the proof of concept (POC) phase,
+            I have a clear idea of how I would take it further.
+          </p>
+          <ul className="takeaways-rn-list">
+            <li>
+              <span>Going beyond mobile:</span> My first priority would be
+              adapting the layout so it looks just as clean and professional on
+              a desktop browser.
+            </li>
+            <li>
+              <span>Testing the copy:</span> I want to run real tests to see if
+              people actually find the &lsquo;plain English&rsquo; version
+              easier to trust than the medical jargon.
+            </li>
+            <li>
+              <span>Expanding the library:</span> I would look at how these
+              components can handle even more complex medical categories without
+              cluttering the screen.
+            </li>
+          </ul>
+        </div>
+      </section>
+
     </section>
   );
 }

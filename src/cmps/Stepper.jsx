@@ -5,7 +5,7 @@ const STEPS = [
   { id: 1, label: 'Research' },
   { id: 2, label: 'Ideation' },
   { id: 3, label: 'Design' },
-  { id: 4, label: 'Takeaway' },
+  { id: 4, label: 'Takeaways' },
 ]
 
 export function Stepper({ activeStep = 1, onStepClick }) {

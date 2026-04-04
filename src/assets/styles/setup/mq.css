@@ -994,6 +994,52 @@
         }
       }
     }
+
+    .takeaways-reflections-next {
+      grid-template-columns: 1fr;
+      gap: var(--related-elements-space);
+
+      .takeaways-reflections {
+        .takeaways-rn-heading {
+          margin: 0 0 0.5rem 0;
+        }
+
+        .takeaways-reflections-intro {
+          margin: 0 0 0.5rem 0;
+        }
+
+        .takeaways-rn-list {
+          margin-block-end: 6.25rem;
+        }
+      }
+
+      .takeaways-next {
+        .takeaways-rn-heading {
+          margin: 0 0 0.5rem 0;
+        }
+
+        .takeaways-next-intro {
+          color: var(--dark-grey);
+          margin: 0 0 0.5rem 0;
+        }
+
+        .takeaways-rn-list {
+          margin-block-end: 6.25rem;
+        }
+      }
+    }
+
+    .takeaways-metrics {
+      padding-block: 0 6.25rem;
+
+      .takeaways-metrics-heading {
+        margin: 0 0 0.5rem 0;
+      }
+
+      .takeaways-metrics-intro {
+        margin: 0 0 0.5rem 0;
+      }
+    }
   }
 }
 

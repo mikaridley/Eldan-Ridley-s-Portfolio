@@ -432,4 +432,121 @@
       padding-block: var(--imgs-carousel-wrapper-padding);
     }
   }
+
+  .takeaways-reflections-next {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12rem;
+    align-items: start;
+    margin-block-end: var(--related-elements-space);
+
+    .takeaways-reflections {
+      .takeaways-rn-heading {
+        color: var(--dark-grey);
+        margin-block-end: var(--subheader-to-paragraph);
+      }
+
+      .takeaways-reflections-intro {
+        color: var(--main-txt);
+        line-height: 1.6;
+        margin: 0 0 var(--subheader-to-paragraph) 0;
+        max-width: 55rem;
+        color: var(--dark-grey);
+      }
+
+      .takeaways-rn-list {
+        margin: 0;
+        padding-left: 1.5rem;
+        list-style-type: disc;
+        color: var(--main-txt);
+
+        li {
+          margin-block-end: 0rem;
+          font-weight: 500;
+
+          &::marker {
+            color: var(--dark-grey);
+          }
+
+          & span {
+            color: var(--dark-grey);
+          }
+        }
+      }
+    }
+
+    .takeaways-next {
+      .takeaways-rn-heading {
+        color: var(--dark-grey);
+        margin-block-end: var(--subheader-to-paragraph);
+      }
+
+      .takeaways-next-intro {
+        color: var(--main-txt);
+        line-height: 1.6;
+        margin: 0 0 var(--subheader-to-paragraph) 0;
+        max-width: 55rem;
+        color: var(--dark-grey);
+      }
+
+      .takeaways-rn-list {
+        margin: 0;
+        padding-left: 1.5rem;
+        list-style-type: disc;
+        color: var(--main-txt);
+
+        li {
+          margin-block-end: 0rem;
+          font-weight: 500;
+
+          &::marker {
+            color: var(--dark-grey);
+          }
+
+          & span {
+            color: var(--dark-grey);
+          }
+        }
+      }
+    }
+  }
+
+  .takeaways-metrics {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-block-end: var(--unrelated-elements-space);
+
+    .takeaways-metrics-heading {
+      color: var(--dark-grey);
+      margin-block-end: var(--subheader-to-paragraph);
+    }
+
+    .takeaways-metrics-intro {
+      color: var(--dark-grey);
+      margin-block-end: var(--subheader-to-paragraph);
+      max-width: 55rem;
+    }
+
+    .takeaways-metrics-list {
+      margin: 0;
+      padding-left: 0;
+      color: var(--main-txt);
+      max-width: 55rem;
+
+      li {
+        margin-block-end: 0.75rem;
+        font-weight: 500;
+        list-style: disc;
+        margin-inline-start: 1.5rem;
+
+        &::marker {
+          color: var(--dark-grey);
+        }
+
+        & span {
+          color: var(--dark-grey);
+        }
+      }
+    }
+  }
 }
