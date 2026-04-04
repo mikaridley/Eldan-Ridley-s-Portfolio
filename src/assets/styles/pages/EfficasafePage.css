@@ -84,33 +84,6 @@
     }
   }
 
-  .project-details {
-    justify-self: center;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-block-start: var(--beginning-of-section);
-    margin-block-end: var(--unrelated-elements-space);
-    justify-items: start;
-    max-width: 53rem;
-    column-gap: 7.5rem;
-
-    .project-details-col {
-      .project-details-heading {
-        color: var(--dark-grey);
-        margin-block-end: 1rem;
-      }
-
-      .project-details-list {
-        list-style-position: inside;
-        padding-left: 0;
-
-        li {
-          color: var(--main-txt);
-        }
-      }
-    }
-  }
-
   .efficasafe-step-section {
     margin-block-end: var(--unrelated-elements-space);
 

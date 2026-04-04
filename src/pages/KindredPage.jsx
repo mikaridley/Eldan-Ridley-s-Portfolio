@@ -4,8 +4,22 @@ import { StepperHeader } from "../cmps/StepperHeader";
 import { ImgsCarousel } from "../cmps/ImgsCarousel";
 import { TargetAudience } from "../cmps/projects-cmps/TargetAudience";
 import { IdeationStrategy } from "../cmps/projects-cmps/IdeationStrategy";
+import { ProjectDetails } from "../cmps/projects-cmps/ProjectDetails";
 import appScreen from "../assets/imgs/kindred/Hand showing Kindred app.png";
 import kindredAppGif from "../assets/imgs/kindred/stepper/app-gif.gif";
+
+const KINDRED_PROJECT_DETAILS_COLUMNS = [
+  {
+    heading: "My role",
+    items: ["UX designer", "Visual designer", "UX researcher"],
+  },
+  { heading: "Team", items: ["Solo project"] },
+  { heading: "Duration", items: ["3.5 weeks"] },
+  {
+    heading: "Tools",
+    items: ["Figma", "FigJam", "Pen & paper", "Gen AI"],
+  },
+];
 
 // —— Constants (module globs & config) —————————————————————————————————————
 const kindredStepperModules = import.meta.glob(
@@ -175,37 +189,7 @@ export function KindredPage() {
         </p>
       </section>
 
-      <section className="project-details">
-        <div className="project-details-col">
-          <h4 className="project-details-heading">My role</h4>
-          <ul className="project-details-list">
-            <li>UX designer</li>
-            <li>Visual designer</li>
-            <li>UX researcher</li>
-          </ul>
-        </div>
-        <div className="project-details-col">
-          <h4 className="project-details-heading">Team</h4>
-          <ul className="project-details-list">
-            <li>Solo project</li>
-          </ul>
-        </div>
-        <div className="project-details-col">
-          <h4 className="project-details-heading">Duration</h4>
-          <ul className="project-details-list">
-            <li>3.5 weeks</li>
-          </ul>
-        </div>
-        <div className="project-details-col">
-          <h4 className="project-details-heading">Tools</h4>
-          <ul className="project-details-list">
-            <li>Figma</li>
-            <li>FigJam</li>
-            <li>Pen & paper</li>
-            <li>Gen AI</li>
-          </ul>
-        </div>
-      </section>
+      <ProjectDetails columns={KINDRED_PROJECT_DETAILS_COLUMNS} />
 
       <Stepper
         activeStep={activeStep}

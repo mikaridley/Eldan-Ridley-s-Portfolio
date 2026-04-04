@@ -9,10 +9,27 @@ import { Stepper } from "../cmps/Stepper";
 import { StepperHeader } from "../cmps/StepperHeader";
 import { TargetAudience } from "../cmps/projects-cmps/TargetAudience";
 import { IdeationStrategy } from "../cmps/projects-cmps/IdeationStrategy";
+import { ProjectDetails } from "../cmps/projects-cmps/ProjectDetails";
 
 const EFFICASAFE_PERSONA_IMAGES = [
   efficasafeMedia.personaMargret,
   efficasafeMedia.personaDavid,
+];
+
+const EFFICASAFE_PROJECT_DETAILS_COLUMNS = [
+  {
+    heading: "My role",
+    items: ["UX designer", "Visual designer", "UX writer"],
+  },
+  {
+    heading: "Team",
+    items: ["UX designer", "Web developer"],
+  },
+  { heading: "Duration", items: ["2.5 weeks"] },
+  {
+    heading: "Tools",
+    items: ["Figma", "FigJam", "Gen AI"],
+  },
 ];
 
 const STEP_HEADER_OFFSET = 120;
@@ -142,37 +159,7 @@ export function EfficasafePage() {
         </p>
       </section>
 
-      <section className="project-details">
-        <div className="project-details-col">
-          <h4 className="project-details-heading">My role</h4>
-          <ul className="project-details-list">
-            <li>UX designer</li>
-            <li>Visual designer</li>
-            <li>UX writer</li>
-          </ul>
-        </div>
-        <div className="project-details-col">
-          <h4 className="project-details-heading">Team</h4>
-          <ul className="project-details-list">
-            <li>UX designer</li>
-            <li>Web developer</li>
-          </ul>
-        </div>
-        <div className="project-details-col">
-          <h4 className="project-details-heading">Duration</h4>
-          <ul className="project-details-list">
-            <li>2.5 weeks</li>
-          </ul>
-        </div>
-        <div className="project-details-col">
-          <h4 className="project-details-heading">Tools</h4>
-          <ul className="project-details-list">
-            <li>Figma</li>
-            <li>FigJam</li>
-            <li>Gen AI</li>
-          </ul>
-        </div>
-      </section>
+      <ProjectDetails columns={EFFICASAFE_PROJECT_DETAILS_COLUMNS} />
 
       <Stepper activeStep={activeStep} onStepClick={handleStepClick} />
 
