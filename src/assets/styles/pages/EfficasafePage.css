@@ -258,6 +258,7 @@
 
       .efficasafe-iteration-op {
         align-self: center;
+        justify-self: center;
       }
 
       &.efficasafe-iteration-block--pair {
@@ -309,10 +310,10 @@
   }
 
   .efficasafe-inclusive-content {
-    grid-column: 1 / -1;
-    justify-self: center;
+    grid-column: 2;
     width: 100%;
-    max-width: 75rem;
+    max-width: min(75rem, 100%);
+    min-width: 0;
     margin-block-end: 12.5rem;
 
     .efficasafe-inclusive-title {
@@ -340,8 +341,8 @@
         grid-template-rows: auto auto;
         column-gap: clamp(1.5rem, 4vw, 2.75rem);
         row-gap: 1rem;
-        column-gap: 2.5rem;
         align-items: start;
+        min-width: 0;
 
         .efficasafe-inclusive-label {
           grid-column: 1;
