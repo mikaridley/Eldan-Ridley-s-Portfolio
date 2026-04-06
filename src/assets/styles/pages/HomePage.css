@@ -63,6 +63,14 @@
       display: grid;
       grid-template-rows: auto auto 1fr;
 
+      &.home-project--efficasafe .home-project-img--fg {
+        transform: scale(1.07);
+      }
+
+      &.home-project--efficasafe .home-project-img--fg:hover {
+        transform: scale(1.1342);
+      }
+
       .home-project-link {
         cursor: pointer;
       }

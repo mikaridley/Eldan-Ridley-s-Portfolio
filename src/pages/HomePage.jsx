@@ -43,7 +43,7 @@ export function HomePage() {
         />
 
         <ProjectPreview
-          className="home-project"
+          className="home-project home-project--efficasafe"
           to="/efficasafe"
           bgSrc={homePageEfficasafeBgImg}
           fgSrc={homePageEfficasafeImg}
