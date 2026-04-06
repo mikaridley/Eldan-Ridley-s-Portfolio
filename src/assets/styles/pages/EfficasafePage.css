@@ -26,6 +26,10 @@
       .efficasafe-page-subtitle {
         color: var(--dark-grey);
         margin-block-end: var(--subheader-to-paragraph);
+
+        .efficasafe-page-subtitle-compound {
+          white-space: nowrap;
+        }
       }
 
       .efficasafe-page-placeholder {
@@ -178,8 +182,8 @@
       grid-template-columns: 1fr auto 1fr auto 1fr;
       grid-template-rows: auto auto;
       grid-template-areas:
-        '. . . . .'
-        'phone1 op-plus phone2 op-eq phone3';
+        ". . . . ."
+        "phone1 op-plus phone2 op-eq phone3";
       column-gap: clamp(0.35rem, 2vw, 1.25rem);
       align-items: end;
       margin-block-end: var(--unrelated-elements-space);
@@ -237,13 +241,16 @@
         align-self: center;
         justify-self: center;
         color: var(--dark-grey);
+        font-family: Montserrat;
+        font-size: 3rem;
+        font-weight: 700;
       }
 
       &.efficasafe-iteration-block--pair {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-          'label-before label-after'
-          'phone1 phone2';
+          "label-before label-after"
+          "phone1 phone2";
         column-gap: clamp(0.75rem, 4vw, 2.5rem);
 
         .efficasafe-iteration-label--before {
@@ -308,7 +315,6 @@
     width: 100%;
     max-width: min(75rem, 100%);
     min-width: 0;
-    margin-block-end: 12.5rem;
 
     .efficasafe-inclusive-title {
       color: var(--dark-grey);
@@ -367,10 +373,13 @@
 
           p {
             margin: 0;
+            margin-bottom: 15rem;
             max-width: 55rem;
             color: var(--main-txt);
-            line-height: 1.65;
-            font-size: clamp(1rem, 1.1vw + 0.85rem, 1.25rem);
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%;
           }
 
           strong {

@@ -96,7 +96,9 @@ export function EfficasafePage() {
         <section className="efficasafe-page-header">
           <h1 className="efficasafe-page-title">EfficaSafe:</h1>
           <h2 className="efficasafe-page-subtitle">
-            Clinical e-commerce widget
+            Clinical{" "}
+            <span className="efficasafe-page-subtitle-compound">e-commerce</span>{" "}
+            widget
           </h2>
           <h4 className="efficasafe-page-placeholder">
             A B2B e-commerce widget enabling shoppers to manage and verify
@@ -267,7 +269,7 @@ export function EfficasafePage() {
                 medical data into a clear and actionable checkout experience. By
                 categorising findings into a tiered system of Caution,
                 Replenish, and Optimisers, I focused on reducing the user's
-                cognitive load. This structured approach ensures that shoppers
+                cognitive load.<br /> This structured approach ensures that shoppers
                 can quickly identify critical safety risks while also
                 discovering ways to support their long term health without
                 leaving the Amazon platform.
